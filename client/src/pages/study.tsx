@@ -259,51 +259,22 @@ export default function Study() {
                   transition={{ duration: 0.4, ease: "easeOut" }}
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <Card className="h-full flex flex-col overflow-hidden bg-primary/5">
-                    {/* Image Section */}
-                    <div className="h-[55%] w-full bg-secondary/30 relative flex items-center justify-center">
-                      <img 
-                        src={getImageUrl(currentCard)} 
-                        alt={currentCard.englishText}
-                        className="max-w-full max-h-full object-contain"
-                      />
-                      <div className="absolute top-3 right-3">
-                        <span 
-                          className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground uppercase tracking-wide"
-                        >
-                          {currentCard.category}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Content Section - Back */}
-                    <div className="flex-1 flex flex-col items-center justify-center p-5 text-center relative">
+                  <Card className="h-full flex flex-col items-center justify-center p-6 text-center">
+                    <div className="space-y-4">
+                      <p className="text-base text-muted-foreground" data-testid="text-spanish-back">
+                        {currentCard.text}
+                      </p>
+                      <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-english-translation">
+                        {currentCard.englishText}
+                      </h2>
                       <Button
-                        variant="default"
-                        size="icon"
-                        onClick={(e) => { e.stopPropagation(); playAudio(); }}
-                        data-testid="button-audio-back"
-                        className="absolute -top-5 rounded-full shadow-md"
+                        variant="ghost"
+                        size="sm"
+                        onClick={(e) => { e.stopPropagation(); setIsFlipped(false); }}
+                        data-testid="button-hide-translation"
                       >
-                        <Volume2 className="h-5 w-5" />
+                        Hide translation
                       </Button>
-                      
-                      <div className="space-y-3 mt-3">
-                        <p className="text-base text-muted-foreground" data-testid="text-spanish-back">
-                          {currentCard.text}
-                        </p>
-                        <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-english-translation">
-                          {currentCard.englishText}
-                        </h2>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={(e) => { e.stopPropagation(); setIsFlipped(false); }}
-                          data-testid="button-hide-translation"
-                        >
-                          Hide translation
-                        </Button>
-                      </div>
                     </div>
                   </Card>
                 </motion.div>
