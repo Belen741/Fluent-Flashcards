@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
-import { useLocation } from "wouter";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { useLocation, useSearch } from "wouter";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -13,6 +13,7 @@ import {
   getLearningState,
   saveLearningState,
   saveSessionHistory,
+  getSessionsCompletedToday,
 } from "@/utils/sessionQueue";
 import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
 import type { Flashcard, ConceptLearningState } from "@shared/schema";
@@ -20,7 +21,15 @@ import type { Flashcard, ConceptLearningState } from "@shared/schema";
 export default function Study() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [, setLocation] = useLocation();
+  const searchString = useSearch();
   const { data: flashcards, isLoading } = useFlashcards();
+  
+  // Get session number from URL params
+  const sessionNumber = useMemo(() => {
+    const params = new URLSearchParams(searchString);
+    const session = params.get("session");
+    return session ? parseInt(session, 10) : getSessionsCompletedToday() + 1;
+  }, [searchString]);
   
   // Session queue state
   const [sessionQueue, setSessionQueue] = useState<Flashcard[]>([]);
@@ -28,20 +37,25 @@ export default function Study() {
   const [learningState, setLearningState] = useState<Record<string, ConceptLearningState>>({});
   const [seenConceptIds, setSeenConceptIds] = useState<Set<string>>(new Set());
   const [userResponse, setUserResponse] = useState<"correct" | "incorrect" | null>(null);
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [initializedSession, setInitializedSession] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // Initialize session queue when flashcards load
+  // Initialize session queue when flashcards load or session changes
   useEffect(() => {
-    if (flashcards && flashcards.length > 0 && !isInitialized) {
+    if (flashcards && flashcards.length > 0 && initializedSession !== sessionNumber) {
       const { queue, reservePool: pool } = buildSessionQueue(flashcards);
       setSessionQueue(queue);
       setReservePool(pool);
       setLearningState(getLearningState());
-      setIsInitialized(true);
+      setSeenConceptIds(new Set());
+      setCurrentIndex(0);
+      setUserResponse(null);
+      setShowFeedback(false);
+      setIsFlipped(false);
+      setInitializedSession(sessionNumber);
     }
-  }, [flashcards, isInitialized]);
+  }, [flashcards, sessionNumber, initializedSession]);
 
   const handleResponse = useCallback((correct: boolean) => {
     setUserResponse(correct ? "correct" : "incorrect");
@@ -114,7 +128,7 @@ export default function Study() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleResponse, handleNext]);
 
-  if (isLoading || !flashcards || !isInitialized || sessionQueue.length === 0) {
+  if (isLoading || !flashcards || initializedSession === null || sessionQueue.length === 0) {
     return (
       <Layout>
         <div className="flex flex-col items-center justify-center h-[50vh]">

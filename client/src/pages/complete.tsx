@@ -1,12 +1,27 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Home, RotateCcw, PartyPopper } from "lucide-react";
+import { CheckCircle2, Home, ArrowRight, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { getSessionsCompletedToday, incrementSessionCount } from "@/utils/sessionQueue";
 
 export default function Complete() {
+  const [, setLocation] = useLocation();
+  const [sessionsToday, setSessionsToday] = useState(0);
+
+  useEffect(() => {
+    // Increment and get session count on mount
+    const count = incrementSessionCount();
+    setSessionsToday(count);
+  }, []);
+
+  const handleNextSession = () => {
+    // Navigate to study with a fresh session
+    setLocation("/study?session=" + (sessionsToday + 1));
+  };
+
   useEffect(() => {
     // Fire confetti on mount
     const duration = 2.5 * 1000;
@@ -52,12 +67,14 @@ export default function Complete() {
         >
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-2xl font-bold text-foreground" data-testid="text-session-complete">
-              Session complete
+              Session {sessionsToday} complete
             </h1>
             <PartyPopper className="w-6 h-6 text-foreground" />
           </div>
           <p className="text-base text-muted-foreground max-w-[280px] mx-auto" data-testid="text-success-message">
-            Great job! Keep it up.
+            {sessionsToday === 1 
+              ? "Great job! Keep it up." 
+              : `Amazing! You've completed ${sessionsToday} sessions today.`}
           </p>
         </motion.div>
 
@@ -68,26 +85,25 @@ export default function Complete() {
           transition={{ delay: 0.5 }}
           className="w-full space-y-3 pt-6"
         >
-          <Link href="/" data-testid="link-home">
-            <Button 
-              size="lg" 
-              data-testid="button-home"
-              className="w-full font-semibold"
-            >
-              <Home className="mr-2 h-5 w-5" />
-              Back to home
-            </Button>
-          </Link>
+          <Button 
+            size="lg" 
+            onClick={handleNextSession}
+            data-testid="button-next-session"
+            className="w-full font-semibold"
+          >
+            Continue to next session
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
           
-          <Link href="/study" data-testid="link-repeat">
+          <Link href="/" data-testid="link-home">
             <Button 
               variant="outline"
               size="lg" 
-              data-testid="button-repeat"
+              data-testid="button-home"
               className="w-full font-medium"
             >
-              <RotateCcw className="mr-2 h-4 w-4" />
-              Repeat session
+              <Home className="mr-2 h-4 w-4" />
+              Done for now
             </Button>
           </Link>
         </motion.div>

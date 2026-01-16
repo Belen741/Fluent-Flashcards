@@ -2,11 +2,12 @@ import { Link } from "wouter";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, BookOpen, ArrowRight, Clock } from "lucide-react";
-import { buildSessionQueue } from "@/utils/sessionQueue";
+import { Loader2, BookOpen, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
+import { buildSessionQueue, getSessionsCompletedToday } from "@/utils/sessionQueue";
 
 export default function Home() {
   const { data: flashcards, isLoading } = useFlashcards();
+  const sessionsCompleted = getSessionsCompletedToday();
 
   if (isLoading) {
     return (
@@ -36,8 +37,14 @@ export default function Home() {
 
         {/* Session Info */}
         <div className="space-y-3">
+          {sessionsCompleted > 0 && (
+            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2" data-testid="text-sessions-completed">
+              <CheckCircle2 className="w-4 h-4" />
+              <span className="text-sm">{sessionsCompleted} session{sessionsCompleted !== 1 ? 's' : ''} completed today</span>
+            </div>
+          )}
           <p className="text-xl text-foreground font-semibold" data-testid="text-session-count">
-            Today's session: {sessionCount} cards
+            {sessionsCompleted > 0 ? 'Next session' : "Today's session"}: {sessionCount} cards
           </p>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Clock className="w-4 h-4" />
@@ -53,7 +60,7 @@ export default function Home() {
               data-testid="button-start"
               className="w-full font-bold"
             >
-              <span>Start today's session</span>
+              <span>{sessionsCompleted > 0 ? 'Start next session' : "Start today's session"}</span>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

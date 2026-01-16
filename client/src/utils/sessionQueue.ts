@@ -2,6 +2,48 @@ import type { Flashcard, ConceptLearningState, SessionHistory } from "@shared/sc
 
 const LEARNING_STATE_KEY = "flashcard_learning_state";
 const SESSION_HISTORY_KEY = "flashcard_session_history";
+const SESSION_COUNT_KEY = "flashcard_session_count";
+const SESSION_DATE_KEY = "flashcard_session_date";
+
+// Get today's date as string (YYYY-MM-DD)
+function getTodayString(): string {
+  return new Date().toISOString().split('T')[0];
+}
+
+// Get number of sessions completed today
+export function getSessionsCompletedToday(): number {
+  try {
+    const storedDate = localStorage.getItem(SESSION_DATE_KEY);
+    const today = getTodayString();
+    
+    if (storedDate !== today) {
+      // New day, reset count
+      localStorage.setItem(SESSION_DATE_KEY, today);
+      localStorage.setItem(SESSION_COUNT_KEY, "0");
+      return 0;
+    }
+    
+    const count = localStorage.getItem(SESSION_COUNT_KEY);
+    return count ? parseInt(count, 10) : 0;
+  } catch {
+    return 0;
+  }
+}
+
+// Increment session count for today
+export function incrementSessionCount(): number {
+  try {
+    const today = getTodayString();
+    localStorage.setItem(SESSION_DATE_KEY, today);
+    
+    const current = getSessionsCompletedToday();
+    const newCount = current + 1;
+    localStorage.setItem(SESSION_COUNT_KEY, String(newCount));
+    return newCount;
+  } catch {
+    return 1;
+  }
+}
 
 // Get learning state from localStorage
 export function getLearningState(): Record<string, ConceptLearningState> {
