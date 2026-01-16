@@ -144,9 +144,9 @@ export default function Study() {
   const getFeedbackMessage = () => {
     if (!showFeedback || !userResponse) return null;
     if (userResponse === "correct") {
-      return "Muy bien.";
+      return "Great job!";
     }
-    return "Sigue adelante.";
+    return "Keep going!";
   };
 
   return (
@@ -155,7 +155,7 @@ export default function Study() {
         {/* Session Header */}
         <div className="text-center">
           <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest" data-testid="text-session-header">
-            Sesión de hoy
+            Today's Session
           </span>
         </div>
 
@@ -164,10 +164,10 @@ export default function Study() {
           <Progress value={progress} className="h-2 rounded-full bg-secondary/50" data-testid="progress-bar" />
           <div className="flex justify-between items-center gap-4 px-1">
             <span className="text-xs text-muted-foreground" data-testid="text-status">
-              Vas muy bien.
+              You're doing great!
             </span>
             <span className="text-xs text-muted-foreground" data-testid="text-progress-counter">
-              Tarjeta {currentIndex + 1} de {totalCards}
+              Card {currentIndex + 1} of {totalCards}
             </span>
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function Study() {
         <div className="space-y-3">
           {/* Question prompt */}
           <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
-            ¿Cómo te fue con esta tarjeta?
+            How did you do with this card?
           </p>
 
           {/* Response Buttons */}
@@ -296,22 +296,22 @@ export default function Study() {
               variant={userResponse === "correct" ? "default" : "outline"}
               size="default"
               onClick={() => handleResponse(true)}
-              data-testid="button-lo-supe"
+              data-testid="button-knew-it"
               className="flex items-center gap-2"
             >
               <ThumbsUp className="h-4 w-4" />
-              <span>Lo supe</span>
+              <span>I knew it</span>
               <span className="text-xs opacity-60 ml-1">(1)</span>
             </Button>
             <Button
               variant={userResponse === "incorrect" ? "destructive" : "outline"}
               size="default"
               onClick={() => handleResponse(false)}
-              data-testid="button-no-lo-supe"
+              data-testid="button-didnt-know"
               className="flex items-center gap-2"
             >
               <ThumbsDown className="h-4 w-4" />
-              <span>No lo supe</span>
+              <span>I didn't know</span>
               <span className="text-xs opacity-60 ml-1">(2)</span>
             </Button>
           </div>
@@ -340,10 +340,10 @@ export default function Study() {
           <Button 
             size="lg"
             onClick={handleNext}
-            data-testid="button-siguiente"
+            data-testid="button-next"
             className="w-full font-semibold"
           >
-            <span>Siguiente</span>
+            <span>Next</span>
             <ArrowRight className="ml-2 h-5 w-5" />
             <span className="text-xs opacity-60 ml-2">(Enter)</span>
           </Button>

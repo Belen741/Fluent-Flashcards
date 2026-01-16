@@ -52,12 +52,12 @@ export default function Complete() {
         >
           <div className="flex items-center justify-center gap-2">
             <h1 className="text-2xl font-bold text-foreground" data-testid="text-session-complete">
-              Sesión completada
+              Session complete
             </h1>
             <PartyPopper className="w-6 h-6 text-foreground" />
           </div>
           <p className="text-base text-muted-foreground max-w-[280px] mx-auto" data-testid="text-success-message">
-            Buen trabajo. Sigue así.
+            Great job! Keep it up.
           </p>
         </motion.div>
 
@@ -68,26 +68,26 @@ export default function Complete() {
           transition={{ delay: 0.5 }}
           className="w-full space-y-3 pt-6"
         >
-          <Link href="/" data-testid="link-volver">
+          <Link href="/" data-testid="link-home">
             <Button 
               size="lg" 
-              data-testid="button-volver"
+              data-testid="button-home"
               className="w-full font-semibold"
             >
               <Home className="mr-2 h-5 w-5" />
-              Volver al inicio
+              Back to home
             </Button>
           </Link>
           
-          <Link href="/study" data-testid="link-repetir">
+          <Link href="/study" data-testid="link-repeat">
             <Button 
               variant="outline"
               size="lg" 
-              data-testid="button-repetir"
+              data-testid="button-repeat"
               className="w-full font-medium"
             >
               <RotateCcw className="mr-2 h-4 w-4" />
-              Repetir sesión
+              Repeat session
             </Button>
           </Link>
         </motion.div>

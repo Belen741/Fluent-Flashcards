@@ -37,28 +37,28 @@ export default function Home() {
         {/* Session Info */}
         <div className="space-y-3">
           <p className="text-xl text-foreground font-semibold" data-testid="text-session-count">
-            Sesión de hoy: {sessionCount} tarjetas
+            Today's session: {sessionCount} cards
           </p>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Clock className="w-4 h-4" />
-            <span className="text-sm" data-testid="text-time-estimate">Avanza en 5 minutos.</span>
+            <span className="text-sm" data-testid="text-time-estimate">Complete in about 5 minutes.</span>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="w-full space-y-4 pt-4">
-          <Link href="/study" data-testid="link-empezar">
+          <Link href="/study" data-testid="link-start">
             <Button 
               size="lg" 
-              data-testid="button-empezar"
+              data-testid="button-start"
               className="w-full font-bold"
             >
-              <span>Empezar sesión de hoy</span>
+              <span>Start today's session</span>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
           <p className="text-sm text-muted-foreground" data-testid="text-motivation">
-            Sin presión. Solo constancia.
+            No pressure. Just consistency.
           </p>
         </div>
       </div>
