@@ -1,0 +1,127 @@
+Actúa como un diseñador UX/UI senior y desarrollador front-end senior.
+
+Contexto:
+Ya existe un MVP en React con:
+- Pantalla Home
+- Sesión de flashcards
+- Lógica invisible de repetición con botones “Lo supe” / “No lo supe”
+- Botón “Siguiente”
+- Progreso tipo “Tarjeta X de Y”
+- Persistencia básica en localStorage
+
+OBJETIVO:
+Mejorar la experiencia visual, el ritmo y la claridad de uso para que el usuario:
+- sienta avance
+- sienta calma
+- quiera continuar
+SIN agregar complejidad visible ni cambiar el concepto de la app.
+
+⚠️ Importante:
+Haz SOLO cambios incrementales.
+NO rompas el flujo actual.
+NO cambies la arquitectura general.
+
+--------------------------------
+1) Barra de progreso visual
+--------------------------------
+- Agrega una barra de progreso horizontal en la parte superior de la sesión.
+- La barra debe llenarse conforme avanza la sesión (x / total).
+- Estilo minimalista:
+  - fondo claro
+  - relleno suave
+  - sin números dentro
+- Mantén el texto “Tarjeta X de Y”, pero más discreto.
+
+--------------------------------
+2) Micro-copy (texto breve y calmado)
+--------------------------------
+
+HOME:
+- Título: "Spanish for Nurses"
+- Subtítulo dinámico: "Sesión de hoy: {N} tarjetas"
+- Texto pequeño adicional: "Avanza en 5 minutos."
+- Botón principal: "Empezar"
+- Texto secundario pequeño: "Sin presión. Solo constancia."
+
+SESIÓN:
+- Encabezado pequeño arriba del contenido: "Sesión de hoy"
+- Texto muy discreto encima de los botones:
+  "¿Cómo te fue con esta tarjeta?"
+
+FINAL DE SESIÓN:
+- Mensaje principal: "Sesión completada 🎉"
+- Subtexto: "Buen trabajo. Mañana será más fácil."
+- Botón principal: "Volver al inicio"
+- Botón secundario opcional (solo si es sencillo): "Repetir sesión"
+
+--------------------------------
+3) Ritmo y fricción (clave)
+--------------------------------
+- El usuario puede marcar:
+  - “Lo supe”
+  - “No lo supe”
+
+- Al seleccionar uno:
+  - resaltar visualmente la opción elegida
+  - mostrar micro-feedback:
+     • “Lo supe” → “¡Bien!”
+     • “No lo supe” → “Te la vuelvo a poner pronto.”
+
+- El botón “Siguiente”:
+  - siempre visible
+  - si el usuario NO eligió nada → asumir “Lo supe”
+  - si eligió → respetar su elección
+
+- Accesibilidad:
+  - Tecla 1 = Lo supe
+  - Tecla 2 = No lo supe
+  - Enter = Siguiente
+  - Estados de foco visibles
+
+--------------------------------
+4) Layout y estilo visual
+--------------------------------
+- CSS simple o CSS Modules
+- Contenedor centrado
+- Ancho máximo: 520px
+- Espaciado generoso
+- Texto principal grande y legible
+- Botones grandes y claros
+
+Estilo general:
+- fondo blanco
+- bordes suaves
+- sombras muy sutiles (si ya existen)
+- sensación de “calma clínica”
+- NO agregar librerías nuevas
+- NO frameworks adicionales
+
+--------------------------------
+5) Mensajes de estado
+--------------------------------
+- Debajo de la barra de progreso muestra un texto fijo:
+  "Vas muy bien."
+- No mostrar estadísticas ni métricas avanzadas.
+
+--------------------------------
+6) Confirmación de lógica
+--------------------------------
+- Asegúrate de que cuando el usuario marque “No lo supe”,
+  la tarjeta del mismo concepto se reinserte de forma camuflada
+  dentro de los próximos 2 pasos.
+- Esta lógica NO debe mostrarse en la interfaz.
+
+--------------------------------
+ENTREGABLE
+--------------------------------
+- Aplica los cambios sobre el código existente
+- Indica brevemente qué archivos fueron modificados
+- Asegura que el proyecto compile y funcione correctamente en Replit
+
+--------------------------------
+NO HACER
+--------------------------------
+- No agregar pantallas nuevas
+- No agregar estadísticas complejas
+- No mencionar “spaced repetition” en la UI
+- No agregar login, backend ni base de datos

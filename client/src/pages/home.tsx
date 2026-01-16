@@ -2,8 +2,8 @@ import { Link } from "wouter";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, BookOpen } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Loader2, BookOpen, ArrowRight, Clock } from "lucide-react";
+import { buildSessionQueue } from "@/utils/sessionQueue";
 
 export default function Home() {
   const { data: flashcards, isLoading } = useFlashcards();
@@ -12,49 +12,54 @@ export default function Home() {
     return (
       <Layout>
         <div className="flex flex-col items-center justify-center h-[50vh]">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
         </div>
       </Layout>
     );
   }
 
-  const count = flashcards?.length || 0;
+  // Calculate session size (intro variants only)
+  const sessionCount = flashcards ? buildSessionQueue(flashcards).queue.length : 0;
 
   return (
     <Layout>
-      <div className="space-y-8 text-center">
-        <div className="space-y-2">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-4 shadow-sm">
-            <BookOpen className="w-8 h-8" />
+      <div className="flex flex-col items-center justify-center min-h-[70vh] text-center space-y-10">
+        {/* Logo and Title */}
+        <div className="space-y-4">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-md bg-secondary text-foreground mb-2">
+            <BookOpen className="w-10 h-10" />
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-foreground">
+          <h1 className="text-4xl font-extrabold tracking-tight text-foreground" data-testid="text-title">
             Spanish for Nurses
           </h1>
-          <p className="text-xl text-muted-foreground font-medium">
-            Learn essential medical vocabulary
-          </p>
         </div>
 
-        <Card className="border-border/50 shadow-sm">
-          <CardContent className="pt-6">
-            <h2 className="text-lg font-semibold text-foreground mb-1">
-              Sesión de hoy
-            </h2>
-            <p className="text-3xl font-bold text-primary">
-              {count} tarjetas
-            </p>
-          </CardContent>
-        </Card>
+        {/* Session Info */}
+        <div className="space-y-3">
+          <p className="text-xl text-foreground font-semibold" data-testid="text-session-count">
+            Sesión de hoy: {sessionCount} tarjetas
+          </p>
+          <div className="flex items-center justify-center gap-2 text-muted-foreground">
+            <Clock className="w-4 h-4" />
+            <span className="text-sm" data-testid="text-time-estimate">Avanza en 5 minutos.</span>
+          </div>
+        </div>
 
-        <div className="pt-4">
-          <Link href="/study">
+        {/* CTA Section */}
+        <div className="w-full space-y-4 pt-4">
+          <Link href="/study" data-testid="link-empezar">
             <Button 
               size="lg" 
-              className="w-full h-14 text-lg font-bold rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1"
+              data-testid="button-empezar"
+              className="w-full font-bold"
             >
-              Empezar sesión de hoy
+              <span>Empezar sesión de hoy</span>
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
+          <p className="text-sm text-muted-foreground" data-testid="text-motivation">
+            Sin presión. Solo constancia.
+          </p>
         </div>
       </div>
     </Layout>

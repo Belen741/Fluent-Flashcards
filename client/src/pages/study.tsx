@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useLocation } from "wouter";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { useFlashcards } from "@/hooks/use-flashcards";
 import { Loader2, Volume2, ArrowRight, ThumbsUp, ThumbsDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,6 +28,7 @@ export default function Study() {
   const [seenConceptIds, setSeenConceptIds] = useState<Set<string>>(new Set());
   const [userResponse, setUserResponse] = useState<"correct" | "incorrect" | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
 
   // Initialize session queue when flashcards load
   useEffect(() => {
@@ -39,25 +41,15 @@ export default function Study() {
     }
   }, [flashcards, isInitialized]);
 
-  if (isLoading || !flashcards || !isInitialized || sessionQueue.length === 0) {
-    return (
-      <Layout>
-        <div className="flex flex-col items-center justify-center h-[50vh]">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        </div>
-      </Layout>
-    );
-  }
-
-  const totalCards = sessionQueue.length;
-  const currentCard = sessionQueue[currentIndex];
-  const progress = ((currentIndex + 1) / totalCards) * 100;
-
-  const handleResponse = (correct: boolean) => {
+  const handleResponse = useCallback((correct: boolean) => {
     setUserResponse(correct ? "correct" : "incorrect");
-  };
+    setShowFeedback(true);
+  }, []);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
+    if (sessionQueue.length === 0) return;
+    
+    const currentCard = sessionQueue[currentIndex];
     // Determine if user got it right (default to correct if no response)
     const gotItRight = userResponse !== "incorrect";
 
@@ -77,6 +69,7 @@ export default function Study() {
     setReservePool(result.updatedReservePool);
     setSeenConceptIds(result.updatedSeenConcepts);
     setUserResponse(null);
+    setShowFeedback(false);
 
     // Check if session is complete
     const nextIndex = currentIndex + 1;
@@ -91,113 +84,202 @@ export default function Study() {
     } else {
       setCurrentIndex(nextIndex);
     }
-  };
+  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore if user is typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+      }
+
+      switch (e.key) {
+        case "1":
+          handleResponse(true);
+          break;
+        case "2":
+          handleResponse(false);
+          break;
+        case "Enter":
+          handleNext();
+          break;
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleResponse, handleNext]);
+
+  if (isLoading || !flashcards || !isInitialized || sessionQueue.length === 0) {
+    return (
+      <Layout>
+        <div className="flex flex-col items-center justify-center h-[50vh]">
+          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+        </div>
+      </Layout>
+    );
+  }
+
+  const totalCards = sessionQueue.length;
+  const currentCard = sessionQueue[currentIndex];
+  const progress = ((currentIndex + 1) / totalCards) * 100;
 
   const playAudio = () => {
     console.log("Playing audio for:", currentCard.text);
   };
 
+  // Micro-feedback message
+  const getFeedbackMessage = () => {
+    if (!showFeedback || !userResponse) return null;
+    if (userResponse === "correct") {
+      return "Muy bien.";
+    }
+    return "Sigue adelante.";
+  };
+
   return (
     <Layout>
-      <div className="space-y-6">
-        {/* Header Progress */}
-        <div className="flex flex-col gap-2">
-          <div className="flex justify-between items-end px-1">
-            <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">
-              Progreso
+      <div className="space-y-5">
+        {/* Session Header */}
+        <div className="text-center">
+          <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest" data-testid="text-session-header">
+            Sesión de hoy
+          </span>
+        </div>
+
+        {/* Progress Section */}
+        <div className="space-y-2">
+          <Progress value={progress} className="h-2 rounded-full bg-secondary/50" data-testid="progress-bar" />
+          <div className="flex justify-between items-center gap-4 px-1">
+            <span className="text-xs text-muted-foreground" data-testid="text-status">
+              Vas muy bien.
             </span>
-            <span className="text-sm font-bold text-foreground">
-              Tarjeta {currentIndex + 1} <span className="text-muted-foreground font-normal">de</span> {totalCards}
+            <span className="text-xs text-muted-foreground" data-testid="text-progress-counter">
+              Tarjeta {currentIndex + 1} de {totalCards}
             </span>
           </div>
-          <Progress value={progress} className="h-3 rounded-full bg-secondary" />
         </div>
 
         {/* Flashcard Area */}
-        <div className="relative h-[420px] w-full perspective-1000">
+        <div className="relative h-[380px] w-full p-1">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentCard.id + "-" + currentIndex}
-              initial={{ x: 50, opacity: 0 }}
+              initial={{ x: 40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -50, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute inset-0 w-full h-full"
+              exit={{ x: -40, opacity: 0 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="w-full h-full"
             >
-              <div className="h-full bg-white rounded-3xl shadow-xl shadow-black/5 border border-border flex flex-col overflow-hidden">
+              <Card className="h-full flex flex-col overflow-hidden">
                 {/* Image Section */}
-                <div className="h-[50%] w-full bg-secondary/30 relative group overflow-hidden">
+                <div className="h-[48%] w-full bg-secondary/20 relative overflow-hidden">
                   <img 
                     src={currentCard.imageUrl} 
                     alt={currentCard.englishText}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover"
+                    data-testid={`img-flashcard-${currentCard.id}`}
                   />
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-bold rounded-full shadow-sm text-foreground/80 uppercase tracking-wide">
+                  <div className="absolute top-3 right-3">
+                    <span 
+                      className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground uppercase tracking-wide"
+                      data-testid={`text-category-${currentCard.id}`}
+                    >
                       {currentCard.category}
                     </span>
                   </div>
                 </div>
 
                 {/* Content Section */}
-                <div className="flex-1 flex flex-col items-center justify-center p-4 text-center space-y-3 relative">
+                <div className="flex-1 flex flex-col items-center justify-center p-5 text-center relative">
                   <Button
-                    variant="ghost"
+                    variant="default"
                     size="icon"
                     onClick={playAudio}
                     data-testid="button-audio"
-                    className="absolute -top-6 bg-primary text-primary-foreground h-12 w-12 rounded-full shadow-lg"
+                    className="absolute -top-5 rounded-full shadow-md"
                   >
-                    <Volume2 className="h-6 w-6" />
+                    <Volume2 className="h-5 w-5" />
                   </Button>
                   
-                  <div className="space-y-1 mt-4">
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-foreground" data-testid="text-spanish-word">
+                  <div className="space-y-2 mt-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground" data-testid="text-spanish-word">
                       {currentCard.text}
                     </h2>
-                    <p className="text-base text-muted-foreground font-medium" data-testid="text-english-translation">
+                    <p className="text-base text-muted-foreground" data-testid="text-english-translation">
                       {currentCard.englishText}
                     </p>
                   </div>
                 </div>
-              </div>
+              </Card>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Response Buttons */}
-        <div className="flex gap-3 justify-center">
-          <Button
-            variant={userResponse === "correct" ? "default" : "outline"}
-            size="sm"
-            onClick={() => handleResponse(true)}
-            data-testid="button-lo-supe"
-            className="flex items-center gap-2 px-4"
-          >
-            <ThumbsUp className="h-4 w-4" />
-            <span>Lo supe</span>
-          </Button>
-          <Button
-            variant={userResponse === "incorrect" ? "destructive" : "outline"}
-            size="sm"
-            onClick={() => handleResponse(false)}
-            data-testid="button-no-lo-supe"
-            className="flex items-center gap-2 px-4"
-          >
-            <ThumbsDown className="h-4 w-4" />
-            <span>No lo supe</span>
-          </Button>
+        {/* Response Section */}
+        <div className="space-y-3">
+          {/* Question prompt */}
+          <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
+            ¿Cómo te fue con esta tarjeta?
+          </p>
+
+          {/* Response Buttons */}
+          <div className="flex gap-3 justify-center">
+            <Button
+              variant={userResponse === "correct" ? "default" : "outline"}
+              size="default"
+              onClick={() => handleResponse(true)}
+              data-testid="button-lo-supe"
+              className="flex items-center gap-2"
+            >
+              <ThumbsUp className="h-4 w-4" />
+              <span>Lo supe</span>
+              <span className="text-xs opacity-60 ml-1">(1)</span>
+            </Button>
+            <Button
+              variant={userResponse === "incorrect" ? "destructive" : "outline"}
+              size="default"
+              onClick={() => handleResponse(false)}
+              data-testid="button-no-lo-supe"
+              className="flex items-center gap-2"
+            >
+              <ThumbsDown className="h-4 w-4" />
+              <span>No lo supe</span>
+              <span className="text-xs opacity-60 ml-1">(2)</span>
+            </Button>
+          </div>
+
+          {/* Micro-feedback */}
+          <AnimatePresence mode="wait">
+            {showFeedback && userResponse && (
+              <motion.p
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className={`text-center text-sm font-medium ${
+                  userResponse === "correct" ? "text-foreground" : "text-muted-foreground"
+                }`}
+                data-testid="text-feedback"
+              >
+                {getFeedbackMessage()}
+              </motion.p>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Next Button */}
-        <div className="pt-2">
+        <div className="pt-1">
           <Button 
+            size="lg"
             onClick={handleNext}
             data-testid="button-siguiente"
-            className="w-full h-14 text-lg font-bold rounded-xl shadow-lg shadow-primary/20"
+            className="w-full font-semibold"
           >
             <span>Siguiente</span>
             <ArrowRight className="ml-2 h-5 w-5" />
+            <span className="text-xs opacity-60 ml-2">(Enter)</span>
           </Button>
         </div>
       </div>
