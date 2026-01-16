@@ -19,6 +19,8 @@ export function QuickPickCard({ card, onAnswer }: QuickPickCardProps) {
   const correctAnswer = card.mcqCorrectEn || card.englishText;
   const questionEs = card.mcqQuestionEs || card.text;
   
+  const hasBlank = questionEs.includes("_");
+  
   const shuffledOptions = useState(() => 
     [...options].sort(() => Math.random() - 0.5)
   )[0];
@@ -62,7 +64,7 @@ export function QuickPickCard({ card, onAnswer }: QuickPickCardProps) {
       <div className="flex-1 flex flex-col p-3">
         <div className="text-center mb-2">
           <p className="text-xs text-muted-foreground mb-1" data-testid="text-quickpick-prompt">
-            What does this mean?
+            {hasBlank ? "Complete with the correct option" : "What does this mean?"}
           </p>
           <h2 className="text-base font-bold text-foreground" data-testid="text-spanish-question">
             {questionEs}
