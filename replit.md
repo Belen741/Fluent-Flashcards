@@ -44,15 +44,23 @@ Preferred communication style: Simple, everyday language.
 
 ### Recent UX Improvements (Jan 2026)
 
-**Spanish UI Text**: All user-facing text is in Spanish for the target nurse audience.
+**English UI Text**: All user-facing text is in English (teaching Spanish to English-speaking nurses).
 
-**Response System**: Users mark "Lo supe" (I knew it) or "No lo supe" (I didn't know it) to track progress. When marking "No lo supe", a variant card is silently inserted 2-3 steps ahead for reinforcement.
+**Three Card Surface Types**:
+- **Standard Card**: Shows Spanish phrase with "Show translation" button; flip to reveal English translation. User marks "I knew it" or "I didn't know"
+- **Quick Fill (Cloze)**: Shows image + "Which phrase matches?" with 4 Spanish options to choose from
+- **Quick Pick (MCQ)**: Shows image + Spanish question with blanks, user picks correct English word from 3 options
 
-**Micro-Feedback**: Brief encouraging messages appear after responses ("Muy bien." for correct, "Sigue adelante." for incorrect).
+**Response System**: 
+- Standard cards: Users mark "I knew it" or "I didn't know" to track progress
+- Interactive cards (cloze/mcq): Auto-submit on option selection; Next button disabled until answer is provided
+- When marking "I didn't know" or getting interactive cards wrong, a variant card is silently inserted 2-3 steps ahead for reinforcement
 
-**Keyboard Shortcuts**: Press 1 for "Lo supe", 2 for "No lo supe", Enter to proceed.
+**Micro-Feedback**: Brief encouraging messages appear after responses ("Great job!" for correct, "Keep going!" for incorrect).
 
-**Session Flow**: Home shows dynamic card count and time estimate. Study page has minimal progress bar and status messaging. Completion page offers "Repetir sesión" option.
+**Keyboard Shortcuts**: Press 1 for "I knew it", 2 for "I didn't know", Enter to proceed.
+
+**Session Flow**: Home shows dynamic card count and time estimate. Study page has minimal progress bar and status messaging. Completion page offers "Start another session" option. Multiple sessions per day supported with session tracking.
 
 ### CDN Preparation (Jan 2026)
 
