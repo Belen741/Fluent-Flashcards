@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, Volume2, ArrowRight, ThumbsUp, ThumbsDown } from "lucide-react";
+import { Loader2, Volume2, ThumbsUp, ThumbsDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -61,36 +61,22 @@ export default function Study() {
     }
   }, [flashcards, sessionNumber, initializedSession]);
 
-  // Handle interactive card answer (cloze/mcq)
+  // Handle interactive card answer (cloze/mcq) - just marks the answer, doesn't advance
   const handleInteractiveAnswer = useCallback((correct: boolean) => {
     setUserResponse(correct ? "correct" : "incorrect");
     setShowFeedback(true);
     setInteractiveAnswered(true);
   }, []);
 
-  const handleResponse = useCallback((correct: boolean) => {
-    setUserResponse(correct ? "correct" : "incorrect");
-    setShowFeedback(true);
-  }, []);
-
-  const handleNext = useCallback(() => {
+  // Handle response and advance to next card
+  const handleResponseAndAdvance = useCallback((gotItRight: boolean) => {
     if (sessionQueue.length === 0) return;
     
     const currentCard = sessionQueue[currentIndex];
-    
-    // Check if this is an interactive card (cloze or mcq)
-    const isInteractive = 
-      (currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0) ||
-      (currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0);
-    
-    // Block Next on interactive cards until answered
-    if (isInteractive && !interactiveAnswered) {
-      return;
-    }
-    
-    // Determine if user got it right
-    // For interactive cards: use actual response, for standard cards: default to correct if no response
-    const gotItRight = isInteractive ? userResponse === "correct" : userResponse !== "incorrect";
+
+    // Show brief feedback before advancing
+    setUserResponse(gotItRight ? "correct" : "incorrect");
+    setShowFeedback(true);
 
     // Process response and potentially update queue
     const result = processResponse(
@@ -103,29 +89,32 @@ export default function Study() {
       seenConceptIds
     );
 
-    setSessionQueue(result.updatedQueue);
-    setLearningState(result.updatedState);
-    setReservePool(result.updatedReservePool);
-    setSeenConceptIds(result.updatedSeenConcepts);
-    setUserResponse(null);
-    setShowFeedback(false);
-    setIsFlipped(false);
-    setInteractiveAnswered(false);
+    // Delay to show feedback briefly
+    setTimeout(() => {
+      setSessionQueue(result.updatedQueue);
+      setLearningState(result.updatedState);
+      setReservePool(result.updatedReservePool);
+      setSeenConceptIds(result.updatedSeenConcepts);
+      setUserResponse(null);
+      setShowFeedback(false);
+      setIsFlipped(false);
+      setInteractiveAnswered(false);
 
-    // Check if session is complete
-    const nextIndex = currentIndex + 1;
-    if (nextIndex >= result.updatedQueue.length) {
-      // Save final state before completing
-      saveLearningState(result.updatedState);
-      saveSessionHistory({
-        date: new Date().toISOString(),
-        conceptsSeen: Array.from(result.updatedSeenConcepts),
-      });
-      setLocation("/complete");
-    } else {
-      setCurrentIndex(nextIndex);
-    }
-  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactiveAnswered]);
+      // Check if session is complete
+      const nextIndex = currentIndex + 1;
+      if (nextIndex >= result.updatedQueue.length) {
+        // Save final state before completing
+        saveLearningState(result.updatedState);
+        saveSessionHistory({
+          date: new Date().toISOString(),
+          conceptsSeen: Array.from(result.updatedSeenConcepts),
+        });
+        setLocation("/complete");
+      } else {
+        setCurrentIndex(nextIndex);
+      }
+    }, 400);
+  }, [currentIndex, sessionQueue, reservePool, learningState, seenConceptIds, setLocation]);
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -135,22 +124,30 @@ export default function Study() {
         return;
       }
 
+      // For interactive cards, only allow shortcuts after answering
+      const currentCard = sessionQueue[currentIndex];
+      const isInteractive = currentCard && (
+        (currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0) ||
+        (currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0)
+      );
+      
+      if (isInteractive && !interactiveAnswered) {
+        return;
+      }
+
       switch (e.key) {
         case "1":
-          handleResponse(true);
+          handleResponseAndAdvance(true);
           break;
         case "2":
-          handleResponse(false);
-          break;
-        case "Enter":
-          handleNext();
+          handleResponseAndAdvance(false);
           break;
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleResponse, handleNext]);
+  }, [handleResponseAndAdvance, sessionQueue, currentIndex, interactiveAnswered]);
 
   if (isLoading || !flashcards || initializedSession === null || sessionQueue.length === 0) {
     return (
@@ -338,40 +335,22 @@ export default function Study() {
           </AnimatePresence>
         </div>
 
-        {/* Response Section - only show for standard cards */}
-        {isInteractiveCard ? (
-          <div className="space-y-3">
-            {/* Micro-feedback for interactive cards */}
-            <AnimatePresence mode="wait">
-              {showFeedback && userResponse && (
-                <motion.p
-                  initial={{ opacity: 0, y: -5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`text-center text-sm font-medium ${
-                    userResponse === "correct" ? "text-foreground" : "text-muted-foreground"
-                  }`}
-                  data-testid="text-feedback"
-                >
-                  {getFeedbackMessage()}
-                </motion.p>
-              )}
-            </AnimatePresence>
-          </div>
-        ) : (
-          <div className="space-y-3">
-            {/* Question prompt */}
+        {/* Response Section */}
+        <div className="space-y-3">
+          {/* Question prompt - hide for interactive cards until answered */}
+          {(!isInteractiveCard || interactiveAnswered) && (
             <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
               How did you do with this card?
             </p>
+          )}
 
-            {/* Response Buttons */}
+          {/* Response Buttons - show for standard cards always, for interactive cards after answering */}
+          {(!isInteractiveCard || interactiveAnswered) && (
             <div className="flex gap-3 justify-center">
               <Button
                 variant={userResponse === "correct" ? "default" : "outline"}
                 size="default"
-                onClick={() => handleResponse(true)}
+                onClick={() => handleResponseAndAdvance(true)}
                 data-testid="button-knew-it"
                 className="flex items-center gap-2"
               >
@@ -382,7 +361,7 @@ export default function Study() {
               <Button
                 variant={userResponse === "incorrect" ? "destructive" : "outline"}
                 size="default"
-                onClick={() => handleResponse(false)}
+                onClick={() => handleResponseAndAdvance(false)}
                 data-testid="button-didnt-know"
                 className="flex items-center gap-2"
               >
@@ -391,40 +370,25 @@ export default function Study() {
                 <span className="text-xs opacity-60 ml-1">(2)</span>
               </Button>
             </div>
+          )}
 
-            {/* Micro-feedback */}
-            <AnimatePresence mode="wait">
-              {showFeedback && userResponse && (
-                <motion.p
-                  initial={{ opacity: 0, y: -5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`text-center text-sm font-medium ${
-                    userResponse === "correct" ? "text-foreground" : "text-muted-foreground"
-                  }`}
-                  data-testid="text-feedback"
-                >
-                  {getFeedbackMessage()}
-                </motion.p>
-              )}
-            </AnimatePresence>
-          </div>
-        )}
-
-        {/* Next Button */}
-        <div className="pt-1">
-          <Button 
-            size="lg"
-            onClick={handleNext}
-            disabled={isInteractiveCard && !interactiveAnswered}
-            data-testid="button-next"
-            className="w-full font-semibold"
-          >
-            <span>Next</span>
-            <ArrowRight className="ml-2 h-5 w-5" />
-            <span className="text-xs opacity-60 ml-2">(Enter)</span>
-          </Button>
+          {/* Micro-feedback */}
+          <AnimatePresence mode="wait">
+            {showFeedback && userResponse && (
+              <motion.p
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className={`text-center text-sm font-medium ${
+                  userResponse === "correct" ? "text-foreground" : "text-muted-foreground"
+                }`}
+                data-testid="text-feedback"
+              >
+                {getFeedbackMessage()}
+              </motion.p>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </Layout>
