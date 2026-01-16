@@ -1,38 +1,23 @@
-import { type User, type InsertUser } from "@shared/schema";
-import { randomUUID } from "crypto";
-
-// modify the interface with any CRUD methods
-// you might need
+import { db } from "./db";
+import { flashcards, type Flashcard, type InsertFlashcard } from "@shared/schema";
 
 export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+  getFlashcards(): Promise<Flashcard[]>;
+  createFlashcard(card: InsertFlashcard): Promise<Flashcard>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-
-  constructor() {
-    this.users = new Map();
+export class DatabaseStorage implements IStorage {
+  async getFlashcards(): Promise<Flashcard[]> {
+    return await db.select().from(flashcards);
   }
 
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
-  }
-
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
-  }
-
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
+  async createFlashcard(insertFlashcard: InsertFlashcard): Promise<Flashcard> {
+    const [card] = await db
+      .insert(flashcards)
+      .values(insertFlashcard)
+      .returning();
+    return card;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
