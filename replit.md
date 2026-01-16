@@ -54,6 +54,18 @@ Preferred communication style: Simple, everyday language.
 
 **Session Flow**: Home shows dynamic card count and time estimate. Study page has minimal progress bar and status messaging. Completion page offers "Repetir sesión" option.
 
+### CDN Preparation (Jan 2026)
+
+**Media Resolver Pattern**: All image and audio URLs are resolved through `client/src/utils/mediaResolver.ts`. Components never access URLs directly.
+
+**New Schema Fields** (nullable, for future use):
+- `deckId`: Groups cards by deck
+- `tags`: Array of category tags
+- `imageKey`: Logical path for CDN (e.g., "mazo_01/images/001.webp")
+- `audioKey`: Logical path for CDN (e.g., "mazo_01/audio/001.mp3")
+
+**Future CDN Switch**: When ready to use Cloudflare R2, only `mediaResolver.ts` needs modification. No component changes required.
+
 ## External Dependencies
 
 ### Database
