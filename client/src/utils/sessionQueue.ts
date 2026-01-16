@@ -5,6 +5,10 @@ const SESSION_HISTORY_KEY = "flashcard_session_history";
 const SESSION_COUNT_KEY = "flashcard_session_count";
 const SESSION_DATE_KEY = "flashcard_session_date";
 
+const NEW_CONCEPTS_PER_SESSION = 5;
+const MAX_INTERACTIONS_PER_SESSION = 18;
+const TARGET_INTERACTIONS = 15;
+
 type CardFormat = "intro" | "cloze" | "mcq";
 
 interface ConceptTracker {
@@ -120,6 +124,7 @@ function getAvailableFormats(cards: Flashcard[]): CardFormat[] {
 export function buildSessionQueue(flashcards: Flashcard[]): {
   queue: Flashcard[];
   reservePool: Flashcard[];
+  maxInteractions: number;
 } {
   const conceptGroups: Record<string, Flashcard[]> = {};
   
@@ -130,102 +135,94 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
     conceptGroups[card.conceptId].push(card);
   }
 
-  const conceptIds = shuffle(Object.keys(conceptGroups));
+  const allConceptIds = shuffle(Object.keys(conceptGroups));
+  
+  const sessionConceptIds = allConceptIds.slice(0, NEW_CONCEPTS_PER_SESSION);
+  
   const queue: Flashcard[] = [];
-  let conceptIndex = 0;
   let isFirstCard = true;
 
-  while (conceptIndex < conceptIds.length) {
-    const windowSize = Math.min(10, conceptIds.length - conceptIndex);
-    const windowConcepts = conceptIds.slice(conceptIndex, conceptIndex + windowSize);
+  const slots: CardFormat[] = [];
+  const introCount = Math.ceil(sessionConceptIds.length * 0.6);
+  const clozeCount = Math.floor(sessionConceptIds.length * 0.2);
+  const mcqCount = sessionConceptIds.length - introCount - clozeCount;
+  
+  for (let i = 0; i < introCount; i++) slots.push("intro");
+  for (let i = 0; i < clozeCount; i++) slots.push("cloze");
+  for (let i = 0; i < mcqCount; i++) slots.push("mcq");
+  
+  let shuffledSlots = shuffle(slots);
+  
+  if (shuffledSlots[0] !== "intro") {
+    const introIdx = shuffledSlots.indexOf("intro");
+    if (introIdx > 0) {
+      [shuffledSlots[0], shuffledSlots[introIdx]] = [shuffledSlots[introIdx], shuffledSlots[0]];
+    }
+  }
+  
+  const availableConcepts = [...sessionConceptIds];
+  const usedConcepts = new Set<string>();
+  
+  for (let i = 0; i < shuffledSlots.length && availableConcepts.length > 0; i++) {
+    const targetFormat = shuffledSlots[i];
+    let selectedCard: Flashcard | null = null;
+    let selectedConceptIdx = -1;
     
-    const slots: CardFormat[] = [];
-    const introCount = Math.min(6, Math.ceil(windowSize * 0.6));
-    const clozeCount = Math.min(2, Math.floor(windowSize * 0.2));
-    const mcqCount = windowSize - introCount - clozeCount;
-    
-    for (let i = 0; i < introCount; i++) slots.push("intro");
-    for (let i = 0; i < clozeCount; i++) slots.push("cloze");
-    for (let i = 0; i < mcqCount; i++) slots.push("mcq");
-    
-    let shuffledSlots = shuffle(slots);
-    
-    if (isFirstCard && shuffledSlots[0] !== "intro") {
-      const introIdx = shuffledSlots.indexOf("intro");
-      if (introIdx > 0) {
-        [shuffledSlots[0], shuffledSlots[introIdx]] = [shuffledSlots[introIdx], shuffledSlots[0]];
+    for (let j = 0; j < availableConcepts.length; j++) {
+      const conceptId = availableConcepts[j];
+      if (usedConcepts.has(conceptId)) continue;
+      
+      const cards = conceptGroups[conceptId];
+      const card = getCardByFormat(cards, targetFormat);
+      
+      if (card) {
+        if (queue.length > 0) {
+          const lastCard = queue[queue.length - 1];
+          if (lastCard.conceptId === conceptId || lastCard.text === card.text) {
+            continue;
+          }
+        }
+        selectedCard = card;
+        selectedConceptIdx = j;
+        break;
       }
     }
     
-    const windowCards: Flashcard[] = [];
-    const usedConcepts = new Set<string>();
-    
-    for (let i = 0; i < shuffledSlots.length && windowConcepts.length > 0; i++) {
-      const targetFormat = shuffledSlots[i];
-      let selectedCard: Flashcard | null = null;
-      let selectedConceptIdx = -1;
-      
-      for (let j = 0; j < windowConcepts.length; j++) {
-        const conceptId = windowConcepts[j];
+    if (!selectedCard) {
+      for (let j = 0; j < availableConcepts.length; j++) {
+        const conceptId = availableConcepts[j];
         if (usedConcepts.has(conceptId)) continue;
         
         const cards = conceptGroups[conceptId];
-        const card = getCardByFormat(cards, targetFormat);
+        const introCard = getCardByFormat(cards, "intro");
         
-        if (card) {
-          if (windowCards.length > 0) {
-            const lastCard = windowCards[windowCards.length - 1];
-            if (lastCard.conceptId === conceptId || lastCard.text === card.text) {
+        if (introCard) {
+          if (queue.length > 0) {
+            const lastCard = queue[queue.length - 1];
+            if (lastCard.conceptId === conceptId || lastCard.text === introCard.text) {
               continue;
             }
           }
-          selectedCard = card;
+          selectedCard = introCard;
           selectedConceptIdx = j;
           break;
         }
       }
-      
-      if (!selectedCard) {
-        for (let j = 0; j < windowConcepts.length; j++) {
-          const conceptId = windowConcepts[j];
-          if (usedConcepts.has(conceptId)) continue;
-          
-          const cards = conceptGroups[conceptId];
-          const introCard = getCardByFormat(cards, "intro");
-          
-          if (introCard) {
-            if (windowCards.length > 0) {
-              const lastCard = windowCards[windowCards.length - 1];
-              if (lastCard.conceptId === conceptId || lastCard.text === introCard.text) {
-                continue;
-              }
-            }
-            selectedCard = introCard;
-            selectedConceptIdx = j;
-            break;
-          }
-        }
-      }
-      
-      if (selectedCard && selectedConceptIdx >= 0) {
-        if (queue.length > 0 && isFirstCard === false) {
-          const lastInQueue = queue[queue.length - 1];
-          if (lastInQueue.conceptId === selectedCard.conceptId || lastInQueue.text === selectedCard.text) {
-            continue;
-          }
-        }
-        windowCards.push(selectedCard);
-        usedConcepts.add(windowConcepts[selectedConceptIdx]);
-        windowConcepts.splice(selectedConceptIdx, 1);
-        isFirstCard = false;
-      }
     }
     
-    queue.push(...windowCards);
-    conceptIndex += windowSize;
+    if (selectedCard && selectedConceptIdx >= 0) {
+      queue.push(selectedCard);
+      usedConcepts.add(availableConcepts[selectedConceptIdx]);
+      availableConcepts.splice(selectedConceptIdx, 1);
+      isFirstCard = false;
+    }
   }
 
-  return { queue, reservePool: flashcards };
+  return { 
+    queue, 
+    reservePool: flashcards,
+    maxInteractions: MAX_INTERACTIONS_PER_SESSION
+  };
 }
 
 export function processResponse(
@@ -235,12 +232,14 @@ export function processResponse(
   currentIndex: number,
   reservePool: Flashcard[],
   learningState: Record<string, ConceptLearningState>,
-  seenConceptIds: Set<string>
+  seenConceptIds: Set<string>,
+  interactionCount: number = 0
 ): {
   updatedQueue: Flashcard[];
   updatedState: Record<string, ConceptLearningState>;
   updatedReservePool: Flashcard[];
   updatedSeenConcepts: Set<string>;
+  shouldEndSession: boolean;
 } {
   const conceptId = currentCard.conceptId;
   
@@ -279,14 +278,18 @@ export function processResponse(
   let updatedQueue = [...currentQueue];
   const updatedReservePool = [...reservePool];
 
+  const newInteractionCount = interactionCount + 1;
+  const shouldEndSession = newInteractionCount >= MAX_INTERACTIONS_PER_SESSION;
+  
   const conceptAppearedCount = updatedQueue.filter(c => c.conceptId === conceptId).length;
   
-  if (conceptAppearedCount >= 3) {
+  if (conceptAppearedCount >= 3 || shouldEndSession) {
     return {
       updatedQueue,
       updatedState,
       updatedReservePool,
       updatedSeenConcepts,
+      shouldEndSession,
     };
   }
 
@@ -329,6 +332,7 @@ export function processResponse(
     updatedState,
     updatedReservePool,
     updatedSeenConcepts,
+    shouldEndSession,
   };
 }
 

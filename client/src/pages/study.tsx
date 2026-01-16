@@ -43,16 +43,20 @@ export default function Study() {
   const [showFeedback, setShowFeedback] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [interactiveAnswered, setInteractiveAnswered] = useState(false);
+  const [interactionCount, setInteractionCount] = useState(0);
+  const [maxInteractions, setMaxInteractions] = useState(18);
 
   // Initialize session queue when flashcards load or session changes
   useEffect(() => {
     if (flashcards && flashcards.length > 0 && initializedSession !== sessionNumber) {
-      const { queue, reservePool: pool } = buildSessionQueue(flashcards);
+      const { queue, reservePool: pool, maxInteractions: max } = buildSessionQueue(flashcards);
       setSessionQueue(queue);
       setReservePool(pool);
+      setMaxInteractions(max);
       setLearningState(getLearningState());
       setSeenConceptIds(new Set());
       setCurrentIndex(0);
+      setInteractionCount(0);
       setUserResponse(null);
       setShowFeedback(false);
       setIsFlipped(false);
@@ -83,9 +87,12 @@ export default function Study() {
       currentIndex,
       reservePool,
       learningState,
-      seenConceptIds
+      seenConceptIds,
+      interactionCount
     );
 
+    const newCount = interactionCount + 1;
+    setInteractionCount(newCount);
     setSessionQueue(result.updatedQueue);
     setLearningState(result.updatedState);
     setReservePool(result.updatedReservePool);
@@ -95,9 +102,9 @@ export default function Study() {
     setIsFlipped(false);
     setInteractiveAnswered(false);
 
-    // Check if session is complete
+    // Check if session is complete (reached max interactions or end of queue)
     const nextIndex = currentIndex + 1;
-    if (nextIndex >= result.updatedQueue.length) {
+    if (result.shouldEndSession || nextIndex >= result.updatedQueue.length) {
       // Save final state before completing
       saveLearningState(result.updatedState);
       saveSessionHistory({
@@ -108,7 +115,7 @@ export default function Study() {
     } else {
       setCurrentIndex(nextIndex);
     }
-  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactiveAnswered]);
+  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactiveAnswered, interactionCount]);
 
   // Handle response and advance to next card (for standard cards)
   const handleResponseAndAdvance = useCallback((gotItRight: boolean) => {
@@ -128,11 +135,14 @@ export default function Study() {
       currentIndex,
       reservePool,
       learningState,
-      seenConceptIds
+      seenConceptIds,
+      interactionCount
     );
 
     // Delay to show feedback briefly
     setTimeout(() => {
+      const newCount = interactionCount + 1;
+      setInteractionCount(newCount);
       setSessionQueue(result.updatedQueue);
       setLearningState(result.updatedState);
       setReservePool(result.updatedReservePool);
@@ -142,9 +152,9 @@ export default function Study() {
       setIsFlipped(false);
       setInteractiveAnswered(false);
 
-      // Check if session is complete
+      // Check if session is complete (reached max interactions or end of queue)
       const nextIndex = currentIndex + 1;
-      if (nextIndex >= result.updatedQueue.length) {
+      if (result.shouldEndSession || nextIndex >= result.updatedQueue.length) {
         // Save final state before completing
         saveLearningState(result.updatedState);
         saveSessionHistory({
@@ -156,7 +166,7 @@ export default function Study() {
         setCurrentIndex(nextIndex);
       }
     }, 400);
-  }, [currentIndex, sessionQueue, reservePool, learningState, seenConceptIds, setLocation]);
+  }, [currentIndex, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactionCount]);
 
   // Keyboard shortcuts
   useEffect(() => {

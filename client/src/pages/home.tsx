@@ -48,7 +48,7 @@ export default function Home() {
           </p>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Clock className="w-4 h-4" />
-            <span className="text-sm" data-testid="text-time-estimate">Complete in about 5 minutes.</span>
+            <span className="text-sm" data-testid="text-time-estimate">Complete in about 2-3 minutes.</span>
           </div>
         </div>
 

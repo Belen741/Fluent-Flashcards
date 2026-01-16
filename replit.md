@@ -41,13 +41,17 @@ Preferred communication style: Simple, everyday language.
 **Concept-Variant Model**: Each vocabulary concept has three variant types (intro, cloze, mcq) stored as separate flashcard records linked by `conceptId`. This enables camouflaged repetition where struggling users see different presentations of the same concept.
 
 **Session Queue Algorithm (Duolingo-Style)**: Located in `client/src/utils/sessionQueue.ts`, builds a varied session with invisible spaced repetition:
-- Initial queue mixes card types: ~60% intro, ~20% cloze, ~20% mcq per 10-card window
+- **New concepts per session**: 5 (configurable via `NEW_CONCEPTS_PER_SESSION`)
+- **Total interactions**: 12-18 (max 18, ideal 14-16)
+- Initial queue mixes card types: ~60% intro, ~20% cloze, ~20% mcq
 - First card is always intro (standard learning card)
 - Never shows same concept twice in a row
 - On failure: reinserts concept 2-5 positions ahead in different format
 - On success (low streak): may reinsert 8-14 positions ahead for proactive practice
 - Max 3 appearances per concept per session
+- If repetition exceeds max interactions: ends session gracefully
 - All repetition is invisible to user - feels like variety, not review
+- Sessions feel short, achievable, and friendly (~2-3 minutes)
 
 ### Recent UX Improvements (Jan 2026)
 
