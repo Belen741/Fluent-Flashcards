@@ -202,7 +202,7 @@ export default function Study() {
                 >
                   <Card className="h-full flex flex-col overflow-hidden">
                     {/* Image Section */}
-                    <div className="h-[55%] w-full bg-secondary/30 relative flex items-center justify-center">
+                    <div className="h-[65%] w-full bg-secondary/30 relative flex items-center justify-center">
                       <img 
                         src={getImageUrl(currentCard)} 
                         alt={currentCard.englishText}
@@ -217,21 +217,20 @@ export default function Study() {
                           {currentCard.category}
                         </span>
                       </div>
-                    </div>
-
-                    {/* Content Section - Front */}
-                    <div className="flex-1 flex flex-col items-center justify-center p-5 text-center relative">
                       <Button
                         variant="default"
                         size="icon"
                         onClick={(e) => { e.stopPropagation(); playAudio(); }}
                         data-testid="button-audio"
-                        className="absolute -top-5 rounded-full shadow-md"
+                        className="absolute -bottom-5 rounded-full shadow-md"
                       >
                         <Volume2 className="h-5 w-5" />
                       </Button>
-                      
-                      <div className="space-y-3 mt-3">
+                    </div>
+
+                    {/* Content Section - Front */}
+                    <div className="flex-1 flex flex-col items-center justify-center p-4 text-center">
+                      <div className="space-y-3 mt-2">
                         <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
                           {currentCard.text}
                         </h2>
