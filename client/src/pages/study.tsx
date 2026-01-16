@@ -30,6 +30,7 @@ export default function Study() {
   const [userResponse, setUserResponse] = useState<"correct" | "incorrect" | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   // Initialize session queue when flashcards load
   useEffect(() => {
@@ -71,6 +72,7 @@ export default function Study() {
     setSeenConceptIds(result.updatedSeenConcepts);
     setUserResponse(null);
     setShowFeedback(false);
+    setIsFlipped(false);
 
     // Check if session is complete
     const nextIndex = currentIndex + 1;
@@ -171,7 +173,7 @@ export default function Study() {
         </div>
 
         {/* Flashcard Area */}
-        <div className="relative h-[380px] w-full p-1">
+        <div className="relative h-[380px] w-full p-1 perspective-1000">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentCard.id + "-" + currentIndex}
@@ -181,56 +183,121 @@ export default function Study() {
               transition={{ duration: 0.25, ease: "easeOut" }}
               className="w-full h-full"
             >
-              <Card className="h-full flex flex-col overflow-hidden">
-                {/* Image Section */}
-                <div className="h-[55%] w-full bg-secondary/30 relative flex items-center justify-center">
-                  <img 
-                    src={getImageUrl(currentCard)} 
-                    alt={currentCard.englishText}
-                    className="max-w-full max-h-full object-contain"
-                    data-testid={`img-flashcard-${currentCard.id}`}
-                  />
-                  <div className="absolute top-3 right-3">
-                    <span 
-                      className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground uppercase tracking-wide"
-                      data-testid={`text-category-${currentCard.id}`}
-                    >
-                      {currentCard.category}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content Section */}
-                <div className="flex-1 flex flex-col items-center justify-center p-5 text-center relative">
-                  <Button
-                    variant="default"
-                    size="icon"
-                    onClick={playAudio}
-                    data-testid="button-audio"
-                    className="absolute -top-5 rounded-full shadow-md"
-                  >
-                    <Volume2 className="h-5 w-5" />
-                  </Button>
-                  
-                  <div className="space-y-2 mt-3">
-                    <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
-                      {currentCard.text}
-                    </h2>
-                    <AnimatePresence>
-                      {showFeedback && userResponse && (
-                        <motion.p 
-                          initial={{ opacity: 0, y: 5 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="text-base text-muted-foreground" 
-                          data-testid="text-english-translation"
+              <div 
+                className="relative w-full h-full cursor-pointer"
+                style={{ transformStyle: "preserve-3d" }}
+                onClick={() => setIsFlipped(!isFlipped)}
+                data-testid="flashcard-container"
+              >
+                {/* Front of card */}
+                <motion.div
+                  className="absolute inset-0"
+                  initial={false}
+                  animate={{ 
+                    rotateY: isFlipped ? 180 : 0,
+                    opacity: isFlipped ? 0 : 1 
+                  }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  style={{ backfaceVisibility: "hidden" }}
+                >
+                  <Card className="h-full flex flex-col overflow-hidden">
+                    {/* Image Section */}
+                    <div className="h-[55%] w-full bg-secondary/30 relative flex items-center justify-center">
+                      <img 
+                        src={getImageUrl(currentCard)} 
+                        alt={currentCard.englishText}
+                        className="max-w-full max-h-full object-contain"
+                        data-testid={`img-flashcard-${currentCard.id}`}
+                      />
+                      <div className="absolute top-3 right-3">
+                        <span 
+                          className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground uppercase tracking-wide"
+                          data-testid={`text-category-${currentCard.id}`}
                         >
+                          {currentCard.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content Section - Front */}
+                    <div className="flex-1 flex flex-col items-center justify-center p-5 text-center relative">
+                      <Button
+                        variant="default"
+                        size="icon"
+                        onClick={(e) => { e.stopPropagation(); playAudio(); }}
+                        data-testid="button-audio"
+                        className="absolute -top-5 rounded-full shadow-md"
+                      >
+                        <Volume2 className="h-5 w-5" />
+                      </Button>
+                      
+                      <div className="space-y-2 mt-3">
+                        <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
+                          {currentCard.text}
+                        </h2>
+                        <p className="text-xs text-muted-foreground">
+                          Toca para ver la traducción
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+
+                {/* Back of card */}
+                <motion.div
+                  className="absolute inset-0"
+                  initial={false}
+                  animate={{ 
+                    rotateY: isFlipped ? 0 : -180,
+                    opacity: isFlipped ? 1 : 0 
+                  }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  style={{ backfaceVisibility: "hidden" }}
+                >
+                  <Card className="h-full flex flex-col overflow-hidden bg-primary/5">
+                    {/* Image Section */}
+                    <div className="h-[55%] w-full bg-secondary/30 relative flex items-center justify-center">
+                      <img 
+                        src={getImageUrl(currentCard)} 
+                        alt={currentCard.englishText}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                      <div className="absolute top-3 right-3">
+                        <span 
+                          className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground uppercase tracking-wide"
+                        >
+                          {currentCard.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content Section - Back */}
+                    <div className="flex-1 flex flex-col items-center justify-center p-5 text-center relative">
+                      <Button
+                        variant="default"
+                        size="icon"
+                        onClick={(e) => { e.stopPropagation(); playAudio(); }}
+                        data-testid="button-audio-back"
+                        className="absolute -top-5 rounded-full shadow-md"
+                      >
+                        <Volume2 className="h-5 w-5" />
+                      </Button>
+                      
+                      <div className="space-y-3 mt-3">
+                        <p className="text-lg text-muted-foreground" data-testid="text-spanish-back">
+                          {currentCard.text}
+                        </p>
+                        <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-english-translation">
                           {currentCard.englishText}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </div>
-              </Card>
+                        </h2>
+                        <p className="text-xs text-muted-foreground">
+                          Toca para volver
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
