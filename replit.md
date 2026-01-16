@@ -40,7 +40,14 @@ Preferred communication style: Simple, everyday language.
 
 **Concept-Variant Model**: Each vocabulary concept has three variant types (intro, cloze, mcq) stored as separate flashcard records linked by `conceptId`. This enables camouflaged repetition where struggling users see different presentations of the same concept.
 
-**Session Queue Algorithm**: Located in `client/src/utils/sessionQueue.ts`, builds a dynamic queue that interleaves concepts and reinjects variants when users mark "No lo supe" (didn't know it).
+**Session Queue Algorithm (Duolingo-Style)**: Located in `client/src/utils/sessionQueue.ts`, builds a varied session with invisible spaced repetition:
+- Initial queue mixes card types: ~60% intro, ~20% cloze, ~20% mcq per 10-card window
+- First card is always intro (standard learning card)
+- Never shows same concept twice in a row
+- On failure: reinserts concept 2-5 positions ahead in different format
+- On success (low streak): may reinsert 8-14 positions ahead for proactive practice
+- Max 3 appearances per concept per session
+- All repetition is invisible to user - feels like variety, not review
 
 ### Recent UX Improvements (Jan 2026)
 
@@ -53,8 +60,9 @@ Preferred communication style: Simple, everyday language.
 
 **Response System**: 
 - Standard cards: Users mark "I knew it" or "I didn't know" to track progress
-- Interactive cards (cloze/mcq): Auto-submit on option selection; Next button disabled until answer is provided
-- When marking "I didn't know" or getting interactive cards wrong, a variant card is silently inserted 2-3 steps ahead for reinforcement
+- Interactive cards (cloze/mcq): Auto-submit on option selection; Next button appears after answering
+- When marking "I didn't know" or getting interactive cards wrong, a variant card is silently inserted 2-5 steps ahead for reinforcement
+- Quick Fill cards show audio button; Quick Pick cards do not show audio button
 
 **Micro-Feedback**: Brief encouraging messages appear after responses ("Great job!" for correct, "Keep going!" for incorrect).
 

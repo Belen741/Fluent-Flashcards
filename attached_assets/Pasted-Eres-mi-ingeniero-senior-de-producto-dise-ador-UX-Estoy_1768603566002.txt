@@ -1,0 +1,106 @@
+Eres mi ingeniero senior de producto + diseñador UX.
+Estoy construyendo una web de flashcards llamada “Spanish for Nurses”.
+La experiencia debe sentirse como Duolingo / Babbel:
+rápida, fluida, motivante, con variedad,
+y NUNCA como castigo o examen.
+
+REGLA DE PRODUCTO (NO NEGOCIABLE):
+El usuario paga por SENTIR progreso, variedad y novedad.
+NO debe sentir:
+- repetición explícita
+- fricción
+- “esto me retrasa”
+Nunca muestres palabras como:
+“repetición espaciada”, “intervalos”, “pendiente”, “dificultad”, “conteo de repeticiones”.
+
+PROBLEMA ACTUAL (CORREGIR):
+El sistema actual muestra:
+Tarjeta normal → “I didn’t know” → Cloze → “I didn’t know” → MCQ.
+Esto se siente como castigo.
+Debes reemplazar esta lógica.
+
+OBJETIVO:
+Implementar “repetición espaciada invisible” usando práctica camuflada:
+- Tarjeta normal (aprender)
+- Quick Fill (cloze disfrazado)
+- Quick Pick (opción múltiple disfrazada)
+Todo debe sentirse como tipos distintos de tarjetas, no como ejercicios.
+
+CAMPOS DISPONIBLES POR TARJETA (Excel ya existe):
+- es, en
+- audio_file, image_file
+- cloze_option_1..4, cloze_correct
+- mcq_question_es, mcq_option_en_1..3, mcq_correct_en
+
+EXPERIENCIA OBLIGATORIA (ESTILO DUOLINGO):
+
+1) SIEMPRE iniciar con tarjeta normal:
+- imagen
+- botón de audio
+- frase en español
+- botón “Show translation”
+- autoevaluación: “I knew it” / “I didn’t know”
+
+2) Práctica camuflada PROACTIVA (no solo por error):
+- A veces, incluso si el usuario marca “I knew it”, la tarjeta reaparece después
+  como Quick Fill o Quick Pick.
+- Esto debe sentirse como VARIEDAD, no como corrección.
+
+3) NUNCA mostrar cloze o mcq inmediatamente después de “I didn’t know”.
+- En su lugar, reinsertar una tarjeta relacionada 2–5 posiciones más adelante.
+- Mantener el ritmo y la sensación de avance.
+
+SCHEDULER (LÓGICA INTERNA SIMPLE, INVISIBLE):
+
+Al generar una sesión:
+- Priorizar tarjetas normales (sensación de avance rápido).
+- En cada 10 pasos:
+  - máximo 6 tarjetas normales
+  - máximo 2 Quick Fill
+  - máximo 2 Quick Pick
+- Nunca mostrar la misma frase en español dos veces seguidas.
+- Si una tarjeta no tiene cloze o mcq, mostrarla solo como tarjeta normal.
+
+REINSERCIÓN (CLAVE):
+- Si el usuario marca “I didn’t know” o falla en Quick Fill / Quick Pick:
+  - reinsertar el MISMO concepto pronto (+2 a +5 posiciones)
+  - pero en un FORMATO DIFERENTE la siguiente vez
+- Si el usuario acierta:
+  - enviar el concepto más lejos (+8 a +14 posiciones)
+  - o marcarlo como “aprendido hoy” (para siguiente día)
+- Máximo 3 apariciones del mismo concepto por sesión (evitar tedio).
+
+SELECCIÓN DE FORMATO:
+- Formato por defecto: tarjeta normal.
+- Probabilidad de Quick Fill:
+  - si antes lo sabía: 15–25%
+  - si antes NO lo sabía: 60–80%
+- Quick Pick debe alternarse con Quick Fill para sensación de novedad.
+- Nunca más de UNA interacción por paso.
+
+UX (SÍ MOSTRAR):
+- “TODAY’S SESSION”
+- barra de progreso
+- “Card X of Y”
+- micro-mensajes motivadores: “You’re doing great”, “Keep going”
+- pantalla final: “Session completed”
+
+UX (NO MOSTRAR):
+- conteos de repetición
+- palabras “review”, “due”, “spaced repetition”
+- métricas técnicas
+
+PERSISTENCIA:
+Usar localStorage por ahora:
+- por concepto: lastSeen, streak, estabilidad simple, nextDue (interno)
+Nunca mostrar estos datos al usuario.
+
+ENTREGABLE:
+1) Mapear correctamente los campos del Excel al modelo de tarjeta.
+2) Implementar el generador de sesión con reinserción y variedad.
+3) Renderizar los 3 tipos de tarjeta:
+   - Normal
+   - Quick Fill
+   - Quick Pick
+4) Reemplazar completamente la lógica actual de castigo por error.
+No hagas preguntas. Toma decisiones razonables e implementa.
