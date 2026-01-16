@@ -42,6 +42,18 @@ Preferred communication style: Simple, everyday language.
 
 **Session Queue Algorithm**: Located in `client/src/utils/sessionQueue.ts`, builds a dynamic queue that interleaves concepts and reinjects variants when users mark "No lo supe" (didn't know it).
 
+### Recent UX Improvements (Jan 2026)
+
+**Spanish UI Text**: All user-facing text is in Spanish for the target nurse audience.
+
+**Response System**: Users mark "Lo supe" (I knew it) or "No lo supe" (I didn't know it) to track progress. When marking "No lo supe", a variant card is silently inserted 2-3 steps ahead for reinforcement.
+
+**Micro-Feedback**: Brief encouraging messages appear after responses ("Muy bien." for correct, "Sigue adelante." for incorrect).
+
+**Keyboard Shortcuts**: Press 1 for "Lo supe", 2 for "No lo supe", Enter to proceed.
+
+**Session Flow**: Home shows dynamic card count and time estimate. Study page has minimal progress bar and status messaging. Completion page offers "Repetir sesión" option.
+
 ## External Dependencies
 
 ### Database
