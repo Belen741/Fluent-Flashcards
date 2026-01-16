@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Volume2, Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Flashcard } from "@shared/schema";
-import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
+import { getAudioUrl } from "@/utils/mediaResolver";
 
 interface QuickFillCardProps {
   card: Flashcard;
@@ -52,15 +52,9 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
 
   return (
     <Card className="h-full flex flex-col overflow-hidden" data-testid="quick-fill-card">
-      <div className="h-[35%] w-full bg-secondary/30 relative flex items-center justify-center">
-        <img 
-          src={getImageUrl(card)} 
-          alt={card.englishText}
-          className="max-w-full max-h-full object-contain"
-          data-testid={`img-quickfill-${card.id}`}
-        />
-        <div className="absolute top-3 right-3">
-          <span className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground">
+      <div className="flex flex-col items-center justify-center pt-6 pb-4">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="px-2.5 py-1 bg-secondary/50 text-xs font-medium rounded-full text-muted-foreground">
             {card.category}
           </span>
         </div>
@@ -69,16 +63,16 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
           size="icon"
           onClick={(e) => { e.stopPropagation(); playAudio(); }}
           data-testid="button-audio-quickfill"
-          className="absolute -bottom-5 rounded-full shadow-md"
+          className="rounded-full shadow-md h-14 w-14"
         >
-          <Volume2 className="h-5 w-5" />
+          <Volume2 className="h-7 w-7" />
         </Button>
-      </div>
-
-      <div className="flex-1 flex flex-col p-3 pt-6">
-        <p className="text-center text-sm text-muted-foreground mb-2" data-testid="text-quickfill-prompt">
+        <p className="text-center text-sm text-muted-foreground mt-3" data-testid="text-quickfill-prompt">
           Which option matches the audio?
         </p>
+      </div>
+
+      <div className="flex-1 flex flex-col p-3">
         
         <div className="flex-1 flex flex-col justify-center gap-1.5">
           {shuffledOptions.map((option, index) => (
