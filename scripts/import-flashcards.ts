@@ -57,12 +57,16 @@ function importFlashcards(xlsxPath: string, deckId: string): FlashcardVariant[] 
     const tags = [row.tag_1, row.tag_2].filter((t): t is string => !!t && t.trim() !== "");
     const category = tags[0] || "General";
 
+    // Map deck file name to R2 folder (mazo_01_admision -> mazo-1)
+    const deckNumber = deckId.match(/mazo_(\d+)/)?.[1] || "1";
+    const r2Folder = `mazo-${parseInt(deckNumber)}`;
+
     const baseCard = {
       conceptId: row.card_id,
       deckId,
       tags,
-      imageKey: row.image_file ? `${deckId}/images/${row.image_file}` : null,
-      audioKey: row.audio_file ? `${deckId}/audio/${row.audio_file}` : null,
+      imageKey: row.image_file ? `${r2Folder}/imagenes/${row.image_file}` : null,
+      audioKey: row.audio_file ? `${r2Folder}/audios/${row.audio_file}` : null,
       category,
       imageUrl: "",
       audioUrl: "",
