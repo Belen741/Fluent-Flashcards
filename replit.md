@@ -64,7 +64,7 @@ Preferred communication style: Simple, everyday language.
 - `imageKey`: Logical path for CDN (e.g., "mazo_01/images/001.webp")
 - `audioKey`: Logical path for CDN (e.g., "mazo_01/audio/001.mp3")
 
-**Future CDN Switch**: When ready to use Cloudflare R2, only `mediaResolver.ts` needs modification. No component changes required.
+**CDN Active**: Cloudflare R2 is now connected via `mediaResolver.ts`. Cards with `imageKey`/`audioKey` load from `https://pub-1fbc99701cda4b24becbb4123415045d.r2.dev/`. Cards without keys fall back to `imageUrl`/`audioUrl` or placeholder.
 
 ## External Dependencies
 
