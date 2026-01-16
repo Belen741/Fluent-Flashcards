@@ -14,6 +14,7 @@ import {
   saveLearningState,
   saveSessionHistory,
 } from "@/utils/sessionQueue";
+import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
 import type { Flashcard, ConceptLearningState } from "@shared/schema";
 
 export default function Study() {
@@ -126,7 +127,15 @@ export default function Study() {
   const progress = ((currentIndex + 1) / totalCards) * 100;
 
   const playAudio = () => {
-    console.log("Playing audio for:", currentCard.text);
+    const audioUrl = getAudioUrl(currentCard);
+    if (audioUrl) {
+      const audio = new Audio(audioUrl);
+      audio.play().catch(() => {
+        console.log("Audio not available for:", currentCard.text);
+      });
+    } else {
+      console.log("No audio URL for:", currentCard.text);
+    }
   };
 
   // Micro-feedback message
@@ -176,7 +185,7 @@ export default function Study() {
                 {/* Image Section */}
                 <div className="h-[48%] w-full bg-secondary/20 relative overflow-hidden">
                   <img 
-                    src={currentCard.imageUrl} 
+                    src={getImageUrl(currentCard)} 
                     alt={currentCard.englishText}
                     className="w-full h-full object-cover"
                     data-testid={`img-flashcard-${currentCard.id}`}

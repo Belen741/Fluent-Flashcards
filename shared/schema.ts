@@ -11,6 +11,10 @@ export const flashcards = pgTable("flashcards", {
   conceptId: text("concept_id").notNull(),
   variantType: text("variant_type").notNull(), // "intro" | "cloze" | "mcq"
   category: text("category").notNull(),
+  deckId: text("deck_id"),
+  tags: text("tags").array(),
+  imageKey: text("image_key"),
+  audioKey: text("audio_key"),
 });
 
 export const insertFlashcardSchema = createInsertSchema(flashcards).omit({ id: true });

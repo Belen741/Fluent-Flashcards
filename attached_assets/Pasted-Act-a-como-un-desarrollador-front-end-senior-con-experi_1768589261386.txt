@@ -1,0 +1,98 @@
+Actúa como un desarrollador front-end senior con experiencia en apps de aprendizaje y uso de CDN (Cloudflare R2).
+
+Contexto:
+Existe una app en React con:
+- Home
+- Sesión de flashcards
+- Lógica invisible de repetición
+- UX refinado (barra, micro-copy, ritmo)
+- Datos locales (flashcards con placeholders de imagen y audio)
+
+OBJETIVO:
+Preparar el código para que en el futuro pueda cargar imágenes y audios desde Cloudflare R2,
+SIN subir archivos todavía y SIN romper el flujo actual de la app.
+
+⚠️ Importante:
+NO conectar aún con Cloudflare real.
+NO subir archivos.
+NO cambiar comportamiento visible de la app.
+Solo preparar la estructura.
+
+--------------------------------
+1) Estructura de datos (preparación)
+--------------------------------
+Actualiza el modelo de cada flashcard para que incluya:
+
+- deckId: string
+- tags: string[]
+- imageKey: string | null   // ruta lógica, no URL real
+- audioKey: string | null   // ruta lógica, no URL real
+- imageUrl: string          // placeholder por ahora
+- audioUrl: string | null   // placeholder por ahora
+
+Ejemplo de imageKey / audioKey (solo como estructura):
+- "mazo_01_admision/images/001.webp"
+- "mazo_01_admision/audio/001.mp3"
+
+--------------------------------
+2) Funciones centralizadas para resolver URLs
+--------------------------------
+Crea un archivo nuevo:
+
+/src/utils/mediaResolver.ts
+
+Con dos funciones:
+
+- getImageUrl(card)
+- getAudioUrl(card)
+
+Comportamiento ACTUAL (por ahora):
+- Si existe imageUrl → devolver imageUrl
+- Si no → devolver imagen placeholder
+- Audio puede devolver null o placeholder
+
+Estas funciones se usarán en la UI en lugar de acceder directamente a URLs.
+
+--------------------------------
+3) Uso en componentes
+--------------------------------
+Refactoriza los componentes de sesión para que:
+- NUNCA usen URLs directas
+- SIEMPRE usen getImageUrl(card) y getAudioUrl(card)
+
+Esto debe funcionar igual que antes para el usuario.
+
+--------------------------------
+4) Configuración futura (comentada)
+--------------------------------
+Agrega en mediaResolver.ts comentarios claros como:
+
+// FUTURO:
+// const CLOUDFLARE_BASE_URL = "https://cdn.tudominio.com/"
+// return `${CLOUDFLARE_BASE_URL}${card.imageKey}`
+
+Pero NO activar aún esta lógica.
+
+--------------------------------
+5) Ventajas de esta preparación
+--------------------------------
+Asegúrate de que el código quede preparado para que:
+- Cambiar de placeholders a Cloudflare requiera tocar SOLO mediaResolver.ts
+- No sea necesario modificar componentes ni lógica de sesión
+- La app siga compilando y funcionando igual que antes
+
+--------------------------------
+ENTREGABLE
+--------------------------------
+- Código actualizado con esta preparación
+- Indicar qué archivos se modificaron
+- Confirmar que todo sigue funcionando en Replit
+
+--------------------------------
+NO HACER
+--------------------------------
+- NO subir archivos
+- NO configurar buckets
+- NO agregar variables de entorno reales
+- NO agregar dependencias nuevas
+- NO romper la UI existente
