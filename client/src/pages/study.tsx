@@ -231,13 +231,18 @@ export default function Study() {
                         <Volume2 className="h-5 w-5" />
                       </Button>
                       
-                      <div className="space-y-2 mt-3">
+                      <div className="space-y-3 mt-3">
                         <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
                           {currentCard.text}
                         </h2>
-                        <p className="text-xs text-muted-foreground">
-                          Toca para ver la traducción
-                        </p>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={(e) => { e.stopPropagation(); setIsFlipped(true); }}
+                          data-testid="button-show-translation"
+                        >
+                          Show translation
+                        </Button>
                       </div>
                     </div>
                   </Card>
@@ -284,15 +289,20 @@ export default function Study() {
                       </Button>
                       
                       <div className="space-y-3 mt-3">
-                        <p className="text-lg text-muted-foreground" data-testid="text-spanish-back">
+                        <p className="text-base text-muted-foreground" data-testid="text-spanish-back">
                           {currentCard.text}
                         </p>
                         <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-english-translation">
                           {currentCard.englishText}
                         </h2>
-                        <p className="text-xs text-muted-foreground">
-                          Toca para volver
-                        </p>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={(e) => { e.stopPropagation(); setIsFlipped(false); }}
+                          data-testid="button-hide-translation"
+                        >
+                          Hide translation
+                        </Button>
                       </div>
                     </div>
                   </Card>
