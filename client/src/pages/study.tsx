@@ -183,11 +183,11 @@ export default function Study() {
             >
               <Card className="h-full flex flex-col overflow-hidden">
                 {/* Image Section */}
-                <div className="h-[48%] w-full bg-secondary/20 relative overflow-hidden">
+                <div className="h-[55%] w-full bg-secondary/30 relative flex items-center justify-center">
                   <img 
                     src={getImageUrl(currentCard)} 
                     alt={currentCard.englishText}
-                    className="w-full h-full object-cover"
+                    className="max-w-full max-h-full object-contain"
                     data-testid={`img-flashcard-${currentCard.id}`}
                   />
                   <div className="absolute top-3 right-3">
@@ -213,12 +213,21 @@ export default function Study() {
                   </Button>
                   
                   <div className="space-y-2 mt-3">
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground" data-testid="text-spanish-word">
+                    <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
                       {currentCard.text}
                     </h2>
-                    <p className="text-base text-muted-foreground" data-testid="text-english-translation">
-                      {currentCard.englishText}
-                    </p>
+                    <AnimatePresence>
+                      {showFeedback && userResponse && (
+                        <motion.p 
+                          initial={{ opacity: 0, y: 5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-base text-muted-foreground" 
+                          data-testid="text-english-translation"
+                        >
+                          {currentCard.englishText}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
               </Card>
