@@ -45,31 +45,31 @@ export function QuickPickCard({ card, onAnswer }: QuickPickCardProps) {
 
   return (
     <Card className="h-full flex flex-col overflow-hidden" data-testid="quick-pick-card">
-      <div className="h-[40%] w-full bg-secondary/30 relative flex items-center justify-center">
+      <div className="h-[30%] w-full bg-secondary/30 relative flex items-center justify-center">
         <img 
           src={getImageUrl(card)} 
           alt={card.englishText}
           className="max-w-full max-h-full object-contain"
           data-testid={`img-quickpick-${card.id}`}
         />
-        <div className="absolute top-3 right-3">
-          <span className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground">
+        <div className="absolute top-2 right-2">
+          <span className="px-2 py-0.5 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground">
             {card.category}
           </span>
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col p-4">
-        <div className="text-center mb-4">
-          <p className="text-sm text-muted-foreground mb-2" data-testid="text-quickpick-prompt">
+      <div className="flex-1 flex flex-col p-3">
+        <div className="text-center mb-2">
+          <p className="text-xs text-muted-foreground mb-1" data-testid="text-quickpick-prompt">
             What does this mean?
           </p>
-          <h2 className="text-lg font-bold text-foreground" data-testid="text-spanish-question">
+          <h2 className="text-base font-bold text-foreground" data-testid="text-spanish-question">
             {questionEs}
           </h2>
         </div>
         
-        <div className="flex-1 flex flex-col justify-center gap-2">
+        <div className="flex-1 flex flex-col justify-center gap-1.5">
           {shuffledOptions.map((option, index) => (
             <motion.div
               key={option}
@@ -79,7 +79,7 @@ export function QuickPickCard({ card, onAnswer }: QuickPickCardProps) {
             >
               <Button
                 variant={getButtonVariant(option)}
-                className="w-full justify-start text-left h-auto py-3 px-4 whitespace-normal"
+                className="w-full justify-start text-left h-auto py-2.5 px-3 whitespace-normal text-sm"
                 onClick={() => handleSelect(option)}
                 disabled={showResult}
                 data-testid={`button-option-${index}`}
