@@ -66,6 +66,19 @@ Preferred communication style: Simple, everyday language.
 
 **CDN Active**: Cloudflare R2 is now connected via `mediaResolver.ts`. Cards with `imageKey`/`audioKey` load from `https://pub-1fbc99701cda4b24becbb4123415045d.r2.dev/`. Cards without keys fall back to `imageUrl`/`audioUrl` or placeholder.
 
+### Flashcard Import System
+
+**Excel Import**: Place `.xlsx` files in `client/src/data/raw/` and run:
+```bash
+npx tsx scripts/import-flashcards.ts
+```
+
+**Excel Format** (columns): deck, card_id, es, en, audio_file, image_file, cloze_option_1-4, cloze_correct, mcq_question_es, mcq_option_en_1-3, mcq_correct_en, tag_1, tag_2
+
+**Generated Output**: `client/src/data/flashcards.ts` with 3 variants per concept (intro, cloze, mcq)
+
+**To update database**: After regenerating flashcards.ts, delete existing cards and restart the app to re-seed.
+
 ## External Dependencies
 
 ### Database
