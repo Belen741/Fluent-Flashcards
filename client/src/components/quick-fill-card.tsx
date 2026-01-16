@@ -5,6 +5,7 @@ import { Volume2, Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Flashcard } from "@shared/schema";
 import { getAudioUrl } from "@/utils/mediaResolver";
+import { playCorrectSound, playIncorrectSound } from "@/utils/audioFeedback";
 
 interface QuickFillCardProps {
   card: Flashcard;
@@ -37,6 +38,12 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
     setShowResult(true);
     
     const isCorrect = option === correctAnswer;
+    
+    if (isCorrect) {
+      playCorrectSound();
+    } else {
+      playIncorrectSound();
+    }
     
     setTimeout(() => {
       onAnswer(isCorrect);
