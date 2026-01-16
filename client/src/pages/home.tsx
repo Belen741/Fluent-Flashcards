@@ -3,10 +3,10 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { useFlashcards } from "@/hooks/use-flashcards";
 import { Loader2, BookOpen, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
-import { buildSessionQueue, getSessionsCompletedToday } from "@/utils/sessionQueue";
+import { getSessionsCompletedToday } from "@/utils/sessionQueue";
 
 export default function Home() {
-  const { data: flashcards, isLoading } = useFlashcards();
+  const { isLoading } = useFlashcards();
   const sessionsCompleted = getSessionsCompletedToday();
 
   if (isLoading) {
@@ -18,9 +18,6 @@ export default function Home() {
       </Layout>
     );
   }
-
-  // Calculate session size (intro variants only)
-  const sessionCount = flashcards ? buildSessionQueue(flashcards).queue.length : 0;
 
   return (
     <Layout>
@@ -43,8 +40,8 @@ export default function Home() {
               <span className="text-sm">{sessionsCompleted} session{sessionsCompleted !== 1 ? 's' : ''} completed today</span>
             </div>
           )}
-          <p className="text-xl text-foreground font-semibold" data-testid="text-session-count">
-            {sessionsCompleted > 0 ? 'Next session' : "Today's session"}: {sessionCount} cards
+          <p className="text-xl text-foreground font-semibold" data-testid="text-session-header">
+            {sessionsCompleted > 0 ? 'Ready for more?' : "TODAY'S SESSION"}
           </p>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Clock className="w-4 h-4" />
