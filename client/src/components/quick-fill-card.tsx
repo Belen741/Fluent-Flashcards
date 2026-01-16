@@ -77,7 +77,7 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
 
       <div className="flex-1 flex flex-col p-3 pt-6">
         <p className="text-center text-sm text-muted-foreground mb-2" data-testid="text-quickfill-prompt">
-          Which phrase matches this image?
+          Which option matches the audio?
         </p>
         
         <div className="flex-1 flex flex-col justify-center gap-1.5">
