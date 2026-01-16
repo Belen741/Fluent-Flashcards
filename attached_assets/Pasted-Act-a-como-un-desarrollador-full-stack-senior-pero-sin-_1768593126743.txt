@@ -1,0 +1,51 @@
+Actúa como un desarrollador full-stack senior (pero sin backend). Quiero importar mis flashcards desde un archivo Excel y convertirlas a un formato que mi app React ya use.
+
+Tengo un archivo Excel llamado mazo_01_admision.xlsx con estas columnas:
+deck, card_id, es, en, audio_file, image_file,
+cloze_option_1, cloze_option_2, cloze_option_3, cloze_option_4, cloze_correct,
+mcq_question_es, mcq_option_en_1, mcq_option_en_2, mcq_option_en_3, mcq_correct_en,
+tag_1, tag_2
+
+OBJETIVO:
+1) Agrega una carpeta /src/data/raw y asume que yo subiré ahí el archivo: /src/data/raw/mazo_01_admision.xlsx
+2) Crea un script de importación (Node) que lea ese Excel y genere /src/data/flashcards.ts (o flashcards.json) con tarjetas en este formato:
+
+Para cada fila, crear hasta 3 “variantes” con el mismo conceptId:
+A) intro:
+- id: `${card_id}_intro`
+- conceptId: card_id
+- variantType: "intro"
+- textEs: es
+- textEn: en
+- deckId: "mazo_01_admision"
+- tags: [tag_1, tag_2] (filtrar vacíos)
+- imageKey: `mazo_01_admision/images/${image_file}`
+- audioKey: `mazo_01_admision/audio/${audio_file}`
+
+B) cloze (solo si cloze_correct y opciones existen):
+- id: `${card_id}_cloze`
+- conceptId: card_id
+- variantType: "cloze"
+- clozeTextEs: cloze_correct
+- clozeOptionsEs: [cloze_option_1..4]
+- correctOptionEs: cloze_correct (o una columna equivalente si aplica)
+
+C) mcq (solo si mcq_question_es existe):
+- id: `${card_id}_mcq`
+- conceptId: card_id
+- variantType: "mcq"
+- mcqQuestionEs: mcq_question_es
+- mcqOptionsEn: [mcq_option_en_1..3]
+- mcqCorrectEn: mcq_correct_en
+
+3) Integra el output en la app actual:
+- Que la sesión use las variantes "intro" por defecto (como hasta ahora).
+- NO muestres todavía UI de cloze/mcq si no existe; solo deja los datos listos.
+
+4) No agregues dependencias pesadas. Si necesitas leer XLSX, usa una librería estándar (xlsx) y un script simple.
+
+ENTREGABLE:
+- Script de importación
+- Archivo final de datos generado
+- App compilando sin romper nada
+- Instrucciones breves: “sube el xlsx aquí y corre este comando”
