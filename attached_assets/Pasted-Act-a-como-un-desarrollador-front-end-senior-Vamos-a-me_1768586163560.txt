@@ -1,0 +1,88 @@
+Actúa como un desarrollador front-end senior. Vamos a mejorar el MVP existente (React) agregando una lógica interna de “repetición invisible” para las flashcards, sin mostrar nada de spaced repetition al usuario.
+
+OBJETIVO:
+Que durante una sesión, algunas tarjetas reaparezcan de forma camuflada según el desempeño del usuario, pero que la interfaz siga siendo simple: solo “Siguiente”, progreso y contenido.
+
+REQUERIMIENTOS FUNCIONALES:
+
+1) Modelo de datos
+Actualiza los datos de flashcards para que cada tarjeta tenga:
+- id: string
+- text: string
+- imageUrl: string
+- audioUrl: string (placeholder)
+- conceptId: string  (ej. "bp_01")  // identifica el concepto base
+- variantType: "intro" | "cloze" | "mcq"  // tipo de variante (para camuflar repetición)
+
+Incluye al menos 9 tarjetas en total, pero agrupadas en 3 conceptos (3 conceptos x 3 variantes).
+Ejemplo:
+concepto A: 3 variantes (intro/cloze/mcq)
+concepto B: 3 variantes
+concepto C: 3 variantes
+
+2) Estado de aprendizaje (invisible)
+Implementa un estado interno por conceptId:
+- seenCountToday (número)
+- correctStreak (número)
+- lastSeenIndex (número opcional)
+- strength: "new" | "weak" | "strong"
+
+Este estado NO se muestra en UI.
+
+3) Interacción mínima para medir desempeño
+En la pantalla de flashcards, agrega SOLO esto:
+- Dos botones pequeños debajo del contenido:
+  "Lo supe" y "No lo supe"
+
+Estos botones sirven para registrar si el usuario acertó o falló, pero SIN mostrar explicaciones.
+Sigue existiendo el botón principal “Siguiente”.
+
+Comportamiento:
+- El usuario primero marca “Lo supe” o “No lo supe” (opcional).
+- Al presionar “Siguiente”, avanzamos y guardamos el resultado (si no marcó nada, asumir “Lo supe”).
+
+4) Algoritmo de “repetición camuflada” para la cola de sesión
+Al iniciar la sesión, en vez de mostrar simplemente la lista en orden, construye una “sessionQueue” interna con estas reglas:
+
+- Cada concepto debe aparecer 3 veces en la sesión (una por variante), pero separadas entre sí.
+- Si el usuario marca “No lo supe” en un concepto:
+   -> reinsertar (en la cola) otra variante del MISMO conceptId dentro de los próximos 2-3 pasos,
+      siempre que exista una variante no usada todavía.
+- Si marca “Lo supe”:
+   -> no reinsertar pronto; mantener espaciado natural.
+
+Reglas importantes:
+- NO mostrar al usuario que es repetición.
+- NO repetir exactamente la misma tarjeta consecutivamente.
+- Preferir cambiar variantType cuando se repite (intro -> cloze -> mcq, etc.).
+- Al terminar la cola, mostrar “Sesión completada 🎉”.
+
+5) Persistencia (simple)
+Guarda el estado interno en localStorage al finalizar sesión:
+- learningState por conceptId
+- historial mínimo de la última sesión (fecha y conceptos vistos)
+
+Pero NO construyas aún un sistema de calendario o “due dates”.
+Solo persistencia básica.
+
+6) Código
+- Refactoriza en componentes y archivos claros:
+  /src/data/flashcards.ts
+  /src/utils/sessionQueue.ts  (algoritmo)
+  /src/components/FlashcardView.tsx
+  /src/pages/Home.tsx
+  /src/pages/Session.tsx
+- Asegúrate de que compile y corra en Replit.
+
+7) UI / UX
+Mantén el diseño minimalista como el MVP:
+- fondo blanco
+- texto grande
+- progreso “Tarjeta X de Y”
+- NO stats avanzados
+- NO “modo repaso”
+- NO términos técnicos
+
+ENTREGABLE:
+- Aplica los cambios al código existente
+- Explica brevemente dónde quedó cada cosa y cómo probarlo

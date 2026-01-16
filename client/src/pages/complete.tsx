@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Home } from "lucide-react";
+import { CheckCircle2, Home, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useEffect } from "react";
@@ -15,7 +15,7 @@ export default function Complete() {
 
     const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
-    const interval: any = setInterval(function() {
+    const interval: ReturnType<typeof setInterval> = setInterval(function() {
       const timeLeft = animationEnd - Date.now();
 
       if (timeLeft <= 0) {
@@ -42,12 +42,15 @@ export default function Complete() {
           <CheckCircle2 className="w-12 h-12" />
         </motion.div>
 
-        <div className="space-y-2">
-          <h1 className="text-3xl font-extrabold text-foreground">
-            Sesión completada 🎉
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-[260px] mx-auto">
-            ¡Excelente trabajo! Has repasado todas las tarjetas de hoy.
+        <div className="space-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <h1 className="text-3xl font-extrabold text-foreground" data-testid="text-session-complete">
+              Sesión completada
+            </h1>
+            <PartyPopper className="w-7 h-7 text-primary" />
+          </div>
+          <p className="text-lg text-muted-foreground max-w-[260px] mx-auto" data-testid="text-success-message">
+            Has repasado todas las tarjetas de hoy.
           </p>
         </div>
 
@@ -56,7 +59,8 @@ export default function Complete() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="w-full h-14 text-lg font-bold border-2 hover:bg-secondary/50"
+              data-testid="button-volver"
+              className="w-full h-14 text-lg font-bold border-2"
             >
               <Home className="mr-2 h-5 w-5" />
               Volver al inicio

@@ -1,9 +1,11 @@
 import { db } from "./db";
 import { flashcards, type Flashcard, type InsertFlashcard } from "@shared/schema";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getFlashcards(): Promise<Flashcard[]>;
   createFlashcard(card: InsertFlashcard): Promise<Flashcard>;
+  deleteAllFlashcards(): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -17,6 +19,10 @@ export class DatabaseStorage implements IStorage {
       .values(insertFlashcard)
       .returning();
     return card;
+  }
+
+  async deleteAllFlashcards(): Promise<void> {
+    await db.delete(flashcards);
   }
 }
 
