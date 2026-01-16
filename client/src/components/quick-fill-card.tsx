@@ -52,7 +52,7 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
 
   return (
     <Card className="h-full flex flex-col overflow-hidden" data-testid="quick-fill-card">
-      <div className="h-[40%] w-full bg-secondary/30 relative flex items-center justify-center">
+      <div className="h-[35%] w-full bg-secondary/30 relative flex items-center justify-center">
         <img 
           src={getImageUrl(card)} 
           alt={card.englishText}
@@ -75,12 +75,12 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
         </Button>
       </div>
 
-      <div className="flex-1 flex flex-col p-4 pt-8">
-        <p className="text-center text-sm text-muted-foreground mb-3" data-testid="text-quickfill-prompt">
+      <div className="flex-1 flex flex-col p-3 pt-6">
+        <p className="text-center text-sm text-muted-foreground mb-2" data-testid="text-quickfill-prompt">
           Which phrase matches this image?
         </p>
         
-        <div className="flex-1 flex flex-col justify-center gap-2">
+        <div className="flex-1 flex flex-col justify-center gap-1.5">
           {shuffledOptions.map((option, index) => (
             <motion.div
               key={option}
@@ -90,7 +90,7 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
             >
               <Button
                 variant={getButtonVariant(option)}
-                className="w-full justify-start text-left h-auto py-3 px-4 whitespace-normal"
+                className="w-full justify-start text-left h-auto py-2 px-3 whitespace-normal text-sm"
                 onClick={() => handleSelect(option)}
                 disabled={showResult}
                 data-testid={`button-option-${index}`}
