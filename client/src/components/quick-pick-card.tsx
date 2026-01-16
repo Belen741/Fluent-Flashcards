@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Volume2, Check, X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Flashcard } from "@shared/schema";
-import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
+import { getImageUrl } from "@/utils/mediaResolver";
 
 interface QuickPickCardProps {
   card: Flashcard;
@@ -22,14 +22,6 @@ export function QuickPickCard({ card, onAnswer }: QuickPickCardProps) {
   const shuffledOptions = useState(() => 
     [...options].sort(() => Math.random() - 0.5)
   )[0];
-
-  const playAudio = () => {
-    const audioUrl = getAudioUrl(card);
-    if (audioUrl) {
-      const audio = new Audio(audioUrl);
-      audio.play().catch(console.error);
-    }
-  };
 
   const handleSelect = (option: string) => {
     if (showResult) return;
@@ -65,18 +57,9 @@ export function QuickPickCard({ card, onAnswer }: QuickPickCardProps) {
             {card.category}
           </span>
         </div>
-        <Button
-          variant="default"
-          size="icon"
-          onClick={(e) => { e.stopPropagation(); playAudio(); }}
-          data-testid="button-audio-quickpick"
-          className="absolute -bottom-5 rounded-full shadow-md"
-        >
-          <Volume2 className="h-5 w-5" />
-        </Button>
       </div>
 
-      <div className="flex-1 flex flex-col p-4 pt-8">
+      <div className="flex-1 flex flex-col p-4">
         <div className="text-center mb-4">
           <p className="text-sm text-muted-foreground mb-2" data-testid="text-quickpick-prompt">
             What does this mean?
