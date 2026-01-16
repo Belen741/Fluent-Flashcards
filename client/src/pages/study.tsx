@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, Volume2, ThumbsUp, ThumbsDown } from "lucide-react";
+import { Loader2, Volume2, ThumbsUp, ThumbsDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -68,7 +68,49 @@ export default function Study() {
     setInteractiveAnswered(true);
   }, []);
 
-  // Handle response and advance to next card
+  // Handle Next button for interactive cards - uses the already-recorded response
+  const handleInteractiveNext = useCallback(() => {
+    if (sessionQueue.length === 0 || !interactiveAnswered) return;
+    
+    const currentCard = sessionQueue[currentIndex];
+    const gotItRight = userResponse === "correct";
+
+    // Process response and potentially update queue
+    const result = processResponse(
+      currentCard,
+      gotItRight,
+      sessionQueue,
+      currentIndex,
+      reservePool,
+      learningState,
+      seenConceptIds
+    );
+
+    setSessionQueue(result.updatedQueue);
+    setLearningState(result.updatedState);
+    setReservePool(result.updatedReservePool);
+    setSeenConceptIds(result.updatedSeenConcepts);
+    setUserResponse(null);
+    setShowFeedback(false);
+    setIsFlipped(false);
+    setInteractiveAnswered(false);
+
+    // Check if session is complete
+    const nextIndex = currentIndex + 1;
+    if (nextIndex >= result.updatedQueue.length) {
+      // Save final state before completing
+      saveLearningState(result.updatedState);
+      saveSessionHistory({
+        date: new Date().toISOString(),
+        conceptsSeen: Array.from(result.updatedSeenConcepts),
+      });
+      setLocation("/complete");
+    } else {
+      setCurrentIndex(nextIndex);
+    }
+  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactiveAnswered]);
+
+  // Handle response and advance to next card (for standard cards)
   const handleResponseAndAdvance = useCallback((gotItRight: boolean) => {
     if (sessionQueue.length === 0) return;
     
@@ -124,30 +166,33 @@ export default function Study() {
         return;
       }
 
-      // For interactive cards, only allow shortcuts after answering
       const currentCard = sessionQueue[currentIndex];
       const isInteractive = currentCard && (
         (currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0) ||
         (currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0)
       );
-      
-      if (isInteractive && !interactiveAnswered) {
-        return;
-      }
 
-      switch (e.key) {
-        case "1":
-          handleResponseAndAdvance(true);
-          break;
-        case "2":
-          handleResponseAndAdvance(false);
-          break;
+      if (isInteractive) {
+        // For interactive cards: Enter to advance after answering
+        if (e.key === "Enter" && interactiveAnswered) {
+          handleInteractiveNext();
+        }
+      } else {
+        // For standard cards: 1/2 to respond and advance
+        switch (e.key) {
+          case "1":
+            handleResponseAndAdvance(true);
+            break;
+          case "2":
+            handleResponseAndAdvance(false);
+            break;
+        }
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleResponseAndAdvance, sessionQueue, currentIndex, interactiveAnswered]);
+  }, [handleResponseAndAdvance, handleInteractiveNext, sessionQueue, currentIndex, interactiveAnswered]);
 
   if (isLoading || !flashcards || initializedSession === null || sessionQueue.length === 0) {
     return (
@@ -337,39 +382,51 @@ export default function Study() {
 
         {/* Response Section */}
         <div className="space-y-3">
-          {/* Question prompt - hide for interactive cards until answered */}
-          {(!isInteractiveCard || interactiveAnswered) && (
-            <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
-              How did you do with this card?
-            </p>
+          {/* For standard cards: show response buttons */}
+          {!isInteractiveCard && (
+            <>
+              <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
+                How did you do with this card?
+              </p>
+              <div className="flex gap-3 justify-center">
+                <Button
+                  variant={userResponse === "correct" ? "default" : "outline"}
+                  size="default"
+                  onClick={() => handleResponseAndAdvance(true)}
+                  data-testid="button-knew-it"
+                  className="flex items-center gap-2"
+                >
+                  <ThumbsUp className="h-4 w-4" />
+                  <span>I knew it</span>
+                  <span className="text-xs opacity-60 ml-1">(1)</span>
+                </Button>
+                <Button
+                  variant={userResponse === "incorrect" ? "destructive" : "outline"}
+                  size="default"
+                  onClick={() => handleResponseAndAdvance(false)}
+                  data-testid="button-didnt-know"
+                  className="flex items-center gap-2"
+                >
+                  <ThumbsDown className="h-4 w-4" />
+                  <span>I didn't know</span>
+                  <span className="text-xs opacity-60 ml-1">(2)</span>
+                </Button>
+              </div>
+            </>
           )}
 
-          {/* Response Buttons - show for standard cards always, for interactive cards after answering */}
-          {(!isInteractiveCard || interactiveAnswered) && (
-            <div className="flex gap-3 justify-center">
-              <Button
-                variant={userResponse === "correct" ? "default" : "outline"}
-                size="default"
-                onClick={() => handleResponseAndAdvance(true)}
-                data-testid="button-knew-it"
-                className="flex items-center gap-2"
-              >
-                <ThumbsUp className="h-4 w-4" />
-                <span>I knew it</span>
-                <span className="text-xs opacity-60 ml-1">(1)</span>
-              </Button>
-              <Button
-                variant={userResponse === "incorrect" ? "destructive" : "outline"}
-                size="default"
-                onClick={() => handleResponseAndAdvance(false)}
-                data-testid="button-didnt-know"
-                className="flex items-center gap-2"
-              >
-                <ThumbsDown className="h-4 w-4" />
-                <span>I didn't know</span>
-                <span className="text-xs opacity-60 ml-1">(2)</span>
-              </Button>
-            </div>
+          {/* For interactive cards: show Next button after answering */}
+          {isInteractiveCard && interactiveAnswered && (
+            <Button 
+              size="lg"
+              onClick={handleInteractiveNext}
+              data-testid="button-next"
+              className="w-full font-semibold"
+            >
+              <span>Next</span>
+              <ArrowRight className="ml-2 h-5 w-5" />
+              <span className="text-xs opacity-60 ml-2">(Enter)</span>
+            </Button>
           )}
 
           {/* Micro-feedback */}
