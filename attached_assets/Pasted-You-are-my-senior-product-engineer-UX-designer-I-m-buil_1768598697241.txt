@@ -1,0 +1,87 @@
+You are my senior product engineer + UX designer. I’m building a web app called “Spanish for Nurses” with flashcards. The Excel deck already contains these fields per card:
+
+- deck, card_id
+- es, en
+- audio_file, image_file
+- cloze_option_1..4, cloze_correct
+- mcq_question_es, mcq_option_en_1..3, mcq_correct_en
+- tag_1, tag_2
+
+GOAL (non-negotiable):
+Implement “invisible spaced repetition” so the user feels: progress, variety, novelty.
+The user must NOT feel repetition, friction, or “this delays me”.
+Never show words like: spaced repetition, intervals, due, review counts, difficulty, levels.
+
+UX RULES (must show):
+- Landing: “Today’s session: X cards”, “Complete in about Y minutes”
+- Progress bar
+- Encouraging microcopy (e.g., “You’re doing great!”, “You’re expanding your nursing Spanish”)
+- End screen: “Session completed”
+
+CORE EXPERIENCE (Layer 1 default):
+Each session is a smooth sequence of “normal flashcards”:
+- image + audio button + Spanish sentence (es)
+- button: “Show translation” (reveals English en)
+- self-rating buttons: “I knew it” / “I didn’t know”
+- Next (Enter)
+No explicit drills visible by name.
+
+INVISIBLE REPETITION CAMOUFLAGE:
+Use the extra fields to create variety “behind the scenes”:
+- If a card has cloze fields, occasionally show a quick fill-in step WITHOUT calling it “cloze”.
+- If a card has mcq fields, occasionally show a quick multiple-choice step WITHOUT calling it “quiz/exam”.
+These steps should feel like “a different card type” (variety) not “repetition”.
+
+CARD FLOW:
+A card can render in one of these surfaces:
+A) Standard Card (default): image + audio + Spanish + Show translation
+B) Quick Fill (camouflaged cloze): show Spanish sentence with blank and 4 options buttons
+C) Quick Pick (camouflaged MCQ): show mcq_question_es + 3 English options
+
+Rules:
+- Never show more than ONE extra step per card.
+- Keep extra steps short (max 1 interaction).
+- After extra step, show the normal card surface (Spanish + Show translation) OR reveal translation automatically if user answered wrong.
+- If user answered wrong in Quick Fill / Quick Pick, schedule that concept to reappear soon as another surface type later.
+
+SCHEDULING LOGIC (simple, invisible):
+Implement a session queue generator:
+- New items appear 3 times within the session but camouflaged as different surfaces.
+- If user fails (“I didn’t know” OR wrong in Quick Fill/Quick Pick), reinsert the same card soon (e.g., +2 to +4 positions) BUT with a different surface next time.
+- If user succeeds, push it later (e.g., +8 to +14 positions) or to next day (persisted).
+- Ensure the user never sees the exact same Spanish sentence back-to-back. Enforce spacing.
+- Ensure variety: in any 10 cards, include at most:
+  - 6 Standard
+  - 2 Quick Fill
+  - 2 Quick Pick
+(Adjust as needed, but keep variety.)
+
+DATA MAPPING (critical):
+Parse the Excel into a Card model that includes:
+- id, deck, es, en, audioFile, imageFile, tags[]
+- cloze: { options[], correct }
+- mcq: { questionEs, optionsEn[], correctEn }
+Skip empty/undefined columns safely. Ignore “Unnamed” columns.
+
+UI IMPLEMENTATION NOTES:
+- Add a “cardType” state and render the appropriate surface.
+- Use the same Next button and keyboard Enter for flow.
+- Keep design clean like the screenshots: centered card, big Spanish text, audio button, simple buttons.
+- Do NOT add new navigation complexity.
+
+PERSISTENCE:
+Store progress locally (localStorage) for now:
+- per card: lastSeen, stabilityScore or simple streak, nextDueDate (internal only)
+- Session should be generated from due + new items.
+But never display due dates or review counts.
+
+DELIVERABLE:
+1) Provide the exact code changes needed:
+   - where to parse Excel and map fields
+   - the queue/scheduler function
+   - UI components for Standard / Quick Fill / Quick Pick
+2) Make sure the app actually uses cloze_option_* and mcq_* fields in the experience.
+3) Ensure the UI still feels like “normal flashcards” and not a test.
+
+IMPORTANT:
+Do not ask me questions. Make reasonable assumptions and implement.

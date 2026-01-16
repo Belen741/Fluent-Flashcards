@@ -16,6 +16,8 @@ import {
   getSessionsCompletedToday,
 } from "@/utils/sessionQueue";
 import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
+import { QuickFillCard } from "@/components/quick-fill-card";
+import { QuickPickCard } from "@/components/quick-pick-card";
 import type { Flashcard, ConceptLearningState } from "@shared/schema";
 
 export default function Study() {
@@ -40,6 +42,7 @@ export default function Study() {
   const [initializedSession, setInitializedSession] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [interactiveAnswered, setInteractiveAnswered] = useState(false);
 
   // Initialize session queue when flashcards load or session changes
   useEffect(() => {
@@ -53,9 +56,17 @@ export default function Study() {
       setUserResponse(null);
       setShowFeedback(false);
       setIsFlipped(false);
+      setInteractiveAnswered(false);
       setInitializedSession(sessionNumber);
     }
   }, [flashcards, sessionNumber, initializedSession]);
+
+  // Handle interactive card answer (cloze/mcq)
+  const handleInteractiveAnswer = useCallback((correct: boolean) => {
+    setUserResponse(correct ? "correct" : "incorrect");
+    setShowFeedback(true);
+    setInteractiveAnswered(true);
+  }, []);
 
   const handleResponse = useCallback((correct: boolean) => {
     setUserResponse(correct ? "correct" : "incorrect");
@@ -66,8 +77,20 @@ export default function Study() {
     if (sessionQueue.length === 0) return;
     
     const currentCard = sessionQueue[currentIndex];
-    // Determine if user got it right (default to correct if no response)
-    const gotItRight = userResponse !== "incorrect";
+    
+    // Check if this is an interactive card (cloze or mcq)
+    const isInteractive = 
+      (currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0) ||
+      (currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0);
+    
+    // Block Next on interactive cards until answered
+    if (isInteractive && !interactiveAnswered) {
+      return;
+    }
+    
+    // Determine if user got it right
+    // For interactive cards: use actual response, for standard cards: default to correct if no response
+    const gotItRight = isInteractive ? userResponse === "correct" : userResponse !== "incorrect";
 
     // Process response and potentially update queue
     const result = processResponse(
@@ -87,6 +110,7 @@ export default function Study() {
     setUserResponse(null);
     setShowFeedback(false);
     setIsFlipped(false);
+    setInteractiveAnswered(false);
 
     // Check if session is complete
     const nextIndex = currentIndex + 1;
@@ -101,7 +125,7 @@ export default function Study() {
     } else {
       setCurrentIndex(nextIndex);
     }
-  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation]);
+  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactiveAnswered]);
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -141,6 +165,11 @@ export default function Study() {
   const totalCards = sessionQueue.length;
   const currentCard = sessionQueue[currentIndex];
   const progress = ((currentIndex + 1) / totalCards) * 100;
+  
+  // Check if current card is an interactive type (cloze or mcq with valid data)
+  const isInteractiveCard = 
+    (currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0) ||
+    (currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0);
 
   const playAudio = () => {
     const audioUrl = getAudioUrl(currentCard);
@@ -197,162 +226,198 @@ export default function Study() {
               transition={{ duration: 0.25, ease: "easeOut" }}
               className="w-full h-full"
             >
-              <div 
-                className="relative w-full h-full cursor-pointer"
-                style={{ transformStyle: "preserve-3d" }}
-                onClick={() => setIsFlipped(!isFlipped)}
-                data-testid="flashcard-container"
-              >
-                {/* Front of card */}
-                <motion.div
-                  className="absolute inset-0"
-                  initial={false}
-                  animate={{ 
-                    rotateY: isFlipped ? 180 : 0,
-                    opacity: isFlipped ? 0 : 1 
-                  }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  style={{ backfaceVisibility: "hidden" }}
+              {/* Render based on variant type */}
+              {currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0 ? (
+                <QuickFillCard 
+                  card={currentCard} 
+                  onAnswer={handleInteractiveAnswer} 
+                />
+              ) : currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0 ? (
+                <QuickPickCard 
+                  card={currentCard} 
+                  onAnswer={handleInteractiveAnswer} 
+                />
+              ) : (
+                <div 
+                  className="relative w-full h-full cursor-pointer"
+                  style={{ transformStyle: "preserve-3d" }}
+                  onClick={() => setIsFlipped(!isFlipped)}
+                  data-testid="flashcard-container"
                 >
-                  <Card className="h-full flex flex-col overflow-hidden">
-                    {/* Image Section */}
-                    <div className="h-[65%] w-full bg-secondary/30 relative flex items-center justify-center">
-                      <img 
-                        src={getImageUrl(currentCard)} 
-                        alt={currentCard.englishText}
-                        className="max-w-full max-h-full object-contain"
-                        data-testid={`img-flashcard-${currentCard.id}`}
-                      />
-                      <div className="absolute top-3 right-3">
-                        <span 
-                          className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground uppercase tracking-wide"
-                          data-testid={`text-category-${currentCard.id}`}
-                        >
-                          {currentCard.category}
-                        </span>
-                      </div>
-                      <Button
-                        variant="default"
-                        size="icon"
-                        onClick={(e) => { e.stopPropagation(); playAudio(); }}
-                        data-testid="button-audio"
-                        className="absolute -bottom-5 rounded-full shadow-md"
-                      >
-                        <Volume2 className="h-5 w-5" />
-                      </Button>
-                    </div>
-
-                    {/* Content Section - Front */}
-                    <div className="flex-1 flex flex-col items-center justify-center p-4 text-center">
-                      <div className="space-y-3 mt-2">
-                        <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
-                          {currentCard.text}
-                        </h2>
+                  {/* Front of card */}
+                  <motion.div
+                    className="absolute inset-0"
+                    initial={false}
+                    animate={{ 
+                      rotateY: isFlipped ? 180 : 0,
+                      opacity: isFlipped ? 0 : 1 
+                    }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    style={{ backfaceVisibility: "hidden" }}
+                  >
+                    <Card className="h-full flex flex-col overflow-hidden">
+                      {/* Image Section */}
+                      <div className="h-[65%] w-full bg-secondary/30 relative flex items-center justify-center">
+                        <img 
+                          src={getImageUrl(currentCard)} 
+                          alt={currentCard.englishText}
+                          className="max-w-full max-h-full object-contain"
+                          data-testid={`img-flashcard-${currentCard.id}`}
+                        />
+                        <div className="absolute top-3 right-3">
+                          <span 
+                            className="px-2.5 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-muted-foreground uppercase tracking-wide"
+                            data-testid={`text-category-${currentCard.id}`}
+                          >
+                            {currentCard.category}
+                          </span>
+                        </div>
                         <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={(e) => { e.stopPropagation(); setIsFlipped(true); }}
-                          data-testid="button-show-translation"
+                          variant="default"
+                          size="icon"
+                          onClick={(e) => { e.stopPropagation(); playAudio(); }}
+                          data-testid="button-audio"
+                          className="absolute -bottom-5 rounded-full shadow-md"
                         >
-                          Show translation
+                          <Volume2 className="h-5 w-5" />
                         </Button>
                       </div>
-                    </div>
-                  </Card>
-                </motion.div>
 
-                {/* Back of card */}
-                <motion.div
-                  className="absolute inset-0"
-                  initial={false}
-                  animate={{ 
-                    rotateY: isFlipped ? 0 : -180,
-                    opacity: isFlipped ? 1 : 0 
-                  }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  style={{ backfaceVisibility: "hidden" }}
-                >
-                  <Card className="h-full flex flex-col items-center justify-center p-6 text-center">
-                    <div className="space-y-4">
-                      <p className="text-base text-muted-foreground" data-testid="text-spanish-back">
-                        {currentCard.text}
-                      </p>
-                      <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-english-translation">
-                        {currentCard.englishText}
-                      </h2>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={(e) => { e.stopPropagation(); setIsFlipped(false); }}
-                        data-testid="button-hide-translation"
-                      >
-                        Hide translation
-                      </Button>
-                    </div>
-                  </Card>
-                </motion.div>
-              </div>
+                      {/* Content Section - Front */}
+                      <div className="flex-1 flex flex-col items-center justify-center p-4 text-center">
+                        <div className="space-y-3 mt-2">
+                          <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
+                            {currentCard.text}
+                          </h2>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={(e) => { e.stopPropagation(); setIsFlipped(true); }}
+                            data-testid="button-show-translation"
+                          >
+                            Show translation
+                          </Button>
+                        </div>
+                      </div>
+                    </Card>
+                  </motion.div>
+
+                  {/* Back of card */}
+                  <motion.div
+                    className="absolute inset-0"
+                    initial={false}
+                    animate={{ 
+                      rotateY: isFlipped ? 0 : -180,
+                      opacity: isFlipped ? 1 : 0 
+                    }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    style={{ backfaceVisibility: "hidden" }}
+                  >
+                    <Card className="h-full flex flex-col items-center justify-center p-6 text-center">
+                      <div className="space-y-4">
+                        <p className="text-base text-muted-foreground" data-testid="text-spanish-back">
+                          {currentCard.text}
+                        </p>
+                        <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-english-translation">
+                          {currentCard.englishText}
+                        </h2>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={(e) => { e.stopPropagation(); setIsFlipped(false); }}
+                          data-testid="button-hide-translation"
+                        >
+                          Hide translation
+                        </Button>
+                      </div>
+                    </Card>
+                  </motion.div>
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Response Section */}
-        <div className="space-y-3">
-          {/* Question prompt */}
-          <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
-            How did you do with this card?
-          </p>
-
-          {/* Response Buttons */}
-          <div className="flex gap-3 justify-center">
-            <Button
-              variant={userResponse === "correct" ? "default" : "outline"}
-              size="default"
-              onClick={() => handleResponse(true)}
-              data-testid="button-knew-it"
-              className="flex items-center gap-2"
-            >
-              <ThumbsUp className="h-4 w-4" />
-              <span>I knew it</span>
-              <span className="text-xs opacity-60 ml-1">(1)</span>
-            </Button>
-            <Button
-              variant={userResponse === "incorrect" ? "destructive" : "outline"}
-              size="default"
-              onClick={() => handleResponse(false)}
-              data-testid="button-didnt-know"
-              className="flex items-center gap-2"
-            >
-              <ThumbsDown className="h-4 w-4" />
-              <span>I didn't know</span>
-              <span className="text-xs opacity-60 ml-1">(2)</span>
-            </Button>
+        {/* Response Section - only show for standard cards */}
+        {isInteractiveCard ? (
+          <div className="space-y-3">
+            {/* Micro-feedback for interactive cards */}
+            <AnimatePresence mode="wait">
+              {showFeedback && userResponse && (
+                <motion.p
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className={`text-center text-sm font-medium ${
+                    userResponse === "correct" ? "text-foreground" : "text-muted-foreground"
+                  }`}
+                  data-testid="text-feedback"
+                >
+                  {getFeedbackMessage()}
+                </motion.p>
+              )}
+            </AnimatePresence>
           </div>
+        ) : (
+          <div className="space-y-3">
+            {/* Question prompt */}
+            <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
+              How did you do with this card?
+            </p>
 
-          {/* Micro-feedback */}
-          <AnimatePresence mode="wait">
-            {showFeedback && userResponse && (
-              <motion.p
-                initial={{ opacity: 0, y: -5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className={`text-center text-sm font-medium ${
-                  userResponse === "correct" ? "text-foreground" : "text-muted-foreground"
-                }`}
-                data-testid="text-feedback"
+            {/* Response Buttons */}
+            <div className="flex gap-3 justify-center">
+              <Button
+                variant={userResponse === "correct" ? "default" : "outline"}
+                size="default"
+                onClick={() => handleResponse(true)}
+                data-testid="button-knew-it"
+                className="flex items-center gap-2"
               >
-                {getFeedbackMessage()}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </div>
+                <ThumbsUp className="h-4 w-4" />
+                <span>I knew it</span>
+                <span className="text-xs opacity-60 ml-1">(1)</span>
+              </Button>
+              <Button
+                variant={userResponse === "incorrect" ? "destructive" : "outline"}
+                size="default"
+                onClick={() => handleResponse(false)}
+                data-testid="button-didnt-know"
+                className="flex items-center gap-2"
+              >
+                <ThumbsDown className="h-4 w-4" />
+                <span>I didn't know</span>
+                <span className="text-xs opacity-60 ml-1">(2)</span>
+              </Button>
+            </div>
+
+            {/* Micro-feedback */}
+            <AnimatePresence mode="wait">
+              {showFeedback && userResponse && (
+                <motion.p
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className={`text-center text-sm font-medium ${
+                    userResponse === "correct" ? "text-foreground" : "text-muted-foreground"
+                  }`}
+                  data-testid="text-feedback"
+                >
+                  {getFeedbackMessage()}
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </div>
+        )}
 
         {/* Next Button */}
         <div className="pt-1">
           <Button 
             size="lg"
             onClick={handleNext}
+            disabled={isInteractiveCard && !interactiveAnswered}
             data-testid="button-next"
             className="w-full font-semibold"
           >

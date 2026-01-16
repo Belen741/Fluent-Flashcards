@@ -15,6 +15,11 @@ export const flashcards = pgTable("flashcards", {
   tags: text("tags").array(),
   imageKey: text("image_key"),
   audioKey: text("audio_key"),
+  clozeOptions: text("cloze_options").array(),
+  clozeCorrect: text("cloze_correct"),
+  mcqQuestionEs: text("mcq_question_es"),
+  mcqOptionsEn: text("mcq_options_en").array(),
+  mcqCorrectEn: text("mcq_correct_en"),
 });
 
 export const insertFlashcardSchema = createInsertSchema(flashcards).omit({ id: true });
