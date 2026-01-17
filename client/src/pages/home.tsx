@@ -39,7 +39,7 @@ export default function Home() {
         </h1>
         
         <p className="home-subtitle">
-          Short sessions. Real hospital Spanish.
+          Real Hospital Spanish Phrases
         </p>
 
         {sessionsCompleted > 0 && (
