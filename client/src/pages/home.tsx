@@ -5,10 +5,10 @@ import { getSessionsCompletedToday } from "@/utils/sessionQueue";
 
 function MedicalChatIcon() {
   return (
-    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="8" width="36" height="28" rx="6" fill="#1E40FF" fillOpacity="0.15"/>
-      <rect x="24" y="28" width="36" height="28" rx="6" fill="#1E40FF"/>
-      <path d="M42 38v12M36 44h12" stroke="white" strokeWidth="3" strokeLinecap="round"/>
+    <svg width="72" height="64" viewBox="0 0 72 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 12C4 7.58172 7.58172 4 12 4H40C44.4183 4 48 7.58172 48 12V32C48 36.4183 44.4183 40 40 40H20L10 50V40H12C7.58172 40 4 36.4183 4 32V12Z" fill="white" stroke="#1E56E8" strokeWidth="3"/>
+      <path d="M26 16V28M20 22H32" stroke="#1E56E8" strokeWidth="4" strokeLinecap="round"/>
+      <path d="M52 24H56C60.4183 24 64 27.5817 64 32V48C64 52.4183 60.4183 56 56 56H54V62L46 56H36C31.5817 56 28 52.4183 28 48V44" fill="#1E56E8"/>
     </svg>
   );
 }
