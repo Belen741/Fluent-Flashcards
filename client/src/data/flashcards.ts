@@ -1038,6 +1038,981 @@ export const flashcardsData = [
       "Let me know if you need anything."
     ],
     "mcqCorrectEn": "They will call you shortly."
+  },
+  {
+    "conceptId": "m2_01",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "location"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_01.webp",
+    "audioKey": "mazo-2/audios/m2_01.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_01_intro",
+    "variantType": "intro",
+    "text": "¿Dónde le duele exactamente?",
+    "englishText": "Where does it hurt exactly?"
+  },
+  {
+    "conceptId": "m2_01",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "location"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_01.webp",
+    "audioKey": "mazo-2/audios/m2_01.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_01_cloze",
+    "variantType": "cloze",
+    "text": "¿Dónde le duele exactamente?",
+    "englishText": "Where does it hurt exactly?",
+    "clozeOptions": [
+      "¿El dolor empeora al moverse?",
+      "¿Desde cuándo tiene este dolor?",
+      "¿Dónde le duele exactamente?",
+      "¿Tiene fiebre?"
+    ],
+    "clozeCorrect": "¿Dónde le duele exactamente?"
+  },
+  {
+    "conceptId": "m2_01",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "location"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_01.webp",
+    "audioKey": "mazo-2/audios/m2_01.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_01_mcq",
+    "variantType": "mcq",
+    "text": "¿Dónde le duele exactamente?",
+    "englishText": "Where does it hurt exactly?",
+    "mcqQuestionEs": "¿Dónde le _____ exactamente?",
+    "mcqOptionsEn": [
+      "dolor",
+      "síntoma",
+      "duele"
+    ],
+    "mcqCorrectEn": "duele"
+  },
+  {
+    "conceptId": "m2_02",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "onset"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_02.webp",
+    "audioKey": "mazo-2/audios/m2_02.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_02_intro",
+    "variantType": "intro",
+    "text": "¿Desde cuándo tiene este dolor?",
+    "englishText": "How long have you had this pain?"
+  },
+  {
+    "conceptId": "m2_02",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "onset"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_02.webp",
+    "audioKey": "mazo-2/audios/m2_02.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_02_cloze",
+    "variantType": "cloze",
+    "text": "¿Desde cuándo tiene este dolor?",
+    "englishText": "How long have you had this pain?",
+    "clozeOptions": [
+      "¿Tiene náuseas?",
+      "¿Ha tenido este dolor antes?",
+      "¿El dolor ha aumentado?",
+      "¿Desde cuándo tiene este dolor?"
+    ],
+    "clozeCorrect": "¿Desde cuándo tiene este dolor?"
+  },
+  {
+    "conceptId": "m2_02",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "onset"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_02.webp",
+    "audioKey": "mazo-2/audios/m2_02.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_02_mcq",
+    "variantType": "mcq",
+    "text": "¿Desde cuándo tiene este dolor?",
+    "englishText": "How long have you had this pain?",
+    "mcqQuestionEs": "¿Desde cuándo tiene este dolor?",
+    "mcqOptionsEn": [
+      "When did the pain start?",
+      "How long have you had this pain?",
+      "Does the pain get worse?"
+    ],
+    "mcqCorrectEn": "How long have you had this pain?"
+  },
+  {
+    "conceptId": "m2_03",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "pattern"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_03.webp",
+    "audioKey": "mazo-2/audios/m2_03.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_03_intro",
+    "variantType": "intro",
+    "text": "¿El dolor es constante o viene y se va?",
+    "englishText": "Is the pain constant or does it come and go?"
+  },
+  {
+    "conceptId": "m2_03",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "pattern"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_03.webp",
+    "audioKey": "mazo-2/audios/m2_03.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_03_cloze",
+    "variantType": "cloze",
+    "text": "¿El dolor es constante o viene y se va?",
+    "englishText": "Is the pain constant or does it come and go?",
+    "clozeOptions": [
+      "¿Tiene fiebre?",
+      "¿Siente mareo?",
+      "¿El dolor es constante o viene y se va?",
+      "¿El dolor ha aumentado o disminuido?"
+    ],
+    "clozeCorrect": "¿El dolor es constante o viene y se va?"
+  },
+  {
+    "conceptId": "m2_03",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "pattern"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_03.webp",
+    "audioKey": "mazo-2/audios/m2_03.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_03_mcq",
+    "variantType": "mcq",
+    "text": "¿El dolor es constante o viene y se va?",
+    "englishText": "Is the pain constant or does it come and go?",
+    "mcqQuestionEs": "Is the pain constant or does it come and go?",
+    "mcqOptionsEn": [
+      "¿El dolor es constante o se va y se va?",
+      "¿El dolor es corto o viene y se va?",
+      "¿El dolor es constante o viene y se va?"
+    ],
+    "mcqCorrectEn": "¿El dolor es constante o viene y se va?"
+  },
+  {
+    "conceptId": "m2_04",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_description",
+      "quality"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_04.webp",
+    "audioKey": "mazo-2/audios/m2_04.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_04_intro",
+    "variantType": "intro",
+    "text": "¿Cómo describiría el dolor: punzante, fuerte o leve?",
+    "englishText": "How would you describe the pain: sharp, strong, or mild?"
+  },
+  {
+    "conceptId": "m2_04",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_description",
+      "quality"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_04.webp",
+    "audioKey": "mazo-2/audios/m2_04.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_04_cloze",
+    "variantType": "cloze",
+    "text": "¿Cómo describiría el dolor: punzante, fuerte o leve?",
+    "englishText": "How would you describe the pain: sharp, strong, or mild?",
+    "clozeOptions": [
+      "¿Ha tomado algo para el dolor?",
+      "¿Cómo describiría el dolor?",
+      "¿Ha tenido fiebre?",
+      "¿El dolor empeora al moverse?"
+    ],
+    "clozeCorrect": "¿Cómo describiría el dolor?"
+  },
+  {
+    "conceptId": "m2_04",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_description",
+      "quality"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_04.webp",
+    "audioKey": "mazo-2/audios/m2_04.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_04_mcq",
+    "variantType": "mcq",
+    "text": "¿Cómo describiría el dolor: punzante, fuerte o leve?",
+    "englishText": "How would you describe the pain: sharp, strong, or mild?",
+    "mcqQuestionEs": "How would you describe the pain?",
+    "mcqOptionsEn": [
+      "¿Cómo diría el dolor?",
+      "¿Cómo describiría el dolor?",
+      "¿Cómo contaría el dolor?"
+    ],
+    "mcqCorrectEn": "¿Cómo describiría el dolor?"
+  },
+  {
+    "conceptId": "m2_05",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "movement"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_05.webp",
+    "audioKey": "mazo-2/audios/m2_05.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_05_intro",
+    "variantType": "intro",
+    "text": "¿El dolor empeora al moverse?",
+    "englishText": "Does the pain get worse when you move?"
+  },
+  {
+    "conceptId": "m2_05",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "movement"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_05.webp",
+    "audioKey": "mazo-2/audios/m2_05.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_05_cloze",
+    "variantType": "cloze",
+    "text": "¿El dolor empeora al moverse?",
+    "englishText": "Does the pain get worse when you move?",
+    "clozeOptions": [
+      "¿Ha tomado algo?",
+      "¿El dolor empeora al moverse?",
+      "¿Le duele al respirar profundo?",
+      "¿Tiene náuseas?"
+    ],
+    "clozeCorrect": "¿El dolor empeora al moverse?"
+  },
+  {
+    "conceptId": "m2_05",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "movement"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_05.webp",
+    "audioKey": "mazo-2/audios/m2_05.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_05_mcq",
+    "variantType": "mcq",
+    "text": "¿El dolor empeora al moverse?",
+    "englishText": "Does the pain get worse when you move?",
+    "mcqQuestionEs": "¿El dolor _____al moverse?",
+    "mcqOptionsEn": [
+      "empeora",
+      "es más malo",
+      "es pesado"
+    ],
+    "mcqCorrectEn": "empeora"
+  },
+  {
+    "conceptId": "m2_06",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "breathing"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_06.webp",
+    "audioKey": "mazo-2/audios/m2_06.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_06_intro",
+    "variantType": "intro",
+    "text": "¿Le duele al respirar profundo?",
+    "englishText": "Does it hurt when you take a deep breath?"
+  },
+  {
+    "conceptId": "m2_06",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "breathing"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_06.webp",
+    "audioKey": "mazo-2/audios/m2_06.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_06_cloze",
+    "variantType": "cloze",
+    "text": "¿Le duele al respirar profundo?",
+    "englishText": "Does it hurt when you take a deep breath?",
+    "clozeOptions": [
+      "¿El dolor empeora?",
+      "¿Tiene fiebre?",
+      "¿Tiene mareo?",
+      "¿Le duele al respirar profundo?"
+    ],
+    "clozeCorrect": "¿Le duele al respirar profundo?"
+  },
+  {
+    "conceptId": "m2_06",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "breathing"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_06.webp",
+    "audioKey": "mazo-2/audios/m2_06.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_06_mcq",
+    "variantType": "mcq",
+    "text": "¿Le duele al respirar profundo?",
+    "englishText": "Does it hurt when you take a deep breath?",
+    "mcqQuestionEs": "¿Le duele al _____ profundo?",
+    "mcqOptionsEn": [
+      "comer",
+      "correr",
+      "repirar"
+    ],
+    "mcqCorrectEn": "respirar"
+  },
+  {
+    "conceptId": "m2_07",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_description",
+      "sensation"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_07.webp",
+    "audioKey": "mazo-2/audios/m2_07.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_07_intro",
+    "variantType": "intro",
+    "text": "¿Siente ardor, presión o calambres?",
+    "englishText": "Do you feel burning, pressure, or cramps?"
+  },
+  {
+    "conceptId": "m2_07",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_description",
+      "sensation"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_07.webp",
+    "audioKey": "mazo-2/audios/m2_07.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_07_cloze",
+    "variantType": "cloze",
+    "text": "¿Siente ardor, presión o calambres?",
+    "englishText": "Do you feel burning, pressure, or cramps?",
+    "clozeOptions": [
+      "¿Tiene mareo?",
+      "¿El dolor ha aumentado?",
+      "¿Siente ardor, presión o calambres?",
+      "¿Ha tenido fiebre?"
+    ],
+    "clozeCorrect": "¿Siente ardor, presión o calambres?"
+  },
+  {
+    "conceptId": "m2_07",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_description",
+      "sensation"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_07.webp",
+    "audioKey": "mazo-2/audios/m2_07.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_07_mcq",
+    "variantType": "mcq",
+    "text": "¿Siente ardor, presión o calambres?",
+    "englishText": "Do you feel burning, pressure, or cramps?",
+    "mcqQuestionEs": "¿Siente ardor, presión o calambres?",
+    "mcqOptionsEn": [
+      "Do you feel dizzy or weak?",
+      "Do you feel burning, pressure, or cramps?",
+      "Do you have nausea?"
+    ],
+    "mcqCorrectEn": "Do you feel burning, pressure, or cramps?"
+  },
+  {
+    "conceptId": "m2_08",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "medical_history",
+      "recurrence"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_08.webp",
+    "audioKey": "mazo-2/audios/m2_08.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_08_intro",
+    "variantType": "intro",
+    "text": "¿Ha tenido este dolor antes?",
+    "englishText": "Have you had this pain before?"
+  },
+  {
+    "conceptId": "m2_08",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "medical_history",
+      "recurrence"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_08.webp",
+    "audioKey": "mazo-2/audios/m2_08.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_08_cloze",
+    "variantType": "cloze",
+    "text": "¿Ha tenido este dolor antes?",
+    "englishText": "Have you had this pain before?",
+    "clozeOptions": [
+      "¿Ha tomado algo para el dolor?",
+      "¿Desde cuándo tiene este dolor?",
+      "¿Ha tenido este dolor antes?",
+      "¿Tiene fiebre?"
+    ],
+    "clozeCorrect": "¿Ha tenido este dolor antes?"
+  },
+  {
+    "conceptId": "m2_08",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "medical_history",
+      "recurrence"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_08.webp",
+    "audioKey": "mazo-2/audios/m2_08.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_08_mcq",
+    "variantType": "mcq",
+    "text": "¿Ha tenido este dolor antes?",
+    "englishText": "Have you had this pain before?",
+    "mcqQuestionEs": "Have you had this pain before?",
+    "mcqOptionsEn": [
+      "¿Ha tenido este dolor antes?",
+      "¿Ha tenido este duele antes?",
+      "¿Ha tenido este malo antes?"
+    ],
+    "mcqCorrectEn": "¿Ha tenido este dolor antes?"
+  },
+  {
+    "conceptId": "m2_09",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "trigger"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_09.webp",
+    "audioKey": "mazo-2/audios/m2_09.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_09_intro",
+    "variantType": "intro",
+    "text": "¿Qué estaba haciendo cuando empezó el dolor?",
+    "englishText": "What were you doing when the pain started?"
+  },
+  {
+    "conceptId": "m2_09",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "trigger"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_09.webp",
+    "audioKey": "mazo-2/audios/m2_09.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_09_cloze",
+    "variantType": "cloze",
+    "text": "¿Qué estaba haciendo cuando empezó el dolor?",
+    "englishText": "What were you doing when the pain started?",
+    "clozeOptions": [
+      "¿Qué estaba haciendo cuando empezó el dolor?",
+      "¿Tiene mareo?",
+      "¿El dolor ha aumentado?",
+      "¿Tiene náuseas?"
+    ],
+    "clozeCorrect": "¿Qué estaba haciendo cuando empezó el dolor?"
+  },
+  {
+    "conceptId": "m2_09",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "trigger"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_09.webp",
+    "audioKey": "mazo-2/audios/m2_09.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_09_mcq",
+    "variantType": "mcq",
+    "text": "¿Qué estaba haciendo cuando empezó el dolor?",
+    "englishText": "What were you doing when the pain started?",
+    "mcqQuestionEs": "¿Qué estaba haciendo cuando empezó el dolor?",
+    "mcqOptionsEn": [
+      "Where does it hurt?",
+      "What were you doing when the pain started?",
+      "How long have you had the pain?"
+    ],
+    "mcqCorrectEn": "What were you doing when the pain started?"
+  },
+  {
+    "conceptId": "m2_10",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "progression"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_10.webp",
+    "audioKey": "mazo-2/audios/m2_10.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_10_intro",
+    "variantType": "intro",
+    "text": "¿El dolor ha aumentado o disminuido?",
+    "englishText": "Has the pain increased or decreased?"
+  },
+  {
+    "conceptId": "m2_10",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "progression"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_10.webp",
+    "audioKey": "mazo-2/audios/m2_10.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_10_cloze",
+    "variantType": "cloze",
+    "text": "¿El dolor ha aumentado o disminuido?",
+    "englishText": "Has the pain increased or decreased?",
+    "clozeOptions": [
+      "¿Tiene fiebre?",
+      "¿Le duele al respirar?",
+      "¿El dolor ha aumentado o disminuido?",
+      "¿Ha tomado algo?"
+    ],
+    "clozeCorrect": "¿El dolor ha aumentado o disminuido?"
+  },
+  {
+    "conceptId": "m2_10",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "pain_assessment",
+      "progression"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_10.webp",
+    "audioKey": "mazo-2/audios/m2_10.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_10_mcq",
+    "variantType": "mcq",
+    "text": "¿El dolor ha aumentado o disminuido?",
+    "englishText": "Has the pain increased or decreased?",
+    "mcqQuestionEs": "¿El dolor ha aumentado o disminuido?",
+    "mcqOptionsEn": [
+      "Has the pain increased or decreased?",
+      "Is the pain constant?",
+      "Does it hurt when you move?"
+    ],
+    "mcqCorrectEn": "Has the pain increased or decreased?"
+  },
+  {
+    "conceptId": "m2_11",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "gastrointestinal"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_11.webp",
+    "audioKey": "mazo-2/audios/m2_11.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_11_intro",
+    "variantType": "intro",
+    "text": "¿Tiene náuseas o vómitos?",
+    "englishText": "Do you have nausea or vomiting?"
+  },
+  {
+    "conceptId": "m2_11",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "gastrointestinal"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_11.webp",
+    "audioKey": "mazo-2/audios/m2_11.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_11_cloze",
+    "variantType": "cloze",
+    "text": "¿Tiene náuseas o vómitos?",
+    "englishText": "Do you have nausea or vomiting?",
+    "clozeOptions": [
+      "¿Tiene mareo?",
+      "¿Ha tomado algo?",
+      "¿Tiene náuseas o vómitos?",
+      "¿Tiene fiebre?"
+    ],
+    "clozeCorrect": "¿Tiene náuseas o vómitos?"
+  },
+  {
+    "conceptId": "m2_11",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "gastrointestinal"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_11.webp",
+    "audioKey": "mazo-2/audios/m2_11.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_11_mcq",
+    "variantType": "mcq",
+    "text": "¿Tiene náuseas o vómitos?",
+    "englishText": "Do you have nausea or vomiting?",
+    "mcqQuestionEs": "¿Tiene náuseas o vómitos?",
+    "mcqOptionsEn": [
+      "Do you have fever or chills?",
+      "Do you have nausea or vomiting?",
+      "Do you feel weak?"
+    ],
+    "mcqCorrectEn": "Do you have nausea or vomiting?"
+  },
+  {
+    "conceptId": "m2_12",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "fever"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_12.webp",
+    "audioKey": "mazo-2/audios/m2_12.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_12_intro",
+    "variantType": "intro",
+    "text": "¿Ha tenido fiebre o escalofríos?",
+    "englishText": "Have you had fever or chills?"
+  },
+  {
+    "conceptId": "m2_12",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "fever"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_12.webp",
+    "audioKey": "mazo-2/audios/m2_12.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_12_cloze",
+    "variantType": "cloze",
+    "text": "¿Ha tenido fiebre o escalofríos?",
+    "englishText": "Have you had fever or chills?",
+    "clozeOptions": [
+      "¿Le duele al respirar?",
+      "¿Tiene mareo?",
+      "¿Ha tenido fiebre o escalofríos?",
+      "¿El dolor empeora?"
+    ],
+    "clozeCorrect": "¿Ha tenido fiebre o escalofríos?"
+  },
+  {
+    "conceptId": "m2_12",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "fever"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_12.webp",
+    "audioKey": "mazo-2/audios/m2_12.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_12_mcq",
+    "variantType": "mcq",
+    "text": "¿Ha tenido fiebre o escalofríos?",
+    "englishText": "Have you had fever or chills?",
+    "mcqQuestionEs": "¿Ha tenido _____ o escalofríos?",
+    "mcqOptionsEn": [
+      "calor",
+      "hambre",
+      "fiebre"
+    ],
+    "mcqCorrectEn": "fiebre"
+  },
+  {
+    "conceptId": "m2_13",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "neurological"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_13.webp",
+    "audioKey": "mazo-2/audios/m2_13.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_13_intro",
+    "variantType": "intro",
+    "text": "¿Siente mareo o debilidad?",
+    "englishText": "Do you feel dizzy or weak?"
+  },
+  {
+    "conceptId": "m2_13",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "neurological"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_13.webp",
+    "audioKey": "mazo-2/audios/m2_13.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_13_cloze",
+    "variantType": "cloze",
+    "text": "¿Siente mareo o debilidad?",
+    "englishText": "Do you feel dizzy or weak?",
+    "clozeOptions": [
+      "¿Tiene náuseas?",
+      "¿Ha tomado algo?",
+      "¿Tiene fiebre?",
+      "¿Siente mareo o debilidad?"
+    ],
+    "clozeCorrect": "¿Siente mareo o debilidad?"
+  },
+  {
+    "conceptId": "m2_13",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "symptoms",
+      "neurological"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_13.webp",
+    "audioKey": "mazo-2/audios/m2_13.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_13_mcq",
+    "variantType": "mcq",
+    "text": "¿Siente mareo o debilidad?",
+    "englishText": "Do you feel dizzy or weak?",
+    "mcqQuestionEs": "¿Siente mareo o debilidad?",
+    "mcqOptionsEn": [
+      "Do you feel dizzy or weak?",
+      "Do you have pain?",
+      "Did you take medication?"
+    ],
+    "mcqCorrectEn": "Do you feel dizzy or weak?"
+  },
+  {
+    "conceptId": "m2_14",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "medications",
+      "pain_management"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_14.webp",
+    "audioKey": "mazo-2/audios/m2_14.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_14_intro",
+    "variantType": "intro",
+    "text": "¿Ha tomado algo para el dolor?",
+    "englishText": "Have you taken anything for the pain?"
+  },
+  {
+    "conceptId": "m2_14",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "medications",
+      "pain_management"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_14.webp",
+    "audioKey": "mazo-2/audios/m2_14.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_14_cloze",
+    "variantType": "cloze",
+    "text": "¿Ha tomado algo para el dolor?",
+    "englishText": "Have you taken anything for the pain?",
+    "clozeOptions": [
+      "¿Tiene fiebre?",
+      "¿Le duele al moverse?",
+      "¿El medicamento ayudó?",
+      "¿Ha tomado algo para el dolor?"
+    ],
+    "clozeCorrect": "¿Ha tomado algo para el dolor?"
+  },
+  {
+    "conceptId": "m2_14",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "medications",
+      "pain_management"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_14.webp",
+    "audioKey": "mazo-2/audios/m2_14.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_14_mcq",
+    "variantType": "mcq",
+    "text": "¿Ha tomado algo para el dolor?",
+    "englishText": "Have you taken anything for the pain?",
+    "mcqQuestionEs": "Have you taken anything for the pain?",
+    "mcqOptionsEn": [
+      "¿Ha bebido algo para el dolor?",
+      "¿Ha tomado algo para el dolor?",
+      "¿Ha comido algo para el dolor?"
+    ],
+    "mcqCorrectEn": "¿Ha tomado algo para el dolor?"
+  },
+  {
+    "conceptId": "m2_15",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "communication",
+      "escalation"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_15.webp",
+    "audioKey": "mazo-2/audios/m2_15.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_15_intro",
+    "variantType": "intro",
+    "text": "Voy a reportar sus síntomas al médico.",
+    "englishText": "I am going to report your symptoms to the doctor."
+  },
+  {
+    "conceptId": "m2_15",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "communication",
+      "escalation"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_15.webp",
+    "audioKey": "mazo-2/audios/m2_15.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_15_cloze",
+    "variantType": "cloze",
+    "text": "Voy a reportar sus síntomas al médico.",
+    "englishText": "I am going to report your symptoms to the doctor.",
+    "clozeOptions": [
+      "¿Tiene dolor?",
+      "Voy a reportar sus síntomas al médico.",
+      "Tome asiento.",
+      "¿Ha tomado algo?"
+    ],
+    "clozeCorrect": "Voy a reportar sus síntomas al médico."
+  },
+  {
+    "conceptId": "m2_15",
+    "deckId": "mazo_02_sintomas",
+    "tags": [
+      "communication",
+      "escalation"
+    ],
+    "imageKey": "mazo-2/imagenes/m2_15.webp",
+    "audioKey": "mazo-2/audios/m2_15.mp3",
+    "category": "symptoms",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m2_15_mcq",
+    "variantType": "mcq",
+    "text": "Voy a reportar sus síntomas al médico.",
+    "englishText": "I am going to report your symptoms to the doctor.",
+    "mcqQuestionEs": "Voy a reportar sus síntomas al médico.",
+    "mcqOptionsEn": [
+      "I am going to report your symptoms to the doctor.",
+      "Please have a seat.",
+      "I will check your information."
+    ],
+    "mcqCorrectEn": "I am going to report your symptoms to the doctor."
   }
 ] as const;
 
