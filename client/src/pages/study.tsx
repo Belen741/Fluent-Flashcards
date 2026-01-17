@@ -317,9 +317,9 @@ export default function Study() {
                           size="icon"
                           onClick={(e) => { e.stopPropagation(); playAudio(); }}
                           data-testid="button-audio"
-                          className="absolute -bottom-5 rounded-full shadow-md"
+                          className="absolute -bottom-6 rounded-full shadow-lg h-14 w-14"
                         >
-                          <Volume2 className="h-5 w-5" />
+                          <Volume2 className="h-7 w-7" />
                         </Button>
                       </div>
 

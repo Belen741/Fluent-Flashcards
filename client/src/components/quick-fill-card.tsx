@@ -70,9 +70,9 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
           size="icon"
           onClick={(e) => { e.stopPropagation(); playAudio(); }}
           data-testid="button-audio-quickfill"
-          className="rounded-full shadow-md h-14 w-14"
+          className="rounded-full shadow-lg h-20 w-20"
         >
-          <Volume2 className="h-7 w-7" />
+          <Volume2 className="h-10 w-10" />
         </Button>
         <p className="text-center text-sm text-muted-foreground mt-3" data-testid="text-quickfill-prompt">
           Which option matches the audio?
