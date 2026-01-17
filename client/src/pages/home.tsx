@@ -1,9 +1,17 @@
 import { Link } from "wouter";
-import { Layout } from "@/components/layout";
-import { Button } from "@/components/ui/button";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, BookOpen, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
+import { Loader2, CheckCircle, ArrowRight } from "lucide-react";
 import { getSessionsCompletedToday } from "@/utils/sessionQueue";
+
+function MedicalChatIcon() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="8" width="36" height="28" rx="6" fill="#1E40FF" fillOpacity="0.15"/>
+      <rect x="24" y="28" width="36" height="28" rx="6" fill="#1E40FF"/>
+      <path d="M42 38v12M36 44h12" stroke="white" strokeWidth="3" strokeLinecap="round"/>
+    </svg>
+  );
+}
 
 export default function Home() {
   const { isLoading } = useFlashcards();
@@ -11,61 +19,59 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <Layout>
-        <div className="flex flex-col items-center justify-center h-[50vh]">
-          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+      <div className="home-page">
+        <div className="home-glow" />
+        <div className="home-card">
+          <Loader2 className="h-8 w-8 animate-spin" style={{ color: '#1E40FF' }} />
         </div>
-      </Layout>
+      </div>
     );
   }
 
   return (
-    <Layout>
-      <div className="flex flex-col items-center justify-center min-h-[70vh] text-center space-y-10">
-        {/* Logo and Title */}
-        <div className="space-y-4">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-md bg-secondary text-foreground mb-2">
-            <BookOpen className="w-10 h-10" />
-          </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-foreground" data-testid="text-title">
-            Spanish for Nurses
-          </h1>
-        </div>
+    <div className="home-page">
+      <div className="home-glow" />
+      <div className="home-card">
+        <MedicalChatIcon />
+        
+        <h1 className="home-title" data-testid="text-title">
+          Spanish for Nurses
+        </h1>
+        
+        <p className="home-subtitle">
+          Short sessions. Real hospital Spanish.
+        </p>
 
-        {/* Session Info */}
-        <div className="space-y-3">
-          {sessionsCompleted > 0 && (
-            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2" data-testid="text-sessions-completed">
-              <CheckCircle2 className="w-4 h-4" />
-              <span className="text-sm">{sessionsCompleted} session{sessionsCompleted !== 1 ? 's' : ''} completed today</span>
-            </div>
-          )}
-          <p className="text-xl text-foreground font-semibold" data-testid="text-session-header">
-            {sessionsCompleted > 0 ? 'Ready for more?' : "TODAY'S SESSION"}
-          </p>
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <Clock className="w-4 h-4" />
-            <span className="text-sm" data-testid="text-time-estimate">Complete in about 2-3 minutes.</span>
+        {sessionsCompleted > 0 && (
+          <div className="home-progress" data-testid="text-sessions-completed">
+            <CheckCircle size={18} color="#1E40FF" />
+            <span>{sessionsCompleted} session{sessionsCompleted !== 1 ? 's' : ''} completed today</span>
           </div>
-        </div>
+        )}
 
-        {/* CTA Section */}
-        <div className="w-full space-y-4 pt-4">
-          <Link href="/study" data-testid="link-start">
-            <Button 
-              size="lg" 
-              data-testid="button-start"
-              className="w-full font-bold"
-            >
-              <span>{sessionsCompleted > 0 ? 'Start next session' : "Start today's session"}</span>
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
-          <p className="text-sm text-muted-foreground" data-testid="text-motivation">
-            No pressure. Just consistency.
-          </p>
-        </div>
+        <h2 className="home-ready" data-testid="text-session-header">
+          {sessionsCompleted > 0 ? 'Ready for more?' : "Ready to practice?"}
+        </h2>
+        
+        <p className="home-time" data-testid="text-time-estimate">
+          Complete in about 2–3 minutes
+        </p>
+
+        <Link href="/study" data-testid="link-start">
+          <button className="home-cta" data-testid="button-start">
+            {sessionsCompleted > 0 ? 'Start next clinical session' : 'Start clinical session'}
+            <ArrowRight size={22} />
+          </button>
+        </Link>
+
+        <p className="home-motivation" data-testid="text-motivation">
+          No pressure. Just consistency.
+        </p>
+
+        <p className="home-microcopy">
+          Designed for nurses working with Spanish-speaking patients
+        </p>
       </div>
-    </Layout>
+    </div>
   );
 }

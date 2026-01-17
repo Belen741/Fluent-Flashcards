@@ -1,0 +1,78 @@
+Quiero que rediseñes la pantalla de inicio (Home) de mi web “Spanish for Nurses” con un estilo SaaS premium, moderno, clínico y minimalista, igual al mockup que te muestro.
+
+OBJETIVO
+- Que NO se vea “Replit default”.
+- Que se vea profesional y lista para cobrar (producto premium).
+
+DISEÑO (Desktop primero, responsive después)
+1) Fondo de la página:
+- Background color: #F7F9FB
+- Agrega un “glow”/radial soft blur sutil desde la parte superior (como una luz difusa).
+- Nada de patrones, nada de imágenes.
+
+2) Tarjeta principal centrada:
+- Un contenedor tipo “card” centrado vertical y horizontalmente.
+- Ancho ideal: 860px (máx 92vw), padding generoso (48px aprox).
+- Fondo blanco (#FFFFFF) con esquinas redondeadas grandes (24px).
+- Sombra suave y elegante (shadow grande pero muy difuso).
+- Todo el contenido alineado al centro.
+
+3) Icono superior:
+- Coloca un icono minimalista arriba: dos burbujas de chat superpuestas con una cruz médica (similar a un icono de “medical chat”).
+- El icono debe ser azul (#1E40FF aprox). Tamaño 64px.
+- Si no hay SVG, usa un placeholder temporal, pero deja listo el espacio para reemplazarlo por un SVG después.
+
+4) Tipografía y jerarquía:
+- Usa una fuente moderna tipo Inter (Google Font) o equivalente.
+- Título grande: “Spanish for Nurses”
+  - Tamaño aprox 56px (responsive a 40–48 en pantallas pequeñas)
+  - Peso 800
+  - Color verde clínico: #18A874 (aprox)
+- Subtítulo: “Short sessions. Real hospital Spanish”
+  - Tamaño 22–24px
+  - Color gris oscuro suave: #2B2F36
+  - Peso 500
+
+5) Línea de progreso:
+- Debajo del subtítulo, agrega un row horizontal con:
+  - Un círculo con check (icono) azul
+  - Texto: “6 sessions completed today”
+- Texto pequeño (16px), gris medio.
+- Separación vertical: 24px aprox.
+
+6) Sección “Ready for more?”
+- Texto: “Ready for more?”
+  - Tamaño 34–36px
+  - Peso 800
+  - Color verde clínico (mismo del título)
+- Debajo: “Complete in about 2–3 minutes”
+  - 18px
+  - Gris medio
+
+7) Botón principal (CTA):
+- Botón grande tipo “pill” (bordes totalmente redondos).
+- Texto: “Start next clinical session →”
+- Padding grande (alto 64px aprox), ancho 520px (máx 90% en móvil).
+- Color: degradado azul (azul intenso a azul un poco más oscuro), ejemplo:
+  background: linear-gradient(180deg, #1E40FF 0%, #1637D9 100%);
+- Texto blanco, tamaño 22px, peso 700.
+- Sombra sutil debajo del botón.
+- Hover: subir un poco (transform translateY(-1px)) y aumentar levemente la sombra.
+
+8) Texto bajo el botón:
+- “No pressure. Just consistency.”
+- Color verde clínico, 18px, peso 600
+
+9) Microcopy final:
+- “Designed for nurses working with Spanish-speaking patients”
+- Gris claro, 14–15px
+
+RESPONSIVE
+- En móvil: la tarjeta ocupa casi todo el ancho con padding menor (24px).
+- El título baja de tamaño, el botón ocupa 100% del ancho disponible.
+
+ENTREGABLE
+- Modifica mi componente/página Home existente.
+- Si uso React: crea/actualiza un componente Home.jsx y un CSS module o archivo CSS dedicado.
+- No uses librerías pesadas; solo CSS + HTML/React.
+- Devuélveme el código completo listo para copiar/pegar (Home + CSS) y dime exactamente en qué archivos va.

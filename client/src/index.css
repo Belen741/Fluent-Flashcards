@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;700&family=Inter:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -55,5 +55,146 @@
   
   .perspective-1000 {
     perspective: 1000px;
+  }
+}
+
+/* Premium Home Page Styles */
+.home-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #F7F9FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.home-glow {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(30, 64, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.home-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 48px;
+  width: 100%;
+  max-width: 860px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 56px;
+  font-weight: 800;
+  color: #18A874;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.home-subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  color: #2B2F36;
+  margin-bottom: 24px;
+}
+
+.home-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #5C6370;
+  margin-bottom: 32px;
+}
+
+.home-ready {
+  font-size: 34px;
+  font-weight: 800;
+  color: #18A874;
+  margin-bottom: 8px;
+}
+
+.home-time {
+  font-size: 18px;
+  color: #5C6370;
+  margin-bottom: 32px;
+}
+
+.home-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(180deg, #1E40FF 0%, #1637D9 100%);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 48px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 4px 20px rgba(30, 64, 255, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(30, 64, 255, 0.35);
+}
+
+.home-cta:active {
+  transform: translateY(0);
+}
+
+.home-motivation {
+  font-size: 18px;
+  font-weight: 600;
+  color: #18A874;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.home-microcopy {
+  font-size: 14px;
+  color: #9CA3AF;
+}
+
+@media (max-width: 640px) {
+  .home-card {
+    padding: 32px 24px;
+  }
+  
+  .home-title {
+    font-size: 36px;
+  }
+  
+  .home-subtitle {
+    font-size: 18px;
+  }
+  
+  .home-ready {
+    font-size: 26px;
+  }
+  
+  .home-cta {
+    font-size: 17px;
+    padding: 18px 32px;
+    max-width: 100%;
   }
 }
