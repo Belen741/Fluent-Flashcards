@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, Volume2, ThumbsUp, ThumbsDown, ArrowRight } from "lucide-react";
+import { Loader2, Volume2, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -117,20 +117,16 @@ export default function Study() {
     }
   }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactiveAnswered, interactionCount]);
 
-  // Handle response and advance to next card (for standard cards)
-  const handleResponseAndAdvance = useCallback((gotItRight: boolean) => {
+  // Handle advancing to next card (for standard cards - learning only, no assessment)
+  const handleStandardNext = useCallback(() => {
     if (sessionQueue.length === 0) return;
     
     const currentCard = sessionQueue[currentIndex];
 
-    // Show brief feedback before advancing
-    setUserResponse(gotItRight ? "correct" : "incorrect");
-    setShowFeedback(true);
-
-    // Process response and potentially update queue
+    // Process as "seen" (treat as correct for learning state purposes)
     const result = processResponse(
       currentCard,
-      gotItRight,
+      true, // Always treat as seen/learned
       sessionQueue,
       currentIndex,
       reservePool,
@@ -139,33 +135,30 @@ export default function Study() {
       interactionCount
     );
 
-    // Delay to show feedback briefly
-    setTimeout(() => {
-      const newCount = interactionCount + 1;
-      setInteractionCount(newCount);
-      setSessionQueue(result.updatedQueue);
-      setLearningState(result.updatedState);
-      setReservePool(result.updatedReservePool);
-      setSeenConceptIds(result.updatedSeenConcepts);
-      setUserResponse(null);
-      setShowFeedback(false);
-      setIsFlipped(false);
-      setInteractiveAnswered(false);
+    const newCount = interactionCount + 1;
+    setInteractionCount(newCount);
+    setSessionQueue(result.updatedQueue);
+    setLearningState(result.updatedState);
+    setReservePool(result.updatedReservePool);
+    setSeenConceptIds(result.updatedSeenConcepts);
+    setUserResponse(null);
+    setShowFeedback(false);
+    setIsFlipped(false);
+    setInteractiveAnswered(false);
 
-      // Check if session is complete (reached max interactions or end of queue)
-      const nextIndex = currentIndex + 1;
-      if (result.shouldEndSession || nextIndex >= result.updatedQueue.length) {
-        // Save final state before completing
-        saveLearningState(result.updatedState);
-        saveSessionHistory({
-          date: new Date().toISOString(),
-          conceptsSeen: Array.from(result.updatedSeenConcepts),
-        });
-        setLocation("/complete");
-      } else {
-        setCurrentIndex(nextIndex);
-      }
-    }, 400);
+    // Check if session is complete (reached max interactions or end of queue)
+    const nextIndex = currentIndex + 1;
+    if (result.shouldEndSession || nextIndex >= result.updatedQueue.length) {
+      // Save final state before completing
+      saveLearningState(result.updatedState);
+      saveSessionHistory({
+        date: new Date().toISOString(),
+        conceptsSeen: Array.from(result.updatedSeenConcepts),
+      });
+      setLocation("/complete");
+    } else {
+      setCurrentIndex(nextIndex);
+    }
   }, [currentIndex, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactionCount]);
 
   // Keyboard shortcuts
@@ -188,21 +181,16 @@ export default function Study() {
           handleInteractiveNext();
         }
       } else {
-        // For standard cards: 1/2 to respond and advance
-        switch (e.key) {
-          case "1":
-            handleResponseAndAdvance(true);
-            break;
-          case "2":
-            handleResponseAndAdvance(false);
-            break;
+        // For standard cards: Enter to advance (learning only)
+        if (e.key === "Enter" && isFlipped) {
+          handleStandardNext();
         }
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleResponseAndAdvance, handleInteractiveNext, sessionQueue, currentIndex, interactiveAnswered]);
+  }, [handleStandardNext, handleInteractiveNext, sessionQueue, currentIndex, interactiveAnswered, isFlipped]);
 
   if (isLoading || !flashcards || initializedSession === null || sessionQueue.length === 0) {
     return (
@@ -392,37 +380,18 @@ export default function Study() {
 
         {/* Response Section */}
         <div className="space-y-3">
-          {/* For standard cards: show response buttons */}
-          {!isInteractiveCard && (
-            <>
-              <p className="text-center text-xs text-muted-foreground" data-testid="text-question-prompt">
-                How did you do with this card?
-              </p>
-              <div className="flex gap-3 justify-center">
-                <Button
-                  variant={userResponse === "correct" ? "default" : "outline"}
-                  size="default"
-                  onClick={() => handleResponseAndAdvance(true)}
-                  data-testid="button-knew-it"
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsUp className="h-4 w-4" />
-                  <span>I knew it</span>
-                  <span className="text-xs opacity-60 ml-1">(1)</span>
-                </Button>
-                <Button
-                  variant={userResponse === "incorrect" ? "destructive" : "outline"}
-                  size="default"
-                  onClick={() => handleResponseAndAdvance(false)}
-                  data-testid="button-didnt-know"
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsDown className="h-4 w-4" />
-                  <span>I didn't know</span>
-                  <span className="text-xs opacity-60 ml-1">(2)</span>
-                </Button>
-              </div>
-            </>
+          {/* For standard cards: show Next button after flipping */}
+          {!isInteractiveCard && isFlipped && (
+            <Button 
+              size="lg"
+              onClick={handleStandardNext}
+              data-testid="button-next-standard"
+              className="w-full font-semibold"
+            >
+              <span>Next</span>
+              <ArrowRight className="ml-2 h-5 w-5" />
+              <span className="text-xs opacity-60 ml-2">(Enter)</span>
+            </Button>
           )}
 
           {/* For interactive cards: show Next button after answering */}
