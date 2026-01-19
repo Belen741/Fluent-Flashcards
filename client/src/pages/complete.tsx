@@ -5,15 +5,14 @@ import { CheckCircle2, Home, ArrowRight, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useEffect, useState } from "react";
-import { getSessionsCompletedToday, incrementSessionCount } from "@/utils/sessionQueue";
+import { getSessionsCompletedToday } from "@/utils/sessionQueue";
 
 export default function Complete() {
   const [, setLocation] = useLocation();
   const [sessionsToday, setSessionsToday] = useState(0);
 
   useEffect(() => {
-    // Increment and get session count on mount
-    const count = incrementSessionCount();
+    const count = getSessionsCompletedToday();
     setSessionsToday(count);
   }, []);
 

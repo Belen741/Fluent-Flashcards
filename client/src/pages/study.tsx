@@ -10,15 +10,18 @@ import { Progress } from "@/components/ui/progress";
 import {
   buildSessionQueue,
   processResponse,
-  getLearningState,
-  saveLearningState,
   saveSessionHistory,
   getSessionsCompletedToday,
+  incrementSessionCount,
+  type SessionCard,
+  type CardType,
 } from "@/utils/sessionQueue";
 import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
 import { QuickFillCard } from "@/components/quick-fill-card";
 import { QuickPickCard } from "@/components/quick-pick-card";
-import type { Flashcard, ConceptLearningState } from "@shared/schema";
+import { WordReorderCard } from "@/components/word-reorder-card";
+import { ReviewCard } from "@/components/review-card";
+import type { Flashcard } from "@shared/schema";
 
 export default function Study() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,18 +29,14 @@ export default function Study() {
   const searchString = useSearch();
   const { data: flashcards, isLoading } = useFlashcards();
   
-  // Get session number from URL params
   const sessionNumber = useMemo(() => {
     const params = new URLSearchParams(searchString);
     const session = params.get("session");
     return session ? parseInt(session, 10) : getSessionsCompletedToday() + 1;
   }, [searchString]);
   
-  // Session queue state
-  const [sessionQueue, setSessionQueue] = useState<Flashcard[]>([]);
+  const [sessionQueue, setSessionQueue] = useState<SessionCard[]>([]);
   const [reservePool, setReservePool] = useState<Flashcard[]>([]);
-  const [learningState, setLearningState] = useState<Record<string, ConceptLearningState>>({});
-  const [seenConceptIds, setSeenConceptIds] = useState<Set<string>>(new Set());
   const [userResponse, setUserResponse] = useState<"correct" | "incorrect" | null>(null);
   const [initializedSession, setInitializedSession] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -45,15 +44,14 @@ export default function Study() {
   const [interactiveAnswered, setInteractiveAnswered] = useState(false);
   const [interactionCount, setInteractionCount] = useState(0);
   const [maxInteractions, setMaxInteractions] = useState(18);
+  const [seenConceptIds, setSeenConceptIds] = useState<Set<string>>(new Set());
 
-  // Initialize session queue when flashcards load or session changes
   useEffect(() => {
     if (flashcards && flashcards.length > 0 && initializedSession !== sessionNumber) {
       const { queue, reservePool: pool, maxInteractions: max } = buildSessionQueue(flashcards);
       setSessionQueue(queue);
       setReservePool(pool);
       setMaxInteractions(max);
-      setLearningState(getLearningState());
       setSeenConceptIds(new Set());
       setCurrentIndex(0);
       setInteractionCount(0);
@@ -65,123 +63,150 @@ export default function Study() {
     }
   }, [flashcards, sessionNumber, initializedSession]);
 
-  // Handle interactive card answer (cloze/mcq) - just marks the answer, doesn't advance
   const handleInteractiveAnswer = useCallback((correct: boolean) => {
     setUserResponse(correct ? "correct" : "incorrect");
     setShowFeedback(true);
     setInteractiveAnswered(true);
   }, []);
 
-  // Handle Next button for interactive cards - uses the already-recorded response
   const handleInteractiveNext = useCallback(() => {
     if (sessionQueue.length === 0 || !interactiveAnswered) return;
     
-    const currentCard = sessionQueue[currentIndex];
+    const currentSessionCard = sessionQueue[currentIndex];
     const gotItRight = userResponse === "correct";
 
-    // Process response and potentially update queue
     const result = processResponse(
-      currentCard,
+      currentSessionCard,
       gotItRight,
       sessionQueue,
       currentIndex,
       reservePool,
-      learningState,
-      seenConceptIds,
       interactionCount
     );
 
     const newCount = interactionCount + 1;
     setInteractionCount(newCount);
     setSessionQueue(result.updatedQueue);
-    setLearningState(result.updatedState);
     setReservePool(result.updatedReservePool);
-    setSeenConceptIds(result.updatedSeenConcepts);
+    
+    const updatedSeenConcepts = new Set(Array.from(seenConceptIds).concat([currentSessionCard.conceptId]));
+    setSeenConceptIds(updatedSeenConcepts);
     setUserResponse(null);
     setShowFeedback(false);
     setIsFlipped(false);
     setInteractiveAnswered(false);
 
-    // Check if session is complete (reached max interactions or end of queue)
     const nextIndex = currentIndex + 1;
     if (result.shouldEndSession || nextIndex >= result.updatedQueue.length) {
-      // Save final state before completing
-      saveLearningState(result.updatedState);
       saveSessionHistory({
         date: new Date().toISOString(),
-        conceptsSeen: Array.from(result.updatedSeenConcepts),
+        conceptsSeen: Array.from(updatedSeenConcepts),
       });
+      incrementSessionCount();
       setLocation("/complete");
     } else {
       setCurrentIndex(nextIndex);
     }
-  }, [currentIndex, userResponse, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactiveAnswered, interactionCount]);
+  }, [currentIndex, userResponse, sessionQueue, reservePool, setLocation, interactiveAnswered, interactionCount, seenConceptIds]);
 
-  // Handle advancing to next card (for standard cards - learning only, no assessment)
   const handleStandardNext = useCallback(() => {
     if (sessionQueue.length === 0) return;
     
-    const currentCard = sessionQueue[currentIndex];
+    const currentSessionCard = sessionQueue[currentIndex];
 
-    // Process as "seen" (treat as correct for learning state purposes)
     const result = processResponse(
-      currentCard,
-      true, // Always treat as seen/learned
+      currentSessionCard,
+      true,
       sessionQueue,
       currentIndex,
       reservePool,
-      learningState,
-      seenConceptIds,
       interactionCount
     );
 
     const newCount = interactionCount + 1;
     setInteractionCount(newCount);
     setSessionQueue(result.updatedQueue);
-    setLearningState(result.updatedState);
     setReservePool(result.updatedReservePool);
-    setSeenConceptIds(result.updatedSeenConcepts);
+    
+    const updatedSeenConcepts = new Set(Array.from(seenConceptIds).concat([currentSessionCard.conceptId]));
+    setSeenConceptIds(updatedSeenConcepts);
     setUserResponse(null);
     setShowFeedback(false);
     setIsFlipped(false);
     setInteractiveAnswered(false);
 
-    // Check if session is complete (reached max interactions or end of queue)
     const nextIndex = currentIndex + 1;
     if (result.shouldEndSession || nextIndex >= result.updatedQueue.length) {
-      // Save final state before completing
-      saveLearningState(result.updatedState);
       saveSessionHistory({
         date: new Date().toISOString(),
-        conceptsSeen: Array.from(result.updatedSeenConcepts),
+        conceptsSeen: Array.from(updatedSeenConcepts),
       });
+      incrementSessionCount();
       setLocation("/complete");
     } else {
       setCurrentIndex(nextIndex);
     }
-  }, [currentIndex, sessionQueue, reservePool, learningState, seenConceptIds, setLocation, interactionCount]);
+  }, [currentIndex, sessionQueue, reservePool, setLocation, interactionCount, seenConceptIds]);
 
-  // Keyboard shortcuts
+  const handleReviewAnswer = useCallback((knew: boolean) => {
+    if (sessionQueue.length === 0) return;
+    
+    const currentSessionCard = sessionQueue[currentIndex];
+
+    const result = processResponse(
+      currentSessionCard,
+      knew,
+      sessionQueue,
+      currentIndex,
+      reservePool,
+      interactionCount
+    );
+
+    const newCount = interactionCount + 1;
+    setInteractionCount(newCount);
+    setSessionQueue(result.updatedQueue);
+    setReservePool(result.updatedReservePool);
+    
+    const updatedSeenConcepts = new Set(Array.from(seenConceptIds).concat([currentSessionCard.conceptId]));
+    setSeenConceptIds(updatedSeenConcepts);
+    setUserResponse(null);
+    setShowFeedback(false);
+    setIsFlipped(false);
+    setInteractiveAnswered(false);
+
+    const nextIndex = currentIndex + 1;
+    if (result.shouldEndSession || nextIndex >= result.updatedQueue.length) {
+      saveSessionHistory({
+        date: new Date().toISOString(),
+        conceptsSeen: Array.from(updatedSeenConcepts),
+      });
+      incrementSessionCount();
+      setLocation("/complete");
+    } else {
+      setCurrentIndex(nextIndex);
+    }
+  }, [currentIndex, sessionQueue, reservePool, setLocation, interactionCount, seenConceptIds]);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if user is typing in an input
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return;
       }
 
-      const currentCard = sessionQueue[currentIndex];
-      const isInteractive = currentCard && (
-        (currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0) ||
-        (currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0)
-      );
+      if (sessionQueue.length === 0 || currentIndex >= sessionQueue.length) return;
+      
+      const currentSessionCard = sessionQueue[currentIndex];
+      const cardType = currentSessionCard.cardType;
 
-      if (isInteractive) {
-        // For interactive cards: Enter to advance after answering
+      if (cardType === "cloze" || cardType === "mcq") {
         if (e.key === "Enter" && interactiveAnswered) {
           handleInteractiveNext();
         }
-      } else {
-        // For standard cards: Enter to advance (learning only)
+      } else if (cardType === "reorder") {
+        // Reorder card handles its own input
+      } else if (cardType === "review") {
+        // Review card handles its own buttons
+      } else if (cardType === "intro") {
         if (e.key === "Enter" && isFlipped) {
           handleStandardNext();
         }
@@ -203,13 +228,10 @@ export default function Study() {
   }
 
   const totalCards = sessionQueue.length;
-  const currentCard = sessionQueue[currentIndex];
+  const currentSessionCard = sessionQueue[currentIndex];
+  const currentCard = currentSessionCard.card;
+  const cardType = currentSessionCard.cardType;
   const progress = ((currentIndex + 1) / totalCards) * 100;
-  
-  // Check if current card is an interactive type (cloze or mcq with valid data)
-  const isInteractiveCard = 
-    (currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0) ||
-    (currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0);
 
   const playAudio = () => {
     const audioUrl = getAudioUrl(currentCard);
@@ -218,12 +240,9 @@ export default function Study() {
       audio.play().catch(() => {
         console.log("Audio not available for:", currentCard.text);
       });
-    } else {
-      console.log("No audio URL for:", currentCard.text);
     }
   };
 
-  // Micro-feedback message
   const getFeedbackMessage = () => {
     if (!showFeedback || !userResponse) return null;
     if (userResponse === "correct") {
@@ -232,22 +251,30 @@ export default function Study() {
     return "Keep going!";
   };
 
+  const getLevelLabel = (cardType: CardType): string => {
+    switch (cardType) {
+      case "intro": return "Learn";
+      case "cloze": return "Recognize";
+      case "mcq": return "Recall";
+      case "reorder": return "Produce";
+      case "review": return "Review";
+    }
+  };
+
   return (
     <Layout>
       <div className="space-y-5">
-        {/* Session Header */}
         <div className="text-center">
           <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest" data-testid="text-session-header">
             Today's Session
           </span>
         </div>
 
-        {/* Progress Section */}
         <div className="space-y-2">
           <Progress value={progress} className="h-2 rounded-full bg-secondary/50" data-testid="progress-bar" />
           <div className="flex justify-between items-center gap-4 px-1">
             <span className="text-xs text-muted-foreground" data-testid="text-status">
-              You're doing great!
+              {getLevelLabel(cardType)} Mode
             </span>
             <span className="text-xs text-muted-foreground" data-testid="text-progress-counter">
               Card {currentIndex + 1} of {totalCards}
@@ -255,7 +282,6 @@ export default function Study() {
           </div>
         </div>
 
-        {/* Flashcard Area */}
         <div className="relative h-[380px] w-full p-1 perspective-1000">
           <AnimatePresence mode="wait">
             <motion.div
@@ -266,16 +292,25 @@ export default function Study() {
               transition={{ duration: 0.25, ease: "easeOut" }}
               className="w-full h-full"
             >
-              {/* Render based on variant type */}
-              {currentCard.variantType === "cloze" && currentCard.clozeOptions && currentCard.clozeOptions.length > 0 ? (
+              {cardType === "cloze" ? (
                 <QuickFillCard 
                   card={currentCard} 
                   onAnswer={handleInteractiveAnswer} 
                 />
-              ) : currentCard.variantType === "mcq" && currentCard.mcqOptionsEn && currentCard.mcqOptionsEn.length > 0 ? (
+              ) : cardType === "mcq" ? (
                 <QuickPickCard 
                   card={currentCard} 
                   onAnswer={handleInteractiveAnswer} 
+                />
+              ) : cardType === "reorder" ? (
+                <WordReorderCard 
+                  card={currentCard} 
+                  onAnswer={handleInteractiveAnswer} 
+                />
+              ) : cardType === "review" ? (
+                <ReviewCard 
+                  card={currentCard} 
+                  onAnswer={handleReviewAnswer} 
                 />
               ) : (
                 <div 
@@ -284,7 +319,6 @@ export default function Study() {
                   onClick={() => setIsFlipped(!isFlipped)}
                   data-testid="flashcard-container"
                 >
-                  {/* Front of card */}
                   <motion.div
                     className="absolute inset-0"
                     initial={false}
@@ -296,7 +330,6 @@ export default function Study() {
                     style={{ backfaceVisibility: "hidden" }}
                   >
                     <Card className="h-full flex flex-col overflow-hidden">
-                      {/* Image Section */}
                       <div className="h-[65%] w-full bg-secondary/30 relative flex items-center justify-center">
                         <img 
                           src={getImageUrl(currentCard)} 
@@ -323,7 +356,6 @@ export default function Study() {
                         </Button>
                       </div>
 
-                      {/* Content Section - Front */}
                       <div className="flex-1 flex flex-col items-center justify-center p-4 text-center">
                         <div className="space-y-3 mt-2">
                           <h2 className="text-xl md:text-2xl font-bold text-foreground" data-testid="text-spanish-word">
@@ -342,7 +374,6 @@ export default function Study() {
                     </Card>
                   </motion.div>
 
-                  {/* Back of card */}
                   <motion.div
                     className="absolute inset-0"
                     initial={false}
@@ -378,10 +409,8 @@ export default function Study() {
           </AnimatePresence>
         </div>
 
-        {/* Response Section */}
         <div className="space-y-3">
-          {/* For standard cards: show Next button after flipping */}
-          {!isInteractiveCard && isFlipped && (
+          {cardType === "intro" && isFlipped && (
             <Button 
               size="lg"
               onClick={handleStandardNext}
@@ -394,8 +423,7 @@ export default function Study() {
             </Button>
           )}
 
-          {/* For interactive cards: show Next button after answering */}
-          {isInteractiveCard && interactiveAnswered && (
+          {(cardType === "cloze" || cardType === "mcq" || cardType === "reorder") && interactiveAnswered && (
             <Button 
               size="lg"
               onClick={handleInteractiveNext}
@@ -408,7 +436,6 @@ export default function Study() {
             </Button>
           )}
 
-          {/* Micro-feedback */}
           <AnimatePresence mode="wait">
             {showFeedback && userResponse && (
               <motion.p

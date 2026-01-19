@@ -36,31 +36,38 @@ Preferred communication style: Simple, everyday language.
 
 **Shared Schema Pattern**: The database schema lives in `shared/` to enable type-safe API contracts between frontend and backend without code duplication.
 
-**Invisible Spaced Repetition**: Learning state is tracked client-side in localStorage rather than the database. This keeps the UI simple while enabling adaptive card ordering based on user performance.
+**5-Level Progression System**: Each concept has a level (0-4) tracked in localStorage via `client/src/utils/userProgress.ts`. No login required.
 
-**Concept-Variant Model**: Each vocabulary concept has three variant types (intro, cloze, mcq) stored as separate flashcard records linked by `conceptId`. This enables camouflaged repetition where struggling users see different presentations of the same concept.
+**Level Progression**:
+- **Level 0 (Learn)**: Standard intro card - flip to reveal translation
+- **Level 1 (Recognize)**: Cloze card - pick the correct Spanish phrase from options
+- **Level 2 (Recall)**: MCQ card - pick correct English word to complete Spanish sentence
+- **Level 3 (Produce)**: Word Reorder card - tap words in correct order to form the phrase
+- **Level 4 (Mastered)**: Review card - appears every 20 sessions with "I know"/"I don't know" buttons
 
-**Session Queue Algorithm (Duolingo-Style)**: Located in `client/src/utils/sessionQueue.ts`, builds a varied session with invisible spaced repetition:
+**Simple Progression Rules**:
+- Correct answer = level up (max 4)
+- Incorrect answer = level down (min 0)
+- On incorrect: a downgraded variant card is inserted 2-5 positions ahead for reinforcement
+
+**Session Queue Algorithm**: Located in `client/src/utils/sessionQueue.ts`:
 - **New concepts per session**: 5 (configurable via `NEW_CONCEPTS_PER_SESSION`)
-- **Total interactions**: 12-18 (max 18, ideal 14-16)
-- Initial queue mixes card types: ~60% intro, ~20% cloze, ~20% mcq
-- First card is always intro (standard learning card)
-- Never shows same concept twice in a row
-- On failure: reinserts concept 2-5 positions ahead in different format
-- On success (low streak): may reinsert 8-14 positions ahead for proactive practice
-- Max 3 appearances per concept per session
-- If repetition exceeds max interactions: ends session gracefully
-- All repetition is invisible to user - feels like variety, not review
+- **Max interactions per session**: 18 (configurable via `MAX_INTERACTIONS_PER_SESSION`)
+- **Mastered review interval**: 20 sessions (configurable via `MASTERED_REVIEW_INTERVAL`)
+- Prioritizes in-progress concepts (levels 1-3), then new concepts (level 0)
+- Up to 2 mastered concepts (level 4) due for review included per session
 - Sessions feel short, achievable, and friendly (~2-3 minutes)
 
 ### Recent UX Improvements (Jan 2026)
 
 **English UI Text**: All user-facing text is in English (teaching Spanish to English-speaking nurses).
 
-**Three Card Surface Types**:
-- **Standard Card**: Shows Spanish phrase with "Show translation" button; flip to reveal English translation. User marks "I knew it" or "I didn't know"
-- **Quick Fill (Cloze)**: Shows image + "Which phrase matches?" with 4 Spanish options to choose from
-- **Quick Pick (MCQ)**: Shows image + Spanish question with blanks, user picks correct English word from 3 options
+**Five Card Surface Types**:
+- **Standard Card (Level 0)**: Shows Spanish phrase with "Show translation" button; flip to reveal English translation
+- **Quick Fill (Level 1)**: Shows image + "Which phrase matches?" with 4 Spanish options to choose from
+- **Quick Pick (Level 2)**: Shows image + Spanish question with blanks, user picks correct English word from 3 options
+- **Word Reorder (Level 3)**: Shows shuffled words as tappable buttons; user taps words in correct order to form the Spanish phrase
+- **Review Card (Level 4)**: Shows Spanish phrase with translation; user marks "I know" or "I don't know" for mastered concept review
 
 **Response System**: 
 - Standard cards: Users mark "I knew it" or "I didn't know" to track progress

@@ -1,4 +1,13 @@
 import type { Flashcard, ConceptLearningState, SessionHistory } from "@shared/schema";
+import { 
+  getUserProgress, 
+  saveUserProgress, 
+  getConceptLevel, 
+  updateConceptLevel,
+  getTotalSessionsCompleted,
+  incrementTotalSessions,
+  type CardLevel 
+} from "./userProgress";
 
 const LEARNING_STATE_KEY = "flashcard_learning_state";
 const SESSION_HISTORY_KEY = "flashcard_session_history";
@@ -7,13 +16,15 @@ const SESSION_DATE_KEY = "flashcard_session_date";
 
 const NEW_CONCEPTS_PER_SESSION = 5;
 const MAX_INTERACTIONS_PER_SESSION = 18;
-const TARGET_INTERACTIONS = 15;
+const MASTERED_REVIEW_INTERVAL = 20;
 
-type CardFormat = "intro" | "cloze" | "mcq";
+export type CardType = "intro" | "cloze" | "mcq" | "reorder" | "review";
 
-interface ConceptTracker {
-  appearanceCount: number;
-  lastFormat: CardFormat | null;
+export interface SessionCard {
+  card: Flashcard;
+  cardType: CardType;
+  conceptId: string;
+  level: CardLevel;
 }
 
 function getTodayString(): string {
@@ -46,6 +57,9 @@ export function incrementSessionCount(): number {
     const current = getSessionsCompletedToday();
     const newCount = current + 1;
     localStorage.setItem(SESSION_COUNT_KEY, String(newCount));
+    
+    incrementTotalSessions();
+    
     return newCount;
   } catch {
     return 1;
@@ -103,26 +117,36 @@ function shuffle<T>(array: T[]): T[] {
   return result;
 }
 
-function getCardByFormat(cards: Flashcard[], format: CardFormat): Flashcard | null {
-  const card = cards.find(c => c.variantType === format);
-  if (!card) return null;
-  if (format === "cloze" && !hasValidCloze(card)) return null;
-  if (format === "mcq" && !hasValidMcq(card)) return null;
-  return card;
+function getCardTypeForLevel(level: CardLevel): CardType {
+  switch (level) {
+    case 0: return "intro";
+    case 1: return "cloze";
+    case 2: return "mcq";
+    case 3: return "reorder";
+    case 4: return "review";
+  }
 }
 
-function getAvailableFormats(cards: Flashcard[]): CardFormat[] {
-  const formats: CardFormat[] = [];
-  if (cards.some(c => c.variantType === "intro")) formats.push("intro");
-  const clozeCard = cards.find(c => c.variantType === "cloze");
-  if (clozeCard && hasValidCloze(clozeCard)) formats.push("cloze");
-  const mcqCard = cards.find(c => c.variantType === "mcq");
-  if (mcqCard && hasValidMcq(mcqCard)) formats.push("mcq");
-  return formats;
+function getCardByType(cards: Flashcard[], cardType: CardType): Flashcard | null {
+  if (cardType === "intro" || cardType === "review") {
+    return cards.find(c => c.variantType === "intro") || null;
+  }
+  if (cardType === "cloze") {
+    const card = cards.find(c => c.variantType === "cloze");
+    return card && hasValidCloze(card) ? card : null;
+  }
+  if (cardType === "mcq") {
+    const card = cards.find(c => c.variantType === "mcq");
+    return card && hasValidMcq(card) ? card : null;
+  }
+  if (cardType === "reorder") {
+    return cards.find(c => c.variantType === "intro") || null;
+  }
+  return null;
 }
 
 export function buildSessionQueue(flashcards: Flashcard[]): {
-  queue: Flashcard[];
+  queue: SessionCard[];
   reservePool: Flashcard[];
   maxInteractions: number;
 } {
@@ -135,97 +159,164 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
     conceptGroups[card.conceptId].push(card);
   }
 
-  const allConceptIds = shuffle(Object.keys(conceptGroups));
+  const allConceptIds = Object.keys(conceptGroups);
+  const userProgress = getUserProgress();
+  const currentSession = userProgress.totalSessionsCompleted + 1;
   
-  const sessionConceptIds = allConceptIds.slice(0, NEW_CONCEPTS_PER_SESSION);
+  const conceptsByLevel: Record<CardLevel, string[]> = {
+    0: [],
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+  };
   
-  const queue: Flashcard[] = [];
-  let isFirstCard = true;
-
-  const slots: CardFormat[] = [];
-  const introCount = Math.ceil(sessionConceptIds.length * 0.6);
-  const clozeCount = Math.floor(sessionConceptIds.length * 0.2);
-  const mcqCount = sessionConceptIds.length - introCount - clozeCount;
+  for (const conceptId of allConceptIds) {
+    const level = getConceptLevel(conceptId);
+    conceptsByLevel[level].push(conceptId);
+  }
   
-  for (let i = 0; i < introCount; i++) slots.push("intro");
-  for (let i = 0; i < clozeCount; i++) slots.push("cloze");
-  for (let i = 0; i < mcqCount; i++) slots.push("mcq");
+  const masteredForReview = conceptsByLevel[4].filter(conceptId => {
+    const concept = userProgress.concepts[conceptId];
+    if (!concept) return false;
+    return currentSession - concept.lastSessionSeen >= MASTERED_REVIEW_INTERVAL;
+  });
   
-  let shuffledSlots = shuffle(slots);
+  const inProgressConcepts: string[] = [
+    ...shuffle(conceptsByLevel[1]),
+    ...shuffle(conceptsByLevel[2]),
+    ...shuffle(conceptsByLevel[3]),
+  ];
   
-  if (shuffledSlots[0] !== "intro") {
-    const introIdx = shuffledSlots.indexOf("intro");
-    if (introIdx > 0) {
-      [shuffledSlots[0], shuffledSlots[introIdx]] = [shuffledSlots[introIdx], shuffledSlots[0]];
+  const newConcepts = shuffle(conceptsByLevel[0]);
+  
+  const queue: SessionCard[] = [];
+  
+  const reviewToAdd = Math.min(masteredForReview.length, 2);
+  for (let i = 0; i < reviewToAdd; i++) {
+    const conceptId = masteredForReview[i];
+    const cards = conceptGroups[conceptId];
+    const card = getCardByType(cards, "review");
+    if (card) {
+      queue.push({
+        card,
+        cardType: "review",
+        conceptId,
+        level: 4,
+      });
     }
   }
   
-  const availableConcepts = [...sessionConceptIds];
-  const usedConcepts = new Set<string>();
+  const inProgressToAdd = Math.min(inProgressConcepts.length, MAX_INTERACTIONS_PER_SESSION - queue.length);
+  for (let i = 0; i < inProgressToAdd; i++) {
+    const conceptId = inProgressConcepts[i];
+    const level = getConceptLevel(conceptId);
+    const cardType = getCardTypeForLevel(level);
+    const cards = conceptGroups[conceptId];
+    const card = getCardByType(cards, cardType);
+    if (card) {
+      queue.push({
+        card,
+        cardType,
+        conceptId,
+        level,
+      });
+    }
+  }
   
-  for (let i = 0; i < shuffledSlots.length && availableConcepts.length > 0; i++) {
-    const targetFormat = shuffledSlots[i];
-    let selectedCard: Flashcard | null = null;
-    let selectedConceptIdx = -1;
-    
-    for (let j = 0; j < availableConcepts.length; j++) {
-      const conceptId = availableConcepts[j];
-      if (usedConcepts.has(conceptId)) continue;
-      
-      const cards = conceptGroups[conceptId];
-      const card = getCardByFormat(cards, targetFormat);
-      
-      if (card) {
-        if (queue.length > 0) {
-          const lastCard = queue[queue.length - 1];
-          if (lastCard.conceptId === conceptId || lastCard.text === card.text) {
-            continue;
-          }
-        }
-        selectedCard = card;
-        selectedConceptIdx = j;
-        break;
-      }
+  const remainingSlots = Math.min(NEW_CONCEPTS_PER_SESSION, MAX_INTERACTIONS_PER_SESSION - queue.length);
+  for (let i = 0; i < remainingSlots && i < newConcepts.length; i++) {
+    const conceptId = newConcepts[i];
+    const cards = conceptGroups[conceptId];
+    const card = getCardByType(cards, "intro");
+    if (card) {
+      queue.push({
+        card,
+        cardType: "intro",
+        conceptId,
+        level: 0,
+      });
     }
-    
-    if (!selectedCard) {
-      for (let j = 0; j < availableConcepts.length; j++) {
-        const conceptId = availableConcepts[j];
-        if (usedConcepts.has(conceptId)) continue;
-        
-        const cards = conceptGroups[conceptId];
-        const introCard = getCardByFormat(cards, "intro");
-        
-        if (introCard) {
-          if (queue.length > 0) {
-            const lastCard = queue[queue.length - 1];
-            if (lastCard.conceptId === conceptId || lastCard.text === introCard.text) {
-              continue;
-            }
-          }
-          selectedCard = introCard;
-          selectedConceptIdx = j;
-          break;
-        }
-      }
-    }
-    
-    if (selectedCard && selectedConceptIdx >= 0) {
-      queue.push(selectedCard);
-      usedConcepts.add(availableConcepts[selectedConceptIdx]);
-      availableConcepts.splice(selectedConceptIdx, 1);
-      isFirstCard = false;
-    }
+  }
+  
+  const shuffledQueue = shuffle(queue);
+  
+  const introIndex = shuffledQueue.findIndex(item => item.cardType === "intro");
+  if (introIndex > 0) {
+    const introItem = shuffledQueue.splice(introIndex, 1)[0];
+    shuffledQueue.unshift(introItem);
   }
 
   return { 
-    queue, 
+    queue: shuffledQueue, 
     reservePool: flashcards,
     maxInteractions: MAX_INTERACTIONS_PER_SESSION
   };
 }
 
 export function processResponse(
+  sessionCard: SessionCard,
+  gotItRight: boolean,
+  currentQueue: SessionCard[],
+  currentIndex: number,
+  reservePool: Flashcard[],
+  interactionCount: number = 0
+): {
+  updatedQueue: SessionCard[];
+  updatedReservePool: Flashcard[];
+  shouldEndSession: boolean;
+  newLevel: CardLevel;
+} {
+  const { conceptId, level } = sessionCard;
+  
+  const userProgress = getUserProgress();
+  const currentSession = userProgress.totalSessionsCompleted + 1;
+  const newLevel = updateConceptLevel(conceptId, gotItRight, currentSession);
+  
+  let updatedQueue = [...currentQueue];
+  const updatedReservePool = [...reservePool];
+
+  const newInteractionCount = interactionCount + 1;
+  const shouldEndSession = newInteractionCount >= MAX_INTERACTIONS_PER_SESSION;
+  
+  if (shouldEndSession) {
+    return {
+      updatedQueue,
+      updatedReservePool,
+      shouldEndSession,
+      newLevel,
+    };
+  }
+  
+  if (!gotItRight && newLevel < level) {
+    const conceptCards = updatedReservePool.filter(c => c.conceptId === conceptId);
+    const newCardType = getCardTypeForLevel(newLevel);
+    const card = getCardByType(conceptCards, newCardType);
+    
+    if (card) {
+      const offset = 2 + Math.floor(Math.random() * 3);
+      const insertPosition = Math.min(currentIndex + offset, updatedQueue.length);
+      
+      const newSessionCard: SessionCard = {
+        card,
+        cardType: newCardType,
+        conceptId,
+        level: newLevel,
+      };
+      
+      updatedQueue.splice(insertPosition, 0, newSessionCard);
+    }
+  }
+
+  return {
+    updatedQueue,
+    updatedReservePool,
+    shouldEndSession,
+    newLevel,
+  };
+}
+
+export function processResponseLegacy(
   currentCard: Flashcard,
   gotItRight: boolean,
   currentQueue: Flashcard[],
@@ -275,100 +366,14 @@ export function processResponse(
 
   saveLearningState(updatedState);
 
-  let updatedQueue = [...currentQueue];
-  const updatedReservePool = [...reservePool];
-
   const newInteractionCount = interactionCount + 1;
   const shouldEndSession = newInteractionCount >= MAX_INTERACTIONS_PER_SESSION;
-  
-  const conceptAppearedCount = updatedQueue.filter(c => c.conceptId === conceptId).length;
-  
-  if (conceptAppearedCount >= 3 || shouldEndSession) {
-    return {
-      updatedQueue,
-      updatedState,
-      updatedReservePool,
-      updatedSeenConcepts,
-      shouldEndSession,
-    };
-  }
-
-  const currentFormat = currentCard.variantType as CardFormat;
-  const conceptCards = updatedReservePool.filter(c => c.conceptId === conceptId);
-  
-  if (!gotItRight) {
-    const offset = 2 + Math.floor(Math.random() * 4);
-    const insertPosition = Math.min(currentIndex + offset, updatedQueue.length);
-    
-    const differentFormatCard = findDifferentFormatCard(conceptCards, currentFormat);
-    
-    if (differentFormatCard) {
-      if (!hasAdjacentConflict(updatedQueue, insertPosition, conceptId, differentFormatCard.text)) {
-        updatedQueue.splice(insertPosition, 0, differentFormatCard);
-      } else {
-        const altPosition = Math.min(insertPosition + 1, updatedQueue.length);
-        if (!hasAdjacentConflict(updatedQueue, altPosition, conceptId, differentFormatCard.text)) {
-          updatedQueue.splice(altPosition, 0, differentFormatCard);
-        }
-      }
-    }
-  } else {
-    if (currentConceptState.correctStreak < 2) {
-      const offset = 8 + Math.floor(Math.random() * 7);
-      const insertPosition = Math.min(currentIndex + offset, updatedQueue.length);
-      
-      const differentFormatCard = findDifferentFormatCard(conceptCards, currentFormat);
-      
-      if (differentFormatCard) {
-        if (!hasAdjacentConflict(updatedQueue, insertPosition, conceptId, differentFormatCard.text)) {
-          updatedQueue.splice(insertPosition, 0, differentFormatCard);
-        }
-      }
-    }
-  }
 
   return {
-    updatedQueue,
+    updatedQueue: [...currentQueue],
     updatedState,
-    updatedReservePool,
+    updatedReservePool: [...reservePool],
     updatedSeenConcepts,
     shouldEndSession,
   };
-}
-
-function findDifferentFormatCard(
-  conceptCards: Flashcard[],
-  currentFormat: CardFormat
-): Flashcard | null {
-  const preferredOrder: CardFormat[] = currentFormat === "intro" 
-    ? ["cloze", "mcq"]
-    : currentFormat === "cloze"
-    ? ["mcq", "intro"]
-    : ["cloze", "intro"];
-  
-  for (const format of preferredOrder) {
-    const card = conceptCards.find(c => c.variantType === format);
-    if (card) {
-      if (format === "cloze" && !hasValidCloze(card)) continue;
-      if (format === "mcq" && !hasValidMcq(card)) continue;
-      return card;
-    }
-  }
-  
-  return null;
-}
-
-function hasAdjacentConflict(
-  queue: Flashcard[],
-  position: number,
-  conceptId: string,
-  text: string
-): boolean {
-  const prev = queue[position - 1];
-  const next = queue[position];
-  
-  if (prev && (prev.conceptId === conceptId || prev.text === text)) return true;
-  if (next && (next.conceptId === conceptId || next.text === text)) return true;
-  
-  return false;
 }
