@@ -1269,11 +1269,11 @@ export const flashcardsData = [
     "englishText": "How would you describe the pain: sharp, strong, or mild?",
     "clozeOptions": [
       "¿Ha tomado algo para el dolor?",
-      "¿Cómo describiría el dolor?",
+      "¿Cómo describiría el dolor: punzante, fuerte o leve?",
       "¿Ha tenido fiebre?",
       "¿El dolor empeora al moverse?"
     ],
-    "clozeCorrect": "¿Cómo describiría el dolor?"
+    "clozeCorrect": "¿Cómo describiría el dolor: punzante, fuerte o leve?"
   },
   {
     "conceptId": "m2_04",
@@ -1291,13 +1291,13 @@ export const flashcardsData = [
     "variantType": "mcq",
     "text": "¿Cómo describiría el dolor: punzante, fuerte o leve?",
     "englishText": "How would you describe the pain: sharp, strong, or mild?",
-    "mcqQuestionEs": "How would you describe the pain?",
+    "mcqQuestionEs": "How would you describe the pain: sharp, severe, or mild?",
     "mcqOptionsEn": [
-      "¿Cómo diría el dolor?",
-      "¿Cómo describiría el dolor?",
-      "¿Cómo contaría el dolor?"
+      "¿Cómo diría el dolor: punzante, fuerte o leve?",
+      "¿Cómo describiría el dolor: punzante, fuerte o leve?",
+      "¿Cómo contaría el dolor: punzante, fuerte o leve?"
     ],
-    "mcqCorrectEn": "¿Cómo describiría el dolor?"
+    "mcqCorrectEn": "¿Cómo describiría el dolor: punzante, fuerte o leve?"
   },
   {
     "conceptId": "m2_05",
