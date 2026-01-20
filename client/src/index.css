@@ -134,34 +134,6 @@
   margin-bottom: 32px;
 }
 
-.home-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: linear-gradient(180deg, #1E40FF 0%, #1637D9 100%);
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 20px 48px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  max-width: 520px;
-  box-shadow: 0 4px 20px rgba(30, 64, 255, 0.25);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.home-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(30, 64, 255, 0.35);
-}
-
-.home-cta:active {
-  transform: translateY(0);
-}
-
 .home-motivation {
   font-size: 18px;
   font-weight: 600;
@@ -192,9 +164,4 @@
     font-size: 26px;
   }
   
-  .home-cta {
-    font-size: 17px;
-    padding: 18px 32px;
-    max-width: 100%;
-  }
 }

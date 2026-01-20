@@ -1,7 +1,8 @@
 import { Link } from "wouter";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, CheckCircle, ArrowRight } from "lucide-react";
+import { Loader2, CheckCircle, ArrowRight, Map } from "lucide-react";
 import { getSessionsCompletedToday } from "@/utils/sessionQueue";
+import { Button } from "@/components/ui/button";
 
 function MedicalChatIcon() {
   return (
@@ -58,10 +59,17 @@ export default function Home() {
         </p>
 
         <Link href="/study" data-testid="link-start">
-          <button className="home-cta" data-testid="button-start">
+          <Button size="lg" className="gap-2 bg-gradient-to-r from-[#1E40FF] to-[#3B82F6] text-white border-0" data-testid="button-start">
             {sessionsCompleted > 0 ? 'Start next clinical session' : 'Start clinical session'}
             <ArrowRight size={22} />
-          </button>
+          </Button>
+        </Link>
+
+        <Link href="/modules" data-testid="link-modules">
+          <Button variant="outline" className="mt-4 gap-2" data-testid="button-modules">
+            <Map size={18} />
+            View Learning Path
+          </Button>
         </Link>
 
         <p className="home-motivation" data-testid="text-motivation">
