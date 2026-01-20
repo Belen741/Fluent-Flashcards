@@ -55,7 +55,7 @@ export default function Home() {
         </h2>
         
         <p className="home-time" data-testid="text-time-estimate">
-          Complete in about 2–3 minutes
+          Complete in about 5 minutes
         </p>
 
         <Link href="/modules" data-testid="link-start">
