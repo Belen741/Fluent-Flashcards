@@ -127,3 +127,31 @@ npx tsx scripts/import-flashcards.ts
 ### Development Tools
 - Replit-specific Vite plugins for development experience
 - `tsx` for running TypeScript directly in development
+
+### Authentication & Payments (Jan 2026)
+
+**Replit Auth Integration**: Users can log in via Google OAuth or email/password through Replit's built-in authentication system.
+- Auth hook: `client/src/hooks/use-auth.ts`
+- User model: `shared/models/auth.ts`
+- Login endpoint: `/api/__repl/auth/login`
+
+**Stripe Subscription**: $5/month subscription for premium access to modules 2-15.
+- Price ID: `price_1SroNeRjP93FY9NBao2zl3w6`
+- Stripe service: `server/stripeService.ts`
+- Subscription hook: `client/src/hooks/use-subscription.ts`
+- Checkout endpoints: `/api/create-checkout-session`, `/api/subscription`
+
+**Module Access Control**:
+- Module 1 (Patient Admission): FREE - no login required
+- Modules 2-15: Require active subscription
+- Premium badges shown on locked modules for non-subscribers
+- Upgrade modal triggers when non-subscriber tries to access premium modules
+
+**Checkout Flow**:
+- Success page: `/checkout/success` - invalidates subscription cache and shows celebration
+- Cancel page: `/checkout/cancel` - shows friendly message with options to return
+
+**User Schema Fields** (for Stripe):
+- `stripe_customer_id`: Stripe customer ID
+- `stripe_subscription_id`: Active subscription ID
+- `subscription_status`: Current status (active, canceled, etc.)

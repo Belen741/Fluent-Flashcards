@@ -7,6 +7,8 @@ import Home from "@/pages/home";
 import Study from "@/pages/study";
 import Complete from "@/pages/complete";
 import Modules from "@/pages/modules";
+import CheckoutSuccess from "@/pages/checkout-success";
+import CheckoutCancel from "@/pages/checkout-cancel";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +18,8 @@ function Router() {
       <Route path="/study" component={Study} />
       <Route path="/complete" component={Complete} />
       <Route path="/modules" component={Modules} />
+      <Route path="/checkout/success" component={CheckoutSuccess} />
+      <Route path="/checkout/cancel" component={CheckoutCancel} />
       <Route component={NotFound} />
     </Switch>
   );

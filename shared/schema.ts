@@ -2,6 +2,9 @@ import { pgTable, text, serial, integer, boolean } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
+// Re-export auth models for Replit Auth integration
+export * from "./models/auth";
+
 export const flashcards = pgTable("flashcards", {
   id: serial("id").primaryKey(),
   text: text("text").notNull(),

@@ -2,6 +2,32 @@ import { modules, type Module } from "@/data/modules";
 import { getUserProgress, type CardLevel } from "./userProgress";
 import type { Flashcard } from "@shared/schema";
 
+const ACTIVE_MODULE_KEY = "flashcard_active_module";
+
+export function setActiveModule(moduleId: string): void {
+  try {
+    localStorage.setItem(ACTIVE_MODULE_KEY, moduleId);
+  } catch (e) {
+    console.error("Failed to save active module:", e);
+  }
+}
+
+export function getActiveModuleId(): string | null {
+  try {
+    return localStorage.getItem(ACTIVE_MODULE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function clearActiveModule(): void {
+  try {
+    localStorage.removeItem(ACTIVE_MODULE_KEY);
+  } catch (e) {
+    console.error("Failed to clear active module:", e);
+  }
+}
+
 export interface ModuleProgress {
   moduleId: string;
   totalConcepts: number;
@@ -132,6 +158,15 @@ export function getAllModulesProgress(flashcards: Flashcard[]): ModuleProgress[]
 }
 
 export function getCurrentModule(flashcards: Flashcard[]): Module | null {
+  const storedModuleId = getActiveModuleId();
+  
+  if (storedModuleId) {
+    const storedModule = modules.find(m => m.id === storedModuleId);
+    if (storedModule && storedModule.hasContent) {
+      return storedModule;
+    }
+  }
+  
   const allProgress = getAllModulesProgress(flashcards);
   const activeProgress = allProgress.find(p => p.isActive);
   

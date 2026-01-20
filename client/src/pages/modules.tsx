@@ -2,20 +2,39 @@ import { useState } from "react";
 import { Layout } from "@/components/layout";
 import { useFlashcards } from "@/hooks/use-flashcards";
 import { modules } from "@/data/modules";
-import { getAllModulesProgress, getOverallProgress } from "@/utils/moduleProgress";
+import { getAllModulesProgress, getOverallProgress, setActiveModule } from "@/utils/moduleProgress";
 import { resetAllProgress } from "@/utils/userProgress";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw } from "lucide-react";
+import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw, Crown, LogIn } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
+import { useAuth } from "@/hooks/use-auth";
+import { useSubscription, PREMIUM_PRICE_ID } from "@/hooks/use-subscription";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function Modules() {
   const { data: flashcards, isLoading } = useFlashcards();
   const [, setLocation] = useLocation();
+  const { user, isAuthenticated, isLoading: authLoading } = useAuth();
+  const { hasActiveSubscription, isLoading: subLoading } = useSubscription();
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
-  if (isLoading || !flashcards) {
+  const checkoutMutation = useMutation({
+    mutationFn: async () => {
+      const res = await apiRequest("POST", "/api/checkout", { priceId: PREMIUM_PRICE_ID });
+      return res.json();
+    },
+    onSuccess: (data) => {
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    },
+  });
+
+  if (isLoading || !flashcards || authLoading || subLoading) {
     return (
       <Layout>
         <div className="flex flex-col items-center justify-center h-[50vh]">
@@ -28,9 +47,36 @@ export default function Modules() {
   const allProgress = getAllModulesProgress(flashcards);
   const overall = getOverallProgress(flashcards);
 
-  const handleModuleClick = (moduleId: string, isUnlocked: boolean, hasContent: boolean) => {
-    if (!isUnlocked || !hasContent) return;
+  const canAccessModule = (moduleOrder: number): boolean => {
+    if (moduleOrder === 1) return true;
+    return isAuthenticated && hasActiveSubscription;
+  };
+
+  const handleModuleClick = (moduleId: string, moduleOrder: number, isUnlocked: boolean, hasContent: boolean) => {
+    if (!hasContent) return;
+    
+    if (moduleOrder > 1 && !isAuthenticated) {
+      window.location.href = "/api/login";
+      return;
+    }
+
+    if (moduleOrder > 1 && !hasActiveSubscription) {
+      setShowUpgradeModal(true);
+      return;
+    }
+
+    if (!isUnlocked) return;
+    
+    setActiveModule(moduleId);
     setLocation("/study");
+  };
+
+  const handleSubscribe = () => {
+    if (!isAuthenticated) {
+      window.location.href = "/api/login";
+      return;
+    }
+    checkoutMutation.mutate();
   };
 
   return (
@@ -89,7 +135,7 @@ export default function Modules() {
                       ${isCompleted ? "bg-secondary/30" : ""}
                       ${!isUnlocked || !hasContent ? "opacity-60" : "cursor-pointer hover-elevate"}
                     `}
-                    onClick={() => handleModuleClick(module.id, isUnlocked, hasContent)}
+                    onClick={() => handleModuleClick(module.id, module.order, isUnlocked, hasContent)}
                     data-testid={`module-${module.id}`}
                   >
                     <div
@@ -148,6 +194,15 @@ export default function Modules() {
                             data-testid={`badge-coming-soon-${module.id}`}
                           >
                             Coming soon
+                          </span>
+                        )}
+                        {module.order > 1 && !hasActiveSubscription && hasContent && (
+                          <span 
+                            className="px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 text-xs font-medium rounded-full flex items-center gap-1"
+                            data-testid={`badge-premium-${module.id}`}
+                          >
+                            <Crown className="h-3 w-3" />
+                            Premium
                           </span>
                         )}
                       </div>
@@ -211,6 +266,70 @@ export default function Modules() {
           </Button>
         </div>
       </div>
+
+      {showUpgradeModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" data-testid="modal-upgrade">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-card rounded-xl shadow-xl max-w-md w-full p-6 space-y-4"
+          >
+            <div className="text-center space-y-2">
+              <div className="h-16 w-16 rounded-full bg-amber-100 dark:bg-amber-900 flex items-center justify-center mx-auto">
+                <Crown className="h-8 w-8 text-amber-600 dark:text-amber-400" />
+              </div>
+              <h2 className="text-xl font-bold" data-testid="text-upgrade-title">
+                Unlock All Modules
+              </h2>
+              <p className="text-muted-foreground" data-testid="text-upgrade-desc">
+                Get full access to all 15 medical Spanish modules for just $5/month. Learn vocabulary for every nursing situation.
+              </p>
+            </div>
+
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-green-500" />
+                <span>All 15 vocabulary modules</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-green-500" />
+                <span>Spaced repetition learning</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-green-500" />
+                <span>Audio pronunciation</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-green-500" />
+                <span>Cancel anytime</span>
+              </li>
+            </ul>
+
+            <div className="flex flex-col gap-2">
+              <Button
+                className="w-full"
+                onClick={handleSubscribe}
+                disabled={checkoutMutation.isPending}
+                data-testid="button-subscribe"
+              >
+                {checkoutMutation.isPending ? (
+                  <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                ) : (
+                  <Crown className="h-4 w-4 mr-2" />
+                )}
+                Subscribe for $5/month
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => setShowUpgradeModal(false)}
+                data-testid="button-cancel-upgrade"
+              >
+                Maybe later
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </Layout>
   );
 }
