@@ -989,7 +989,7 @@ export const flashcardsData = [
     "id": "m1_16_intro",
     "variantType": "intro",
     "text": "Enseguida la van a pasar.",
-    "englishText": "They will call you shortly."
+    "englishText": "They will take you in shortly."
   },
   {
     "conceptId": "m1_16",
@@ -1006,7 +1006,7 @@ export const flashcardsData = [
     "id": "m1_16_cloze",
     "variantType": "cloze",
     "text": "Enseguida la van a pasar.",
-    "englishText": "They will call you shortly.",
+    "englishText": "They will take you in shortly.",
     "clozeOptions": [
       "Tome asiento un momento.",
       "¿Tiene dolor?",
@@ -1030,14 +1030,14 @@ export const flashcardsData = [
     "id": "m1_16_mcq",
     "variantType": "mcq",
     "text": "Enseguida la van a pasar.",
-    "englishText": "They will call you shortly.",
+    "englishText": "They will take you in shortly.",
     "mcqQuestionEs": "Enseguida la van a pasar.",
     "mcqOptionsEn": [
       "Please have a seat.",
-      "They will call you shortly.",
+      "They will take you in shortly.",
       "Let me know if you need anything."
     ],
-    "mcqCorrectEn": "They will call you shortly."
+    "mcqCorrectEn": "They will take you in shortly."
   },
   {
     "conceptId": "m2_01",
