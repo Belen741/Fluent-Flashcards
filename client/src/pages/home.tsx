@@ -66,11 +66,11 @@ export default function Home() {
         </Link>
 
         <p className="home-motivation" data-testid="text-motivation">
-          No pressure. Just consistency.
+          Designed for nurses working with Spanish-speaking patients
         </p>
 
         <p className="home-microcopy">
-          Designed for nurses working with Spanish-speaking patients
+          No pressure. Just consistency.
         </p>
       </div>
     </div>
