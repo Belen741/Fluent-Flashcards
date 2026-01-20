@@ -17,6 +17,7 @@ import {
   type CardType,
 } from "@/utils/sessionQueue";
 import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
+import { getActiveModuleFlashcards } from "@/utils/moduleProgress";
 import { QuickFillCard } from "@/components/quick-fill-card";
 import { QuickPickCard } from "@/components/quick-pick-card";
 import { WordReorderCard } from "@/components/word-reorder-card";
@@ -48,7 +49,8 @@ export default function Study() {
 
   useEffect(() => {
     if (flashcards && flashcards.length > 0 && initializedSession !== sessionNumber) {
-      const { queue, reservePool: pool, maxInteractions: max } = buildSessionQueue(flashcards);
+      const moduleFlashcards = getActiveModuleFlashcards(flashcards);
+      const { queue, reservePool: pool, maxInteractions: max } = buildSessionQueue(moduleFlashcards);
       setSessionQueue(queue);
       setReservePool(pool);
       setMaxInteractions(max);

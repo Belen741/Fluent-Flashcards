@@ -142,6 +142,13 @@ export function getCurrentModule(flashcards: Flashcard[]): Module | null {
   return modules[0];
 }
 
+export function getActiveModuleFlashcards(flashcards: Flashcard[]): Flashcard[] {
+  const currentModule = getCurrentModule(flashcards);
+  if (!currentModule) return [];
+  
+  return flashcards.filter(card => card.deckId === currentModule.deckId);
+}
+
 export function getOverallProgress(flashcards: Flashcard[]): {
   completedModules: number;
   totalModules: number;
