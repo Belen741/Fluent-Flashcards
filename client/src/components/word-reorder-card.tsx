@@ -22,39 +22,9 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 function tokenizeSpanish(text: string): string[] {
-  const tokens: string[] = [];
-  let currentWord = "";
-  
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-    
-    if (char === "¿" || char === "¡") {
-      if (currentWord) {
-        tokens.push(currentWord);
-        currentWord = "";
-      }
-      tokens.push(char);
-    } else if (char === "?" || char === "!" || char === "." || char === "," || char === ":" || char === ";") {
-      if (currentWord) {
-        tokens.push(currentWord);
-        currentWord = "";
-      }
-      tokens.push(char);
-    } else if (char === " ") {
-      if (currentWord) {
-        tokens.push(currentWord);
-        currentWord = "";
-      }
-    } else {
-      currentWord += char;
-    }
-  }
-  
-  if (currentWord) {
-    tokens.push(currentWord);
-  }
-  
-  return tokens;
+  const punctuation = /[¿?¡!.,;:]/g;
+  const cleanText = text.replace(punctuation, "");
+  return cleanText.split(/\s+/).filter(word => word.length > 0);
 }
 
 export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
@@ -134,10 +104,6 @@ export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
     }
   }, [selectedTokens, correctTokens.length, showResult]);
 
-  const isPunctuation = (token: string) => {
-    return ["¿", "?", "¡", "!", ".", ",", ":", ";"].includes(token);
-  };
-
   return (
     <Card className="h-full flex flex-col overflow-hidden" data-testid="word-reorder-card">
       <div className="flex flex-col items-center pt-6 pb-4 px-4">
@@ -196,7 +162,7 @@ export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
                   size="sm"
                   onClick={() => handleTokenRemove(token, index)}
                   disabled={showResult}
-                  className={`h-auto py-1.5 px-2.5 text-sm ${isPunctuation(token) ? "min-w-[28px]" : ""}`}
+                  className="h-auto py-1.5 px-2.5 text-sm"
                   data-testid={`button-selected-${index}`}
                 >
                   {token}
@@ -229,7 +195,7 @@ export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
                   size="sm"
                   onClick={() => handleTokenSelect(token, index)}
                   disabled={showResult}
-                  className={`h-auto py-1.5 px-2.5 text-sm ${isPunctuation(token) ? "min-w-[28px]" : ""}`}
+                  className="h-auto py-1.5 px-2.5 text-sm"
                   data-testid={`button-available-${index}`}
                 >
                   {token}
