@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Volume2, RotateCcw, Check, X } from "lucide-react";
+import { RotateCcw, Check, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Flashcard } from "@shared/schema";
-import { getAudioUrl } from "@/utils/mediaResolver";
 import { playCorrectSound, playIncorrectSound } from "@/utils/audioFeedback";
 
 interface WordReorderCardProps {
@@ -35,14 +34,6 @@ export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
   const [selectedTokens, setSelectedTokens] = useState<string[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-
-  const playAudio = () => {
-    const audioUrl = getAudioUrl(card);
-    if (audioUrl) {
-      const audio = new Audio(audioUrl);
-      audio.play().catch(console.error);
-    }
-  };
 
   const handleTokenSelect = (token: string, index: number) => {
     if (showResult) return;
@@ -108,17 +99,7 @@ export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
           {card.englishText}
         </p>
         
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={(e) => { e.stopPropagation(); playAudio(); }}
-          data-testid="button-audio-reorder"
-          className="rounded-full h-12 w-12"
-        >
-          <Volume2 className="h-6 w-6" />
-        </Button>
-        
-        <p className="text-center text-sm text-muted-foreground mt-2" data-testid="text-reorder-prompt">
+        <p className="text-center text-sm text-muted-foreground" data-testid="text-reorder-prompt">
           Tap the words in the correct order
         </p>
       </div>
