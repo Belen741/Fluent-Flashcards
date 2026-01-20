@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Volume2, RotateCcw, Check, X, Turtle } from "lucide-react";
+import { Volume2, RotateCcw, Check, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Flashcard } from "@shared/schema";
 import { getAudioUrl } from "@/utils/mediaResolver";
@@ -40,15 +40,6 @@ export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
     const audioUrl = getAudioUrl(card);
     if (audioUrl) {
       const audio = new Audio(audioUrl);
-      audio.play().catch(console.error);
-    }
-  };
-
-  const playAudioSlow = () => {
-    const audioUrl = getAudioUrl(card);
-    if (audioUrl) {
-      const audio = new Audio(audioUrl);
-      audio.playbackRate = 0.6;
       audio.play().catch(console.error);
     }
   };
@@ -117,26 +108,15 @@ export function WordReorderCard({ card, onAnswer }: WordReorderCardProps) {
           {card.englishText}
         </p>
         
-        <div className="flex gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={(e) => { e.stopPropagation(); playAudio(); }}
-            data-testid="button-audio-reorder"
-            className="rounded-full h-12 w-12"
-          >
-            <Volume2 className="h-6 w-6" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={(e) => { e.stopPropagation(); playAudioSlow(); }}
-            data-testid="button-audio-slow-reorder"
-            className="rounded-full h-12 w-12"
-          >
-            <Turtle className="h-6 w-6" />
-          </Button>
-        </div>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={(e) => { e.stopPropagation(); playAudio(); }}
+          data-testid="button-audio-reorder"
+          className="rounded-full h-12 w-12"
+        >
+          <Volume2 className="h-6 w-6" />
+        </Button>
         
         <p className="text-center text-sm text-muted-foreground mt-2" data-testid="text-reorder-prompt">
           Tap the words in the correct order
