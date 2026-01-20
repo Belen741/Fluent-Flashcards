@@ -1,11 +1,13 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout";
 import { useFlashcards } from "@/hooks/use-flashcards";
 import { modules } from "@/data/modules";
 import { getAllModulesProgress, getOverallProgress } from "@/utils/moduleProgress";
+import { resetAllProgress } from "@/utils/userProgress";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Loader2, Lock, Check, ChevronRight, Trophy } from "lucide-react";
+import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
 
@@ -184,13 +186,28 @@ export default function Modules() {
           </div>
         </div>
 
-        <div className="text-center pt-4">
+        <div className="flex flex-col items-center gap-3 pt-4">
           <Button
             variant="outline"
             onClick={() => setLocation("/")}
             data-testid="button-back-home"
           >
             Back to Home
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-destructive hover:text-destructive"
+            onClick={() => {
+              if (confirm("Are you sure you want to reset all progress? This cannot be undone.")) {
+                resetAllProgress();
+                window.location.reload();
+              }
+            }}
+            data-testid="button-reset-progress"
+          >
+            <RotateCcw className="h-4 w-4 mr-2" />
+            Reset Progress
           </Button>
         </div>
       </div>

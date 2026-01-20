@@ -29,6 +29,19 @@ export function getUserProgress(): UserProgress {
   };
 }
 
+export function resetAllProgress(): void {
+  try {
+    localStorage.removeItem(USER_PROGRESS_KEY);
+    localStorage.removeItem(TOTAL_SESSIONS_KEY);
+    localStorage.removeItem("flashcard_learning_state");
+    localStorage.removeItem("flashcard_session_history");
+    localStorage.removeItem("flashcard_session_count");
+    localStorage.removeItem("flashcard_session_date");
+  } catch (e) {
+    console.error("Failed to reset progress:", e);
+  }
+}
+
 export function saveUserProgress(progress: UserProgress): void {
   try {
     localStorage.setItem(USER_PROGRESS_KEY, JSON.stringify(progress));
