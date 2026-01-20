@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Volume2, Check, X } from "lucide-react";
+import { Volume2, Check, X, Turtle } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Flashcard } from "@shared/schema";
 import { getAudioUrl } from "@/utils/mediaResolver";
@@ -27,6 +27,15 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
     const audioUrl = getAudioUrl(card);
     if (audioUrl) {
       const audio = new Audio(audioUrl);
+      audio.play().catch(console.error);
+    }
+  };
+
+  const playAudioSlow = () => {
+    const audioUrl = getAudioUrl(card);
+    if (audioUrl) {
+      const audio = new Audio(audioUrl);
+      audio.playbackRate = 0.6;
       audio.play().catch(console.error);
     }
   };
@@ -65,15 +74,26 @@ export function QuickFillCard({ card, onAnswer }: QuickFillCardProps) {
             {card.category}
           </span>
         </div>
-        <Button
-          variant="default"
-          size="icon"
-          onClick={(e) => { e.stopPropagation(); playAudio(); }}
-          data-testid="button-audio-quickfill"
-          className="rounded-full shadow-lg h-20 w-20"
-        >
-          <Volume2 className="h-10 w-10" />
-        </Button>
+        <div className="flex gap-2">
+          <Button
+            variant="default"
+            size="icon"
+            onClick={(e) => { e.stopPropagation(); playAudio(); }}
+            data-testid="button-audio-quickfill"
+            className="rounded-full shadow-lg h-20 w-20"
+          >
+            <Volume2 className="h-10 w-10" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            onClick={(e) => { e.stopPropagation(); playAudioSlow(); }}
+            data-testid="button-audio-slow-quickfill"
+            className="rounded-full shadow-lg h-20 w-20"
+          >
+            <Turtle className="h-10 w-10" />
+          </Button>
+        </div>
         <p className="text-center text-sm text-muted-foreground mt-3" data-testid="text-quickfill-prompt">
           Which option matches the audio?
         </p>

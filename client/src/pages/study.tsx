@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useFlashcards } from "@/hooks/use-flashcards";
-import { Loader2, Volume2, ArrowRight } from "lucide-react";
+import { Loader2, Volume2, ArrowRight, Turtle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -243,6 +243,17 @@ export default function Study() {
     }
   };
 
+  const playAudioSlow = () => {
+    const audioUrl = getAudioUrl(currentCard);
+    if (audioUrl) {
+      const audio = new Audio(audioUrl);
+      audio.playbackRate = 0.6;
+      audio.play().catch(() => {
+        console.log("Audio not available for:", currentCard.text);
+      });
+    }
+  };
+
   const getFeedbackMessage = () => {
     if (!showFeedback || !userResponse) return null;
     if (userResponse === "correct") {
@@ -345,15 +356,26 @@ export default function Study() {
                             {currentCard.category}
                           </span>
                         </div>
-                        <Button
-                          variant="default"
-                          size="icon"
-                          onClick={(e) => { e.stopPropagation(); playAudio(); }}
-                          data-testid="button-audio"
-                          className="absolute -bottom-6 rounded-full shadow-lg h-14 w-14"
-                        >
-                          <Volume2 className="h-7 w-7" />
-                        </Button>
+                        <div className="absolute -bottom-6 flex gap-2">
+                          <Button
+                            variant="default"
+                            size="icon"
+                            onClick={(e) => { e.stopPropagation(); playAudio(); }}
+                            data-testid="button-audio"
+                            className="rounded-full shadow-lg h-14 w-14"
+                          >
+                            <Volume2 className="h-7 w-7" />
+                          </Button>
+                          <Button
+                            variant="secondary"
+                            size="icon"
+                            onClick={(e) => { e.stopPropagation(); playAudioSlow(); }}
+                            data-testid="button-audio-slow"
+                            className="rounded-full shadow-lg h-14 w-14"
+                          >
+                            <Turtle className="h-7 w-7" />
+                          </Button>
+                        </div>
                       </div>
 
                       <div className="flex-1 flex flex-col items-center justify-center p-4 text-center">

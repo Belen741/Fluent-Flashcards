@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Volume2, Check, X } from "lucide-react";
+import { Volume2, Check, X, Turtle } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Flashcard } from "@shared/schema";
 import { getAudioUrl, getImageUrl } from "@/utils/mediaResolver";
@@ -20,6 +20,14 @@ export function ReviewCard({ card, onAnswer }: ReviewCardProps) {
   const playAudio = () => {
     if (audioUrl) {
       const audio = new Audio(audioUrl);
+      audio.play().catch(console.error);
+    }
+  };
+
+  const playAudioSlow = () => {
+    if (audioUrl) {
+      const audio = new Audio(audioUrl);
+      audio.playbackRate = 0.6;
       audio.play().catch(console.error);
     }
   };
@@ -64,15 +72,26 @@ export function ReviewCard({ card, onAnswer }: ReviewCardProps) {
           </span>
         </div>
         {audioUrl && (
-          <Button
-            variant="default"
-            size="icon"
-            onClick={(e) => { e.stopPropagation(); playAudio(); }}
-            data-testid="button-audio-review"
-            className="absolute -bottom-6 left-1/2 -translate-x-1/2 rounded-full shadow-lg h-14 w-14"
-          >
-            <Volume2 className="h-7 w-7" />
-          </Button>
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+            <Button
+              variant="default"
+              size="icon"
+              onClick={(e) => { e.stopPropagation(); playAudio(); }}
+              data-testid="button-audio-review"
+              className="rounded-full shadow-lg h-14 w-14"
+            >
+              <Volume2 className="h-7 w-7" />
+            </Button>
+            <Button
+              variant="secondary"
+              size="icon"
+              onClick={(e) => { e.stopPropagation(); playAudioSlow(); }}
+              data-testid="button-audio-slow-review"
+              className="rounded-full shadow-lg h-14 w-14"
+            >
+              <Turtle className="h-7 w-7" />
+            </Button>
+          </div>
         )}
       </div>
 
