@@ -289,7 +289,7 @@ export default function Modules() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
-                <span>All 15 vocabulary modules</span>
+                <span>All 15 phrases modules</span>
               </li>
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
