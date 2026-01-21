@@ -268,11 +268,11 @@ export default function Modules() {
       </div>
 
       {showUpgradeModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" data-testid="modal-upgrade">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4" data-testid="modal-upgrade">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-card rounded-xl shadow-xl max-w-md w-full p-6 space-y-4"
+            className="bg-background border rounded-xl shadow-2xl max-w-md w-full p-6 space-y-4"
           >
             <div className="text-center space-y-2">
               <div className="h-16 w-16 rounded-full bg-amber-100 dark:bg-amber-900 flex items-center justify-center mx-auto">
