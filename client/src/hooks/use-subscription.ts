@@ -1,39 +1,42 @@
 import { useQuery } from "@tanstack/react-query";
-import { useAuth } from "./use-auth";
+import { useAuth } from "@clerk/clerk-react";
 
 interface SubscriptionData {
   subscription: any;
   status: string | null;
 }
 
-async function fetchSubscription(): Promise<SubscriptionData | null> {
-  const response = await fetch("/api/subscription", {
-    credentials: "include",
-  });
-
-  if (response.status === 401) {
-    return null;
-  }
-
-  if (!response.ok) {
-    throw new Error(`${response.status}: ${response.statusText}`);
-  }
-
-  return response.json();
-}
-
 export function useSubscription() {
-  const { isAuthenticated, isLoading: authLoading } = useAuth();
+  const { isSignedIn, isLoaded, getToken } = useAuth();
 
   const { data, isLoading: subLoading, refetch } = useQuery<SubscriptionData | null>({
     queryKey: ["/api/subscription"],
-    queryFn: fetchSubscription,
-    enabled: isAuthenticated,
+    queryFn: async () => {
+      const token = await getToken();
+      if (!token) return null;
+      
+      const response = await fetch("/api/subscription", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.status === 401) {
+        return null;
+      }
+
+      if (!response.ok) {
+        throw new Error(`${response.status}: ${response.statusText}`);
+      }
+
+      return response.json();
+    },
+    enabled: isLoaded && isSignedIn,
     retry: false,
     staleTime: 1000 * 60 * 5,
   });
 
-  const isLoading = authLoading || (isAuthenticated && subLoading);
+  const isLoading = !isLoaded || (isSignedIn && subLoading);
   const hasActiveSubscription = data?.status === "active" || data?.status === "trialing";
 
   return {

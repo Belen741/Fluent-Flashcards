@@ -10,7 +10,7 @@ import { Progress } from "@/components/ui/progress";
 import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw, Crown, LogIn } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
-import { useAuth } from "@/hooks/use-auth";
+import { useAuth } from "@clerk/clerk-react";
 import { useSubscription, PREMIUM_PRICE_ID } from "@/hooks/use-subscription";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -18,7 +18,9 @@ import { apiRequest } from "@/lib/queryClient";
 export default function Modules() {
   const { data: flashcards, isLoading } = useFlashcards();
   const [, setLocation] = useLocation();
-  const { user, isAuthenticated, isLoading: authLoading } = useAuth();
+  const { isSignedIn, isLoaded } = useAuth();
+  const isAuthenticated = isSignedIn ?? false;
+  const authLoading = !isLoaded;
   const { hasActiveSubscription, isLoading: subLoading } = useSubscription();
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
@@ -56,7 +58,7 @@ export default function Modules() {
     if (!hasContent) return;
     
     if (moduleOrder > 1 && !isAuthenticated) {
-      window.location.href = "/api/login";
+      setLocation("/sign-in");
       return;
     }
 
@@ -73,7 +75,7 @@ export default function Modules() {
 
   const handleSubscribe = () => {
     if (!isAuthenticated) {
-      window.location.href = "/api/login";
+      setLocation("/sign-in");
       return;
     }
     checkoutMutation.mutate();

@@ -130,16 +130,32 @@ npx tsx scripts/import-flashcards.ts
 
 ### Authentication & Payments (Jan 2026)
 
-**Replit Auth Integration**: Users can log in via Google OAuth or email/password through Replit's built-in authentication system.
+**Vercel Deployment Architecture** (Updated Jan 2026):
+The application has been migrated from Replit to Vercel for improved performance.
+
+**Clerk Authentication**: Users can log in via Google OAuth or email/password through Clerk.
+- Frontend: `@clerk/clerk-react` with ClerkProvider in `App.tsx`
+- Backend: `@clerk/backend` verifyToken in serverless functions
 - Auth hook: `client/src/hooks/use-auth.ts`
-- User model: `shared/models/auth.ts`
-- Login endpoint: `/api/__repl/auth/login`
+- Sign-in/sign-up pages: `/sign-in`, `/sign-up`
+
+**Supabase Database**: PostgreSQL database hosted on Supabase.
+- Connection via `SUPABASE_URL` and `SUPABASE_SERVICE_KEY`
+- Seed script: `scripts/seed-supabase.ts`
+
+**Vercel Serverless Functions** (in `/api/` folder):
+- `api/flashcards.ts` - Get all flashcards
+- `api/auth/user.ts` - Get authenticated user info
+- `api/subscription.ts` - Get subscription status
+- `api/checkout.ts` - Create Stripe checkout session
+- `api/customer-portal.ts` - Stripe billing portal
+- `api/stripe-webhook.ts` - Handle Stripe events
+- `api/products.ts` - Get Stripe products
 
 **Stripe Subscription**: $5/month subscription for premium access to modules 2-15.
 - Price ID: `price_1SroNeRjP93FY9NBao2zl3w6`
-- Stripe service: `server/stripeService.ts`
 - Subscription hook: `client/src/hooks/use-subscription.ts`
-- Checkout endpoints: `/api/create-checkout-session`, `/api/subscription`
+- Checkout endpoints: `/api/checkout`, `/api/subscription`
 
 **Module Access Control**:
 - Module 1 (Patient Admission): FREE - no login required
@@ -151,7 +167,17 @@ npx tsx scripts/import-flashcards.ts
 - Success page: `/checkout/success` - invalidates subscription cache and shows celebration
 - Cancel page: `/checkout/cancel` - shows friendly message with options to return
 
+**Environment Variables for Vercel**:
+- `VITE_CLERK_PUBLISHABLE_KEY`: Clerk frontend key (pk_...)
+- `CLERK_SECRET_KEY`: Clerk backend key (sk_...)
+- `SUPABASE_URL`: Supabase project URL
+- `SUPABASE_SERVICE_KEY`: Supabase service role key
+- `STRIPE_SECRET_KEY`: Stripe secret key
+- `STRIPE_WEBHOOK_SECRET`: Stripe webhook signing secret
+
 **User Schema Fields** (for Stripe):
 - `stripe_customer_id`: Stripe customer ID
 - `stripe_subscription_id`: Active subscription ID
 - `subscription_status`: Current status (active, canceled, etc.)
+
+**Migration Guide**: See `VERCEL_MIGRATION.md` for complete deployment instructions.
