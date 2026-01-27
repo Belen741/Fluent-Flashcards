@@ -1,6 +1,12 @@
-// API Base URL configuration
-// Replit backend URL - used when not on Replit domain
+// API Base URL configuration for split architecture (Vercel frontend + Replit backend)
+// Updated: force rebuild v2
 const REPLIT_BACKEND = 'https://efd0c2b9-faba-4dcd-a542-cac018800a89-00-2y0ya6b2sa1ra.janeway.replit.dev';
+
+// Debug: log API configuration on load
+if (typeof window !== 'undefined') {
+  console.log('[API Config v2] Backend URL:', REPLIT_BACKEND);
+  console.log('[API Config v2] Current hostname:', window.location.hostname);
+}
 
 export function getApiUrl(path: string): string {
   // Check hostname at call time (not module load time)
