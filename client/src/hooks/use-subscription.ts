@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useAuth } from "@clerk/clerk-react";
+import { getApiUrl } from "@/lib/apiConfig";
 
 interface SubscriptionData {
   subscription: any;
@@ -15,10 +16,11 @@ export function useSubscription() {
       const token = await getToken();
       if (!token) return null;
       
-      const response = await fetch("/api/subscription", {
+      const response = await fetch(getApiUrl("/api/subscription"), {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        credentials: 'include',
       });
 
       if (response.status === 401) {

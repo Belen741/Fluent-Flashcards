@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { flashcardsData } from "../client/src/data/flashcards";
 import { stripeService } from "./stripeService";
-import { isAuthenticated } from "./replit_integrations/auth";
+import { clerkAuth } from "./clerkAuth";
 import { getStripePublishableKey } from "./stripeClient";
 
 export async function registerRoutes(
@@ -26,9 +26,9 @@ export async function registerRoutes(
     }
   });
 
-  app.get('/api/subscription', isAuthenticated, async (req: any, res) => {
+  app.get('/api/subscription', clerkAuth, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
+      const userId = req.clerkUser?.userId;
       const user = await stripeService.getUser(userId);
       if (!user?.stripeSubscriptionId) {
         return res.json({ subscription: null, status: null });
@@ -41,10 +41,10 @@ export async function registerRoutes(
     }
   });
 
-  app.post('/api/checkout', isAuthenticated, async (req: any, res) => {
+  app.post('/api/checkout', clerkAuth, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
-      const userEmail = req.user.claims.email;
+      const userId = req.clerkUser?.userId;
+      const userEmail = req.clerkUser?.email;
       const { priceId } = req.body;
 
       if (!priceId) {
@@ -74,9 +74,9 @@ export async function registerRoutes(
     }
   });
 
-  app.post('/api/customer-portal', isAuthenticated, async (req: any, res) => {
+  app.post('/api/customer-portal', clerkAuth, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
+      const userId = req.clerkUser?.userId;
       const user = await stripeService.getUser(userId);
 
       if (!user?.stripeCustomerId) {
