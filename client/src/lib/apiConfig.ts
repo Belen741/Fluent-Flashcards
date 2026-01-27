@@ -1,23 +1,31 @@
 // API Base URL configuration
 // In development (Replit), use relative URLs
-// In production (Vercel), use the Replit backend URL
+// In production (Vercel/spanish4nurses.com), use the Replit backend URL
 
-const REPLIT_BACKEND_URL = import.meta.env.VITE_API_BASE_URL || '';
+// Hardcoded Replit backend URL for production
+const REPLIT_BACKEND = 'https://efd0c2b9-faba-4dcd-a542-cac018800a89-00-2y0ya6b2sa1ra.janeway.replit.dev';
 
-// Debug: log the API URL configuration at startup
-if (typeof window !== 'undefined') {
-  console.log('[API Config] VITE_API_BASE_URL:', REPLIT_BACKEND_URL || '(not set)');
-  console.log('[API Config] Current hostname:', window.location.hostname);
-}
-
-export function getApiUrl(path: string): string {
-  // If VITE_API_BASE_URL is set, always use it (production/Vercel)
-  if (REPLIT_BACKEND_URL) {
-    return `${REPLIT_BACKEND_URL}${path}`;
+function getBackendUrl(): string {
+  if (typeof window === 'undefined') return '';
+  
+  const hostname = window.location.hostname;
+  
+  // If we're on Vercel/production domain, use Replit backend
+  if (hostname.includes('spanish4nurses') || hostname.includes('vercel.app')) {
+    return REPLIT_BACKEND;
   }
   
-  // Fallback to relative URL (development/Replit)
+  // If we're on Replit or localhost, use relative URLs
+  return '';
+}
+
+const API_BASE = getBackendUrl();
+
+export function getApiUrl(path: string): string {
+  if (API_BASE) {
+    return `${API_BASE}${path}`;
+  }
   return path;
 }
 
-export const API_BASE_URL = REPLIT_BACKEND_URL;
+export const API_BASE_URL = API_BASE;
