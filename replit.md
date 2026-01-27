@@ -130,27 +130,34 @@ npx tsx scripts/import-flashcards.ts
 
 ### Authentication & Payments (Jan 2026)
 
-**Vercel Deployment Architecture** (Updated Jan 2026):
-The application has been migrated from Replit to Vercel for improved performance.
+**Split Architecture (Updated Jan 2026)**:
+Due to Vite 7 incompatibility with Vercel serverless functions, the app uses a split architecture:
+- **Vercel** (spanish4nurses.com): Serves static React frontend only
+- **Replit**: Handles all API routes with Express server
+
+**API Configuration**:
+- Frontend uses `client/src/lib/apiConfig.ts` to determine API base URL
+- In development (Replit): Uses relative URLs
+- In production (Vercel): Uses `VITE_API_BASE_URL` pointing to Replit backend
+- CORS configured in `server/index.ts` to allow Vercel domains
 
 **Clerk Authentication**: Users can log in via Google OAuth or email/password through Clerk.
 - Frontend: `@clerk/clerk-react` with ClerkProvider in `App.tsx`
-- Backend: `@clerk/backend` verifyToken in serverless functions
+- Backend: `@clerk/backend` verifyToken in `server/clerkAuth.ts` middleware
 - Auth hook: `client/src/hooks/use-auth.ts`
 - Sign-in/sign-up pages: `/sign-in`, `/sign-up`
+- JWT tokens passed in Authorization header for cross-origin requests
 
-**Supabase Database**: PostgreSQL database hosted on Supabase.
-- Connection via `SUPABASE_URL` and `SUPABASE_SERVICE_KEY`
-- Seed script: `scripts/seed-supabase.ts`
+**PostgreSQL Database**: Uses Replit's built-in PostgreSQL with Drizzle ORM.
+- Connection via `DATABASE_URL` environment variable
+- Schema in `shared/schema.ts`
 
-**Vercel Serverless Functions** (in `/api/` folder):
-- `api/flashcards.ts` - Get all flashcards
-- `api/auth/user.ts` - Get authenticated user info
-- `api/subscription.ts` - Get subscription status
-- `api/checkout.ts` - Create Stripe checkout session
-- `api/customer-portal.ts` - Stripe billing portal
-- `api/stripe-webhook.ts` - Handle Stripe events
-- `api/products.ts` - Get Stripe products
+**Express API Routes** (in `server/routes.ts`):
+- `GET /api/flashcards` - Get all flashcards (public)
+- `GET /api/subscription` - Get subscription status (authenticated)
+- `POST /api/checkout` - Create Stripe checkout session (authenticated)
+- `POST /api/customer-portal` - Stripe billing portal (authenticated)
+- `POST /api/stripe-webhook` - Handle Stripe events (webhook)
 
 **Stripe Subscription**: $5/month subscription for premium access to modules 2-15.
 - Price ID: `price_1SroNeRjP93FY9NBao2zl3w6`
@@ -169,15 +176,15 @@ The application has been migrated from Replit to Vercel for improved performance
 
 **Environment Variables for Vercel**:
 - `VITE_CLERK_PUBLISHABLE_KEY`: Clerk frontend key (pk_...)
+- `VITE_API_BASE_URL`: Replit backend URL (https://...replit.dev)
+
+**Environment Variables for Replit**:
 - `CLERK_SECRET_KEY`: Clerk backend key (sk_...)
-- `SUPABASE_URL`: Supabase project URL
-- `SUPABASE_SERVICE_KEY`: Supabase service role key
 - `STRIPE_SECRET_KEY`: Stripe secret key
 - `STRIPE_WEBHOOK_SECRET`: Stripe webhook signing secret
+- `DATABASE_URL`: PostgreSQL connection string (auto-configured)
 
 **User Schema Fields** (for Stripe):
 - `stripe_customer_id`: Stripe customer ID
 - `stripe_subscription_id`: Active subscription ID
 - `subscription_status`: Current status (active, canceled, etc.)
-
-**Migration Guide**: See `VERCEL_MIGRATION.md` for complete deployment instructions.
