@@ -4,21 +4,19 @@
 
 const REPLIT_BACKEND_URL = import.meta.env.VITE_API_BASE_URL || '';
 
+// Debug: log the API URL configuration at startup
+if (typeof window !== 'undefined') {
+  console.log('[API Config] VITE_API_BASE_URL:', REPLIT_BACKEND_URL || '(not set)');
+  console.log('[API Config] Current hostname:', window.location.hostname);
+}
+
 export function getApiUrl(path: string): string {
-  // If we're on the Replit domain, use relative URLs
-  if (typeof window !== 'undefined') {
-    const hostname = window.location.hostname;
-    if (hostname.includes('replit') || hostname === 'localhost') {
-      return path;
-    }
-  }
-  
-  // For Vercel (production), use the Replit backend
+  // If VITE_API_BASE_URL is set, always use it (production/Vercel)
   if (REPLIT_BACKEND_URL) {
     return `${REPLIT_BACKEND_URL}${path}`;
   }
   
-  // Fallback to relative URL
+  // Fallback to relative URL (development/Replit)
   return path;
 }
 
