@@ -24,9 +24,19 @@ function Router() {
       <Route path="/modules" component={Modules} />
       <Route path="/checkout/success" component={CheckoutSuccess} />
       <Route path="/checkout/cancel" component={CheckoutCancel} />
+      <Route path="/sign-in/:rest*">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
+          <SignIn routing="path" path="/sign-in" signUpUrl="/sign-up" afterSignInUrl="/modules" />
+        </div>
+      </Route>
       <Route path="/sign-in">
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
           <SignIn routing="path" path="/sign-in" signUpUrl="/sign-up" afterSignInUrl="/modules" />
+        </div>
+      </Route>
+      <Route path="/sign-up/:rest*">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
+          <SignUp routing="path" path="/sign-up" signInUrl="/sign-in" afterSignUpUrl="/modules" />
         </div>
       </Route>
       <Route path="/sign-up">
