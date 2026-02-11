@@ -5,7 +5,6 @@ import { api } from "@shared/routes";
 import { flashcardsData } from "../client/src/data/flashcards";
 import { stripeService } from "./stripeService";
 import { clerkAuth } from "./clerkAuth";
-import { getStripePublishableKey } from "./stripeClient";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -17,15 +16,6 @@ export async function registerRoutes(
   });
 
   // Stripe routes
-  app.get('/api/stripe/publishable-key', async (req, res) => {
-    try {
-      const publishableKey = await getStripePublishableKey();
-      res.json({ publishableKey });
-    } catch (error) {
-      res.status(500).json({ error: 'Failed to get Stripe key' });
-    }
-  });
-
   app.get('/api/subscription', clerkAuth, async (req: any, res) => {
     try {
       const userId = req.clerkUser?.userId;
@@ -33,7 +23,7 @@ export async function registerRoutes(
       if (!user?.stripeSubscriptionId) {
         return res.json({ subscription: null, status: null });
       }
-      const subscription = await stripeService.getSubscription(user.stripeSubscriptionId);
+      const subscription = await stripeService.getSubscriptionFromStripe(user.stripeSubscriptionId);
       res.json({ subscription, status: user.subscriptionStatus });
     } catch (error) {
       console.error('Error getting subscription:', error);
@@ -60,11 +50,14 @@ export async function registerRoutes(
         customerId = customer.id;
       }
 
+      const frontendUrl = req.headers.origin || 'https://www.spanish4nurses.com';
+
       const session = await stripeService.createCheckoutSession(
         customerId,
         priceId,
-        `${req.protocol}://${req.get('host')}/checkout/success`,
-        `${req.protocol}://${req.get('host')}/checkout/cancel`
+        `${frontendUrl}/checkout/success`,
+        `${frontendUrl}/checkout/cancel`,
+        userId
       );
 
       res.json({ url: session.url });
@@ -83,25 +76,16 @@ export async function registerRoutes(
         return res.status(400).json({ error: 'No Stripe customer found' });
       }
 
+      const frontendUrl = req.headers.origin || 'https://www.spanish4nurses.com';
       const session = await stripeService.createCustomerPortalSession(
         user.stripeCustomerId,
-        `${req.protocol}://${req.get('host')}/modules`
+        `${frontendUrl}/modules`
       );
 
       res.json({ url: session.url });
     } catch (error) {
       console.error('Error creating portal session:', error);
       res.status(500).json({ error: 'Failed to create portal session' });
-    }
-  });
-
-  app.get('/api/products', async (req, res) => {
-    try {
-      const products = await stripeService.getProductsWithPrices();
-      res.json({ data: products });
-    } catch (error) {
-      console.error('Error getting products:', error);
-      res.status(500).json({ error: 'Failed to get products' });
     }
   });
 

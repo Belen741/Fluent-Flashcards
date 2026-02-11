@@ -1,19 +1,19 @@
-import { getUncachableStripeClient } from './stripeClient';
+import { getStripeClient } from './stripeClient';
 import { db } from './db';
 import { users } from '@shared/schema';
-import { eq, sql } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 
 export class StripeService {
   async createCustomer(email: string, userId: string) {
-    const stripe = await getUncachableStripeClient();
+    const stripe = getStripeClient();
     return await stripe.customers.create({
       email,
       metadata: { userId },
     });
   }
 
-  async createCheckoutSession(customerId: string, priceId: string, successUrl: string, cancelUrl: string) {
-    const stripe = await getUncachableStripeClient();
+  async createCheckoutSession(customerId: string, priceId: string, successUrl: string, cancelUrl: string, userId?: string) {
+    const stripe = getStripeClient();
     return await stripe.checkout.sessions.create({
       customer: customerId,
       payment_method_types: ['card'],
@@ -21,11 +21,13 @@ export class StripeService {
       mode: 'subscription',
       success_url: successUrl,
       cancel_url: cancelUrl,
+      metadata: userId ? { userId } : undefined,
+      client_reference_id: userId,
     });
   }
 
   async createCustomerPortalSession(customerId: string, returnUrl: string) {
-    const stripe = await getUncachableStripeClient();
+    const stripe = getStripeClient();
     return await stripe.billingPortal.sessions.create({
       customer: customerId,
       return_url: returnUrl,
@@ -50,45 +52,15 @@ export class StripeService {
     return user;
   }
 
-  async getSubscription(subscriptionId: string) {
-    const result = await db.execute(
-      sql`SELECT * FROM stripe.subscriptions WHERE id = ${subscriptionId}`
-    );
-    return result.rows[0] || null;
-  }
-
-  async getProducts() {
-    const result = await db.execute(
-      sql`SELECT * FROM stripe.products WHERE active = true`
-    );
-    return result.rows;
-  }
-
-  async getPrices() {
-    const result = await db.execute(
-      sql`SELECT * FROM stripe.prices WHERE active = true`
-    );
-    return result.rows;
-  }
-
-  async getProductsWithPrices() {
-    const result = await db.execute(
-      sql`
-        SELECT 
-          p.id as product_id,
-          p.name as product_name,
-          p.description as product_description,
-          pr.id as price_id,
-          pr.unit_amount,
-          pr.currency,
-          pr.recurring
-        FROM stripe.products p
-        LEFT JOIN stripe.prices pr ON pr.product = p.id AND pr.active = true
-        WHERE p.active = true
-        ORDER BY p.id, pr.unit_amount
-      `
-    );
-    return result.rows;
+  async getSubscriptionFromStripe(subscriptionId: string) {
+    const stripe = getStripeClient();
+    try {
+      const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+      return subscription;
+    } catch (error) {
+      console.error('Error retrieving subscription from Stripe:', error);
+      return null;
+    }
   }
 }
 
