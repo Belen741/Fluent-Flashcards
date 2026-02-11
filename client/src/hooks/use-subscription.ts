@@ -50,4 +50,4 @@ export function useSubscription() {
   };
 }
 
-export const PREMIUM_PRICE_ID = "price_1SroNeRjP93FY9NBao2zl3w6";
+export const PREMIUM_PRICE_ID = "price_1SzU1y9jgd4cptrq90URxWgK";
