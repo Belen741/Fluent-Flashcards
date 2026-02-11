@@ -160,7 +160,7 @@ Due to Vite 7 incompatibility with Vercel serverless functions, the app uses a s
 - `POST /api/stripe-webhook` - Handle Stripe events (webhook)
 
 **Stripe Subscription**: $5/month subscription for premium access to modules 2-15.
-- Price ID: `price_1SzU1y9jgd4cptrq90URxWgK`
+- Price ID: `price_1SzmFL9jgd4cptrqQYELUnb1` (multi-currency: $5 USD / $100 MXN per month)
 - Subscription hook: `client/src/hooks/use-subscription.ts`
 - Checkout endpoints: `/api/checkout`, `/api/subscription`
 
