@@ -7,10 +7,10 @@ import { resetAllProgress } from "@/utils/userProgress";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw, Crown, LogIn } from "lucide-react";
+import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw, Crown, LogIn, Settings, CreditCard, LogOut } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
-import { useAuth } from "@clerk/clerk-react";
+import { useAuth, useClerk } from "@clerk/clerk-react";
 import { useSubscription, PREMIUM_PRICE_ID } from "@/hooks/use-subscription";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -19,14 +19,28 @@ export default function Modules() {
   const { data: flashcards, isLoading } = useFlashcards();
   const [, setLocation] = useLocation();
   const { isSignedIn, isLoaded } = useAuth();
+  const { signOut } = useClerk();
   const isAuthenticated = isSignedIn ?? false;
   const authLoading = !isLoaded;
   const { hasActiveSubscription, isLoading: subLoading } = useSubscription();
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
 
   const checkoutMutation = useMutation({
     mutationFn: async () => {
       const res = await apiRequest("POST", "/api/checkout", { priceId: PREMIUM_PRICE_ID });
+      return res.json();
+    },
+    onSuccess: (data) => {
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    },
+  });
+
+  const portalMutation = useMutation({
+    mutationFn: async () => {
+      const res = await apiRequest("POST", "/api/customer-portal");
       return res.json();
     },
     onSuccess: (data) => {
@@ -84,7 +98,18 @@ export default function Modules() {
   return (
     <Layout>
       <div className="space-y-6 pb-8">
-        <div className="text-center space-y-2">
+        <div className="relative text-center space-y-2">
+          {isAuthenticated && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-0 top-0"
+              onClick={() => setShowSettings(!showSettings)}
+              data-testid="button-settings"
+            >
+              <Settings className="h-5 w-5" />
+            </Button>
+          )}
           <h1 className="text-2xl font-bold text-foreground" data-testid="text-page-title">
             Learning Path
           </h1>
@@ -92,6 +117,37 @@ export default function Modules() {
             Master medical Spanish one module at a time
           </p>
         </div>
+
+        {showSettings && isAuthenticated && (
+          <Card className="p-4 space-y-3" data-testid="panel-settings">
+            <h3 className="font-semibold text-sm text-foreground">Settings</h3>
+            {hasActiveSubscription && (
+              <Button
+                variant="outline"
+                className="w-full justify-start gap-2"
+                onClick={() => portalMutation.mutate()}
+                disabled={portalMutation.isPending}
+                data-testid="button-manage-subscription"
+              >
+                {portalMutation.isPending ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <CreditCard className="h-4 w-4" />
+                )}
+                Manage Subscription
+              </Button>
+            )}
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2 text-destructive hover:text-destructive"
+              onClick={() => signOut(() => setLocation("/"))}
+              data-testid="button-sign-out"
+            >
+              <LogOut className="h-4 w-4" />
+              Sign Out
+            </Button>
+          </Card>
+        )}
 
         <Card className="p-4">
           <div className="flex items-center gap-3">
