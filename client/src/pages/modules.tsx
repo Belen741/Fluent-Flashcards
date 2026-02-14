@@ -99,17 +99,15 @@ export default function Modules() {
     <Layout>
       <div className="space-y-6 pb-8">
         <div className="relative text-center space-y-2">
-          {isAuthenticated && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-0 top-0"
-              onClick={() => setShowSettings(!showSettings)}
-              data-testid="button-settings"
-            >
-              <Settings className="h-5 w-5" />
-            </Button>
-          )}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-0 top-0"
+            onClick={() => setShowSettings(!showSettings)}
+            data-testid="button-settings"
+          >
+            <Settings className="h-5 w-5" />
+          </Button>
           <h1 className="text-2xl font-bold text-foreground" data-testid="text-page-title">
             Learning Path
           </h1>
@@ -118,10 +116,10 @@ export default function Modules() {
           </p>
         </div>
 
-        {showSettings && isAuthenticated && (
+        {showSettings && (
           <Card className="p-4 space-y-3" data-testid="panel-settings">
             <h3 className="font-semibold text-sm text-foreground">Settings</h3>
-            {hasActiveSubscription && (
+            {isAuthenticated && hasActiveSubscription && (
               <Button
                 variant="outline"
                 className="w-full justify-start gap-2"
@@ -137,15 +135,27 @@ export default function Modules() {
                 Manage Subscription
               </Button>
             )}
-            <Button
-              variant="outline"
-              className="w-full justify-start gap-2 text-destructive hover:text-destructive"
-              onClick={() => signOut(() => setLocation("/"))}
-              data-testid="button-sign-out"
-            >
-              <LogOut className="h-4 w-4" />
-              Sign Out
-            </Button>
+            {isAuthenticated ? (
+              <Button
+                variant="outline"
+                className="w-full justify-start gap-2 text-destructive hover:text-destructive"
+                onClick={() => signOut(() => setLocation("/"))}
+                data-testid="button-sign-out"
+              >
+                <LogOut className="h-4 w-4" />
+                Sign Out
+              </Button>
+            ) : (
+              <Button
+                variant="outline"
+                className="w-full justify-start gap-2"
+                onClick={() => setLocation("/sign-in")}
+                data-testid="button-sign-in"
+              >
+                <LogIn className="h-4 w-4" />
+                Sign In
+              </Button>
+            )}
           </Card>
         )}
 
