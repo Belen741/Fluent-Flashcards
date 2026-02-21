@@ -127,20 +127,28 @@ function getCardTypeForLevel(level: CardLevel): CardType {
   }
 }
 
-function getCardByType(cards: Flashcard[], cardType: CardType): Flashcard | null {
+function getCardByType(cards: Flashcard[], cardType: CardType): { card: Flashcard; actualType: CardType } | null {
   if (cardType === "intro" || cardType === "review") {
-    return cards.find(c => c.variantType === "intro") || null;
+    const card = cards.find(c => c.variantType === "intro");
+    return card ? { card, actualType: cardType } : null;
   }
   if (cardType === "cloze") {
     const card = cards.find(c => c.variantType === "cloze");
-    return card && hasValidCloze(card) ? card : null;
+    if (card && hasValidCloze(card)) return { card, actualType: "cloze" };
+    const introCard = cards.find(c => c.variantType === "intro");
+    return introCard ? { card: introCard, actualType: "intro" } : null;
   }
   if (cardType === "mcq") {
     const card = cards.find(c => c.variantType === "mcq");
-    return card && hasValidMcq(card) ? card : null;
+    if (card && hasValidMcq(card)) return { card, actualType: "mcq" };
+    const clozeCard = cards.find(c => c.variantType === "cloze");
+    if (clozeCard && hasValidCloze(clozeCard)) return { card: clozeCard, actualType: "cloze" };
+    const introCard = cards.find(c => c.variantType === "intro");
+    return introCard ? { card: introCard, actualType: "intro" } : null;
   }
   if (cardType === "reorder") {
-    return cards.find(c => c.variantType === "intro") || null;
+    const introCard = cards.find(c => c.variantType === "intro");
+    return introCard ? { card: introCard, actualType: "reorder" } : null;
   }
   return null;
 }
@@ -196,11 +204,11 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
   for (let i = 0; i < reviewToAdd; i++) {
     const conceptId = masteredForReview[i];
     const cards = conceptGroups[conceptId];
-    const card = getCardByType(cards, "review");
-    if (card) {
+    const result = getCardByType(cards, "review");
+    if (result) {
       queue.push({
-        card,
-        cardType: "review",
+        card: result.card,
+        cardType: result.actualType,
         conceptId,
         level: 4,
       });
@@ -213,11 +221,11 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
     const level = getConceptLevel(conceptId);
     const cardType = getCardTypeForLevel(level);
     const cards = conceptGroups[conceptId];
-    const card = getCardByType(cards, cardType);
-    if (card) {
+    const result = getCardByType(cards, cardType);
+    if (result) {
       queue.push({
-        card,
-        cardType,
+        card: result.card,
+        cardType: result.actualType,
         conceptId,
         level,
       });
@@ -228,11 +236,11 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
   for (let i = 0; i < remainingSlots && i < newConcepts.length; i++) {
     const conceptId = newConcepts[i];
     const cards = conceptGroups[conceptId];
-    const card = getCardByType(cards, "intro");
-    if (card) {
+    const result = getCardByType(cards, "intro");
+    if (result) {
       queue.push({
-        card,
-        cardType: "intro",
+        card: result.card,
+        cardType: result.actualType,
         conceptId,
         level: 0,
       });
@@ -291,15 +299,15 @@ export function processResponse(
   if (!gotItRight && newLevel < level) {
     const conceptCards = updatedReservePool.filter(c => c.conceptId === conceptId);
     const newCardType = getCardTypeForLevel(newLevel);
-    const card = getCardByType(conceptCards, newCardType);
+    const result = getCardByType(conceptCards, newCardType);
     
-    if (card) {
+    if (result) {
       const offset = 2 + Math.floor(Math.random() * 3);
       const insertPosition = Math.min(currentIndex + offset, updatedQueue.length);
       
       const newSessionCard: SessionCard = {
-        card,
-        cardType: newCardType,
+        card: result.card,
+        cardType: result.actualType,
         conceptId,
         level: newLevel,
       };
