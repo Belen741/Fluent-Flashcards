@@ -1,16 +1,19 @@
-// API Base URL configuration for split architecture (Vercel frontend + Replit backend)
-const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
-
-// Debug: log API configuration on load
-if (typeof window !== 'undefined') {
-  console.log('[API Config] VITE_API_BASE_URL:', import.meta.env.VITE_API_BASE_URL);
-  console.log('[API Config] API_BASE:', API_BASE);
-  console.log('[API Config] Current hostname:', window.location.hostname);
+// API Base URL configuration
+// When hosted on Replit (spanish4nurses.com), use relative URLs (same origin)
+// Only use VITE_API_BASE_URL for external hosting (e.g., Vercel)
+function resolveApiBase(): string {
+  if (typeof window !== 'undefined') {
+    const hostname = window.location.hostname;
+    if (hostname.includes('spanish4nurses.com') || hostname.includes('replit')) {
+      return '';
+    }
+  }
+  return import.meta.env.VITE_API_BASE_URL || '';
 }
 
+const API_BASE = resolveApiBase();
+
 export function getApiUrl(path: string): string {
-  // If API_BASE is set (production on Vercel), use it
-  // Otherwise use relative path (development on Replit)
   if (API_BASE) {
     return `${API_BASE}${path}`;
   }
