@@ -51,6 +51,10 @@ export default function Study() {
     if (flashcards && flashcards.length > 0 && initializedSession !== sessionNumber) {
       const moduleFlashcards = getActiveModuleFlashcards(flashcards);
       const { queue, reservePool: pool, maxInteractions: max } = buildSessionQueue(moduleFlashcards);
+      if (queue.length === 0) {
+        setLocation("/complete?moduleComplete=true");
+        return;
+      }
       setSessionQueue(queue);
       setReservePool(pool);
       setMaxInteractions(max);
@@ -63,7 +67,7 @@ export default function Study() {
       setInteractiveAnswered(false);
       setInitializedSession(sessionNumber);
     }
-  }, [flashcards, sessionNumber, initializedSession]);
+  }, [flashcards, sessionNumber, initializedSession, setLocation]);
 
   const handleInteractiveAnswer = useCallback((correct: boolean) => {
     setUserResponse(correct ? "correct" : "incorrect");

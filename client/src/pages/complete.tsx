@@ -1,15 +1,21 @@
-import { Link, useLocation } from "wouter";
+import { Link, useLocation, useSearch } from "wouter";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Home, ArrowRight, PartyPopper } from "lucide-react";
+import { CheckCircle2, Home, ArrowRight, PartyPopper, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { getSessionsCompletedToday } from "@/utils/sessionQueue";
 
 export default function Complete() {
   const [, setLocation] = useLocation();
+  const searchString = useSearch();
   const [sessionsToday, setSessionsToday] = useState(0);
+
+  const isModuleComplete = useMemo(() => {
+    const params = new URLSearchParams(searchString);
+    return params.get("moduleComplete") === "true";
+  }, [searchString]);
 
   useEffect(() => {
     const count = getSessionsCompletedToday();
@@ -17,12 +23,10 @@ export default function Complete() {
   }, []);
 
   const handleNextSession = () => {
-    // Navigate to study with a fresh session
     setLocation("/study?session=" + (sessionsToday + 1));
   };
 
   useEffect(() => {
-    // Fire confetti on mount
     const duration = 2.5 * 1000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 25, spread: 360, ticks: 50, zIndex: 0 };
@@ -47,64 +51,92 @@ export default function Complete() {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center min-h-[70vh] space-y-8 text-center">
-        {/* Success Icon */}
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.1 }}
           className="w-20 h-20 bg-secondary text-foreground rounded-full flex items-center justify-center"
         >
-          <CheckCircle2 className="w-10 h-10" />
+          {isModuleComplete ? <Trophy className="w-10 h-10" /> : <CheckCircle2 className="w-10 h-10" />}
         </motion.div>
 
-        {/* Message */}
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="space-y-3"
         >
-          <div className="flex items-center justify-center gap-2">
-            <h1 className="text-2xl font-bold text-foreground" data-testid="text-session-complete">
-              Session {sessionsToday} complete
-            </h1>
-            <PartyPopper className="w-6 h-6 text-foreground" />
-          </div>
-          <p className="text-base text-muted-foreground max-w-[280px] mx-auto" data-testid="text-success-message">
-            {sessionsToday === 1 
-              ? "Great job! Keep it up." 
-              : `Amazing! You've completed ${sessionsToday} sessions today.`}
-          </p>
+          {isModuleComplete ? (
+            <>
+              <div className="flex items-center justify-center gap-2">
+                <h1 className="text-2xl font-bold text-foreground" data-testid="text-module-complete">
+                  Module Complete!
+                </h1>
+                <PartyPopper className="w-6 h-6 text-foreground" />
+              </div>
+              <p className="text-base text-muted-foreground max-w-[280px] mx-auto" data-testid="text-success-message">
+                You've mastered all the concepts in this module. Go back to choose your next module!
+              </p>
+            </>
+          ) : (
+            <>
+              <div className="flex items-center justify-center gap-2">
+                <h1 className="text-2xl font-bold text-foreground" data-testid="text-session-complete">
+                  Session {sessionsToday} complete
+                </h1>
+                <PartyPopper className="w-6 h-6 text-foreground" />
+              </div>
+              <p className="text-base text-muted-foreground max-w-[280px] mx-auto" data-testid="text-success-message">
+                {sessionsToday === 1 
+                  ? "Great job! Keep it up." 
+                  : `Amazing! You've completed ${sessionsToday} sessions today.`}
+              </p>
+            </>
+          )}
         </motion.div>
 
-        {/* Action Buttons */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="w-full space-y-3 pt-6"
         >
-          <Button 
-            size="lg" 
-            onClick={handleNextSession}
-            data-testid="button-next-session"
-            className="w-full font-semibold"
-          >
-            Continue to next session
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          
-          <Link href="/" data-testid="link-home">
-            <Button 
-              variant="outline"
-              size="lg" 
-              data-testid="button-home"
-              className="w-full font-medium"
-            >
-              <Home className="mr-2 h-4 w-4" />
-              Done for now
-            </Button>
-          </Link>
+          {isModuleComplete ? (
+            <Link href="/" data-testid="link-modules">
+              <Button 
+                size="lg" 
+                data-testid="button-back-modules"
+                className="w-full font-semibold"
+              >
+                <Home className="mr-2 h-5 w-5" />
+                Back to Modules
+              </Button>
+            </Link>
+          ) : (
+            <>
+              <Button 
+                size="lg" 
+                onClick={handleNextSession}
+                data-testid="button-next-session"
+                className="w-full font-semibold"
+              >
+                Continue to next session
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              
+              <Link href="/" data-testid="link-home">
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  data-testid="button-home"
+                  className="w-full font-medium"
+                >
+                  <Home className="mr-2 h-4 w-4" />
+                  Done for now
+                </Button>
+              </Link>
+            </>
+          )}
         </motion.div>
       </div>
     </Layout>
