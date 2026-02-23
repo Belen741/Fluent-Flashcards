@@ -16,6 +16,7 @@ import {
   type SessionCard,
   type CardType,
 } from "@/utils/sessionQueue";
+import { markConceptSeen, getUserProgress } from "@/utils/userProgress";
 import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
 import { getActiveModuleFlashcards } from "@/utils/moduleProgress";
 import { QuickFillCard } from "@/components/quick-fill-card";
@@ -119,6 +120,36 @@ export default function Study() {
     if (sessionQueue.length === 0) return;
     
     const currentSessionCard = sessionQueue[currentIndex];
+    const isFallbackIntro = currentSessionCard.level > 0 && currentSessionCard.cardType === "intro";
+
+    if (isFallbackIntro) {
+      const progress = getUserProgress();
+      const currentSession = progress.totalSessionsCompleted + 1;
+      markConceptSeen(currentSessionCard.conceptId, currentSession);
+      
+      const updatedSeenConcepts = new Set(Array.from(seenConceptIds).concat([currentSessionCard.conceptId]));
+      setSeenConceptIds(updatedSeenConcepts);
+      const newCount = interactionCount + 1;
+      setInteractionCount(newCount);
+      setUserResponse(null);
+      setShowFeedback(false);
+      setIsFlipped(false);
+      setInteractiveAnswered(false);
+
+      const nextIndex = currentIndex + 1;
+      const shouldEnd = newCount >= maxInteractions || nextIndex >= sessionQueue.length;
+      if (shouldEnd) {
+        saveSessionHistory({
+          date: new Date().toISOString(),
+          conceptsSeen: Array.from(updatedSeenConcepts),
+        });
+        incrementSessionCount();
+        setLocation("/complete");
+      } else {
+        setCurrentIndex(nextIndex);
+      }
+      return;
+    }
 
     const result = processResponse(
       currentSessionCard,
@@ -152,7 +183,7 @@ export default function Study() {
     } else {
       setCurrentIndex(nextIndex);
     }
-  }, [currentIndex, sessionQueue, reservePool, setLocation, interactionCount, seenConceptIds]);
+  }, [currentIndex, sessionQueue, reservePool, setLocation, interactionCount, seenConceptIds, maxInteractions]);
 
   const handleReviewAnswer = useCallback((knew: boolean) => {
     if (sessionQueue.length === 0) return;

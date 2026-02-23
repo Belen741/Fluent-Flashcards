@@ -87,6 +87,15 @@ export function updateConceptLevel(
   return newLevel;
 }
 
+export function markConceptSeen(conceptId: string, currentSessionNumber: number): void {
+  const progress = getUserProgress();
+  const current = progress.concepts[conceptId];
+  if (current) {
+    current.lastSessionSeen = currentSessionNumber;
+    saveUserProgress(progress);
+  }
+}
+
 export function incrementTotalSessions(): number {
   const progress = getUserProgress();
   progress.totalSessionsCompleted += 1;

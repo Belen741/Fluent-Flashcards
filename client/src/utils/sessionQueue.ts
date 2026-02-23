@@ -134,13 +134,21 @@ function getCardByType(cards: Flashcard[], cardType: CardType): { card: Flashcar
   }
   if (cardType === "cloze") {
     const card = cards.find(c => c.variantType === "cloze");
-    if (card && hasValidCloze(card)) return { card, actualType: "cloze" };
+    if (card && hasValidCloze(card)) {
+      console.log(`[Queue] ${cards[0]?.conceptId}: cloze card valid, showing as cloze`);
+      return { card, actualType: "cloze" };
+    }
+    console.warn(`[Queue] ${cards[0]?.conceptId}: cloze INVALID, falling back to intro. clozeOptions:`, card?.clozeOptions, 'clozeCorrect:', card?.clozeCorrect);
     const introCard = cards.find(c => c.variantType === "intro");
     return introCard ? { card: introCard, actualType: "intro" } : null;
   }
   if (cardType === "mcq") {
     const card = cards.find(c => c.variantType === "mcq");
-    if (card && hasValidMcq(card)) return { card, actualType: "mcq" };
+    if (card && hasValidMcq(card)) {
+      console.log(`[Queue] ${cards[0]?.conceptId}: mcq card valid, showing as mcq`);
+      return { card, actualType: "mcq" };
+    }
+    console.warn(`[Queue] ${cards[0]?.conceptId}: mcq INVALID, trying cloze. mcqOptionsEn:`, card?.mcqOptionsEn, 'mcqCorrectEn:', card?.mcqCorrectEn, 'mcqQuestionEs:', card?.mcqQuestionEs);
     const clozeCard = cards.find(c => c.variantType === "cloze");
     if (clozeCard && hasValidCloze(clozeCard)) return { card: clozeCard, actualType: "cloze" };
     const introCard = cards.find(c => c.variantType === "intro");
@@ -247,16 +255,43 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
     }
   }
   
-  const shuffledQueue = shuffle(queue);
+  const practiceCards = shuffle(queue.filter(item => item.cardType !== "intro"));
+  const introCards = shuffle(queue.filter(item => item.cardType === "intro"));
   
-  const introIndex = shuffledQueue.findIndex(item => item.cardType === "intro");
-  if (introIndex > 0) {
-    const introItem = shuffledQueue.splice(introIndex, 1)[0];
-    shuffledQueue.unshift(introItem);
+  const interleavedQueue: SessionCard[] = [];
+  
+  if (practiceCards.length > 0) {
+    const pi = Math.max(practiceCards.length, introCards.length);
+    let pIdx = 0;
+    let iIdx = 0;
+    
+    for (let i = 0; i < pi * 2 && interleavedQueue.length < queue.length; i++) {
+      if (i % 2 === 0 && pIdx < practiceCards.length) {
+        interleavedQueue.push(practiceCards[pIdx++]);
+      } else if (iIdx < introCards.length) {
+        interleavedQueue.push(introCards[iIdx++]);
+      } else if (pIdx < practiceCards.length) {
+        interleavedQueue.push(practiceCards[pIdx++]);
+      }
+    }
+    
+    while (pIdx < practiceCards.length) interleavedQueue.push(practiceCards[pIdx++]);
+    while (iIdx < introCards.length) interleavedQueue.push(introCards[iIdx++]);
+  } else {
+    interleavedQueue.push(...shuffle(introCards));
   }
 
+  const typeCounts: Record<string, number> = {};
+  for (const item of interleavedQueue) {
+    typeCounts[item.cardType] = (typeCounts[item.cardType] || 0) + 1;
+  }
+  console.log('[Queue] Session queue built:', JSON.stringify(typeCounts), 'total:', interleavedQueue.length);
+  console.log('[Queue] Concept levels:', JSON.stringify(
+    interleavedQueue.map(item => ({ id: item.conceptId, level: item.level, type: item.cardType }))
+  ));
+
   return { 
-    queue: shuffledQueue, 
+    queue: interleavedQueue, 
     reservePool: flashcards,
     maxInteractions: MAX_INTERACTIONS_PER_SESSION
   };
