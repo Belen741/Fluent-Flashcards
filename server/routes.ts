@@ -90,7 +90,15 @@ export async function registerRoutes(
   });
 
   const cards = await storage.getFlashcards();
-  if (cards.length === 0) {
+  const needsReseed = cards.length === 0 
+    || cards.length !== flashcardsData.length
+    || cards.some(c => c.variantType === "cloze" && !c.clozeOptions);
+
+  if (needsReseed) {
+    if (cards.length > 0) {
+      console.log(`Stale flashcard data detected (${cards.length} cards, missing cloze/mcq data). Re-seeding...`);
+      await storage.deleteAllFlashcards();
+    }
     console.log(`Seeding flashcards with ${flashcardsData.length} cards from imported data...`);
     
     for (const card of flashcardsData) {
