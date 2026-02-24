@@ -70,10 +70,13 @@ Preferred communication style: Simple, everyday language.
 - **Review Card (Level 4)**: Shows Spanish phrase with translation; user marks "I know" or "I don't know" for mastered concept review
 
 **Response System**: 
-- Standard cards: Users mark "I knew it" or "I didn't know" to track progress
+- Standard cards (intro): Single "Next" button after flipping (always marks as correct, promotes level)
 - Interactive cards (cloze/mcq): Auto-submit on option selection; Next button appears after answering
-- When marking "I didn't know" or getting interactive cards wrong, a variant card is silently inserted 2-5 steps ahead for reinforcement
+- Fallback intros (level > 0 but shown as intro due to missing data): Skip level changes, only mark concept as seen
+- When getting interactive cards wrong, a variant card is silently inserted 2-5 steps ahead for reinforcement
 - Quick Fill cards show audio button; Quick Pick cards do not show audio button
+
+**Data Caching**: The `useFlashcards` hook has `staleTime: 5 minutes` to ensure fresh data is fetched periodically. The global QueryClient uses `staleTime: Infinity` for other queries — flashcards override this to prevent stale cloze/mcq data from being cached indefinitely.
 
 **Micro-Feedback**: Brief encouraging messages appear after responses ("Great job!" for correct, "Keep going!" for incorrect).
 
