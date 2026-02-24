@@ -17,6 +17,7 @@ import {
   type CardType,
 } from "@/utils/sessionQueue";
 import { markConceptSeen, getUserProgress } from "@/utils/userProgress";
+
 import { getImageUrl, getAudioUrl } from "@/utils/mediaResolver";
 import { getActiveModuleFlashcards } from "@/utils/moduleProgress";
 import { QuickFillCard } from "@/components/quick-fill-card";
@@ -81,7 +82,6 @@ export default function Study() {
     
     const currentSessionCard = sessionQueue[currentIndex];
     const gotItRight = userResponse === "correct";
-    console.log(`[Study] handleInteractiveNext: ${currentSessionCard.conceptId} level=${currentSessionCard.level} type=${currentSessionCard.cardType} gotItRight=${gotItRight}`);
 
     const result = processResponse(
       currentSessionCard,
@@ -122,7 +122,6 @@ export default function Study() {
     
     const currentSessionCard = sessionQueue[currentIndex];
     const isFallbackIntro = currentSessionCard.level > 0 && currentSessionCard.cardType === "intro";
-    console.log(`[Study] handleStandardNext: ${currentSessionCard.conceptId} level=${currentSessionCard.level} type=${currentSessionCard.cardType} isFallback=${isFallbackIntro}`);
 
     if (isFallbackIntro) {
       const progress = getUserProgress();
@@ -515,28 +514,6 @@ export default function Study() {
           </AnimatePresence>
         </div>
 
-        <details className="mt-4 text-[10px] text-muted-foreground/60">
-          <summary>Debug Info</summary>
-          <pre className="mt-1 p-2 bg-muted/30 rounded text-[9px] overflow-auto max-h-32">
-{JSON.stringify({
-  cardType,
-  level: currentSessionCard.level,
-  conceptId: currentSessionCard.conceptId,
-  variantType: currentCard.variantType,
-  queue: sessionQueue.map(s => `${s.conceptId}:L${s.level}:${s.cardType}`),
-  storedProgress: (() => {
-    try {
-      const p = JSON.parse(localStorage.getItem("flashcard_user_progress") || "{}");
-      const concepts = p.concepts || {};
-      return {
-        sessions: p.totalSessionsCompleted,
-        concepts: Object.entries(concepts).map(([id, c]: [string, any]) => `${id}:L${c.level}`)
-      };
-    } catch { return "error"; }
-  })(),
-}, null, 1)}
-          </pre>
-        </details>
       </div>
     </Layout>
   );

@@ -135,20 +135,16 @@ function getCardByType(cards: Flashcard[], cardType: CardType): { card: Flashcar
   if (cardType === "cloze") {
     const card = cards.find(c => c.variantType === "cloze");
     if (card && hasValidCloze(card)) {
-      console.log(`[Queue] ${cards[0]?.conceptId}: cloze card valid, showing as cloze`);
       return { card, actualType: "cloze" };
     }
-    console.warn(`[Queue] ${cards[0]?.conceptId}: cloze INVALID, falling back to intro. clozeOptions:`, card?.clozeOptions, 'clozeCorrect:', card?.clozeCorrect);
     const introCard = cards.find(c => c.variantType === "intro");
     return introCard ? { card: introCard, actualType: "intro" } : null;
   }
   if (cardType === "mcq") {
     const card = cards.find(c => c.variantType === "mcq");
     if (card && hasValidMcq(card)) {
-      console.log(`[Queue] ${cards[0]?.conceptId}: mcq card valid, showing as mcq`);
       return { card, actualType: "mcq" };
     }
-    console.warn(`[Queue] ${cards[0]?.conceptId}: mcq INVALID, trying cloze. mcqOptionsEn:`, card?.mcqOptionsEn, 'mcqCorrectEn:', card?.mcqCorrectEn, 'mcqQuestionEs:', card?.mcqQuestionEs);
     const clozeCard = cards.find(c => c.variantType === "cloze");
     if (clozeCard && hasValidCloze(clozeCard)) return { card: clozeCard, actualType: "cloze" };
     const introCard = cards.find(c => c.variantType === "intro");
@@ -192,18 +188,6 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
     conceptsByLevel[level].push(conceptId);
   }
   
-  console.log('[Queue] Concept level distribution:', JSON.stringify({
-    level0: conceptsByLevel[0].length,
-    level1: conceptsByLevel[1].length,
-    level2: conceptsByLevel[2].length,
-    level3: conceptsByLevel[3].length,
-    level4: conceptsByLevel[4].length,
-  }));
-  console.log('[Queue] In-progress concepts:', JSON.stringify([
-    ...conceptsByLevel[1].map(id => ({ id, level: 1 })),
-    ...conceptsByLevel[2].map(id => ({ id, level: 2 })),
-    ...conceptsByLevel[3].map(id => ({ id, level: 3 })),
-  ]));
   
   const masteredForReview = conceptsByLevel[4].filter(conceptId => {
     const concept = userProgress.concepts[conceptId];
@@ -237,14 +221,12 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
   }
   
   const inProgressToAdd = Math.min(inProgressConcepts.length, MAX_INTERACTIONS_PER_SESSION - queue.length);
-  console.log(`[Queue] Adding ${inProgressToAdd} in-progress concepts (${inProgressConcepts.length} available)`);
   for (let i = 0; i < inProgressToAdd; i++) {
     const conceptId = inProgressConcepts[i];
     const level = getConceptLevel(conceptId);
     const cardType = getCardTypeForLevel(level);
     const cards = conceptGroups[conceptId];
     const result = getCardByType(cards, cardType);
-    console.log(`[Queue] In-progress: ${conceptId} level=${level} wantType=${cardType} gotType=${result?.actualType || 'null'} variants=${cards?.map(c => c.variantType).join(',')}`);
     if (result) {
       queue.push({
         card: result.card,
@@ -295,15 +277,6 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
   } else {
     interleavedQueue.push(...shuffle(introCards));
   }
-
-  const typeCounts: Record<string, number> = {};
-  for (const item of interleavedQueue) {
-    typeCounts[item.cardType] = (typeCounts[item.cardType] || 0) + 1;
-  }
-  console.log('[Queue] Session queue built:', JSON.stringify(typeCounts), 'total:', interleavedQueue.length);
-  console.log('[Queue] Concept levels:', JSON.stringify(
-    interleavedQueue.map(item => ({ id: item.conceptId, level: item.level, type: item.cardType }))
-  ));
 
   return { 
     queue: interleavedQueue, 

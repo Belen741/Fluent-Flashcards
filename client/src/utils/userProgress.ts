@@ -18,16 +18,11 @@ export function getUserProgress(): UserProgress {
   try {
     const stored = localStorage.getItem(USER_PROGRESS_KEY);
     if (stored) {
-      const parsed = JSON.parse(stored);
-      const conceptCount = Object.keys(parsed.concepts || {}).length;
-      const levels = Object.values(parsed.concepts || {}).map((c: any) => c.level);
-      console.log(`[Progress] getUserProgress: ${conceptCount} concepts, sessions=${parsed.totalSessionsCompleted}, levels=[${levels.join(',')}]`);
-      return parsed;
+      return JSON.parse(stored);
     }
   } catch {
     console.error("Failed to load user progress");
   }
-  console.log('[Progress] getUserProgress: EMPTY (no stored data)');
   return {
     concepts: {},
     totalSessionsCompleted: 0,
@@ -87,7 +82,6 @@ export function updateConceptLevel(
     lastSessionSeen: currentSessionNumber,
   };
   
-  console.log(`[Progress] ${conceptId}: level ${current.level} → ${newLevel} (gotItRight=${gotItRight}, session=${currentSessionNumber})`);
   saveUserProgress(progress);
   
   return newLevel;
