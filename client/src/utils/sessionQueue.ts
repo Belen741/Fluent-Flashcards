@@ -192,6 +192,19 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
     conceptsByLevel[level].push(conceptId);
   }
   
+  console.log('[Queue] Concept level distribution:', JSON.stringify({
+    level0: conceptsByLevel[0].length,
+    level1: conceptsByLevel[1].length,
+    level2: conceptsByLevel[2].length,
+    level3: conceptsByLevel[3].length,
+    level4: conceptsByLevel[4].length,
+  }));
+  console.log('[Queue] In-progress concepts:', JSON.stringify([
+    ...conceptsByLevel[1].map(id => ({ id, level: 1 })),
+    ...conceptsByLevel[2].map(id => ({ id, level: 2 })),
+    ...conceptsByLevel[3].map(id => ({ id, level: 3 })),
+  ]));
+  
   const masteredForReview = conceptsByLevel[4].filter(conceptId => {
     const concept = userProgress.concepts[conceptId];
     if (!concept) return false;
@@ -224,12 +237,14 @@ export function buildSessionQueue(flashcards: Flashcard[]): {
   }
   
   const inProgressToAdd = Math.min(inProgressConcepts.length, MAX_INTERACTIONS_PER_SESSION - queue.length);
+  console.log(`[Queue] Adding ${inProgressToAdd} in-progress concepts (${inProgressConcepts.length} available)`);
   for (let i = 0; i < inProgressToAdd; i++) {
     const conceptId = inProgressConcepts[i];
     const level = getConceptLevel(conceptId);
     const cardType = getCardTypeForLevel(level);
     const cards = conceptGroups[conceptId];
     const result = getCardByType(cards, cardType);
+    console.log(`[Queue] In-progress: ${conceptId} level=${level} wantType=${cardType} gotType=${result?.actualType || 'null'} variants=${cards?.map(c => c.variantType).join(',')}`);
     if (result) {
       queue.push({
         card: result.card,
