@@ -19,12 +19,31 @@ export async function registerRoutes(
   app.get('/api/subscription', clerkAuth, async (req: any, res) => {
     try {
       const userId = req.clerkUser?.userId;
-      const user = await stripeService.getUser(userId);
-      if (!user?.stripeSubscriptionId) {
-        return res.json({ subscription: null, status: null });
+      const user = await stripeService.getOrCreateUser(userId, req.clerkUser?.email);
+
+      if (user.stripeSubscriptionId) {
+        const subscription = await stripeService.getSubscriptionFromStripe(user.stripeSubscriptionId);
+        const liveStatus = subscription?.status || user.subscriptionStatus;
+
+        if (liveStatus && liveStatus !== user.subscriptionStatus) {
+          await stripeService.updateUserStripeInfo(userId, { subscriptionStatus: liveStatus as string });
+        }
+
+        return res.json({ subscription, status: liveStatus });
       }
-      const subscription = await stripeService.getSubscriptionFromStripe(user.stripeSubscriptionId);
-      res.json({ subscription, status: user.subscriptionStatus });
+
+      if (user.stripeCustomerId) {
+        const activeSub = await stripeService.getActiveSubscriptionByCustomer(user.stripeCustomerId);
+        if (activeSub) {
+          await stripeService.updateUserStripeInfo(userId, {
+            stripeSubscriptionId: activeSub.id,
+            subscriptionStatus: activeSub.status,
+          });
+          return res.json({ subscription: activeSub, status: activeSub.status });
+        }
+      }
+
+      return res.json({ subscription: null, status: null });
     } catch (error) {
       console.error('Error getting subscription:', error);
       res.status(500).json({ error: 'Failed to get subscription' });
@@ -41,8 +60,8 @@ export async function registerRoutes(
         return res.status(400).json({ error: 'Price ID is required' });
       }
 
-      let user = await stripeService.getUser(userId);
-      let customerId = user?.stripeCustomerId;
+      const user = await stripeService.getOrCreateUser(userId, userEmail);
+      let customerId = user.stripeCustomerId;
 
       if (!customerId) {
         const customer = await stripeService.createCustomer(userEmail || '', userId);

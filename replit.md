@@ -166,6 +166,9 @@ Due to Vite 7 incompatibility with Vercel serverless functions, the app uses a s
 - Price ID: `price_1SzmFL9jgd4cptrqQYELUnb1` (multi-currency: $5 USD / $100 MXN per month)
 - Subscription hook: `client/src/hooks/use-subscription.ts`
 - Checkout endpoints: `/api/checkout`, `/api/subscription`
+- Webhook: `/api/stripe-webhook` (registered in `server/index.ts` BEFORE express.json() middleware)
+- Subscription recovery: `/api/subscription` checks Stripe API directly if DB data is missing, auto-syncs to DB
+- User upsert: `stripeService.getOrCreateUser()` ensures user exists before Stripe operations
 
 **Module Access Control**:
 - Module 1 (Patient Admission): FREE - no login required

@@ -39,16 +39,34 @@ export class StripeService {
     return user;
   }
 
+  async getOrCreateUser(userId: string, email?: string) {
+    let [user] = await db.select().from(users).where(eq(users.id, userId));
+    if (!user) {
+      [user] = await db.insert(users).values({
+        id: userId,
+        email: email || null,
+      }).returning();
+    }
+    return user;
+  }
+
   async updateUserStripeInfo(userId: string, stripeInfo: {
     stripeCustomerId?: string;
     stripeSubscriptionId?: string;
     subscriptionStatus?: string;
   }) {
-    const [user] = await db
+    let [user] = await db
       .update(users)
       .set({ ...stripeInfo, updatedAt: new Date() })
       .where(eq(users.id, userId))
       .returning();
+
+    if (!user) {
+      [user] = await db.insert(users).values({
+        id: userId,
+        ...stripeInfo,
+      }).returning();
+    }
     return user;
   }
 
@@ -59,6 +77,21 @@ export class StripeService {
       return subscription;
     } catch (error) {
       console.error('Error retrieving subscription from Stripe:', error);
+      return null;
+    }
+  }
+
+  async getActiveSubscriptionByCustomer(customerId: string) {
+    const stripe = getStripeClient();
+    try {
+      const subscriptions = await stripe.subscriptions.list({
+        customer: customerId,
+        status: 'active',
+        limit: 1,
+      });
+      return subscriptions.data[0] || null;
+    } catch (error) {
+      console.error('Error fetching subscriptions from Stripe:', error);
       return null;
     }
   }

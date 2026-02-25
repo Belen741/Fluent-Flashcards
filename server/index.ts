@@ -54,7 +54,7 @@ async function initStripe() {
 
 // Register Stripe webhook route BEFORE express.json()
 app.post(
-  '/api/stripe/webhook',
+  '/api/stripe-webhook',
   express.raw({ type: 'application/json' }),
   async (req, res) => {
     const signature = req.headers['stripe-signature'];
