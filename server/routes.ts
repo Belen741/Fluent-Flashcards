@@ -43,6 +43,14 @@ export async function registerRoutes(
         }
       }
 
+      const userEmail = req.clerkUser?.email || user.email;
+      if (userEmail) {
+        const recovered = await stripeService.recoverSubscriptionByEmail(userId, userEmail);
+        if (recovered) {
+          return res.json(recovered);
+        }
+      }
+
       return res.json({ subscription: null, status: null });
     } catch (error) {
       console.error('Error getting subscription:', error);

@@ -95,6 +95,37 @@ export class StripeService {
       return null;
     }
   }
+
+  async findCustomerByEmail(email: string) {
+    const stripe = getStripeClient();
+    try {
+      const customers = await stripe.customers.list({
+        email,
+        limit: 1,
+      });
+      return customers.data[0] || null;
+    } catch (error) {
+      console.error('Error finding customer by email:', error);
+      return null;
+    }
+  }
+
+  async recoverSubscriptionByEmail(userId: string, email: string) {
+    const customer = await this.findCustomerByEmail(email);
+    if (!customer) return null;
+
+    const activeSub = await this.getActiveSubscriptionByCustomer(customer.id);
+    if (!activeSub) return null;
+
+    await this.updateUserStripeInfo(userId, {
+      stripeCustomerId: customer.id,
+      stripeSubscriptionId: activeSub.id,
+      subscriptionStatus: activeSub.status,
+    });
+
+    console.log(`Recovered subscription for user ${userId} via email ${email}: ${activeSub.id}`);
+    return { subscription: activeSub, status: activeSub.status };
+  }
 }
 
 export const stripeService = new StripeService();

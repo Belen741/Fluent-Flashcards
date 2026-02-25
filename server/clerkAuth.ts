@@ -1,4 +1,4 @@
-import { verifyToken } from '@clerk/backend';
+import { verifyToken, createClerkClient } from '@clerk/backend';
 import type { Request, Response, NextFunction } from 'express';
 
 export interface ClerkUser {
@@ -12,6 +12,15 @@ declare global {
       clerkUser?: ClerkUser;
     }
   }
+}
+
+let clerkClient: ReturnType<typeof createClerkClient> | null = null;
+
+function getClerkClient() {
+  if (!clerkClient) {
+    clerkClient = createClerkClient({ secretKey: process.env.CLERK_SECRET_KEY! });
+  }
+  return clerkClient;
 }
 
 export async function clerkAuth(req: Request, res: Response, next: NextFunction) {
@@ -36,9 +45,21 @@ export async function clerkAuth(req: Request, res: Response, next: NextFunction)
       return res.status(401).json({ error: 'Invalid token' });
     }
 
+    let email = payload.email as string | undefined;
+
+    if (!email) {
+      try {
+        const clerk = getClerkClient();
+        const clerkUser = await clerk.users.getUser(payload.sub);
+        email = clerkUser.emailAddresses?.[0]?.emailAddress;
+      } catch (e) {
+        // Non-critical: proceed without email
+      }
+    }
+
     req.clerkUser = {
       userId: payload.sub,
-      email: payload.email as string | undefined,
+      email,
     };
 
     next();
