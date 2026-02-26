@@ -127,7 +127,7 @@ export const modules: Module[] = [
     description: "Emotional support phrases",
     icon: Heart,
     color: "#E91E63",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m11",

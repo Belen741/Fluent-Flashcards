@@ -8764,6 +8764,981 @@ export const flashcardsData = [
       "For now, you cannot eat or drink."
     ],
     "mcqCorrectEn": "I am going to remove the tray."
+  },
+  {
+    "conceptId": "m10_01",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "call_for_help"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_01.webp",
+    "audioKey": "mazo-10/audios/m10_01.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_01_intro",
+    "variantType": "intro",
+    "text": "Necesito ayuda aquí, por favor.",
+    "englishText": "I need help here, please."
+  },
+  {
+    "conceptId": "m10_01",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "call_for_help"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_01.webp",
+    "audioKey": "mazo-10/audios/m10_01.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_01_cloze",
+    "variantType": "cloze",
+    "text": "Necesito ayuda aquí, por favor.",
+    "englishText": "I need help here, please.",
+    "clozeOptions": [
+      "Active el código.",
+      "Tranquilo.",
+      "Llame al médico.",
+      "Necesito ayuda aquí, por favor."
+    ],
+    "clozeCorrect": "Necesito ayuda aquí, por favor."
+  },
+  {
+    "conceptId": "m10_01",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "call_for_help"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_01.webp",
+    "audioKey": "mazo-10/audios/m10_01.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_01_mcq",
+    "variantType": "mcq",
+    "text": "I need help here, please.",
+    "englishText": "I need help here, please.",
+    "mcqQuestionEs": "I need help here, please.",
+    "mcqOptionsEn": [
+      "Necesito ayuda aquí, urgente.",
+      "Necesito ayuda aquí, rápido.",
+      "Necesito ayuda aquí, por favor."
+    ],
+    "mcqCorrectEn": "Necesito ayuda aquí, por favor."
+  },
+  {
+    "conceptId": "m10_02",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "escalation"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_02.webp",
+    "audioKey": "mazo-10/audios/m10_02.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_02_intro",
+    "variantType": "intro",
+    "text": "Llame al médico de inmediato.",
+    "englishText": "Call the doctor immediately."
+  },
+  {
+    "conceptId": "m10_02",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "escalation"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_02.webp",
+    "audioKey": "mazo-10/audios/m10_02.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_02_cloze",
+    "variantType": "cloze",
+    "text": "Llame al médico de inmediato.",
+    "englishText": "Call the doctor immediately.",
+    "clozeOptions": [
+      "Llame al médico de inmediato.",
+      "Avise al personal.",
+      "Tráiganme el equipo.",
+      "Active el código."
+    ],
+    "clozeCorrect": "Llame al médico de inmediato."
+  },
+  {
+    "conceptId": "m10_02",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "escalation"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_02.webp",
+    "audioKey": "mazo-10/audios/m10_02.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_02_mcq",
+    "variantType": "mcq",
+    "text": "Llame al médico de ____.",
+    "englishText": "Call the doctor immediately.",
+    "mcqQuestionEs": "Llame al médico de ____.",
+    "mcqOptionsEn": [
+      "inmediatamente",
+      "después",
+      "calmadamente"
+    ],
+    "mcqCorrectEn": "inmediatamente"
+  },
+  {
+    "conceptId": "m10_03",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "protocol"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_03.webp",
+    "audioKey": "mazo-10/audios/m10_03.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_03_intro",
+    "variantType": "intro",
+    "text": "Active el código de emergencia.",
+    "englishText": "Activate the emergency code."
+  },
+  {
+    "conceptId": "m10_03",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "protocol"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_03.webp",
+    "audioKey": "mazo-10/audios/m10_03.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_03_cloze",
+    "variantType": "cloze",
+    "text": "Active el código de emergencia.",
+    "englishText": "Activate the emergency code.",
+    "clozeOptions": [
+      "Avise al personal.",
+      "Tráiganme el equipo.",
+      "Active el código de emergencia.",
+      "Llame al médico."
+    ],
+    "clozeCorrect": "Active el código de emergencia."
+  },
+  {
+    "conceptId": "m10_03",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "protocol"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_03.webp",
+    "audioKey": "mazo-10/audios/m10_03.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_03_mcq",
+    "variantType": "mcq",
+    "text": "Active el código de emergencia.",
+    "englishText": "Activate the emergency code.",
+    "mcqQuestionEs": "Active el código de emergencia.",
+    "mcqOptionsEn": [
+      "Bring me the emergency equipment.",
+      "We need space, please.",
+      "Activate the emergency code."
+    ],
+    "mcqCorrectEn": "Activate the emergency code."
+  },
+  {
+    "conceptId": "m10_04",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "assessment",
+      "consciousness"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_04.webp",
+    "audioKey": "mazo-10/audios/m10_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_04_intro",
+    "variantType": "intro",
+    "text": "¿Me escucha?",
+    "englishText": "Can you hear me?"
+  },
+  {
+    "conceptId": "m10_04",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "assessment",
+      "consciousness"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_04.webp",
+    "audioKey": "mazo-10/audios/m10_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_04_cloze",
+    "variantType": "cloze",
+    "text": "¿Me escucha?",
+    "englishText": "Can you hear me?",
+    "clozeOptions": [
+      "¿Me escucha?",
+      "¿Puede abrir los ojos?",
+      "¿Respira normal?",
+      "¿Tiene dolor?"
+    ],
+    "clozeCorrect": "¿Me escucha?"
+  },
+  {
+    "conceptId": "m10_04",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "assessment",
+      "consciousness"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_04.webp",
+    "audioKey": "mazo-10/audios/m10_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_04_mcq",
+    "variantType": "mcq",
+    "text": "Can you hear me?",
+    "englishText": "Can you hear me?",
+    "mcqQuestionEs": "Can you hear me?",
+    "mcqOptionsEn": [
+      "¿Me escucha?",
+      "¿Me ve?",
+      "¿Me habla?"
+    ],
+    "mcqCorrectEn": "¿Me escucha?"
+  },
+  {
+    "conceptId": "m10_05",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "assessment",
+      "consciousness"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_05.webp",
+    "audioKey": "mazo-10/audios/m10_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_05_intro",
+    "variantType": "intro",
+    "text": "¿Puede abrir los ojos?",
+    "englishText": "Can you open your eyes?"
+  },
+  {
+    "conceptId": "m10_05",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "assessment",
+      "consciousness"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_05.webp",
+    "audioKey": "mazo-10/audios/m10_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_05_cloze",
+    "variantType": "cloze",
+    "text": "¿Puede abrir los ojos?",
+    "englishText": "Can you open your eyes?",
+    "clozeOptions": [
+      "¿Respira normal?",
+      "¿Puede abrir los ojos?",
+      "¿Puede moverse?",
+      "¿Me escucha?"
+    ],
+    "clozeCorrect": "¿Puede abrir los ojos?"
+  },
+  {
+    "conceptId": "m10_05",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "assessment",
+      "consciousness"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_05.webp",
+    "audioKey": "mazo-10/audios/m10_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_05_mcq",
+    "variantType": "mcq",
+    "text": "Can you open your eyes?",
+    "englishText": "Can you open your eyes?",
+    "mcqQuestionEs": "Can you open your eyes?",
+    "mcqOptionsEn": [
+      "¿Puede cerrar los ojos?",
+      "¿Puede abrir los ojos?",
+      "¿Puede abrir la boca?"
+    ],
+    "mcqCorrectEn": "¿Puede abrir los ojos?"
+  },
+  {
+    "conceptId": "m10_06",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "breathing"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_06.webp",
+    "audioKey": "mazo-10/audios/m10_06.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_06_intro",
+    "variantType": "intro",
+    "text": "No respira normalmente.",
+    "englishText": "He/She is not breathing normally."
+  },
+  {
+    "conceptId": "m10_06",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "breathing"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_06.webp",
+    "audioKey": "mazo-10/audios/m10_06.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_06_cloze",
+    "variantType": "cloze",
+    "text": "No respira normalmente.",
+    "englishText": "He/She is not breathing normally.",
+    "clozeOptions": [
+      "Necesitamos espacio.",
+      "No respira normalmente.",
+      "Está inconsciente.",
+      "Active el código."
+    ],
+    "clozeCorrect": "No respira normalmente."
+  },
+  {
+    "conceptId": "m10_06",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "breathing"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_06.webp",
+    "audioKey": "mazo-10/audios/m10_06.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_06_mcq",
+    "variantType": "mcq",
+    "text": "No respira _____.",
+    "englishText": "He/She is not breathing normally.",
+    "mcqQuestionEs": "No respira _____.",
+    "mcqOptionsEn": [
+      "normalmente",
+      "emergencia",
+      "suavemente"
+    ],
+    "mcqCorrectEn": "normalmente"
+  },
+  {
+    "conceptId": "m10_07",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "equipment"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_07.webp",
+    "audioKey": "mazo-10/audios/m10_07.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_07_intro",
+    "variantType": "intro",
+    "text": "Tráiganme el equipo de emergencia.",
+    "englishText": "Bring me the emergency equipment."
+  },
+  {
+    "conceptId": "m10_07",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "equipment"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_07.webp",
+    "audioKey": "mazo-10/audios/m10_07.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_07_cloze",
+    "variantType": "cloze",
+    "text": "Tráiganme el equipo de emergencia.",
+    "englishText": "Bring me the emergency equipment.",
+    "clozeOptions": [
+      "Necesitamos espacio.",
+      "Tráiganme el equipo de emergencia.",
+      "Llame al médico.",
+      "Active el código."
+    ],
+    "clozeCorrect": "Tráiganme el equipo de emergencia."
+  },
+  {
+    "conceptId": "m10_07",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "equipment"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_07.webp",
+    "audioKey": "mazo-10/audios/m10_07.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_07_mcq",
+    "variantType": "mcq",
+    "text": "Bring me the emergency equipment.",
+    "englishText": "Bring me the emergency equipment.",
+    "mcqQuestionEs": "Bring me the emergency equipment.",
+    "mcqOptionsEn": [
+      "Tráiganme el equipo de emergencia.",
+      "Tráiganme el equipo de emergencia y apoyo.",
+      "Tráiganme el  de emergencia."
+    ],
+    "mcqCorrectEn": "Tráiganme el equipo de emergencia."
+  },
+  {
+    "conceptId": "m10_08",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "communication"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_08.webp",
+    "audioKey": "mazo-10/audios/m10_08.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_08_intro",
+    "variantType": "intro",
+    "text": "Avise al personal de guardia.",
+    "englishText": "Notify the on-call staff."
+  },
+  {
+    "conceptId": "m10_08",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "communication"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_08.webp",
+    "audioKey": "mazo-10/audios/m10_08.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_08_cloze",
+    "variantType": "cloze",
+    "text": "Avise al personal de guardia.",
+    "englishText": "Notify the on-call staff.",
+    "clozeOptions": [
+      "Active el código.",
+      "Tráiganme el equipo.",
+      "Llame al médico.",
+      "Avise al personal de guardia."
+    ],
+    "clozeCorrect": "Avise al personal de guardia."
+  },
+  {
+    "conceptId": "m10_08",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "communication"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_08.webp",
+    "audioKey": "mazo-10/audios/m10_08.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_08_mcq",
+    "variantType": "mcq",
+    "text": "Avise al personal de guardia.",
+    "englishText": "Notify the on-call staff.",
+    "mcqQuestionEs": "Avise al personal de guardia.",
+    "mcqOptionsEn": [
+      "Notify the doctor.",
+      "Notify the on-call staff.",
+      "Notify the family members"
+    ],
+    "mcqCorrectEn": "Notify the on-call staff."
+  },
+  {
+    "conceptId": "m10_09",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_09.webp",
+    "audioKey": "mazo-10/audios/m10_09.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_09_intro",
+    "variantType": "intro",
+    "text": "Permanezca tranquilo, lo estamos atendiendo.",
+    "englishText": "Stay calm, we are taking care of you."
+  },
+  {
+    "conceptId": "m10_09",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_09.webp",
+    "audioKey": "mazo-10/audios/m10_09.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_09_cloze",
+    "variantType": "cloze",
+    "text": "Permanezca tranquilo, lo estamos atendiendo.",
+    "englishText": "Stay calm, we are taking care of you.",
+    "clozeOptions": [
+      "Todo está bajo control.",
+      "Siga respirando.",
+      "Permanezca tranquilo, lo estamos atendiendo.",
+      "No se mueva."
+    ],
+    "clozeCorrect": "Permanezca tranquilo, lo estamos atendiendo."
+  },
+  {
+    "conceptId": "m10_09",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_09.webp",
+    "audioKey": "mazo-10/audios/m10_09.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_09_mcq",
+    "variantType": "mcq",
+    "text": "Stay calm, we are taking care of you.",
+    "englishText": "Stay calm, we are taking care of you.",
+    "mcqQuestionEs": "Stay calm, we are taking care of you.",
+    "mcqOptionsEn": [
+      "Permanezca tranquilo, lo estamos entendiendo.",
+      "Permanezca tranquilo, lo estamos atendiendo.",
+      "Permanezca tranquilo, lo estamos viendo."
+    ],
+    "mcqCorrectEn": "Permanezca tranquilo, lo estamos atendiendo."
+  },
+  {
+    "conceptId": "m10_10",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "crowd_control"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_10.webp",
+    "audioKey": "mazo-10/audios/m10_10.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_10_intro",
+    "variantType": "intro",
+    "text": "Necesitamos espacio, por favor.",
+    "englishText": "We need space, please."
+  },
+  {
+    "conceptId": "m10_10",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "crowd_control"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_10.webp",
+    "audioKey": "mazo-10/audios/m10_10.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_10_cloze",
+    "variantType": "cloze",
+    "text": "Necesitamos espacio, por favor.",
+    "englishText": "We need space, please.",
+    "clozeOptions": [
+      "Tráiganme el equipo.",
+      "Permanezca tranquilo.",
+      "Retírese un momento.",
+      "Necesitamos espacio, por favor."
+    ],
+    "clozeCorrect": "Necesitamos espacio, por favor."
+  },
+  {
+    "conceptId": "m10_10",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "crowd_control"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_10.webp",
+    "audioKey": "mazo-10/audios/m10_10.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_10_mcq",
+    "variantType": "mcq",
+    "text": "We need space, please.",
+    "englishText": "We need space, please.",
+    "mcqQuestionEs": "We need space, please.",
+    "mcqOptionsEn": [
+      "Necesitamos espacio, por favor.",
+      "Necesitamos paz, por favor.",
+      "Necesitamos paces, por favor."
+    ],
+    "mcqCorrectEn": "Necesitamos espacio, por favor."
+  },
+  {
+    "conceptId": "m10_11",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "safety"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_11.webp",
+    "audioKey": "mazo-10/audios/m10_11.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_11_intro",
+    "variantType": "intro",
+    "text": "Retírese un momento.",
+    "englishText": "Step back for a moment."
+  },
+  {
+    "conceptId": "m10_11",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "safety"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_11.webp",
+    "audioKey": "mazo-10/audios/m10_11.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_11_cloze",
+    "variantType": "cloze",
+    "text": "Retírese un momento.",
+    "englishText": "Step back for a moment.",
+    "clozeOptions": [
+      "Necesitamos espacio.",
+      "Permanezca tranquilo.",
+      "No se mueva.",
+      "Retírese un momento."
+    ],
+    "clozeCorrect": "Retírese un momento."
+  },
+  {
+    "conceptId": "m10_11",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "safety"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_11.webp",
+    "audioKey": "mazo-10/audios/m10_11.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_11_mcq",
+    "variantType": "mcq",
+    "text": "Retírese un momento.",
+    "englishText": "Step back for a moment.",
+    "mcqQuestionEs": "Retírese un momento.",
+    "mcqOptionsEn": [
+      "Stay calm.",
+      "Step back for a moment.",
+      "Stay calm."
+    ],
+    "mcqCorrectEn": "Step back for a moment."
+  },
+  {
+    "conceptId": "m10_12",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "reassurance"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_12.webp",
+    "audioKey": "mazo-10/audios/m10_12.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_12_intro",
+    "variantType": "intro",
+    "text": "El médico ya viene en camino.",
+    "englishText": "The doctor is on the way."
+  },
+  {
+    "conceptId": "m10_12",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "reassurance"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_12.webp",
+    "audioKey": "mazo-10/audios/m10_12.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_12_cloze",
+    "variantType": "cloze",
+    "text": "El médico ya viene en camino.",
+    "englishText": "The doctor is on the way.",
+    "clozeOptions": [
+      "Todo está bajo control.",
+      "Ya casi llega.",
+      "El médico ya viene en camino.",
+      "Permanezca tranquilo."
+    ],
+    "clozeCorrect": "El médico ya viene en camino."
+  },
+  {
+    "conceptId": "m10_12",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "reassurance"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_12.webp",
+    "audioKey": "mazo-10/audios/m10_12.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_12_mcq",
+    "variantType": "mcq",
+    "text": "The doctor is on the way.",
+    "englishText": "The doctor is on the way.",
+    "mcqQuestionEs": "The doctor is on the way.",
+    "mcqOptionsEn": [
+      "El médico ya viene en camino.",
+      "El médico ya viene caminando.",
+      "El médico ya viene coduciendo."
+    ],
+    "mcqCorrectEn": "El médico ya viene en camino."
+  },
+  {
+    "conceptId": "m10_13",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "breathing"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_13.webp",
+    "audioKey": "mazo-10/audios/m10_13.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_13_intro",
+    "variantType": "intro",
+    "text": "Siga respirando conmigo.",
+    "englishText": "Keep breathing with me."
+  },
+  {
+    "conceptId": "m10_13",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "breathing"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_13.webp",
+    "audioKey": "mazo-10/audios/m10_13.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_13_cloze",
+    "variantType": "cloze",
+    "text": "Siga respirando conmigo.",
+    "englishText": "Keep breathing with me.",
+    "clozeOptions": [
+      "Respire profundo.",
+      "Tranquilo.",
+      "Siga respirando conmigo.",
+      "No se mueva."
+    ],
+    "clozeCorrect": "Siga respirando conmigo."
+  },
+  {
+    "conceptId": "m10_13",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "breathing"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_13.webp",
+    "audioKey": "mazo-10/audios/m10_13.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_13_mcq",
+    "variantType": "mcq",
+    "text": "Keep breathing with me.",
+    "englishText": "Keep breathing with me.",
+    "mcqQuestionEs": "Keep breathing with me.",
+    "mcqOptionsEn": [
+      "Siga respirando conmigo.",
+      "Respirando conmigo.",
+      "Siga respirando."
+    ],
+    "mcqCorrectEn": "Siga respirando conmigo."
+  },
+  {
+    "conceptId": "m10_14",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "safety"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_14.webp",
+    "audioKey": "mazo-10/audios/m10_14.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_14_intro",
+    "variantType": "intro",
+    "text": "No se mueva.",
+    "englishText": "Do not move."
+  },
+  {
+    "conceptId": "m10_14",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "safety"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_14.webp",
+    "audioKey": "mazo-10/audios/m10_14.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_14_cloze",
+    "variantType": "cloze",
+    "text": "No se mueva.",
+    "englishText": "Do not move.",
+    "clozeOptions": [
+      "Necesitamos espacio.",
+      "Respire conmigo.",
+      "No se mueva.",
+      "Permanezca tranquilo."
+    ],
+    "clozeCorrect": "No se mueva."
+  },
+  {
+    "conceptId": "m10_14",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "emergency",
+      "safety"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_14.webp",
+    "audioKey": "mazo-10/audios/m10_14.mp3",
+    "category": "emergency",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_14_mcq",
+    "variantType": "mcq",
+    "text": "No se____",
+    "englishText": "Do not move.",
+    "mcqQuestionEs": "No se____",
+    "mcqOptionsEn": [
+      "pánico",
+      "dolor",
+      "mueva"
+    ],
+    "mcqCorrectEn": "mueva"
+  },
+  {
+    "conceptId": "m10_15",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_15.webp",
+    "audioKey": "mazo-10/audios/m10_15.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_15_intro",
+    "variantType": "intro",
+    "text": "La situación está bajo control.",
+    "englishText": "The situation is under control."
+  },
+  {
+    "conceptId": "m10_15",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_15.webp",
+    "audioKey": "mazo-10/audios/m10_15.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_15_cloze",
+    "variantType": "cloze",
+    "text": "La situación está bajo control.",
+    "englishText": "The situation is under control.",
+    "clozeOptions": [
+      "Permanezca tranquilo.",
+      "Todo va bien.",
+      "La situación está bajo control.",
+      "El médico viene."
+    ],
+    "clozeCorrect": "La situación está bajo control."
+  },
+  {
+    "conceptId": "m10_15",
+    "deckId": "mazo_10_empatia",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-10/imagenes/m10_15.webp",
+    "audioKey": "mazo-10/audios/m10_15.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m10_15_mcq",
+    "variantType": "mcq",
+    "text": "The situation is under control.",
+    "englishText": "The situation is under control.",
+    "mcqQuestionEs": "The situation is under control.",
+    "mcqOptionsEn": [
+      "La situación está bajo control.",
+      "Todo está bien",
+      "permanezca calmado"
+    ],
+    "mcqCorrectEn": "La situación está bajo control."
   }
 ] as const;
 
