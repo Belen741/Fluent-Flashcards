@@ -69,8 +69,16 @@ export default function Home() {
           Designed for nurses working with Spanish-speaking patients
         </p>
 
+        <p className="home-microcopy" style={{ fontWeight: 600 }}>
+          Comments and Suggestions
+        </p>
         <p className="home-microcopy">
-          No pressure. Just consistency.
+          Have feedback or ideas? I'd love to hear from you!
+        </p>
+        <p className="home-microcopy">
+          <a href="mailto:hablandoconbelen@gmail.com" style={{ color: '#2563eb', textDecoration: 'underline' }} data-testid="link-feedback-email">
+            hablandoconbelen@gmail.com
+          </a>
         </p>
       </div>
     </div>
