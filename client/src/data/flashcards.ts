@@ -10584,6 +10584,786 @@ export const flashcardsData = [
       "The hard part won't come back."
     ],
     "mcqCorrectEn": "The hardest part is over."
+  },
+  {
+    "conceptId": "m12_01",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "procedure"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_01.webp",
+    "audioKey": "mazo-12/audios/m12_01.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_01_intro",
+    "variantType": "intro",
+    "text": "Vamos a prepararlo para el procedimiento.",
+    "englishText": "We are going to prepare you for the procedure."
+  },
+  {
+    "conceptId": "m12_01",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "procedure"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_01.webp",
+    "audioKey": "mazo-12/audios/m12_01.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_01_cloze",
+    "variantType": "cloze",
+    "text": "Vamos a prepararlo para el procedimiento.",
+    "englishText": "We are going to prepare you for the procedure.",
+    "clozeOptions": [
+      "El médico viene.",
+      "Todo está listo.",
+      "Vamos a prepararlo para el procedimiento.",
+      "Estamos listos para comenzar."
+    ],
+    "clozeCorrect": "Vamos a prepararlo para el procedimiento."
+  },
+  {
+    "conceptId": "m12_01",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "procedure"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_01.webp",
+    "audioKey": "mazo-12/audios/m12_01.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_01_mcq",
+    "variantType": "mcq",
+    "text": "We are going to prepare you for the procedure.",
+    "englishText": "We are going to prepare you for the procedure.",
+    "mcqQuestionEs": "We are going to prepare you for the procedure.",
+    "mcqOptionsEn": [
+      "Vamos a ponerlo para el procedimiento.",
+      "Vamos a prepararlo para el procedimiento.",
+      "Vamos a comodarlo para el procedimiento."
+    ],
+    "mcqCorrectEn": "Vamos a prepararlo para el procedimiento."
+  },
+  {
+    "conceptId": "m12_02",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "communication",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_02.webp",
+    "audioKey": "mazo-12/audios/m12_02.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_02_intro",
+    "variantType": "intro",
+    "text": "¿Tiene alguna duda antes de empezar?",
+    "englishText": "Do you have any questions before we begin?"
+  },
+  {
+    "conceptId": "m12_02",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "communication",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_02.webp",
+    "audioKey": "mazo-12/audios/m12_02.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_02_cloze",
+    "variantType": "cloze",
+    "text": "¿Tiene alguna duda antes de empezar?",
+    "englishText": "Do you have any questions before we begin?",
+    "clozeOptions": [
+      "¿Tiene alguna duda antes de empezar?",
+      "¿Tiene dolor?",
+      "¿Está listo?",
+      "¿Se siente bien?"
+    ],
+    "clozeCorrect": "¿Tiene alguna duda antes de empezar?"
+  },
+  {
+    "conceptId": "m12_02",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "communication",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_02.webp",
+    "audioKey": "mazo-12/audios/m12_02.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_02_mcq",
+    "variantType": "mcq",
+    "text": "Do you have any questions before we begin?",
+    "englishText": "Do you have any questions before we begin?",
+    "mcqQuestionEs": "Do you have any questions before we begin?",
+    "mcqOptionsEn": [
+      "¿Tiene alguna duda antes de empezar?",
+      "¿Tiene alguna duda después de empezar?",
+      "¿Tiene alguna incomodidad antes de empezar?"
+    ],
+    "mcqCorrectEn": "¿Tiene alguna duda antes de empezar?"
+  },
+  {
+    "conceptId": "m12_03",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "documentation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_03.webp",
+    "audioKey": "mazo-12/audios/m12_03.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_03_intro",
+    "variantType": "intro",
+    "text": "Necesito confirmar algunos datos.",
+    "englishText": "I need to confirm some information."
+  },
+  {
+    "conceptId": "m12_03",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "documentation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_03.webp",
+    "audioKey": "mazo-12/audios/m12_03.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_03_cloze",
+    "variantType": "cloze",
+    "text": "Necesito confirmar algunos datos.",
+    "englishText": "I need to confirm some information.",
+    "clozeOptions": [
+      "Todo está listo.",
+      "Estamos listos.",
+      "Necesito confirmar algunos datos.",
+      "Voy a revisar su expediente."
+    ],
+    "clozeCorrect": "Necesito confirmar algunos datos."
+  },
+  {
+    "conceptId": "m12_03",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "documentation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_03.webp",
+    "audioKey": "mazo-12/audios/m12_03.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_03_mcq",
+    "variantType": "mcq",
+    "text": "I need to confirm some information.",
+    "englishText": "I need to confirm some information.",
+    "mcqQuestionEs": "I need to confirm some information.",
+    "mcqOptionsEn": [
+      "Necesito ver algunos datos.",
+      "Necesito cordinar algunos datos.",
+      "Necesito confirmar algunos datos."
+    ],
+    "mcqCorrectEn": "Necesito confirmar algunos datos."
+  },
+  {
+    "conceptId": "m12_04",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "safety",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_04.webp",
+    "audioKey": "mazo-12/audios/m12_04.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_04_intro",
+    "variantType": "intro",
+    "text": "Debe retirar joyas y objetos metálicos.",
+    "englishText": "You must remove jewelry and metal objects."
+  },
+  {
+    "conceptId": "m12_04",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "safety",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_04.webp",
+    "audioKey": "mazo-12/audios/m12_04.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_04_cloze",
+    "variantType": "cloze",
+    "text": "Debe retirar joyas y objetos metálicos.",
+    "englishText": "You must remove jewelry and metal objects.",
+    "clozeOptions": [
+      "Guarde sus pertenencias aquí.",
+      "Debe retirar joyas y objetos metálicos.",
+      "Debe permanecer en ayuno.",
+      "Por favor, cámbiese."
+    ],
+    "clozeCorrect": "Debe retirar joyas y objetos metálicos."
+  },
+  {
+    "conceptId": "m12_04",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "safety",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_04.webp",
+    "audioKey": "mazo-12/audios/m12_04.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_04_mcq",
+    "variantType": "mcq",
+    "text": "Debe retirar joyas y objetos metálicos.",
+    "englishText": "You must remove jewelry and metal objects.",
+    "mcqQuestionEs": "Debe retirar joyas y objetos metálicos.",
+    "mcqOptionsEn": [
+      "You must remove plastic objects",
+      "You must remove silver and gold objects",
+      "You must remove jewelry and metal objects."
+    ],
+    "mcqCorrectEn": "You must remove jewelry and metal objects."
+  },
+  {
+    "conceptId": "m12_05",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "clothing"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_05.webp",
+    "audioKey": "mazo-12/audios/m12_05.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_05_intro",
+    "variantType": "intro",
+    "text": "Por favor, cámbiese esta bata.",
+    "englishText": "Please change into this gown."
+  },
+  {
+    "conceptId": "m12_05",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "clothing"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_05.webp",
+    "audioKey": "mazo-12/audios/m12_05.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_05_cloze",
+    "variantType": "cloze",
+    "text": "Por favor, cámbiese esta bata.",
+    "englishText": "Please change into this gown.",
+    "clozeOptions": [
+      "Por favor, cámbiese esta bata.",
+      "Voy a cerrar la cortina.",
+      "Guarde sus pertenencias aquí.",
+      "Todo está listo."
+    ],
+    "clozeCorrect": "Por favor, cámbiese esta bata."
+  },
+  {
+    "conceptId": "m12_05",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "clothing"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_05.webp",
+    "audioKey": "mazo-12/audios/m12_05.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_05_mcq",
+    "variantType": "mcq",
+    "text": "Por favor, cámbiese esta _____.",
+    "englishText": "Please change into this gown.",
+    "mcqQuestionEs": "Por favor, cámbiese esta _____.",
+    "mcqOptionsEn": [
+      "bata",
+      "ropa",
+      "camisa"
+    ],
+    "mcqCorrectEn": "bata"
+  },
+  {
+    "conceptId": "m12_06",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "belongings"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_06.webp",
+    "audioKey": "mazo-12/audios/m12_06.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_06_intro",
+    "variantType": "intro",
+    "text": "Guarde sus pertenencias aquí.",
+    "englishText": "Please place your belongings here."
+  },
+  {
+    "conceptId": "m12_06",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "belongings"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_06.webp",
+    "audioKey": "mazo-12/audios/m12_06.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_06_cloze",
+    "variantType": "cloze",
+    "text": "Guarde sus pertenencias aquí.",
+    "englishText": "Please place your belongings here.",
+    "clozeOptions": [
+      "Debe retirar joyas.",
+      "Cámbiese la bata.",
+      "Guarde sus pertenencias aquí.",
+      "Todo está listo."
+    ],
+    "clozeCorrect": "Guarde sus pertenencias aquí."
+  },
+  {
+    "conceptId": "m12_06",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "belongings"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_06.webp",
+    "audioKey": "mazo-12/audios/m12_06.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_06_mcq",
+    "variantType": "mcq",
+    "text": "Please place your belongings here.",
+    "englishText": "Please place your belongings here.",
+    "mcqQuestionEs": "Please place your belongings here.",
+    "mcqOptionsEn": [
+      "Guarde sus medicamentos aquí.",
+      "Guarde todo aquí.",
+      "Guarde sus pertenencias aquí."
+    ],
+    "mcqCorrectEn": "Guarde sus pertenencias aquí."
+  },
+  {
+    "conceptId": "m12_07",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "procedures",
+      "iv"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_07.webp",
+    "audioKey": "mazo-12/audios/m12_07.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_07_intro",
+    "variantType": "intro",
+    "text": "Le voy a poner suero.",
+    "englishText": "I am going to start an IV."
+  },
+  {
+    "conceptId": "m12_07",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "procedures",
+      "iv"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_07.webp",
+    "audioKey": "mazo-12/audios/m12_07.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_07_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a poner el suero",
+    "englishText": "I am going to start an IV.",
+    "clozeOptions": [
+      "Va a sentir molestia.",
+      "Le voy a poner el suero",
+      "Voy a limpiar el área.",
+      "Todo está listo."
+    ],
+    "clozeCorrect": "Le voy a poner el suero"
+  },
+  {
+    "conceptId": "m12_07",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "procedures",
+      "iv"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_07.webp",
+    "audioKey": "mazo-12/audios/m12_07.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_07_mcq",
+    "variantType": "mcq",
+    "text": "I am going to start an IV.",
+    "englishText": "I am going to start an IV.",
+    "mcqQuestionEs": "I am going to start an IV.",
+    "mcqOptionsEn": [
+      "Le voy a tomar la temperatura.",
+      "Le voy a poner el suero",
+      "Le voy a tomar la presión"
+    ],
+    "mcqCorrectEn": "Le voy a poner el suero"
+  },
+  {
+    "conceptId": "m12_08",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "reassurance",
+      "procedure"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_08.webp",
+    "audioKey": "mazo-12/audios/m12_08.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_08_intro",
+    "variantType": "intro",
+    "text": "Va a sentir una ligera molestia.",
+    "englishText": "You will feel slight discomfort."
+  },
+  {
+    "conceptId": "m12_08",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "reassurance",
+      "procedure"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_08.webp",
+    "audioKey": "mazo-12/audios/m12_08.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_08_cloze",
+    "variantType": "cloze",
+    "text": "Va a sentir una ligera molestia.",
+    "englishText": "You will feel slight discomfort.",
+    "clozeOptions": [
+      "Esto es normal.",
+      "Todo está listo.",
+      "Va a sentir una ligera molestia.",
+      "Ya casi empezamos."
+    ],
+    "clozeCorrect": "Va a sentir una ligera molestia."
+  },
+  {
+    "conceptId": "m12_08",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "reassurance",
+      "procedure"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_08.webp",
+    "audioKey": "mazo-12/audios/m12_08.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_08_mcq",
+    "variantType": "mcq",
+    "text": "Va a sentir una ligera _____.",
+    "englishText": "You will feel slight discomfort.",
+    "mcqQuestionEs": "Va a sentir una ligera _____.",
+    "mcqOptionsEn": [
+      "molestia",
+      "ayuno",
+      "inyección"
+    ],
+    "mcqCorrectEn": "molestia"
+  },
+  {
+    "conceptId": "m12_09",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "workflow",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_09.webp",
+    "audioKey": "mazo-12/audios/m12_09.mp3",
+    "category": "workflow",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_09_intro",
+    "variantType": "intro",
+    "text": "El médico vendrá a verlo en un momento.",
+    "englishText": "The doctor will come see you shortly."
+  },
+  {
+    "conceptId": "m12_09",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "workflow",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_09.webp",
+    "audioKey": "mazo-12/audios/m12_09.mp3",
+    "category": "workflow",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_09_cloze",
+    "variantType": "cloze",
+    "text": "El médico vendrá a verlo en un momento.",
+    "englishText": "The doctor will come see you shortly.",
+    "clozeOptions": [
+      "Estamos listos.",
+      "Ya casi comenzamos.",
+      "El médico vendrá a verlo en un momento.",
+      "Todo está listo."
+    ],
+    "clozeCorrect": "El médico vendrá a verlo en un momento."
+  },
+  {
+    "conceptId": "m12_09",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "workflow",
+      "preparation"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_09.webp",
+    "audioKey": "mazo-12/audios/m12_09.mp3",
+    "category": "workflow",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_09_mcq",
+    "variantType": "mcq",
+    "text": "The doctor will come see you shortly.",
+    "englishText": "The doctor will come see you shortly.",
+    "mcqQuestionEs": "The doctor will come see you shortly.",
+    "mcqOptionsEn": [
+      "El médico vendrá a hablar en un momento.",
+      "El médico vendrá a saludarlo en un momento.",
+      "El médico vendrá a verlo en un momento."
+    ],
+    "mcqCorrectEn": "El médico vendrá a verlo en un momento."
+  },
+  {
+    "conceptId": "m12_10",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "timing"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_10.webp",
+    "audioKey": "mazo-12/audios/m12_10.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_10_intro",
+    "variantType": "intro",
+    "text": "El procedimiento comenzará pronto.",
+    "englishText": "The procedure will begin shortly."
+  },
+  {
+    "conceptId": "m12_10",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "timing"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_10.webp",
+    "audioKey": "mazo-12/audios/m12_10.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_10_cloze",
+    "variantType": "cloze",
+    "text": "El procedimiento comenzará pronto.",
+    "englishText": "The procedure will begin shortly.",
+    "clozeOptions": [
+      "El médico viene.",
+      "Todo está listo.",
+      "Estamos listos.",
+      "El procedimiento comenzará pronto."
+    ],
+    "clozeCorrect": "El procedimiento comenzará pronto."
+  },
+  {
+    "conceptId": "m12_10",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "timing"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_10.webp",
+    "audioKey": "mazo-12/audios/m12_10.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_10_mcq",
+    "variantType": "mcq",
+    "text": "El procedimiento comenzará pronto.",
+    "englishText": "The procedure will begin shortly.",
+    "mcqQuestionEs": "El procedimiento comenzará pronto.",
+    "mcqOptionsEn": [
+      "The procedure will be quick.",
+      "The procedure will begin shortly.",
+      "The procedure is simple and safe"
+    ],
+    "mcqCorrectEn": "The procedure will begin shortly."
+  },
+  {
+    "conceptId": "m12_12",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "monitoring",
+      "communication"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_12.webp",
+    "audioKey": "mazo-12/audios/m12_12.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_12_intro",
+    "variantType": "intro",
+    "text": "Si siente dolor o malestar, avíseme.",
+    "englishText": "Let me know if you feel pain or discomfort."
+  },
+  {
+    "conceptId": "m12_12",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "monitoring",
+      "communication"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_12.webp",
+    "audioKey": "mazo-12/audios/m12_12.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_12_cloze",
+    "variantType": "cloze",
+    "text": "Si siente dolor o malestar, avíseme.",
+    "englishText": "Let me know if you feel pain or discomfort.",
+    "clozeOptions": [
+      "Avíseme si tiene náuseas.",
+      "No hay prisa.",
+      "Si siente dolor o malestar, avíseme.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Si siente dolor o malestar, avíseme."
+  },
+  {
+    "conceptId": "m12_12",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "monitoring",
+      "communication"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_12.webp",
+    "audioKey": "mazo-12/audios/m12_12.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_12_mcq",
+    "variantType": "mcq",
+    "text": "Let me know if you feel pain or discomfort.",
+    "englishText": "Let me know if you feel pain or discomfort.",
+    "mcqQuestionEs": "Let me know if you feel pain or discomfort.",
+    "mcqOptionsEn": [
+      "Si siente dolor de cabeza, avíseme.",
+      "Si siente dolor o malestar, avíseme.",
+      "Si siente dolor o cansancio, avíseme."
+    ],
+    "mcqCorrectEn": "Si siente dolor o malestar, avíseme."
+  },
+  {
+    "conceptId": "m12_13",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "readiness"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_13.webp",
+    "audioKey": "mazo-12/audios/m12_13.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_13_intro",
+    "variantType": "intro",
+    "text": "Todo está listo.",
+    "englishText": "Everything is ready."
+  },
+  {
+    "conceptId": "m12_13",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "readiness"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_13.webp",
+    "audioKey": "mazo-12/audios/m12_13.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_13_cloze",
+    "variantType": "cloze",
+    "text": "Todo está listo.",
+    "englishText": "Everything is ready.",
+    "clozeOptions": [
+      "No hay prisa.",
+      "El médico viene.",
+      "Estamos listos para comenzar.",
+      "Todo está listo."
+    ],
+    "clozeCorrect": "Todo está listo."
+  },
+  {
+    "conceptId": "m12_13",
+    "deckId": "mazo_12_preoperatorio",
+    "tags": [
+      "preparation",
+      "readiness"
+    ],
+    "imageKey": "mazo-12/imagenes/m12_13.webp",
+    "audioKey": "mazo-12/audios/m12_13.mp3",
+    "category": "preparation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m12_13_mcq",
+    "variantType": "mcq",
+    "text": "Everything is ready.",
+    "englishText": "Everything is ready.",
+    "mcqQuestionEs": "Everything is ready.",
+    "mcqOptionsEn": [
+      "Casi todo está listo.",
+      "Nada está listo.",
+      "Todo está listo."
+    ],
+    "mcqCorrectEn": "Todo está listo."
   }
 ] as const;
 

@@ -147,7 +147,7 @@ export const modules: Module[] = [
     description: "Preparing the patient for surgery",
     icon: ClipboardCheck,
     color: "#607D8B",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m13",
