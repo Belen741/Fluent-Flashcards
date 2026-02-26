@@ -97,7 +97,7 @@ export const modules: Module[] = [
     description: "Helping with patient hygiene and grooming",
     icon: ShowerHead,
     color: "#00BCD4",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m08",

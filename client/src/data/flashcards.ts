@@ -5969,6 +5969,981 @@ export const flashcardsData = [
       "síntoma"
     ],
     "mcqCorrectEn": "material"
+  },
+  {
+    "conceptId": "m7_01",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "care"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_01.webp",
+    "audioKey": "mazo-7/audios/m7_01.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_01_intro",
+    "variantType": "intro",
+    "text": "Vamos a ayudarle con su higiene personal.",
+    "englishText": "We are going to help you with your personal hygiene."
+  },
+  {
+    "conceptId": "m7_01",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "care"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_01.webp",
+    "audioKey": "mazo-7/audios/m7_01.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_01_cloze",
+    "variantType": "cloze",
+    "text": "Vamos a ayudarle con su higiene personal.",
+    "englishText": "We are going to help you with your personal hygiene.",
+    "clozeOptions": [
+      "Le voy a ayudar a bañarse.",
+      "Vamos a ayudarle con su higiene personal.",
+      "Vamos a cambiarle la ropa.",
+      "Voy a cerrar la cortina."
+    ],
+    "clozeCorrect": "Vamos a ayudarle con su higiene personal."
+  },
+  {
+    "conceptId": "m7_01",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "care"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_01.webp",
+    "audioKey": "mazo-7/audios/m7_01.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_01_mcq",
+    "variantType": "mcq",
+    "text": "Vamos a ayudarle con su higiene ____.",
+    "englishText": "We are going to help you with your personal hygiene.",
+    "mcqQuestionEs": "Vamos a ayudarle con su higiene ____.",
+    "mcqOptionsEn": [
+      "médica",
+      "personal",
+      "rutinaria"
+    ],
+    "mcqCorrectEn": "personal"
+  },
+  {
+    "conceptId": "m7_02",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "bathing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_02.webp",
+    "audioKey": "mazo-7/audios/m7_02.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_02_intro",
+    "variantType": "intro",
+    "text": "Le voy a ayudar a bañarse.",
+    "englishText": "I am going to help you bathe."
+  },
+  {
+    "conceptId": "m7_02",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "bathing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_02.webp",
+    "audioKey": "mazo-7/audios/m7_02.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_02_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a ayudar a bañarse.",
+    "englishText": "I am going to help you bathe.",
+    "clozeOptions": [
+      "Voy a cerrar la cortina.",
+      "Le voy a ayudar a bañarse.",
+      "¿Prefiere ahora o más tarde?",
+      "Vamos a cambiarle la ropa."
+    ],
+    "clozeCorrect": "Le voy a ayudar a bañarse."
+  },
+  {
+    "conceptId": "m7_02",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "bathing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_02.webp",
+    "audioKey": "mazo-7/audios/m7_02.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_02_mcq",
+    "variantType": "mcq",
+    "text": "I am going to help you bathe.",
+    "englishText": "I am going to help you bathe.",
+    "mcqQuestionEs": "I am going to help you bathe.",
+    "mcqOptionsEn": [
+      "Le voy a ayudar a baño.",
+      "Le voy a ayudar a ducha.",
+      "Le voy a ayudar a bañarse."
+    ],
+    "mcqCorrectEn": "Le voy a ayudar a bañarse."
+  },
+  {
+    "conceptId": "m7_03",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "preferences"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_03.webp",
+    "audioKey": "mazo-7/audios/m7_03.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_03_intro",
+    "variantType": "intro",
+    "text": "¿Prefiere bañarse ahora o más tarde?",
+    "englishText": "Do you prefer to bathe now or later?"
+  },
+  {
+    "conceptId": "m7_03",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "preferences"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_03.webp",
+    "audioKey": "mazo-7/audios/m7_03.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_03_cloze",
+    "variantType": "cloze",
+    "text": "¿Prefiere bañarse ahora o más tarde?",
+    "englishText": "Do you prefer to bathe now or later?",
+    "clozeOptions": [
+      "¿Prefiere bañarse ahora o más tarde?",
+      "¿Está cómodo?",
+      "¿Necesita ayuda?",
+      "¿Quiere esperar?"
+    ],
+    "clozeCorrect": "¿Prefiere bañarse ahora o más tarde?"
+  },
+  {
+    "conceptId": "m7_03",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "preferences"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_03.webp",
+    "audioKey": "mazo-7/audios/m7_03.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_03_mcq",
+    "variantType": "mcq",
+    "text": "Do you prefer to bathe now or later?",
+    "englishText": "Do you prefer to bathe now or later?",
+    "mcqQuestionEs": "Do you prefer to bathe now or later?",
+    "mcqOptionsEn": [
+      "¿Prefiere bañarse hoy o mañana tarde?",
+      "¿Prefiere bañarse ahora o no?",
+      "¿Prefiere bañarse ahora o más tarde?"
+    ],
+    "mcqCorrectEn": "¿Prefiere bañarse ahora o más tarde?"
+  },
+  {
+    "conceptId": "m7_04",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "privacy",
+      "dignity"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_04.webp",
+    "audioKey": "mazo-7/audios/m7_04.mp3",
+    "category": "privacy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_04_intro",
+    "variantType": "intro",
+    "text": "Voy a cerrar la cortina para su privacidad.",
+    "englishText": "I am going to close the curtain for your privacy."
+  },
+  {
+    "conceptId": "m7_04",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "privacy",
+      "dignity"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_04.webp",
+    "audioKey": "mazo-7/audios/m7_04.mp3",
+    "category": "privacy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_04_cloze",
+    "variantType": "cloze",
+    "text": "Voy a cerrar la cortina para su privacidad.",
+    "englishText": "I am going to close the curtain for your privacy.",
+    "clozeOptions": [
+      "Le voy a acomodar la almohada.",
+      "Voy a cerrar la cortina para su privacidad.",
+      "Voy a cambiar las sábanas.",
+      "Avíseme si se siente incómodo."
+    ],
+    "clozeCorrect": "Voy a cerrar la cortina para su privacidad."
+  },
+  {
+    "conceptId": "m7_04",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "privacy",
+      "dignity"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_04.webp",
+    "audioKey": "mazo-7/audios/m7_04.mp3",
+    "category": "privacy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_04_mcq",
+    "variantType": "mcq",
+    "text": "Voy a cerrar la cortina para su ____.",
+    "englishText": "I am going to close the curtain for your privacy.",
+    "mcqQuestionEs": "Voy a cerrar la cortina para su ____.",
+    "mcqOptionsEn": [
+      "privacidad",
+      "persona",
+      "paciente"
+    ],
+    "mcqCorrectEn": "provacidad"
+  },
+  {
+    "conceptId": "m7_05",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "communication",
+      "comfort"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_05.webp",
+    "audioKey": "mazo-7/audios/m7_05.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_05_intro",
+    "variantType": "intro",
+    "text": "Avíseme si se siente incómodo.",
+    "englishText": "Let me know if you feel uncomfortable."
+  },
+  {
+    "conceptId": "m7_05",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "communication",
+      "comfort"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_05.webp",
+    "audioKey": "mazo-7/audios/m7_05.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_05_cloze",
+    "variantType": "cloze",
+    "text": "Avíseme si se siente incómodo.",
+    "englishText": "Let me know if you feel uncomfortable.",
+    "clozeOptions": [
+      "Avíseme si se siente incómodo.",
+      "Todo va bien.",
+      "No hay prisa.",
+      "¿Está cómodo así?"
+    ],
+    "clozeCorrect": "Avíseme si se siente incómodo."
+  },
+  {
+    "conceptId": "m7_05",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "communication",
+      "comfort"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_05.webp",
+    "audioKey": "mazo-7/audios/m7_05.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_05_mcq",
+    "variantType": "mcq",
+    "text": "Let me know if you feel uncomfortable.",
+    "englishText": "Let me know if you feel uncomfortable.",
+    "mcqQuestionEs": "Let me know if you feel uncomfortable.",
+    "mcqOptionsEn": [
+      "Avíseme si se siente cómodo.",
+      "Avíseme si se siente incómodo.",
+      "Avíseme si se siente no cómodo."
+    ],
+    "mcqCorrectEn": "Avíseme si se siente incómodo."
+  },
+  {
+    "conceptId": "m7_06",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "clothing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_06.webp",
+    "audioKey": "mazo-7/audios/m7_06.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_06_intro",
+    "variantType": "intro",
+    "text": "Vamos a cambiarle la ropa.",
+    "englishText": "We are going to change your clothes."
+  },
+  {
+    "conceptId": "m7_06",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "clothing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_06.webp",
+    "audioKey": "mazo-7/audios/m7_06.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_06_cloze",
+    "variantType": "cloze",
+    "text": "Vamos a cambiarle la ropa.",
+    "englishText": "We are going to change your clothes.",
+    "clozeOptions": [
+      "Voy a cambiar las sábanas.",
+      "Le voy a ayudar a bañarse.",
+      "Vamos a cambiarle la ropa.",
+      "Le voy a acomodar la almohada."
+    ],
+    "clozeCorrect": "Vamos a cambiarle la ropa."
+  },
+  {
+    "conceptId": "m7_06",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "clothing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_06.webp",
+    "audioKey": "mazo-7/audios/m7_06.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_06_mcq",
+    "variantType": "mcq",
+    "text": "We are going to change your clothes.",
+    "englishText": "We are going to change your clothes.",
+    "mcqQuestionEs": "We are going to change your clothes.",
+    "mcqOptionsEn": [
+      "Vamos a cambiarle la ropa.",
+      "Vamos a cambiarle los calcetines.",
+      "Vamos a cambiarle la sábana."
+    ],
+    "mcqCorrectEn": "Vamos a cambiarle la ropa."
+  },
+  {
+    "conceptId": "m7_07",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "dressing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_07.webp",
+    "audioKey": "mazo-7/audios/m7_07.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_07_intro",
+    "variantType": "intro",
+    "text": "¿Necesita ayuda para vestirse?",
+    "englishText": "Do you need help getting dressed?"
+  },
+  {
+    "conceptId": "m7_07",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "dressing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_07.webp",
+    "audioKey": "mazo-7/audios/m7_07.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_07_cloze",
+    "variantType": "cloze",
+    "text": "¿Necesita ayuda para vestirse?",
+    "englishText": "Do you need help getting dressed?",
+    "clozeOptions": [
+      "¿Quiere esperar?",
+      "¿Necesita ayuda para vestirse?",
+      "¿Prefiere ahora?",
+      "¿Está cómodo así?"
+    ],
+    "clozeCorrect": "¿Necesita ayuda para vestirse?"
+  },
+  {
+    "conceptId": "m7_07",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "dressing"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_07.webp",
+    "audioKey": "mazo-7/audios/m7_07.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_07_mcq",
+    "variantType": "mcq",
+    "text": "Do you need help getting dressed?",
+    "englishText": "Do you need help getting dressed?",
+    "mcqQuestionEs": "Do you need help getting dressed?",
+    "mcqOptionsEn": [
+      "¿Necesita ayuda para vestirse?",
+      "¿Necesita ayuda para tener ropa?",
+      "¿Necesita ayuda para dirección?"
+    ],
+    "mcqCorrectEn": "¿Necesita ayuda para vestirse?"
+  },
+  {
+    "conceptId": "m7_08",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "mobility"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_08.webp",
+    "audioKey": "mazo-7/audios/m7_08.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_08_intro",
+    "variantType": "intro",
+    "text": "Voy a ayudarle a girarse.",
+    "englishText": "I am going to help you turn."
+  },
+  {
+    "conceptId": "m7_08",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "mobility"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_08.webp",
+    "audioKey": "mazo-7/audios/m7_08.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_08_cloze",
+    "variantType": "cloze",
+    "text": "Voy a ayudarle a girarse.",
+    "englishText": "I am going to help you turn.",
+    "clozeOptions": [
+      "Levante el brazo.",
+      "Voy a cambiar las sábanas.",
+      "Tómese de la barra.",
+      "Voy a ayudarle a girarse."
+    ],
+    "clozeCorrect": "Voy a ayudarle a girarse."
+  },
+  {
+    "conceptId": "m7_08",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "mobility"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_08.webp",
+    "audioKey": "mazo-7/audios/m7_08.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_08_mcq",
+    "variantType": "mcq",
+    "text": "I am going to help you turn.",
+    "englishText": "I am going to help you turn.",
+    "mcqQuestionEs": "I am going to help you turn.",
+    "mcqOptionsEn": [
+      "Voy a ayudarle a girarse.",
+      "Please hold the support rail.",
+      "I am going to change the sheets."
+    ],
+    "mcqCorrectEn": "I am going to help you turn."
+  },
+  {
+    "conceptId": "m7_09",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "safety",
+      "mobility"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_09.webp",
+    "audioKey": "mazo-7/audios/m7_09.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_09_intro",
+    "variantType": "intro",
+    "text": "Tómese de la barra de apoyo.",
+    "englishText": "Please hold onto the support rail."
+  },
+  {
+    "conceptId": "m7_09",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "safety",
+      "mobility"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_09.webp",
+    "audioKey": "mazo-7/audios/m7_09.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_09_cloze",
+    "variantType": "cloze",
+    "text": "Tómese de la barra de apoyo.",
+    "englishText": "Please hold onto the support rail.",
+    "clozeOptions": [
+      "Levante el brazo.",
+      "Avíseme si duele.",
+      "Voy a ayudarle a girarse.",
+      "Tómese de la barra de apoyo."
+    ],
+    "clozeCorrect": "Tómese de la barra de apoyo."
+  },
+  {
+    "conceptId": "m7_09",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "safety",
+      "mobility"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_09.webp",
+    "audioKey": "mazo-7/audios/m7_09.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_09_mcq",
+    "variantType": "mcq",
+    "text": "Please hold onto the support rail.",
+    "englishText": "Please hold onto the support rail.",
+    "mcqQuestionEs": "Please hold onto the support rail.",
+    "mcqOptionsEn": [
+      "Tómese de la barra de apoyo.",
+      "Tómese de esto por favor.",
+      "Tómese aquí para apoyo."
+    ],
+    "mcqCorrectEn": "Tómese de la barra de apoyo."
+  },
+  {
+    "conceptId": "m7_10",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "bedding"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_10.webp",
+    "audioKey": "mazo-7/audios/m7_10.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_10_intro",
+    "variantType": "intro",
+    "text": "Voy a cambiar las sábanas.",
+    "englishText": "I am going to change the sheets."
+  },
+  {
+    "conceptId": "m7_10",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "bedding"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_10.webp",
+    "audioKey": "mazo-7/audios/m7_10.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_10_cloze",
+    "variantType": "cloze",
+    "text": "Voy a cambiar las sábanas.",
+    "englishText": "I am going to change the sheets.",
+    "clozeOptions": [
+      "Voy a cambiar las sábanas.",
+      "Le voy a acomodar la almohada.",
+      "Vamos a cambiarle la ropa.",
+      "Voy a cerrar la cortina."
+    ],
+    "clozeCorrect": "Voy a cambiar las sábanas."
+  },
+  {
+    "conceptId": "m7_10",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "bedding"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_10.webp",
+    "audioKey": "mazo-7/audios/m7_10.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_10_mcq",
+    "variantType": "mcq",
+    "text": "I am going to change the sheets.",
+    "englishText": "I am going to change the sheets.",
+    "mcqQuestionEs": "I am going to change the sheets.",
+    "mcqOptionsEn": [
+      "Voy a cambiar las cámas.",
+      "Voy a cambiar las sábanas.",
+      "Voy a cambiar las cobijas."
+    ],
+    "mcqCorrectEn": "Voy a cambiar las sábanas."
+  },
+  {
+    "conceptId": "m7_11",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "comfort",
+      "positioning"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_11.webp",
+    "audioKey": "mazo-7/audios/m7_11.mp3",
+    "category": "comfort",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_11_intro",
+    "variantType": "intro",
+    "text": "Le voy a acomodar la almohada.",
+    "englishText": "I am going to adjust your pillow."
+  },
+  {
+    "conceptId": "m7_11",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "comfort",
+      "positioning"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_11.webp",
+    "audioKey": "mazo-7/audios/m7_11.mp3",
+    "category": "comfort",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_11_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a acomodar la almohada.",
+    "englishText": "I am going to adjust your pillow.",
+    "clozeOptions": [
+      "Voy a cambiar las sábanas.",
+      "Todo va bien.",
+      "¿Está cómodo así?",
+      "Le voy a acomodar la almohada."
+    ],
+    "clozeCorrect": "Le voy a acomodar la almohada."
+  },
+  {
+    "conceptId": "m7_11",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "comfort",
+      "positioning"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_11.webp",
+    "audioKey": "mazo-7/audios/m7_11.mp3",
+    "category": "comfort",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_11_mcq",
+    "variantType": "mcq",
+    "text": "I am going to adjust your pillow.",
+    "englishText": "I am going to adjust your pillow.",
+    "mcqQuestionEs": "I am going to adjust your pillow.",
+    "mcqOptionsEn": [
+      "Le voy a acomodar la almohada.",
+      "Le voy a acomodar la sábana.",
+      "Le voy a acomodar el colchón."
+    ],
+    "mcqCorrectEn": "Le voy a acomodar la almohada."
+  },
+  {
+    "conceptId": "m7_12",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "comfort",
+      "assessment"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_12.webp",
+    "audioKey": "mazo-7/audios/m7_12.mp3",
+    "category": "comfort",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_12_intro",
+    "variantType": "intro",
+    "text": "¿Está cómodo así?",
+    "englishText": "Are you comfortable like this?"
+  },
+  {
+    "conceptId": "m7_12",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "comfort",
+      "assessment"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_12.webp",
+    "audioKey": "mazo-7/audios/m7_12.mp3",
+    "category": "comfort",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_12_cloze",
+    "variantType": "cloze",
+    "text": "¿Está cómodo así?",
+    "englishText": "Are you comfortable like this?",
+    "clozeOptions": [
+      "¿Está cómodo así?",
+      "Todo va bien.",
+      "Avíseme si se siente incómodo.",
+      "No hay prisa."
+    ],
+    "clozeCorrect": "¿Está cómodo así?"
+  },
+  {
+    "conceptId": "m7_12",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "comfort",
+      "assessment"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_12.webp",
+    "audioKey": "mazo-7/audios/m7_12.mp3",
+    "category": "comfort",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_12_mcq",
+    "variantType": "mcq",
+    "text": "Are you comfortable like this?",
+    "englishText": "Are you comfortable like this?",
+    "mcqQuestionEs": "Are you comfortable like this?",
+    "mcqOptionsEn": [
+      "¿Está confotable así?",
+      "¿Está cómodo así?",
+      "¿Está confortable como así?"
+    ],
+    "mcqCorrectEn": "¿Está cómodo así?"
+  },
+  {
+    "conceptId": "m7_13",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "prevention"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_13.webp",
+    "audioKey": "mazo-7/audios/m7_13.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_13_intro",
+    "variantType": "intro",
+    "text": "Vamos a mantener la piel seca.",
+    "englishText": "We are going to keep the skin dry."
+  },
+  {
+    "conceptId": "m7_13",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "prevention"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_13.webp",
+    "audioKey": "mazo-7/audios/m7_13.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_13_cloze",
+    "variantType": "cloze",
+    "text": "Vamos a mantener la piel seca.",
+    "englishText": "We are going to keep the skin dry.",
+    "clozeOptions": [
+      "Es importante mantenerse limpio.",
+      "Vamos a cambiarle la ropa.",
+      "Vamos a mantener la piel seca.",
+      "Voy a ayudarle a bañarse."
+    ],
+    "clozeCorrect": "Vamos a mantener la piel seca."
+  },
+  {
+    "conceptId": "m7_13",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "prevention"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_13.webp",
+    "audioKey": "mazo-7/audios/m7_13.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_13_mcq",
+    "variantType": "mcq",
+    "text": "Vamos a mantener la piel _____.",
+    "englishText": "We are going to keep the skin dry.",
+    "mcqQuestionEs": "Vamos a mantener la piel _____.",
+    "mcqOptionsEn": [
+      "sucia",
+      "seca",
+      "a salvo"
+    ],
+    "mcqCorrectEn": "seca"
+  },
+  {
+    "conceptId": "m7_14",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "education"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_14.webp",
+    "audioKey": "mazo-7/audios/m7_14.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_14_intro",
+    "variantType": "intro",
+    "text": "Es importante mantenerse limpio para evitar infecciones.",
+    "englishText": "It is important to stay clean to prevent infections."
+  },
+  {
+    "conceptId": "m7_14",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "education"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_14.webp",
+    "audioKey": "mazo-7/audios/m7_14.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_14_cloze",
+    "variantType": "cloze",
+    "text": "Es importante mantenerse limpio para evitar infecciones.",
+    "englishText": "It is important to stay clean to prevent infections.",
+    "clozeOptions": [
+      "No hay prisa.",
+      "Es importante mantenerse limpio para evitar infecciones.",
+      "Vamos a mantener la piel seca.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Es importante mantenerse limpio para evitar infecciones."
+  },
+  {
+    "conceptId": "m7_14",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "hygiene",
+      "education"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_14.webp",
+    "audioKey": "mazo-7/audios/m7_14.mp3",
+    "category": "hygiene",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_14_mcq",
+    "variantType": "mcq",
+    "text": "It is important to stay clean to prevent infections.",
+    "englishText": "It is important to stay clean to prevent infections.",
+    "mcqQuestionEs": "It is important to stay clean to prevent infections.",
+    "mcqOptionsEn": [
+      "Es importante mantenerse limpio para evitar infecciones.",
+      "Es importante mantenerse limpio para tener infecciones.",
+      "Es importante mantenerse seco para evitar infecciones."
+    ],
+    "mcqCorrectEn": "Es importante mantenerse limpio para evitar infecciones."
+  },
+  {
+    "conceptId": "m7_15",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_15.webp",
+    "audioKey": "mazo-7/audios/m7_15.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_15_intro",
+    "variantType": "intro",
+    "text": "Tómese su tiempo, no hay prisa.",
+    "englishText": "Take your time, there is no rush."
+  },
+  {
+    "conceptId": "m7_15",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_15.webp",
+    "audioKey": "mazo-7/audios/m7_15.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_15_cloze",
+    "variantType": "cloze",
+    "text": "Tómese su tiempo, no hay prisa.",
+    "englishText": "Take your time, there is no rush.",
+    "clozeOptions": [
+      "Tómese su tiempo, no hay prisa.",
+      "Ya casi terminamos.",
+      "Puede descansar.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Tómese su tiempo, no hay prisa."
+  },
+  {
+    "conceptId": "m7_15",
+    "deckId": "mazo_07_higiene",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-7/imagenes/m7_15.webp",
+    "audioKey": "mazo-7/audios/m7_15.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m7_15_mcq",
+    "variantType": "mcq",
+    "text": "Take your time, there is no rush.",
+    "englishText": "Take your time, there is no rush.",
+    "mcqQuestionEs": "Take your time, there is no rush.",
+    "mcqOptionsEn": [
+      "Tómese su tiempo, no hay rápido.",
+      "Tómese su tiempo, no hay correr.",
+      "Tómese su tiempo, no hay prisa."
+    ],
+    "mcqCorrectEn": "Tómese su tiempo, no hay prisa."
   }
 ] as const;
 
