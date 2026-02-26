@@ -177,7 +177,7 @@ export const modules: Module[] = [
     description: "Communication with patient's family",
     icon: Users,
     color: "#673AB7",
-    hasContent: false,
+    hasContent: true,
   },
 ];
 

@@ -12989,6 +12989,981 @@ export const flashcardsData = [
       "Que tenga buen regreso al trabajo."
     ],
     "mcqCorrectEn": "Que tenga buen regreso a casa."
+  },
+  {
+    "conceptId": "m15_01",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "courtesy",
+      "communication"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_01.webp",
+    "audioKey": "mazo-15/audios/m15_01.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_01_intro",
+    "variantType": "intro",
+    "text": "Gracias por esperar.",
+    "englishText": "Thank you for waiting."
+  },
+  {
+    "conceptId": "m15_01",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "courtesy",
+      "communication"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_01.webp",
+    "audioKey": "mazo-15/audios/m15_01.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_01_cloze",
+    "variantType": "cloze",
+    "text": "Gracias por esperar.",
+    "englishText": "Thank you for waiting.",
+    "clozeOptions": [
+      "Gracias por esperar.",
+      "Todo va bien.",
+      "Gracias por su paciencia.",
+      "Enseguida les avisamos."
+    ],
+    "clozeCorrect": "Gracias por esperar."
+  },
+  {
+    "conceptId": "m15_01",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "courtesy",
+      "communication"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_01.webp",
+    "audioKey": "mazo-15/audios/m15_01.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_01_mcq",
+    "variantType": "mcq",
+    "text": "Thank you for waiting.",
+    "englishText": "Thank you for waiting.",
+    "mcqQuestionEs": "Thank you for waiting.",
+    "mcqOptionsEn": [
+      "Gracias por esperar.",
+      "Gracias por su paciencia.",
+      "Gracias por estar aquí."
+    ],
+    "mcqCorrectEn": "Gracias por esperar."
+  },
+  {
+    "conceptId": "m15_02",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "status",
+      "reassurance"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_02.webp",
+    "audioKey": "mazo-15/audios/m15_02.mp3",
+    "category": "status",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_02_intro",
+    "variantType": "intro",
+    "text": "El paciente está siendo atendido.",
+    "englishText": "The patient is being taken care of."
+  },
+  {
+    "conceptId": "m15_02",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "status",
+      "reassurance"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_02.webp",
+    "audioKey": "mazo-15/audios/m15_02.mp3",
+    "category": "status",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_02_cloze",
+    "variantType": "cloze",
+    "text": "El paciente está siendo atendido.",
+    "englishText": "The patient is being taken care of.",
+    "clozeOptions": [
+      "El médico está con él.",
+      "Enseguida avisamos.",
+      "El paciente está siendo atendido.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "El paciente está siendo atendido."
+  },
+  {
+    "conceptId": "m15_02",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "status",
+      "reassurance"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_02.webp",
+    "audioKey": "mazo-15/audios/m15_02.mp3",
+    "category": "status",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_02_mcq",
+    "variantType": "mcq",
+    "text": "El paciente está siendo atendido.",
+    "englishText": "The patient is being taken care of.",
+    "mcqQuestionEs": "El paciente está siendo atendido.",
+    "mcqOptionsEn": [
+      "The patient is admitted.",
+      "The patient is attending.",
+      "The patient is being taken care of."
+    ],
+    "mcqCorrectEn": "The patient is being taken care of."
+  },
+  {
+    "conceptId": "m15_03",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "access",
+      "safety"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_03.webp",
+    "audioKey": "mazo-15/audios/m15_03.mp3",
+    "category": "access",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_03_intro",
+    "variantType": "intro",
+    "text": "En este momento no es posible pasar.",
+    "englishText": "At this moment, it is not possible to enter."
+  },
+  {
+    "conceptId": "m15_03",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "access",
+      "safety"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_03.webp",
+    "audioKey": "mazo-15/audios/m15_03.mp3",
+    "category": "access",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_03_cloze",
+    "variantType": "cloze",
+    "text": "En este momento no es posible pasar.",
+    "englishText": "At this moment, it is not possible to enter.",
+    "clozeOptions": [
+      "En este momento no es posible pasar.",
+      "Solo una persona.",
+      "Más tarde podrán entrar.",
+      "Necesitan esperar."
+    ],
+    "clozeCorrect": "En este momento no es posible pasar."
+  },
+  {
+    "conceptId": "m15_03",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "access",
+      "safety"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_03.webp",
+    "audioKey": "mazo-15/audios/m15_03.mp3",
+    "category": "access",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_03_mcq",
+    "variantType": "mcq",
+    "text": "At this moment, it is not possible to enter.",
+    "englishText": "At this moment, it is not possible to enter.",
+    "mcqQuestionEs": "At this moment, it is not possible to enter.",
+    "mcqOptionsEn": [
+      "En este momento no es posible caminar.",
+      "En este momento no es posible verlo.",
+      "En este momento no es posible pasar."
+    ],
+    "mcqCorrectEn": "En este momento no es posible pasar."
+  },
+  {
+    "conceptId": "m15_04",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "flow"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_04.webp",
+    "audioKey": "mazo-15/audios/m15_04.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_04_intro",
+    "variantType": "intro",
+    "text": "Les avisaremos cuando puedan entrar.",
+    "englishText": "We will let you know when you may enter."
+  },
+  {
+    "conceptId": "m15_04",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "flow"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_04.webp",
+    "audioKey": "mazo-15/audios/m15_04.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_04_cloze",
+    "variantType": "cloze",
+    "text": "Les avisaremos cuando puedan entrar.",
+    "englishText": "We will let you know when you may enter.",
+    "clozeOptions": [
+      "Gracias por esperar.",
+      "Enseguida regresamos.",
+      "Todo va bien.",
+      "Les avisaremos cuando puedan entrar."
+    ],
+    "clozeCorrect": "Les avisaremos cuando puedan entrar."
+  },
+  {
+    "conceptId": "m15_04",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "flow"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_04.webp",
+    "audioKey": "mazo-15/audios/m15_04.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_04_mcq",
+    "variantType": "mcq",
+    "text": "We will let you know when you may enter.",
+    "englishText": "We will let you know when you may enter.",
+    "mcqQuestionEs": "We will let you know when you may enter.",
+    "mcqOptionsEn": [
+      "Les diremos cuando puedan entrar.",
+      "Les avisaremos cuando puedan entrar.",
+      "Los llamaremos cuando puedan entrar."
+    ],
+    "mcqCorrectEn": "Les avisaremos cuando puedan entrar."
+  },
+  {
+    "conceptId": "m15_05",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "reassurance",
+      "crowd_control"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_05.webp",
+    "audioKey": "mazo-15/audios/m15_05.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_05_intro",
+    "variantType": "intro",
+    "text": "Por favor, mantengan la calma.",
+    "englishText": "Please remain calm."
+  },
+  {
+    "conceptId": "m15_05",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "reassurance",
+      "crowd_control"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_05.webp",
+    "audioKey": "mazo-15/audios/m15_05.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_05_cloze",
+    "variantType": "cloze",
+    "text": "Por favor, mantengan la calma.",
+    "englishText": "Please remain calm.",
+    "clozeOptions": [
+      "Enseguida avisamos.",
+      "Estamos con el paciente.",
+      "Todo va bien.",
+      "Por favor, mantengan la calma."
+    ],
+    "clozeCorrect": "Por favor, mantengan la calma."
+  },
+  {
+    "conceptId": "m15_05",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "reassurance",
+      "crowd_control"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_05.webp",
+    "audioKey": "mazo-15/audios/m15_05.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_05_mcq",
+    "variantType": "mcq",
+    "text": "Por favor, mantengan la _____.",
+    "englishText": "Please remain calm.",
+    "mcqQuestionEs": "Por favor, mantengan la _____.",
+    "mcqOptionsEn": [
+      "calma",
+      "orden",
+      "quietud"
+    ],
+    "mcqCorrectEn": "calma"
+  },
+  {
+    "conceptId": "m15_06",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "medical_info"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_06.webp",
+    "audioKey": "mazo-15/audios/m15_06.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_06_intro",
+    "variantType": "intro",
+    "text": "El médico les dará más información.",
+    "englishText": "The doctor will give you more information."
+  },
+  {
+    "conceptId": "m15_06",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "medical_info"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_06.webp",
+    "audioKey": "mazo-15/audios/m15_06.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_06_cloze",
+    "variantType": "cloze",
+    "text": "El médico les dará más información.",
+    "englishText": "The doctor will give you more information.",
+    "clozeOptions": [
+      "Enseguida regresamos.",
+      "Todo va bien.",
+      "El médico les dará más información.",
+      "Les avisaremos."
+    ],
+    "clozeCorrect": "El médico les dará más información."
+  },
+  {
+    "conceptId": "m15_06",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "medical_info"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_06.webp",
+    "audioKey": "mazo-15/audios/m15_06.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_06_mcq",
+    "variantType": "mcq",
+    "text": "The doctor will give you more information.",
+    "englishText": "The doctor will give you more information.",
+    "mcqQuestionEs": "The doctor will give you more information.",
+    "mcqOptionsEn": [
+      "El médico les pidió más información.",
+      "El médico les dará más información.",
+      "El médico ya les dio más información."
+    ],
+    "mcqCorrectEn": "El médico les dará más información."
+  },
+  {
+    "conceptId": "m15_07",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "flow",
+      "safety"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_07.webp",
+    "audioKey": "mazo-15/audios/m15_07.mp3",
+    "category": "flow",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_07_intro",
+    "variantType": "intro",
+    "text": "Necesitamos que esperen aquí.",
+    "englishText": "We need you to wait here."
+  },
+  {
+    "conceptId": "m15_07",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "flow",
+      "safety"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_07.webp",
+    "audioKey": "mazo-15/audios/m15_07.mp3",
+    "category": "flow",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_07_cloze",
+    "variantType": "cloze",
+    "text": "Necesitamos que esperen aquí.",
+    "englishText": "We need you to wait here.",
+    "clozeOptions": [
+      "Por favor, mantengan la calma.",
+      "Gracias por esperar.",
+      "Necesitamos que esperen aquí.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Necesitamos que esperen aquí."
+  },
+  {
+    "conceptId": "m15_07",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "flow",
+      "safety"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_07.webp",
+    "audioKey": "mazo-15/audios/m15_07.mp3",
+    "category": "flow",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_07_mcq",
+    "variantType": "mcq",
+    "text": "Necesitamos que esperen _____.",
+    "englishText": "We need you to wait here.",
+    "mcqQuestionEs": "Necesitamos que esperen _____.",
+    "mcqOptionsEn": [
+      "en silencio",
+      "aquí",
+      "afuera"
+    ],
+    "mcqCorrectEn": "aquí"
+  },
+  {
+    "conceptId": "m15_08",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "access",
+      "policy"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_08.webp",
+    "audioKey": "mazo-15/audios/m15_08.mp3",
+    "category": "access",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_08_intro",
+    "variantType": "intro",
+    "text": "Solo puede pasar una persona.",
+    "englishText": "Only one person may enter."
+  },
+  {
+    "conceptId": "m15_08",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "access",
+      "policy"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_08.webp",
+    "audioKey": "mazo-15/audios/m15_08.mp3",
+    "category": "access",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_08_cloze",
+    "variantType": "cloze",
+    "text": "Solo puede pasar una persona.",
+    "englishText": "Only one person may enter.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "Solo puede pasar una persona.",
+      "Necesitan esperar.",
+      "Más tarde podrán entrar."
+    ],
+    "clozeCorrect": "Solo puede pasar una persona."
+  },
+  {
+    "conceptId": "m15_08",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "access",
+      "policy"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_08.webp",
+    "audioKey": "mazo-15/audios/m15_08.mp3",
+    "category": "access",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_08_mcq",
+    "variantType": "mcq",
+    "text": "Only one person may enter.",
+    "englishText": "Only one person may enter.",
+    "mcqQuestionEs": "Only one person may enter.",
+    "mcqOptionsEn": [
+      "Solo puede pasar una persona.",
+      "Solo puede entrar el paciente.",
+      "Puede pasar una persona más"
+    ],
+    "mcqCorrectEn": "Solo puede pasar una persona."
+  },
+  {
+    "conceptId": "m15_09",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "policy",
+      "visits"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_09.webp",
+    "audioKey": "mazo-15/audios/m15_09.mp3",
+    "category": "policy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_09_intro",
+    "variantType": "intro",
+    "text": "Las visitas tienen un horario establecido.",
+    "englishText": "Visiting hours are established."
+  },
+  {
+    "conceptId": "m15_09",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "policy",
+      "visits"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_09.webp",
+    "audioKey": "mazo-15/audios/m15_09.mp3",
+    "category": "policy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_09_cloze",
+    "variantType": "cloze",
+    "text": "Las visitas tienen un horario establecido.",
+    "englishText": "Visiting hours are established.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "Solo una persona.",
+      "Necesitan esperar.",
+      "Las visitas tienen un horario establecido."
+    ],
+    "clozeCorrect": "Las visitas tienen un horario establecido."
+  },
+  {
+    "conceptId": "m15_09",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "policy",
+      "visits"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_09.webp",
+    "audioKey": "mazo-15/audios/m15_09.mp3",
+    "category": "policy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_09_mcq",
+    "variantType": "mcq",
+    "text": "Las visitas tienen un horario _____.",
+    "englishText": "Visiting hours are established.",
+    "mcqQuestionEs": "Las visitas tienen un horario _____.",
+    "mcqOptionsEn": [
+      "flexible",
+      "establecido",
+      "opcional"
+    ],
+    "mcqCorrectEn": "establecido"
+  },
+  {
+    "conceptId": "m15_10",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "care",
+      "rest"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_10.webp",
+    "audioKey": "mazo-15/audios/m15_10.mp3",
+    "category": "care",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_10_intro",
+    "variantType": "intro",
+    "text": "El paciente necesita descansar.",
+    "englishText": "The patient needs to rest."
+  },
+  {
+    "conceptId": "m15_10",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "care",
+      "rest"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_10.webp",
+    "audioKey": "mazo-15/audios/m15_10.mp3",
+    "category": "care",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_10_cloze",
+    "variantType": "cloze",
+    "text": "El paciente necesita descansar.",
+    "englishText": "The patient needs to rest.",
+    "clozeOptions": [
+      "Por favor, mantengan la calma.",
+      "Gracias por esperar.",
+      "Todo va bien.",
+      "El paciente necesita descansar."
+    ],
+    "clozeCorrect": "El paciente necesita descansar."
+  },
+  {
+    "conceptId": "m15_10",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "care",
+      "rest"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_10.webp",
+    "audioKey": "mazo-15/audios/m15_10.mp3",
+    "category": "care",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_10_mcq",
+    "variantType": "mcq",
+    "text": "The patient needs to rest.",
+    "englishText": "The patient needs to rest.",
+    "mcqQuestionEs": "The patient needs to rest.",
+    "mcqOptionsEn": [
+      "El paciente necesita descansar.",
+      "El paciente está descansando.",
+      "El paciente necesita tratamiento."
+    ],
+    "mcqCorrectEn": "El paciente necesita descansar."
+  },
+  {
+    "conceptId": "m15_11",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "updates"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_11.webp",
+    "audioKey": "mazo-15/audios/m15_11.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_11_intro",
+    "variantType": "intro",
+    "text": "Si hay algún cambio, se los comunicaremos.",
+    "englishText": "If there is any change, we will inform you."
+  },
+  {
+    "conceptId": "m15_11",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "updates"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_11.webp",
+    "audioKey": "mazo-15/audios/m15_11.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_11_cloze",
+    "variantType": "cloze",
+    "text": "Si hay algún cambio, se los comunicaremos.",
+    "englishText": "If there is any change, we will inform you.",
+    "clozeOptions": [
+      "Enseguida regresamos.",
+      "Les avisaremos.",
+      "Todo va bien.",
+      "Si hay algún cambio, se los comunicaremos."
+    ],
+    "clozeCorrect": "Si hay algún cambio, se los comunicaremos."
+  },
+  {
+    "conceptId": "m15_11",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "updates"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_11.webp",
+    "audioKey": "mazo-15/audios/m15_11.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_11_mcq",
+    "variantType": "mcq",
+    "text": "If there is any change, we will inform you.",
+    "englishText": "If there is any change, we will inform you.",
+    "mcqQuestionEs": "If there is any change, we will inform you.",
+    "mcqOptionsEn": [
+      "Si hay algún cambio, nos lo comunicarán.",
+      "Si hay algún cambio, se los explicaremos.",
+      "Si hay algún cambio, se los comunicaremos."
+    ],
+    "mcqCorrectEn": "Si hay algún cambio, se los comunicaremos."
+  },
+  {
+    "conceptId": "m15_12",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "courtesy",
+      "closure"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_12.webp",
+    "audioKey": "mazo-15/audios/m15_12.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_12_intro",
+    "variantType": "intro",
+    "text": "Gracias por su comprensión.",
+    "englishText": "Thank you for your understanding."
+  },
+  {
+    "conceptId": "m15_12",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "courtesy",
+      "closure"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_12.webp",
+    "audioKey": "mazo-15/audios/m15_12.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_12_cloze",
+    "variantType": "cloze",
+    "text": "Gracias por su comprensión.",
+    "englishText": "Thank you for your understanding.",
+    "clozeOptions": [
+      "Gracias por su comprensión.",
+      "Buen día.",
+      "Todo va bien.",
+      "Gracias por esperar."
+    ],
+    "clozeCorrect": "Gracias por su comprensión."
+  },
+  {
+    "conceptId": "m15_12",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "courtesy",
+      "closure"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_12.webp",
+    "audioKey": "mazo-15/audios/m15_12.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_12_mcq",
+    "variantType": "mcq",
+    "text": "Thank you for your understanding.",
+    "englishText": "Thank you for your understanding.",
+    "mcqQuestionEs": "Thank you for your understanding.",
+    "mcqOptionsEn": [
+      "Gracias por su apoyo.",
+      "Gracias por su comprensión.",
+      "Gracias por su paciencia."
+    ],
+    "mcqCorrectEn": "Gracias por su comprensión."
+  },
+  {
+    "conceptId": "m15_13",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "reassurance",
+      "commitment"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_13.webp",
+    "audioKey": "mazo-15/audios/m15_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_13_intro",
+    "variantType": "intro",
+    "text": "Estamos haciendo todo lo posible.",
+    "englishText": "We are doing everything we can."
+  },
+  {
+    "conceptId": "m15_13",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "reassurance",
+      "commitment"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_13.webp",
+    "audioKey": "mazo-15/audios/m15_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_13_cloze",
+    "variantType": "cloze",
+    "text": "Estamos haciendo todo lo posible.",
+    "englishText": "We are doing everything we can.",
+    "clozeOptions": [
+      "El médico viene.",
+      "Estamos haciendo todo lo posible.",
+      "Enseguida avisamos.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Estamos haciendo todo lo posible."
+  },
+  {
+    "conceptId": "m15_13",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "reassurance",
+      "commitment"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_13.webp",
+    "audioKey": "mazo-15/audios/m15_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_13_mcq",
+    "variantType": "mcq",
+    "text": "We are doing everything we can.",
+    "englishText": "We are doing everything we can.",
+    "mcqQuestionEs": "We are doing everything we can.",
+    "mcqOptionsEn": [
+      "Estamos intentando ayudar.",
+      "Ya hicimos todo lo posible.",
+      "Estamos haciendo todo lo posible."
+    ],
+    "mcqCorrectEn": "Estamos haciendo todo lo posible."
+  },
+  {
+    "conceptId": "m15_14",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "collaboration",
+      "care"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_14.webp",
+    "audioKey": "mazo-15/audios/m15_14.mp3",
+    "category": "collaboration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_14_intro",
+    "variantType": "intro",
+    "text": "Les pedimos su apoyo para el cuidado del paciente.",
+    "englishText": "We ask for your support in the patient’s care."
+  },
+  {
+    "conceptId": "m15_14",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "collaboration",
+      "care"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_14.webp",
+    "audioKey": "mazo-15/audios/m15_14.mp3",
+    "category": "collaboration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_14_cloze",
+    "variantType": "cloze",
+    "text": "Les pedimos su apoyo para el cuidado del paciente.",
+    "englishText": "We ask for your support in the patient’s care.",
+    "clozeOptions": [
+      "Gracias por su comprensión.",
+      "Todo va bien.",
+      "Necesitamos cooperación.",
+      "Les pedimos su apoyo para el cuidado del paciente."
+    ],
+    "clozeCorrect": "Les pedimos su apoyo para el cuidado del paciente."
+  },
+  {
+    "conceptId": "m15_14",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "collaboration",
+      "care"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_14.webp",
+    "audioKey": "mazo-15/audios/m15_14.mp3",
+    "category": "collaboration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_14_mcq",
+    "variantType": "mcq",
+    "text": "Les pedimos su apoyo para el cuidado del paciente.",
+    "englishText": "We ask for your support in the patient’s care.",
+    "mcqQuestionEs": "Les pedimos su apoyo para el cuidado del paciente.",
+    "mcqOptionsEn": [
+      "We thank you for your support with the patient.",
+      "We ask for your support in the patient’s care.",
+      "We request support for the patient"
+    ],
+    "mcqCorrectEn": "We ask for your support in the patient’s care."
+  },
+  {
+    "conceptId": "m15_15",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "updates"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_15.webp",
+    "audioKey": "mazo-15/audios/m15_15.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_15_intro",
+    "variantType": "intro",
+    "text": "Cualquier novedad, les avisamos inmediatamente.",
+    "englishText": "If there is any update, we will notify you immediately."
+  },
+  {
+    "conceptId": "m15_15",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "updates"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_15.webp",
+    "audioKey": "mazo-15/audios/m15_15.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_15_cloze",
+    "variantType": "cloze",
+    "text": "Cualquier novedad, les avisamos inmediatamente.",
+    "englishText": "If there is any update, we will notify you immediately.",
+    "clozeOptions": [
+      "Les avisaremos.",
+      "Enseguida regresamos.",
+      "Cualquier novedad, les avisamos inmediatamente.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Cualquier novedad, les avisamos inmediatamente."
+  },
+  {
+    "conceptId": "m15_15",
+    "deckId": "mazo_15_familiares",
+    "tags": [
+      "communication",
+      "updates"
+    ],
+    "imageKey": "mazo-15/imagenes/m15_15.webp",
+    "audioKey": "mazo-15/audios/m15_15.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m15_15_mcq",
+    "variantType": "mcq",
+    "text": "Cualquier novedad, les avisamos inmediatamente.",
+    "englishText": "If there is any update, we will notify you immediately.",
+    "mcqQuestionEs": "Cualquier novedad, les avisamos inmediatamente.",
+    "mcqOptionsEn": [
+      "depués",
+      "con calma",
+      "inmediatamente"
+    ],
+    "mcqCorrectEn": "inmediatamente"
   }
 ] as const;
 
