@@ -96,35 +96,52 @@ export class StripeService {
     }
   }
 
-  async findCustomerByEmail(email: string) {
+  async recoverSubscription(userId: string, email?: string | null) {
     const stripe = getStripeClient();
+
     try {
-      const customers = await stripe.customers.list({
-        email,
-        limit: 1,
+      const customers = await stripe.customers.search({
+        query: `metadata["userId"]:"${userId}"`,
+        limit: 10,
       });
-      return customers.data[0] || null;
+
+      for (const customer of customers.data) {
+        const activeSub = await this.getActiveSubscriptionByCustomer(customer.id);
+        if (activeSub) {
+          await this.updateUserStripeInfo(userId, {
+            stripeCustomerId: customer.id,
+            stripeSubscriptionId: activeSub.id,
+            subscriptionStatus: activeSub.status,
+          });
+          console.log(`Recovered subscription for user ${userId} via metadata: ${activeSub.id}`);
+          return { subscription: activeSub, status: activeSub.status };
+        }
+      }
     } catch (error) {
-      console.error('Error finding customer by email:', error);
-      return null;
+      console.error('Error searching customers by metadata:', error);
     }
-  }
 
-  async recoverSubscriptionByEmail(userId: string, email: string) {
-    const customer = await this.findCustomerByEmail(email);
-    if (!customer) return null;
+    if (email) {
+      try {
+        const customers = await stripe.customers.list({ email, limit: 10 });
+        for (const customer of customers.data) {
+          const activeSub = await this.getActiveSubscriptionByCustomer(customer.id);
+          if (activeSub) {
+            await this.updateUserStripeInfo(userId, {
+              stripeCustomerId: customer.id,
+              stripeSubscriptionId: activeSub.id,
+              subscriptionStatus: activeSub.status,
+            });
+            console.log(`Recovered subscription for user ${userId} via email ${email}: ${activeSub.id}`);
+            return { subscription: activeSub, status: activeSub.status };
+          }
+        }
+      } catch (error) {
+        console.error('Error searching customers by email:', error);
+      }
+    }
 
-    const activeSub = await this.getActiveSubscriptionByCustomer(customer.id);
-    if (!activeSub) return null;
-
-    await this.updateUserStripeInfo(userId, {
-      stripeCustomerId: customer.id,
-      stripeSubscriptionId: activeSub.id,
-      subscriptionStatus: activeSub.status,
-    });
-
-    console.log(`Recovered subscription for user ${userId} via email ${email}: ${activeSub.id}`);
-    return { subscription: activeSub, status: activeSub.status };
+    return null;
   }
 }
 

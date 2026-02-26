@@ -19,7 +19,11 @@ export async function registerRoutes(
   app.get('/api/subscription', clerkAuth, async (req: any, res) => {
     try {
       const userId = req.clerkUser?.userId;
-      const user = await stripeService.getOrCreateUser(userId, req.clerkUser?.email);
+      const clerkEmail = req.clerkUser?.email;
+      console.log(`[subscription] userId=${userId} clerkEmail=${clerkEmail}`);
+      
+      const user = await stripeService.getOrCreateUser(userId, clerkEmail);
+      console.log(`[subscription] DB user: customerId=${user.stripeCustomerId} subId=${user.stripeSubscriptionId} status=${user.subscriptionStatus} email=${user.email}`);
 
       if (user.stripeSubscriptionId) {
         const subscription = await stripeService.getSubscriptionFromStripe(user.stripeSubscriptionId);
@@ -43,13 +47,13 @@ export async function registerRoutes(
         }
       }
 
-      const userEmail = req.clerkUser?.email || user.email;
-      if (userEmail) {
-        const recovered = await stripeService.recoverSubscriptionByEmail(userId, userEmail);
-        if (recovered) {
-          return res.json(recovered);
-        }
+      const userEmail = clerkEmail || user.email;
+      console.log(`[subscription] Recovery attempt userId=${userId} email=${userEmail}`);
+      const recovered = await stripeService.recoverSubscription(userId, userEmail);
+      if (recovered) {
+        return res.json(recovered);
       }
+      console.log(`[subscription] No active subscription found for userId=${userId}`);
 
       return res.json({ subscription: null, status: null });
     } catch (error) {
