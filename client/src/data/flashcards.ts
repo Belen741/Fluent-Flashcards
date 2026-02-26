@@ -3053,6 +3053,1037 @@ export const flashcardsData = [
       "En un momento regreso con usted."
     ],
     "mcqCorrectEn": "En un momento regreso con usted."
+  },
+  {
+    "conceptId": "m4_01",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "allergies",
+      "medications"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_01.webp",
+    "audioKey": "mazo-4/audios/m4_01.mp3",
+    "category": "allergies",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_01_intro",
+    "variantType": "intro",
+    "text": "¿Es alérgico a algún medicamento?",
+    "englishText": "Are you allergic to any medication?"
+  },
+  {
+    "conceptId": "m4_01",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "allergies",
+      "medications"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_01.webp",
+    "audioKey": "mazo-4/audios/m4_01.mp3",
+    "category": "allergies",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_01_cloze",
+    "variantType": "cloze",
+    "text": "¿Es alérgico a algún medicamento?",
+    "englishText": "Are you allergic to any medication?",
+    "clozeOptions": [
+      "¿Es alérgico a algún medicamento?",
+      "¿Tiene dolor?",
+      "¿Ha tenido efectos secundarios?",
+      "¿Toma medicamentos?"
+    ],
+    "clozeCorrect": "¿Es alérgico a algún medicamento?"
+  },
+  {
+    "conceptId": "m4_01",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "allergies",
+      "medications"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_01.webp",
+    "audioKey": "mazo-4/audios/m4_01.mp3",
+    "category": "allergies",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_01_mcq",
+    "variantType": "mcq",
+    "text": "¿Es alérgico a algún ____?",
+    "englishText": "Are you allergic to any medication?",
+    "mcqQuestionEs": "¿Es alérgico a algún ____?",
+    "mcqOptionsEn": [
+      "medicamento",
+      "dolor",
+      "síntoma"
+    ],
+    "mcqCorrectEn": "medicamento"
+  },
+  {
+    "conceptId": "m4_02",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "assessment"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_02.webp",
+    "audioKey": "mazo-4/audios/m4_02.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_02_intro",
+    "variantType": "intro",
+    "text": "¿Qué reacción tiene cuando lo toma?",
+    "englishText": "What reaction do you have when you take it?"
+  },
+  {
+    "conceptId": "m4_02",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "assessment"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_02.webp",
+    "audioKey": "mazo-4/audios/m4_02.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_02_cloze",
+    "variantType": "cloze",
+    "text": "¿Qué reacción tiene cuando lo toma?",
+    "englishText": "What reaction do you have when you take it?",
+    "clozeOptions": [
+      "¿Qué reacción tiene cuando lo toma?",
+      "¿Tiene mareo?",
+      "¿Con qué frecuencia lo toma?",
+      "¿Tiene dolor?"
+    ],
+    "clozeCorrect": "¿Qué reacción tiene cuando lo toma?"
+  },
+  {
+    "conceptId": "m4_02",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "assessment"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_02.webp",
+    "audioKey": "mazo-4/audios/m4_02.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_02_mcq",
+    "variantType": "mcq",
+    "text": "What reaction do you have when you take it?",
+    "englishText": "What reaction do you have when you take it?",
+    "mcqQuestionEs": "What reaction do you have when you take it?",
+    "mcqOptionsEn": [
+      "¿Con qué frecuencia lo toma?",
+      "¿Qué reacción tiene cuando lo toma?",
+      "¿A qué hora fue la dosis?"
+    ],
+    "mcqCorrectEn": "¿Qué reacción tiene cuando lo toma?"
+  },
+  {
+    "conceptId": "m4_03",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "dosage",
+      "frequency"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_03.webp",
+    "audioKey": "mazo-4/audios/m4_03.mp3",
+    "category": "dosage",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_03_intro",
+    "variantType": "intro",
+    "text": "¿Con qué frecuencia lo toma?",
+    "englishText": "How often do you take it?"
+  },
+  {
+    "conceptId": "m4_03",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "dosage",
+      "frequency"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_03.webp",
+    "audioKey": "mazo-4/audios/m4_03.mp3",
+    "category": "dosage",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_03_cloze",
+    "variantType": "cloze",
+    "text": "¿Con qué frecuencia lo toma?",
+    "englishText": "How often do you take it?",
+    "clozeOptions": [
+      "¿Sabe el nombre?",
+      "¿Con qué frecuencia lo toma?",
+      "¿Tiene dolor?",
+      "¿A qué hora fue la última dosis?"
+    ],
+    "clozeCorrect": "¿Con qué frecuencia lo toma?"
+  },
+  {
+    "conceptId": "m4_03",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "dosage",
+      "frequency"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_03.webp",
+    "audioKey": "mazo-4/audios/m4_03.mp3",
+    "category": "dosage",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_03_mcq",
+    "variantType": "mcq",
+    "text": "¿Con qué frecuencia lo ____?",
+    "englishText": "How often do you take it?",
+    "mcqQuestionEs": "¿Con qué frecuencia lo ____?",
+    "mcqOptionsEn": [
+      "toma",
+      "dosis",
+      "usa"
+    ],
+    "mcqCorrectEn": "toma"
+  },
+  {
+    "conceptId": "m4_04",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "dosage",
+      "timing"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_04.webp",
+    "audioKey": "mazo-4/audios/m4_04.mp3",
+    "category": "dosage",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_04_intro",
+    "variantType": "intro",
+    "text": "¿A qué hora fue la última dosis?",
+    "englishText": "What time was the last dose?"
+  },
+  {
+    "conceptId": "m4_04",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "dosage",
+      "timing"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_04.webp",
+    "audioKey": "mazo-4/audios/m4_04.mp3",
+    "category": "dosage",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_04_cloze",
+    "variantType": "cloze",
+    "text": "¿A qué hora fue la última dosis?",
+    "englishText": "What time was the last dose?",
+    "clozeOptions": [
+      "¿Sabe el nombre?",
+      "¿A qué hora fue la última dosis?",
+      "¿Con qué frecuencia lo toma?",
+      "¿Ha tenido efectos secundarios?"
+    ],
+    "clozeCorrect": "¿A qué hora fue la última dosis?"
+  },
+  {
+    "conceptId": "m4_04",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "dosage",
+      "timing"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_04.webp",
+    "audioKey": "mazo-4/audios/m4_04.mp3",
+    "category": "dosage",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_04_mcq",
+    "variantType": "mcq",
+    "text": "What time was the last dose?",
+    "englishText": "What time was the last dose?",
+    "mcqQuestionEs": "What time was the last dose?",
+    "mcqOptionsEn": [
+      "¿A qué hora fue la última toma?",
+      "¿A qué hora fue la última muestra?",
+      "¿A qué hora fue la última dosis?"
+    ],
+    "mcqCorrectEn": "¿A qué hora fue la última dosis?"
+  },
+  {
+    "conceptId": "m4_05",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "identification"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_05.webp",
+    "audioKey": "mazo-4/audios/m4_05.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_05_intro",
+    "variantType": "intro",
+    "text": "¿Sabe el nombre del medicamento?",
+    "englishText": "Do you know the name of the medication?"
+  },
+  {
+    "conceptId": "m4_05",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "identification"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_05.webp",
+    "audioKey": "mazo-4/audios/m4_05.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_05_cloze",
+    "variantType": "cloze",
+    "text": "¿Sabe el nombre del medicamento?",
+    "englishText": "Do you know the name of the medication?",
+    "clozeOptions": [
+      "¿Es alérgico?",
+      "¿Con qué frecuencia lo toma?",
+      "¿Tiene dolor?",
+      "¿Sabe el nombre del medicamento?"
+    ],
+    "clozeCorrect": "¿Sabe el nombre del medicamento?"
+  },
+  {
+    "conceptId": "m4_05",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "identification"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_05.webp",
+    "audioKey": "mazo-4/audios/m4_05.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_05_mcq",
+    "variantType": "mcq",
+    "text": "Do you know the name of the medication?",
+    "englishText": "Do you know the name of the medication?",
+    "mcqQuestionEs": "Do you know the name of the medication?",
+    "mcqOptionsEn": [
+      "¿Sabe el nombre del medicamento?",
+      "¿Toma medicamento ahora?",
+      "¿Tiene dolor?"
+    ],
+    "mcqCorrectEn": "¿Sabe el nombre del medicamento?"
+  },
+  {
+    "conceptId": "m4_06",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "assessment"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_06.webp",
+    "audioKey": "mazo-4/audios/m4_06.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_06_intro",
+    "variantType": "intro",
+    "text": "¿Ha tenido efectos secundarios?",
+    "englishText": "Have you had side effects?"
+  },
+  {
+    "conceptId": "m4_06",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "assessment"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_06.webp",
+    "audioKey": "mazo-4/audios/m4_06.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_06_cloze",
+    "variantType": "cloze",
+    "text": "¿Ha tenido efectos secundarios?",
+    "englishText": "Have you had side effects?",
+    "clozeOptions": [
+      "¿Tiene dolor?",
+      "¿Tiene mareo?",
+      "¿Ha tenido efectos secundarios?",
+      "¿Toma medicamento?"
+    ],
+    "clozeCorrect": "¿Ha tenido efectos secundarios?"
+  },
+  {
+    "conceptId": "m4_06",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "assessment"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_06.webp",
+    "audioKey": "mazo-4/audios/m4_06.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_06_mcq",
+    "variantType": "mcq",
+    "text": "Have you had side effects?",
+    "englishText": "Have you had side effects?",
+    "mcqQuestionEs": "Have you had side effects?",
+    "mcqOptionsEn": [
+      "¿Tiene dolor?",
+      "¿Ha tenido efectos secundarios?",
+      "¿Ha tenido efectos a lado?"
+    ],
+    "mcqCorrectEn": "¿Ha tenido efectos secundarios?"
+  },
+  {
+    "conceptId": "m4_07",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "documentation"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_07.webp",
+    "audioKey": "mazo-4/audios/m4_07.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_07_intro",
+    "variantType": "intro",
+    "text": "Voy a revisar su lista de medicamentos.",
+    "englishText": "I am going to review your medication list."
+  },
+  {
+    "conceptId": "m4_07",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "documentation"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_07.webp",
+    "audioKey": "mazo-4/audios/m4_07.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_07_cloze",
+    "variantType": "cloze",
+    "text": "Voy a revisar su lista de medicamentos.",
+    "englishText": "I am going to review your medication list.",
+    "clozeOptions": [
+      "Tome asiento.",
+      "Voy a revisar su lista de medicamentos.",
+      "Ya regreso.",
+      "Voy a administrarle el medicamento."
+    ],
+    "clozeCorrect": "Voy a revisar su lista de medicamentos."
+  },
+  {
+    "conceptId": "m4_07",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "documentation"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_07.webp",
+    "audioKey": "mazo-4/audios/m4_07.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_07_mcq",
+    "variantType": "mcq",
+    "text": "Voy a revisar su lista de medicamentos.",
+    "englishText": "I am going to review your medication list.",
+    "mcqQuestionEs": "Voy a revisar su lista de medicamentos.",
+    "mcqOptionsEn": [
+      "I am going to review your medication list.",
+      "I will give you the medication now.",
+      "Please sit down."
+    ],
+    "mcqCorrectEn": "I am going to review your medication list."
+  },
+  {
+    "conceptId": "m4_08",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "administration"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_08.webp",
+    "audioKey": "mazo-4/audios/m4_08.mp3",
+    "category": "administration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_08_intro",
+    "variantType": "intro",
+    "text": "Le voy a administrar el medicamento ahora.",
+    "englishText": "I am going to give you the medication now."
+  },
+  {
+    "conceptId": "m4_08",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "administration"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_08.webp",
+    "audioKey": "mazo-4/audios/m4_08.mp3",
+    "category": "administration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_08_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a administrar el medicamento ahora.",
+    "englishText": "I am going to give you the medication now.",
+    "clozeOptions": [
+      "Tome asiento.",
+      "Ya terminamos.",
+      "Voy a revisar su lista.",
+      "Le voy a administrar el medicamento ahora."
+    ],
+    "clozeCorrect": "Le voy a administrar el medicamento ahora."
+  },
+  {
+    "conceptId": "m4_08",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "administration"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_08.webp",
+    "audioKey": "mazo-4/audios/m4_08.mp3",
+    "category": "administration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_08_mcq",
+    "variantType": "mcq",
+    "text": "I am going to give you the medication now.",
+    "englishText": "I am going to give you the medication now.",
+    "mcqQuestionEs": "I am going to give you the medication now.",
+    "mcqOptionsEn": [
+      "Le voy a administrar el medicamento ahora.",
+      "Le voy a revisar el medicamento ahora.",
+      "Le voy a tomar el medicamento ahora."
+    ],
+    "mcqCorrectEn": "Le voy a administrar el medicamento ahora."
+  },
+  {
+    "conceptId": "m4_09",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "pain_management"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_09.webp",
+    "audioKey": "mazo-4/audios/m4_09.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_09_intro",
+    "variantType": "intro",
+    "text": "Este medicamento es para el dolor.",
+    "englishText": "This medication is for pain."
+  },
+  {
+    "conceptId": "m4_09",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "pain_management"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_09.webp",
+    "audioKey": "mazo-4/audios/m4_09.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_09_cloze",
+    "variantType": "cloze",
+    "text": "Este medicamento es para el dolor.",
+    "englishText": "This medication is for pain.",
+    "clozeOptions": [
+      "Este medicamento es para el dolor.",
+      "Este medicamento es para la presión.",
+      "Puede causar mareo.",
+      "Ya terminamos."
+    ],
+    "clozeCorrect": "Este medicamento es para el dolor."
+  },
+  {
+    "conceptId": "m4_09",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "pain_management"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_09.webp",
+    "audioKey": "mazo-4/audios/m4_09.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_09_mcq",
+    "variantType": "mcq",
+    "text": "This medication is for pain.",
+    "englishText": "This medication is for pain.",
+    "mcqQuestionEs": "This medication is for pain.",
+    "mcqOptionsEn": [
+      "Este medicamento es para la presión.",
+      "Este medicamento es para el dolor.",
+      "Este medicamento es para el pie."
+    ],
+    "mcqCorrectEn": "Este medicamento es para el dolor."
+  },
+  {
+    "conceptId": "m4_10",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_10.webp",
+    "audioKey": "mazo-4/audios/m4_10.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_10_intro",
+    "variantType": "intro",
+    "text": "Este medicamento es para la presión.",
+    "englishText": "This medication is for blood pressure."
+  },
+  {
+    "conceptId": "m4_10",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_10.webp",
+    "audioKey": "mazo-4/audios/m4_10.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_10_cloze",
+    "variantType": "cloze",
+    "text": "Este medicamento es para la presión.",
+    "englishText": "This medication is for blood pressure.",
+    "clozeOptions": [
+      "Puede causar sueño.",
+      "Ya terminamos.",
+      "Este medicamento es para el dolor.",
+      "Este medicamento es para la presión."
+    ],
+    "clozeCorrect": "Este medicamento es para la presión."
+  },
+  {
+    "conceptId": "m4_10",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_10.webp",
+    "audioKey": "mazo-4/audios/m4_10.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_10_mcq",
+    "variantType": "mcq",
+    "text": "Este medicamento es para la ____",
+    "englishText": "This medication is for blood pressure.",
+    "mcqQuestionEs": "Este medicamento es para la ____",
+    "mcqOptionsEn": [
+      "presión",
+      "medicina",
+      "cita médica"
+    ],
+    "mcqCorrectEn": "presión"
+  },
+  {
+    "conceptId": "m4_11",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "warnings"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_11.webp",
+    "audioKey": "mazo-4/audios/m4_11.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_11_intro",
+    "variantType": "intro",
+    "text": "Puede causar sueño o mareo.",
+    "englishText": "It may cause drowsiness or dizziness."
+  },
+  {
+    "conceptId": "m4_11",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "warnings"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_11.webp",
+    "audioKey": "mazo-4/audios/m4_11.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_11_cloze",
+    "variantType": "cloze",
+    "text": "Puede causar sueño o mareo.",
+    "englishText": "It may cause drowsiness or dizziness.",
+    "clozeOptions": [
+      "Ya terminamos.",
+      "¿Ha tenido efectos?",
+      "Es importante tomarlo igual.",
+      "Puede causar sueño o mareo."
+    ],
+    "clozeCorrect": "Puede causar sueño o mareo."
+  },
+  {
+    "conceptId": "m4_11",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "side_effects",
+      "warnings"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_11.webp",
+    "audioKey": "mazo-4/audios/m4_11.mp3",
+    "category": "side_effects",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_11_mcq",
+    "variantType": "mcq",
+    "text": "It may cause drowsiness or dizziness.",
+    "englishText": "It may cause drowsiness or dizziness.",
+    "mcqQuestionEs": "It may cause drowsiness or dizziness.",
+    "mcqOptionsEn": [
+      "Puede causar sueño o mareo.",
+      "Puede causar tropiezo o mareo.",
+      "Puede causar sueño o enfermedades."
+    ],
+    "mcqCorrectEn": "Puede causar sueño o mareo."
+  },
+  {
+    "conceptId": "m4_12",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "instructions",
+      "adherence"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_12.webp",
+    "audioKey": "mazo-4/audios/m4_12.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_12_intro",
+    "variantType": "intro",
+    "text": "Es importante tomarlo a la misma hora.",
+    "englishText": "It is important to take it at the same time."
+  },
+  {
+    "conceptId": "m4_12",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "instructions",
+      "adherence"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_12.webp",
+    "audioKey": "mazo-4/audios/m4_12.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_12_cloze",
+    "variantType": "cloze",
+    "text": "Es importante tomarlo a la misma hora.",
+    "englishText": "It is important to take it at the same time.",
+    "clozeOptions": [
+      "Es importante tomarlo a la misma hora.",
+      "Puede causar mareo.",
+      "¿Con qué frecuencia lo toma?",
+      "Ya terminamos."
+    ],
+    "clozeCorrect": "Es importante tomarlo a la misma hora."
+  },
+  {
+    "conceptId": "m4_12",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "instructions",
+      "adherence"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_12.webp",
+    "audioKey": "mazo-4/audios/m4_12.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_12_mcq",
+    "variantType": "mcq",
+    "text": "Es importante tomarlo a la misma ____",
+    "englishText": "It is important to take it at the same time.",
+    "mcqQuestionEs": "Es importante tomarlo a la misma ____",
+    "mcqOptionsEn": [
+      "hora",
+      "día",
+      "minuto"
+    ],
+    "mcqCorrectEn": "hora"
+  },
+  {
+    "conceptId": "m4_13",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "diabetes",
+      "insulin"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_13.webp",
+    "audioKey": "mazo-4/audios/m4_13.mp3",
+    "category": "diabetes",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_13_intro",
+    "variantType": "intro",
+    "text": "¿Se ha aplicado insulina hoy?",
+    "englishText": "Have you taken insulin today?"
+  },
+  {
+    "conceptId": "m4_13",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "diabetes",
+      "insulin"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_13.webp",
+    "audioKey": "mazo-4/audios/m4_13.mp3",
+    "category": "diabetes",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_13_cloze",
+    "variantType": "cloze",
+    "text": "¿Se ha aplicado insulina hoy?",
+    "englishText": "Have you taken insulin today?",
+    "clozeOptions": [
+      "¿Se ha aplicado insulina hoy?",
+      "¿Toma medicamento?",
+      "¿Tiene dolor?",
+      "¿Tiene mareo?"
+    ],
+    "clozeCorrect": "¿Se ha aplicado insulina hoy?"
+  },
+  {
+    "conceptId": "m4_13",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "diabetes",
+      "insulin"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_13.webp",
+    "audioKey": "mazo-4/audios/m4_13.mp3",
+    "category": "diabetes",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_13_mcq",
+    "variantType": "mcq",
+    "text": "Have you taken insulin today?",
+    "englishText": "Have you taken insulin today?",
+    "mcqQuestionEs": "Have you taken insulin today?",
+    "mcqOptionsEn": [
+      "¿Se ha demostrado insulina hoy?",
+      "¿Se ha producido insulina hoy?",
+      "¿Se ha aplicado insulina hoy?"
+    ],
+    "mcqCorrectEn": "¿Se ha aplicado insulina hoy?"
+  },
+  {
+    "conceptId": "m4_14",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "antibiotics"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_14.webp",
+    "audioKey": "mazo-4/audios/m4_14.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_14_intro",
+    "variantType": "intro",
+    "text": "Este antibiótico es para tratar la infección.",
+    "englishText": "This antibiotic is to treat the infection."
+  },
+  {
+    "conceptId": "m4_14",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "antibiotics"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_14.webp",
+    "audioKey": "mazo-4/audios/m4_14.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_14_cloze",
+    "variantType": "cloze",
+    "text": "Este antibiótico es para tratar la infección.",
+    "englishText": "This antibiotic is to treat the infection.",
+    "clozeOptions": [
+      "Este medicamento es para el dolor.",
+      "Este antibiótico es para tratar la infección.",
+      "Puede causar mareo.",
+      "Ya terminamos."
+    ],
+    "clozeCorrect": "Este antibiótico es para tratar la infección."
+  },
+  {
+    "conceptId": "m4_14",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "medications",
+      "antibiotics"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_14.webp",
+    "audioKey": "mazo-4/audios/m4_14.mp3",
+    "category": "medications",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_14_mcq",
+    "variantType": "mcq",
+    "text": "This antibiotic is to treat the infection.",
+    "englishText": "This antibiotic is to treat the infection.",
+    "mcqQuestionEs": "This antibiotic is to treat the infection.",
+    "mcqOptionsEn": [
+      "Este medicamento es para el dolor.",
+      "Este antibiótico es para tratar la infección.",
+      "Este antibiótico es para tratar la enfermedad."
+    ],
+    "mcqCorrectEn": "Este antibiótico es para tratar la infección."
+  },
+  {
+    "conceptId": "m4_15",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "pain_management"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_15.webp",
+    "audioKey": "mazo-4/audios/m4_15.mp3",
+    "category": "pain_management",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_15_intro",
+    "variantType": "intro",
+    "text": "Puede tomar ibuprofeno si tiene dolor o inflamación.",
+    "englishText": "You may take ibuprofen if you have pain or inflammation."
+  },
+  {
+    "conceptId": "m4_15",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "pain_management"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_15.webp",
+    "audioKey": "mazo-4/audios/m4_15.mp3",
+    "category": "pain_management",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_15_cloze",
+    "variantType": "cloze",
+    "text": "Puede tomar ibuprofeno si tiene dolor o inflamación.",
+    "englishText": "You may take ibuprofen if you have pain or inflammation.",
+    "clozeOptions": [
+      "Puede tomar paracetamol.",
+      "Puede tomar ibuprofeno si tiene dolor o inflamación.",
+      "Tome medicamento.",
+      "Ya terminamos."
+    ],
+    "clozeCorrect": "Puede tomar ibuprofeno si tiene dolor o inflamación."
+  },
+  {
+    "conceptId": "m4_15",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "pain_management"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_15.webp",
+    "audioKey": "mazo-4/audios/m4_15.mp3",
+    "category": "pain_management",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_15_mcq",
+    "variantType": "mcq",
+    "text": "You may take ibuprofen if you have pain or inflammation.",
+    "englishText": "You may take ibuprofen if you have pain or inflammation.",
+    "mcqQuestionEs": "You may take ibuprofen if you have pain or inflammation.",
+    "mcqOptionsEn": [
+      "Puede tomar ibuprofeno si tiene dolor o inflamación.",
+      "Es importante tomarlo a la misma hora.",
+      "Puede tomar ibuprofeno si tiene medicamento."
+    ],
+    "mcqCorrectEn": "Puede tomar ibuprofeno si tiene dolor o inflamación."
+  },
+  {
+    "conceptId": "m4_16",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "fever"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_16.webp",
+    "audioKey": "mazo-4/audios/m4_16.mp3",
+    "category": "fever",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_16_intro",
+    "variantType": "intro",
+    "text": "El paracetamol es para el dolor o la fiebre.",
+    "englishText": "Acetaminophen is for pain or fever."
+  },
+  {
+    "conceptId": "m4_16",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "fever"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_16.webp",
+    "audioKey": "mazo-4/audios/m4_16.mp3",
+    "category": "fever",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_16_cloze",
+    "variantType": "cloze",
+    "text": "El paracetamol es para el dolor o la fiebre.",
+    "englishText": "Acetaminophen is for pain or fever.",
+    "clozeOptions": [
+      "Ya terminamos.",
+      "Este medicamento es para la presión.",
+      "Puede causar mareo.",
+      "El paracetamol es para el dolor o la fiebre."
+    ],
+    "clozeCorrect": "El paracetamol es para el dolor o la fiebre."
+  },
+  {
+    "conceptId": "m4_16",
+    "deckId": "mazo_04_medicamentos",
+    "tags": [
+      "fever"
+    ],
+    "imageKey": "mazo-4/imagenes/m4_16.webp",
+    "audioKey": "mazo-4/audios/m4_16.mp3",
+    "category": "fever",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m4_16_mcq",
+    "variantType": "mcq",
+    "text": "Acetaminophen is for pain or fever.",
+    "englishText": "Acetaminophen is for pain or fever.",
+    "mcqQuestionEs": "Acetaminophen is for pain or fever.",
+    "mcqOptionsEn": [
+      "Este medicamento es para la presión.",
+      "El paracetamol es para el calor.",
+      "Este antibiótico es para tratar la infección."
+    ],
+    "mcqCorrectEn": "El paracetamol es para el dolor o la fiebre."
   }
 ] as const;
 

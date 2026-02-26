@@ -67,7 +67,7 @@ export const modules: Module[] = [
     description: "Instructions about medicines and dosages",
     icon: Pill,
     color: "#9B59B6",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m05",
