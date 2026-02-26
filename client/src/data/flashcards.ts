@@ -11364,6 +11364,656 @@ export const flashcardsData = [
       "Todo está listo."
     ],
     "mcqCorrectEn": "Todo está listo."
+  },
+  {
+    "conceptId": "m13_01",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "closure",
+      "procedure"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_01.webp",
+    "audioKey": "mazo-13/audios/m13_01.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_01_intro",
+    "variantType": "intro",
+    "text": "Ya terminó el procedimiento.",
+    "englishText": "The procedure is finished."
+  },
+  {
+    "conceptId": "m13_01",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "closure",
+      "procedure"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_01.webp",
+    "audioKey": "mazo-13/audios/m13_01.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_01_cloze",
+    "variantType": "cloze",
+    "text": "Ya terminó el procedimiento.",
+    "englishText": "The procedure is finished.",
+    "clozeOptions": [
+      "Ya terminó el procedimiento.",
+      "El médico viene.",
+      "Todo salió bien.",
+      "Ya puede descansar."
+    ],
+    "clozeCorrect": "Ya terminó el procedimiento."
+  },
+  {
+    "conceptId": "m13_01",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "closure",
+      "procedure"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_01.webp",
+    "audioKey": "mazo-13/audios/m13_01.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_01_mcq",
+    "variantType": "mcq",
+    "text": "The procedure is finished.",
+    "englishText": "The procedure is finished.",
+    "mcqQuestionEs": "The procedure is finished.",
+    "mcqOptionsEn": [
+      "Ya empezó el procedimiento.",
+      "Ya terminó el procedimiento.",
+      "Terminó es procedimiento."
+    ],
+    "mcqCorrectEn": "Ya terminó el procedimiento."
+  },
+  {
+    "conceptId": "m13_02",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "reassurance",
+      "outcome"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_02.webp",
+    "audioKey": "mazo-13/audios/m13_02.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_02_intro",
+    "variantType": "intro",
+    "text": "Todo salió bien.",
+    "englishText": "Everything went well."
+  },
+  {
+    "conceptId": "m13_02",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "reassurance",
+      "outcome"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_02.webp",
+    "audioKey": "mazo-13/audios/m13_02.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_02_cloze",
+    "variantType": "cloze",
+    "text": "Todo salió bien.",
+    "englishText": "Everything went well.",
+    "clozeOptions": [
+      "Puede descansar.",
+      "Todo salió bien.",
+      "El médico viene.",
+      "Ya terminó el procedimiento."
+    ],
+    "clozeCorrect": "Todo salió bien."
+  },
+  {
+    "conceptId": "m13_02",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "reassurance",
+      "outcome"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_02.webp",
+    "audioKey": "mazo-13/audios/m13_02.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_02_mcq",
+    "variantType": "mcq",
+    "text": "Todo salió bien.",
+    "englishText": "Everything went well.",
+    "mcqQuestionEs": "Todo salió bien.",
+    "mcqOptionsEn": [
+      "It went alright, kind of.",
+      "Everything went well.",
+      "It was just okay."
+    ],
+    "mcqCorrectEn": "Everything went well."
+  },
+  {
+    "conceptId": "m13_03",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "reassurance",
+      "recovery"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_03.webp",
+    "audioKey": "mazo-13/audios/m13_03.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_03_intro",
+    "variantType": "intro",
+    "text": "Es normal sentirse cansado después.",
+    "englishText": "It is normal to feel tired afterward."
+  },
+  {
+    "conceptId": "m13_03",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "reassurance",
+      "recovery"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_03.webp",
+    "audioKey": "mazo-13/audios/m13_03.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_03_cloze",
+    "variantType": "cloze",
+    "text": "Es normal sentirse cansado después.",
+    "englishText": "It is normal to feel tired afterward.",
+    "clozeOptions": [
+      "Es normal sentir dolor.",
+      "Es normal sentirse cansado después.",
+      "Puede descansar.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Es normal sentirse cansado después."
+  },
+  {
+    "conceptId": "m13_03",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "reassurance",
+      "recovery"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_03.webp",
+    "audioKey": "mazo-13/audios/m13_03.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_03_mcq",
+    "variantType": "mcq",
+    "text": "Es normal sentirse _____ después.",
+    "englishText": "It is normal to feel tired afterward.",
+    "mcqQuestionEs": "Es normal sentirse _____ después.",
+    "mcqOptionsEn": [
+      "cansado",
+      "hambriento",
+      "sediento"
+    ],
+    "mcqCorrectEn": "cansado"
+  },
+  {
+    "conceptId": "m13_04",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "assessment",
+      "pain"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_04.webp",
+    "audioKey": "mazo-13/audios/m13_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_04_intro",
+    "variantType": "intro",
+    "text": "Puede sentir un poco de dolor o molestia.",
+    "englishText": "You may feel some pain or discomfort."
+  },
+  {
+    "conceptId": "m13_04",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "assessment",
+      "pain"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_04.webp",
+    "audioKey": "mazo-13/audios/m13_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_04_cloze",
+    "variantType": "cloze",
+    "text": "Puede sentir un poco de dolor o molestia.",
+    "englishText": "You may feel some pain or discomfort.",
+    "clozeOptions": [
+      "Todo salió bien.",
+      "Puede sentir un poco de dolor o molestia.",
+      "Esto es normal.",
+      "Puede descansar."
+    ],
+    "clozeCorrect": "Puede sentir un poco de dolor o molestia."
+  },
+  {
+    "conceptId": "m13_04",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "assessment",
+      "pain"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_04.webp",
+    "audioKey": "mazo-13/audios/m13_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_04_mcq",
+    "variantType": "mcq",
+    "text": "You may feel some pain or discomfort.",
+    "englishText": "You may feel some pain or discomfort.",
+    "mcqQuestionEs": "You may feel some pain or discomfort.",
+    "mcqOptionsEn": [
+      "Puede sentir un poco de cansancio o molestia.",
+      "Puede sentir un poco de dolor y sed.",
+      "Puede sentir un poco de dolor o molestia."
+    ],
+    "mcqCorrectEn": "Puede sentir un poco de dolor o molestia."
+  },
+  {
+    "conceptId": "m13_05",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "assessment",
+      "patient_status"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_05.webp",
+    "audioKey": "mazo-13/audios/m13_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_05_intro",
+    "variantType": "intro",
+    "text": "¿Cómo se siente en este momento?",
+    "englishText": "How are you feeling right now?"
+  },
+  {
+    "conceptId": "m13_05",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "assessment",
+      "patient_status"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_05.webp",
+    "audioKey": "mazo-13/audios/m13_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_05_cloze",
+    "variantType": "cloze",
+    "text": "¿Cómo se siente en este momento?",
+    "englishText": "How are you feeling right now?",
+    "clozeOptions": [
+      "¿Puede descansar?",
+      "¿Tiene dolor?",
+      "¿Cómo se siente en este momento?",
+      "¿Se siente mareado?"
+    ],
+    "clozeCorrect": "¿Cómo se siente en este momento?"
+  },
+  {
+    "conceptId": "m13_05",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "assessment",
+      "patient_status"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_05.webp",
+    "audioKey": "mazo-13/audios/m13_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_05_mcq",
+    "variantType": "mcq",
+    "text": "How are you feeling right now?",
+    "englishText": "How are you feeling right now?",
+    "mcqQuestionEs": "How are you feeling right now?",
+    "mcqOptionsEn": [
+      "¿Cómo se sienta en este momento?",
+      "¿Cómo se siente en este momento?",
+      "¿qué se siente en este momento?"
+    ],
+    "mcqCorrectEn": "¿Cómo se siente en este momento?"
+  },
+  {
+    "conceptId": "m13_06",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "safety",
+      "mobility"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_06.webp",
+    "audioKey": "mazo-13/audios/m13_06.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_06_intro",
+    "variantType": "intro",
+    "text": "No se levante sin avisarnos.",
+    "englishText": "Do not get up without telling us."
+  },
+  {
+    "conceptId": "m13_06",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "safety",
+      "mobility"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_06.webp",
+    "audioKey": "mazo-13/audios/m13_06.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_06_cloze",
+    "variantType": "cloze",
+    "text": "No se levante sin avisarnos.",
+    "englishText": "Do not get up without telling us.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "No se levante sin avisarnos.",
+      "Use el timbre.",
+      "Puede descansar."
+    ],
+    "clozeCorrect": "No se levante sin avisarnos."
+  },
+  {
+    "conceptId": "m13_06",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "safety",
+      "mobility"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_06.webp",
+    "audioKey": "mazo-13/audios/m13_06.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_06_mcq",
+    "variantType": "mcq",
+    "text": "Do not get up without telling us.",
+    "englishText": "Do not get up without telling us.",
+    "mcqQuestionEs": "Do not get up without telling us.",
+    "mcqOptionsEn": [
+      "No se levante sin avisarnos.",
+      "No se acueste sin avisarnos.",
+      "No se duerma sin avisarnos."
+    ],
+    "mcqCorrectEn": "No se levante sin avisarnos."
+  },
+  {
+    "conceptId": "m13_07",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "hydration",
+      "recovery"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_07.webp",
+    "audioKey": "mazo-13/audios/m13_07.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_07_intro",
+    "variantType": "intro",
+    "text": "Puede tomar líquidos poco a poco.",
+    "englishText": "You may drink liquids little by little."
+  },
+  {
+    "conceptId": "m13_07",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "hydration",
+      "recovery"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_07.webp",
+    "audioKey": "mazo-13/audios/m13_07.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_07_cloze",
+    "variantType": "cloze",
+    "text": "Puede tomar líquidos poco a poco.",
+    "englishText": "You may drink liquids little by little.",
+    "clozeOptions": [
+      "Avíseme si vomita.",
+      "Puede tomar líquidos poco a poco.",
+      "No coma nada.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Puede tomar líquidos poco a poco."
+  },
+  {
+    "conceptId": "m13_07",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "hydration",
+      "recovery"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_07.webp",
+    "audioKey": "mazo-13/audios/m13_07.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_07_mcq",
+    "variantType": "mcq",
+    "text": "You may drink liquids little by little.",
+    "englishText": "You may drink liquids little by little.",
+    "mcqQuestionEs": "You may drink liquids little by little.",
+    "mcqOptionsEn": [
+      "Puede tomar líquidos poco a poco.",
+      "Puede tener líquidos poco a poco.",
+      "Puede comer líquidos poco a poco."
+    ],
+    "mcqCorrectEn": "Puede tomar líquidos poco a poco."
+  },
+  {
+    "conceptId": "m13_08",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "aftercare",
+      "wound"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_08.webp",
+    "audioKey": "mazo-13/audios/m13_08.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_08_intro",
+    "variantType": "intro",
+    "text": "Voy a revisar la herida.",
+    "englishText": "I am going to check the wound."
+  },
+  {
+    "conceptId": "m13_08",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "aftercare",
+      "wound"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_08.webp",
+    "audioKey": "mazo-13/audios/m13_08.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_08_cloze",
+    "variantType": "cloze",
+    "text": "Voy a revisar la herida.",
+    "englishText": "I am going to check the wound.",
+    "clozeOptions": [
+      "Voy a cambiar el vendaje.",
+      "Puede descansar.",
+      "Voy a revisar la herida.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Voy a revisar la herida."
+  },
+  {
+    "conceptId": "m13_08",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "aftercare",
+      "wound"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_08.webp",
+    "audioKey": "mazo-13/audios/m13_08.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_08_mcq",
+    "variantType": "mcq",
+    "text": "I am going to check the wound.",
+    "englishText": "I am going to check the wound.",
+    "mcqQuestionEs": "I am going to check the wound.",
+    "mcqOptionsEn": [
+      "Voy a revisar la cirugía.",
+      "Voy a revisar la benda.",
+      "Voy a revisar la herida."
+    ],
+    "mcqCorrectEn": "Voy a revisar la herida."
+  },
+  {
+    "conceptId": "m13_09",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "aftercare",
+      "hygiene"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_09.webp",
+    "audioKey": "mazo-13/audios/m13_09.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_09_intro",
+    "variantType": "intro",
+    "text": "Es importante mantener esta zona limpia.",
+    "englishText": "It is important to keep this area clean."
+  },
+  {
+    "conceptId": "m13_09",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "aftercare",
+      "hygiene"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_09.webp",
+    "audioKey": "mazo-13/audios/m13_09.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_09_cloze",
+    "variantType": "cloze",
+    "text": "Es importante mantener esta zona limpia.",
+    "englishText": "It is important to keep this area clean.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "Es importante mantener esta zona limpia.",
+      "Puede descansar.",
+      "Evite mojarla."
+    ],
+    "clozeCorrect": "Es importante mantener esta zona limpia."
+  },
+  {
+    "conceptId": "m13_09",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "aftercare",
+      "hygiene"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_09.webp",
+    "audioKey": "mazo-13/audios/m13_09.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_09_mcq",
+    "variantType": "mcq",
+    "text": "Es importante mantener esta zona limpia.",
+    "englishText": "It is important to keep this area clean.",
+    "mcqQuestionEs": "Es importante mantener esta zona limpia.",
+    "mcqOptionsEn": [
+      "It is important to keep this area dry.",
+      "It is important to keep this area protected.",
+      "It is important to keep this area clean."
+    ],
+    "mcqCorrectEn": "It is important to keep this area clean."
+  },
+  {
+    "conceptId": "m13_10",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "monitoring",
+      "warning"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_10.webp",
+    "audioKey": "mazo-13/audios/m13_10.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_10_intro",
+    "variantType": "intro",
+    "text": "Avíseme si presenta sangrado.",
+    "englishText": "Let me know if there is bleeding."
+  },
+  {
+    "conceptId": "m13_10",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "monitoring",
+      "warning"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_10.webp",
+    "audioKey": "mazo-13/audios/m13_10.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_10_cloze",
+    "variantType": "cloze",
+    "text": "Avíseme si presenta sangrado.",
+    "englishText": "Let me know if there is bleeding.",
+    "clozeOptions": [
+      "Avíseme si tiene dolor.",
+      "No hay prisa.",
+      "Todo va bien.",
+      "Avíseme si presenta sangrado."
+    ],
+    "clozeCorrect": "Avíseme si presenta sangrado."
+  },
+  {
+    "conceptId": "m13_10",
+    "deckId": "mazo_13_postoperatorio",
+    "tags": [
+      "monitoring",
+      "warning"
+    ],
+    "imageKey": "mazo-13/imagenes/m13_10.webp",
+    "audioKey": "mazo-13/audios/m13_10.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m13_10_mcq",
+    "variantType": "mcq",
+    "text": "Let me know if there is bleeding.",
+    "englishText": "Let me know if there is bleeding.",
+    "mcqQuestionEs": "Let me know if there is bleeding.",
+    "mcqOptionsEn": [
+      "Avíseme si presenta sangrado.",
+      "Avíseme si presenta ardor.",
+      "Avíseme si presenta mareo."
+    ],
+    "mcqCorrectEn": "Avíseme si presenta sangrado."
   }
 ] as const;
 

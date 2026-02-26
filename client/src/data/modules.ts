@@ -157,7 +157,7 @@ export const modules: Module[] = [
     description: "Care after surgery",
     icon: Bandage,
     color: "#795548",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m14",
