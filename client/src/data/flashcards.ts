@@ -6228,7 +6228,7 @@ export const flashcardsData = [
       "persona",
       "paciente"
     ],
-    "mcqCorrectEn": "provacidad"
+    "mcqCorrectEn": "privacidad"
   },
   {
     "conceptId": "m7_05",
