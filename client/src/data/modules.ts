@@ -57,7 +57,7 @@ export const modules: Module[] = [
     description: "Vocabulary for taking vital signs",
     icon: Activity,
     color: "#3498DB",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m04",

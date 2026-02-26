@@ -989,7 +989,7 @@ export const flashcardsData = [
     "id": "m1_16_intro",
     "variantType": "intro",
     "text": "Enseguida la van a pasar.",
-    "englishText": "They will take you in shortly."
+    "englishText": "They will call you shortly."
   },
   {
     "conceptId": "m1_16",
@@ -1006,7 +1006,7 @@ export const flashcardsData = [
     "id": "m1_16_cloze",
     "variantType": "cloze",
     "text": "Enseguida la van a pasar.",
-    "englishText": "They will take you in shortly.",
+    "englishText": "They will call you shortly.",
     "clozeOptions": [
       "Tome asiento un momento.",
       "¿Tiene dolor?",
@@ -1030,14 +1030,14 @@ export const flashcardsData = [
     "id": "m1_16_mcq",
     "variantType": "mcq",
     "text": "Enseguida la van a pasar.",
-    "englishText": "They will take you in shortly.",
+    "englishText": "They will call you shortly.",
     "mcqQuestionEs": "Enseguida la van a pasar.",
     "mcqOptionsEn": [
       "Please have a seat.",
-      "They will take you in shortly.",
+      "They will call you shortly.",
       "Let me know if you need anything."
     ],
-    "mcqCorrectEn": "They will take you in shortly."
+    "mcqCorrectEn": "They will call you shortly."
   },
   {
     "conceptId": "m2_01",
@@ -1048,7 +1048,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_01.webp",
     "audioKey": "mazo-2/audios/m2_01.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_01_intro",
@@ -1065,7 +1065,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_01.webp",
     "audioKey": "mazo-2/audios/m2_01.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_01_cloze",
@@ -1089,12 +1089,12 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_01.webp",
     "audioKey": "mazo-2/audios/m2_01.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_01_mcq",
     "variantType": "mcq",
-    "text": "¿Dónde le duele exactamente?",
+    "text": "¿Dónde le _____ exactamente?",
     "englishText": "Where does it hurt exactly?",
     "mcqQuestionEs": "¿Dónde le _____ exactamente?",
     "mcqOptionsEn": [
@@ -1113,7 +1113,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_02.webp",
     "audioKey": "mazo-2/audios/m2_02.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_02_intro",
@@ -1130,7 +1130,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_02.webp",
     "audioKey": "mazo-2/audios/m2_02.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_02_cloze",
@@ -1154,7 +1154,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_02.webp",
     "audioKey": "mazo-2/audios/m2_02.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_02_mcq",
@@ -1178,7 +1178,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_03.webp",
     "audioKey": "mazo-2/audios/m2_03.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_03_intro",
@@ -1195,7 +1195,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_03.webp",
     "audioKey": "mazo-2/audios/m2_03.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_03_cloze",
@@ -1219,12 +1219,12 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_03.webp",
     "audioKey": "mazo-2/audios/m2_03.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_03_mcq",
     "variantType": "mcq",
-    "text": "¿El dolor es constante o viene y se va?",
+    "text": "Is the pain constant or does it come and go?",
     "englishText": "Is the pain constant or does it come and go?",
     "mcqQuestionEs": "Is the pain constant or does it come and go?",
     "mcqOptionsEn": [
@@ -1243,7 +1243,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_04.webp",
     "audioKey": "mazo-2/audios/m2_04.mp3",
-    "category": "symptoms",
+    "category": "pain_description",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_04_intro",
@@ -1260,20 +1260,20 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_04.webp",
     "audioKey": "mazo-2/audios/m2_04.mp3",
-    "category": "symptoms",
+    "category": "pain_description",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_04_cloze",
     "variantType": "cloze",
-    "text": "¿Cómo describiría el dolor: punzante, fuerte o leve?",
+    "text": "¿Cómo describiría el dolor?",
     "englishText": "How would you describe the pain: sharp, strong, or mild?",
     "clozeOptions": [
       "¿Ha tomado algo para el dolor?",
-      "¿Cómo describiría el dolor: punzante, fuerte o leve?",
+      "¿Cómo describiría el dolor?",
       "¿Ha tenido fiebre?",
       "¿El dolor empeora al moverse?"
     ],
-    "clozeCorrect": "¿Cómo describiría el dolor: punzante, fuerte o leve?"
+    "clozeCorrect": "¿Cómo describiría el dolor?"
   },
   {
     "conceptId": "m2_04",
@@ -1284,20 +1284,20 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_04.webp",
     "audioKey": "mazo-2/audios/m2_04.mp3",
-    "category": "symptoms",
+    "category": "pain_description",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_04_mcq",
     "variantType": "mcq",
-    "text": "¿Cómo describiría el dolor: punzante, fuerte o leve?",
+    "text": "How would you describe the pain?",
     "englishText": "How would you describe the pain: sharp, strong, or mild?",
-    "mcqQuestionEs": "How would you describe the pain: sharp, severe, or mild?",
+    "mcqQuestionEs": "How would you describe the pain?",
     "mcqOptionsEn": [
-      "¿Cómo diría el dolor: punzante, fuerte o leve?",
-      "¿Cómo describiría el dolor: punzante, fuerte o leve?",
-      "¿Cómo contaría el dolor: punzante, fuerte o leve?"
+      "¿Cómo diría el dolor?",
+      "¿Cómo describiría el dolor?",
+      "¿Cómo contaría el dolor?"
     ],
-    "mcqCorrectEn": "¿Cómo describiría el dolor: punzante, fuerte o leve?"
+    "mcqCorrectEn": "¿Cómo describiría el dolor?"
   },
   {
     "conceptId": "m2_05",
@@ -1308,7 +1308,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_05.webp",
     "audioKey": "mazo-2/audios/m2_05.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_05_intro",
@@ -1325,7 +1325,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_05.webp",
     "audioKey": "mazo-2/audios/m2_05.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_05_cloze",
@@ -1349,12 +1349,12 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_05.webp",
     "audioKey": "mazo-2/audios/m2_05.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_05_mcq",
     "variantType": "mcq",
-    "text": "¿El dolor empeora al moverse?",
+    "text": "¿El dolor _____al moverse?",
     "englishText": "Does the pain get worse when you move?",
     "mcqQuestionEs": "¿El dolor _____al moverse?",
     "mcqOptionsEn": [
@@ -1373,7 +1373,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_06.webp",
     "audioKey": "mazo-2/audios/m2_06.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_06_intro",
@@ -1390,7 +1390,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_06.webp",
     "audioKey": "mazo-2/audios/m2_06.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_06_cloze",
@@ -1414,18 +1414,18 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_06.webp",
     "audioKey": "mazo-2/audios/m2_06.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_06_mcq",
     "variantType": "mcq",
-    "text": "¿Le duele al respirar profundo?",
+    "text": "¿Le duele al _____ profundo?",
     "englishText": "Does it hurt when you take a deep breath?",
     "mcqQuestionEs": "¿Le duele al _____ profundo?",
     "mcqOptionsEn": [
       "comer",
       "correr",
-      "respirar"
+      "repirar"
     ],
     "mcqCorrectEn": "respirar"
   },
@@ -1438,7 +1438,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_07.webp",
     "audioKey": "mazo-2/audios/m2_07.mp3",
-    "category": "symptoms",
+    "category": "pain_description",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_07_intro",
@@ -1455,7 +1455,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_07.webp",
     "audioKey": "mazo-2/audios/m2_07.mp3",
-    "category": "symptoms",
+    "category": "pain_description",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_07_cloze",
@@ -1479,7 +1479,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_07.webp",
     "audioKey": "mazo-2/audios/m2_07.mp3",
-    "category": "symptoms",
+    "category": "pain_description",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_07_mcq",
@@ -1503,7 +1503,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_08.webp",
     "audioKey": "mazo-2/audios/m2_08.mp3",
-    "category": "symptoms",
+    "category": "medical_history",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_08_intro",
@@ -1520,7 +1520,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_08.webp",
     "audioKey": "mazo-2/audios/m2_08.mp3",
-    "category": "symptoms",
+    "category": "medical_history",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_08_cloze",
@@ -1544,12 +1544,12 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_08.webp",
     "audioKey": "mazo-2/audios/m2_08.mp3",
-    "category": "symptoms",
+    "category": "medical_history",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_08_mcq",
     "variantType": "mcq",
-    "text": "¿Ha tenido este dolor antes?",
+    "text": "Have you had this pain before?",
     "englishText": "Have you had this pain before?",
     "mcqQuestionEs": "Have you had this pain before?",
     "mcqOptionsEn": [
@@ -1568,7 +1568,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_09.webp",
     "audioKey": "mazo-2/audios/m2_09.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_09_intro",
@@ -1585,7 +1585,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_09.webp",
     "audioKey": "mazo-2/audios/m2_09.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_09_cloze",
@@ -1609,7 +1609,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_09.webp",
     "audioKey": "mazo-2/audios/m2_09.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_09_mcq",
@@ -1633,7 +1633,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_10.webp",
     "audioKey": "mazo-2/audios/m2_10.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_10_intro",
@@ -1650,7 +1650,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_10.webp",
     "audioKey": "mazo-2/audios/m2_10.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_10_cloze",
@@ -1674,7 +1674,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_10.webp",
     "audioKey": "mazo-2/audios/m2_10.mp3",
-    "category": "symptoms",
+    "category": "pain_assessment",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_10_mcq",
@@ -1809,7 +1809,7 @@ export const flashcardsData = [
     "audioUrl": "",
     "id": "m2_12_mcq",
     "variantType": "mcq",
-    "text": "¿Ha tenido fiebre o escalofríos?",
+    "text": "¿Ha tenido _____ o escalofríos?",
     "englishText": "Have you had fever or chills?",
     "mcqQuestionEs": "¿Ha tenido _____ o escalofríos?",
     "mcqOptionsEn": [
@@ -1893,7 +1893,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_14.webp",
     "audioKey": "mazo-2/audios/m2_14.mp3",
-    "category": "symptoms",
+    "category": "medications",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_14_intro",
@@ -1910,7 +1910,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_14.webp",
     "audioKey": "mazo-2/audios/m2_14.mp3",
-    "category": "symptoms",
+    "category": "medications",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_14_cloze",
@@ -1934,12 +1934,12 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_14.webp",
     "audioKey": "mazo-2/audios/m2_14.mp3",
-    "category": "symptoms",
+    "category": "medications",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_14_mcq",
     "variantType": "mcq",
-    "text": "¿Ha tomado algo para el dolor?",
+    "text": "Have you taken anything for the pain?",
     "englishText": "Have you taken anything for the pain?",
     "mcqQuestionEs": "Have you taken anything for the pain?",
     "mcqOptionsEn": [
@@ -1958,7 +1958,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_15.webp",
     "audioKey": "mazo-2/audios/m2_15.mp3",
-    "category": "symptoms",
+    "category": "communication",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_15_intro",
@@ -1975,7 +1975,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_15.webp",
     "audioKey": "mazo-2/audios/m2_15.mp3",
-    "category": "symptoms",
+    "category": "communication",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_15_cloze",
@@ -1999,7 +1999,7 @@ export const flashcardsData = [
     ],
     "imageKey": "mazo-2/imagenes/m2_15.webp",
     "audioKey": "mazo-2/audios/m2_15.mp3",
-    "category": "symptoms",
+    "category": "communication",
     "imageUrl": "",
     "audioUrl": "",
     "id": "m2_15_mcq",
@@ -2013,6 +2013,1046 @@ export const flashcardsData = [
       "I will check your information."
     ],
     "mcqCorrectEn": "I am going to report your symptoms to the doctor."
+  },
+  {
+    "conceptId": "m3_01",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "procedure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_01.webp",
+    "audioKey": "mazo-3/audios/m3_01.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_01_intro",
+    "variantType": "intro",
+    "text": "Voy a tomarle los signos vitales.",
+    "englishText": "I am going to take your vital signs."
+  },
+  {
+    "conceptId": "m3_01",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "procedure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_01.webp",
+    "audioKey": "mazo-3/audios/m3_01.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_01_cloze",
+    "variantType": "cloze",
+    "text": "Voy a tomarle los signos vitales.",
+    "englishText": "I am going to take your vital signs.",
+    "clozeOptions": [
+      "Voy a medir su temperatura.",
+      "Respire normal.",
+      "Le voy a tomar la presión arterial.",
+      "Voy a tomarle los signos vitales."
+    ],
+    "clozeCorrect": "Voy a tomarle los signos vitales."
+  },
+  {
+    "conceptId": "m3_01",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "procedure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_01.webp",
+    "audioKey": "mazo-3/audios/m3_01.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_01_mcq",
+    "variantType": "mcq",
+    "text": "Voy a tomarle los signos vitales.",
+    "englishText": "I am going to take your vital signs.",
+    "mcqQuestionEs": "Voy a tomarle los signos vitales.",
+    "mcqOptionsEn": [
+      "I am going to take your vital signs.",
+      "I am going to check your pain.",
+      "Please sit down."
+    ],
+    "mcqCorrectEn": "I am going to take your vital signs."
+  },
+  {
+    "conceptId": "m3_02",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_02.webp",
+    "audioKey": "mazo-3/audios/m3_02.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_02_intro",
+    "variantType": "intro",
+    "text": "Le voy a tomar la presión arterial.",
+    "englishText": "I am going to take your blood pressure."
+  },
+  {
+    "conceptId": "m3_02",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_02.webp",
+    "audioKey": "mazo-3/audios/m3_02.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_02_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a tomar la presión arterial.",
+    "englishText": "I am going to take your blood pressure.",
+    "clozeOptions": [
+      "Voy a medir su temperatura.",
+      "Respire normal.",
+      "Le voy a tomar la presión arterial.",
+      "Relaje el brazo."
+    ],
+    "clozeCorrect": "Le voy a tomar la presión arterial."
+  },
+  {
+    "conceptId": "m3_02",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_02.webp",
+    "audioKey": "mazo-3/audios/m3_02.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_02_mcq",
+    "variantType": "mcq",
+    "text": "I am going to take your blood pressure.",
+    "englishText": "I am going to take your blood pressure.",
+    "mcqQuestionEs": "I am going to take your blood pressure.",
+    "mcqOptionsEn": [
+      "Voy a medir su temperatura.",
+      "Le voy a tomar la presión arterial.",
+      "Voy a tomarle los signos vitales."
+    ],
+    "mcqCorrectEn": "Le voy a tomar la presión arterial."
+  },
+  {
+    "conceptId": "m3_03",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "temperature"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_03.webp",
+    "audioKey": "mazo-3/audios/m3_03.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_03_intro",
+    "variantType": "intro",
+    "text": "Voy a medir su temperatura.",
+    "englishText": "I am going to take your temperature."
+  },
+  {
+    "conceptId": "m3_03",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "temperature"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_03.webp",
+    "audioKey": "mazo-3/audios/m3_03.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_03_cloze",
+    "variantType": "cloze",
+    "text": "Voy a medir su temperatura.",
+    "englishText": "I am going to take your temperature.",
+    "clozeOptions": [
+      "Voy a medir su temperatura.",
+      "Su presión está normal.",
+      "Ya terminamos.",
+      "Respire normal."
+    ],
+    "clozeCorrect": "Voy a medir su temperatura."
+  },
+  {
+    "conceptId": "m3_03",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "temperature"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_03.webp",
+    "audioKey": "mazo-3/audios/m3_03.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_03_mcq",
+    "variantType": "mcq",
+    "text": "Voy a medir su _____.",
+    "englishText": "I am going to take your temperature.",
+    "mcqQuestionEs": "Voy a medir su _____.",
+    "mcqOptionsEn": [
+      "temperatura",
+      "visita",
+      "brazo"
+    ],
+    "mcqCorrectEn": "temperatura"
+  },
+  {
+    "conceptId": "m3_04",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_04.webp",
+    "audioKey": "mazo-3/audios/m3_04.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_04_intro",
+    "variantType": "intro",
+    "text": "Por favor, relaje el brazo.",
+    "englishText": "Please relax your arm."
+  },
+  {
+    "conceptId": "m3_04",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_04.webp",
+    "audioKey": "mazo-3/audios/m3_04.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_04_cloze",
+    "variantType": "cloze",
+    "text": "Por favor, relaje el brazo.",
+    "englishText": "Please relax your arm.",
+    "clozeOptions": [
+      "Por favor, relaje el brazo.",
+      "Respire normal.",
+      "Mantenga el brazo a la altura del corazón.",
+      "No hable."
+    ],
+    "clozeCorrect": "Por favor, relaje el brazo."
+  },
+  {
+    "conceptId": "m3_04",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_04.webp",
+    "audioKey": "mazo-3/audios/m3_04.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_04_mcq",
+    "variantType": "mcq",
+    "text": "Por favor, relaje el brazo.",
+    "englishText": "Please relax your arm.",
+    "mcqQuestionEs": "Por favor, relaje el brazo.",
+    "mcqOptionsEn": [
+      "Please relax your arm.",
+      "Please breathe normally.",
+      "Do not move."
+    ],
+    "mcqCorrectEn": "Please relax your arm."
+  },
+  {
+    "conceptId": "m3_05",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_05.webp",
+    "audioKey": "mazo-3/audios/m3_05.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_05_intro",
+    "variantType": "intro",
+    "text": "Mantenga el brazo a la altura del corazón.",
+    "englishText": "Keep your arm at heart level."
+  },
+  {
+    "conceptId": "m3_05",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_05.webp",
+    "audioKey": "mazo-3/audios/m3_05.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_05_cloze",
+    "variantType": "cloze",
+    "text": "Mantenga el brazo a la altura del corazón.",
+    "englishText": "Keep your arm at heart level.",
+    "clozeOptions": [
+      "No hable.",
+      "Relaje el brazo.",
+      "Respire normal.",
+      "Mantenga el brazo a la altura del corazón."
+    ],
+    "clozeCorrect": "Mantenga el brazo a la altura del corazón."
+  },
+  {
+    "conceptId": "m3_05",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "blood_pressure"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_05.webp",
+    "audioKey": "mazo-3/audios/m3_05.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_05_mcq",
+    "variantType": "mcq",
+    "text": "Keep your arm at heart level.",
+    "englishText": "Keep your arm at heart level.",
+    "mcqQuestionEs": "Keep your arm at heart level.",
+    "mcqOptionsEn": [
+      "Mantenga el brazo arriba.",
+      "Mantenga el brazo a la altura del corazón.",
+      "Relaje el brazo."
+    ],
+    "mcqCorrectEn": "Mantenga el brazo a la altura del corazón."
+  },
+  {
+    "conceptId": "m3_06",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "vital_signs"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_06.webp",
+    "audioKey": "mazo-3/audios/m3_06.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_06_intro",
+    "variantType": "intro",
+    "text": "No hable ni se mueva un momento.",
+    "englishText": "Please do not talk or move for a moment."
+  },
+  {
+    "conceptId": "m3_06",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "vital_signs"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_06.webp",
+    "audioKey": "mazo-3/audios/m3_06.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_06_cloze",
+    "variantType": "cloze",
+    "text": "No hable ni se mueva un momento.",
+    "englishText": "Please do not talk or move for a moment.",
+    "clozeOptions": [
+      "No hable ni se mueva un momento.",
+      "Ya terminamos.",
+      "Respire normal.",
+      "Relaje el brazo."
+    ],
+    "clozeCorrect": "No hable ni se mueva un momento."
+  },
+  {
+    "conceptId": "m3_06",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "vital_signs"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_06.webp",
+    "audioKey": "mazo-3/audios/m3_06.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_06_mcq",
+    "variantType": "mcq",
+    "text": "No hable ni se mueva un momento.",
+    "englishText": "Please do not talk or move for a moment.",
+    "mcqQuestionEs": "No hable ni se mueva un momento.",
+    "mcqOptionsEn": [
+      "Please breathe normally.",
+      "Please do not talk or move for a moment.",
+      "Please sit down."
+    ],
+    "mcqCorrectEn": "Please do not talk or move for a moment."
+  },
+  {
+    "conceptId": "m3_07",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_07.webp",
+    "audioKey": "mazo-3/audios/m3_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_07_intro",
+    "variantType": "intro",
+    "text": "Respire normal, por favor.",
+    "englishText": "Please breathe normally."
+  },
+  {
+    "conceptId": "m3_07",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_07.webp",
+    "audioKey": "mazo-3/audios/m3_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_07_cloze",
+    "variantType": "cloze",
+    "text": "Respire normal, por favor.",
+    "englishText": "Please breathe normally.",
+    "clozeOptions": [
+      "No hable.",
+      "Mantenga el brazo arriba.",
+      "Relaje el brazo.",
+      "Respire normal, por favor."
+    ],
+    "clozeCorrect": "Respire normal, por favor."
+  },
+  {
+    "conceptId": "m3_07",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_07.webp",
+    "audioKey": "mazo-3/audios/m3_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_07_mcq",
+    "variantType": "mcq",
+    "text": "Please breathe normally.",
+    "englishText": "Please breathe normally.",
+    "mcqQuestionEs": "Please breathe normally.",
+    "mcqOptionsEn": [
+      "No hable ni se mueva.",
+      "Respire normal, por favor.",
+      "Relaje el brazo."
+    ],
+    "mcqCorrectEn": "Respire normal, por favor."
+  },
+  {
+    "conceptId": "m3_08",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "assessment",
+      "vital_signs"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_08.webp",
+    "audioKey": "mazo-3/audios/m3_08.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_08_intro",
+    "variantType": "intro",
+    "text": "¿Ha tomado café o fumado recientemente?",
+    "englishText": "Have you had coffee or smoked recently?"
+  },
+  {
+    "conceptId": "m3_08",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "assessment",
+      "vital_signs"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_08.webp",
+    "audioKey": "mazo-3/audios/m3_08.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_08_cloze",
+    "variantType": "cloze",
+    "text": "¿Ha tomado café o fumado recientemente?",
+    "englishText": "Have you had coffee or smoked recently?",
+    "clozeOptions": [
+      "¿Se siente mareado?",
+      "¿Ha tomado café o fumado recientemente?",
+      "¿Tiene dolor?",
+      "¿Ha tenido fiebre?"
+    ],
+    "clozeCorrect": "¿Ha tomado café o fumado recientemente?"
+  },
+  {
+    "conceptId": "m3_08",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "assessment",
+      "vital_signs"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_08.webp",
+    "audioKey": "mazo-3/audios/m3_08.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_08_mcq",
+    "variantType": "mcq",
+    "text": "¿Ha tomado café o fumado recientemente?",
+    "englishText": "Have you had coffee or smoked recently?",
+    "mcqQuestionEs": "¿Ha tomado café o fumado recientemente?",
+    "mcqOptionsEn": [
+      "Do you feel dizzy?",
+      "Are you in pain?",
+      "Have you had coffee or smoked recently?"
+    ],
+    "mcqCorrectEn": "Have you had coffee or smoked recently?"
+  },
+  {
+    "conceptId": "m3_09",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "results"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_09.webp",
+    "audioKey": "mazo-3/audios/m3_09.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_09_intro",
+    "variantType": "intro",
+    "text": "Su presión está un poco alta.",
+    "englishText": "Your blood pressure is a little high."
+  },
+  {
+    "conceptId": "m3_09",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "results"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_09.webp",
+    "audioKey": "mazo-3/audios/m3_09.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_09_cloze",
+    "variantType": "cloze",
+    "text": "Su presión está un poco alta.",
+    "englishText": "Your blood pressure is a little high.",
+    "clozeOptions": [
+      "Su presión está dentro de lo normal.",
+      "Su presión está un poco alta.",
+      "Su temperatura es normal.",
+      "Ya terminamos."
+    ],
+    "clozeCorrect": "Su presión está un poco alta."
+  },
+  {
+    "conceptId": "m3_09",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "results"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_09.webp",
+    "audioKey": "mazo-3/audios/m3_09.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_09_mcq",
+    "variantType": "mcq",
+    "text": "Your blood pressure is a little high.",
+    "englishText": "Your blood pressure is a little high.",
+    "mcqQuestionEs": "Your blood pressure is a little high.",
+    "mcqOptionsEn": [
+      "Su presión está normal.",
+      "Su presión está un poco alta.",
+      "Su temperatura está elevada."
+    ],
+    "mcqCorrectEn": "Su presión está un poco alta."
+  },
+  {
+    "conceptId": "m3_10",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "results"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_10.webp",
+    "audioKey": "mazo-3/audios/m3_10.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_10_intro",
+    "variantType": "intro",
+    "text": "Su presión está dentro de lo normal.",
+    "englishText": "Your blood pressure is within normal range."
+  },
+  {
+    "conceptId": "m3_10",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "results"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_10.webp",
+    "audioKey": "mazo-3/audios/m3_10.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_10_cloze",
+    "variantType": "cloze",
+    "text": "Su presión está dentro de lo normal.",
+    "englishText": "Your blood pressure is within normal range.",
+    "clozeOptions": [
+      "Su presión está dentro de lo normal.",
+      "Su temperatura es normal.",
+      "Su presión está alta.",
+      "Ya terminamos."
+    ],
+    "clozeCorrect": "Su presión está dentro de lo normal."
+  },
+  {
+    "conceptId": "m3_10",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "results"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_10.webp",
+    "audioKey": "mazo-3/audios/m3_10.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_10_mcq",
+    "variantType": "mcq",
+    "text": "Su presión está dentro de lo normal.",
+    "englishText": "Your blood pressure is within normal range.",
+    "mcqQuestionEs": "Su presión está dentro de lo normal.",
+    "mcqOptionsEn": [
+      "Your blood pressure is high.",
+      "Your blood pressure is within normal range.",
+      "Your temperature is elevated."
+    ],
+    "mcqCorrectEn": "Your blood pressure is within normal range."
+  },
+  {
+    "conceptId": "m3_11",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "temperature"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_11.webp",
+    "audioKey": "mazo-3/audios/m3_11.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_11_intro",
+    "variantType": "intro",
+    "text": "Tiene la temperatura elevada.",
+    "englishText": "You have an elevated temperature."
+  },
+  {
+    "conceptId": "m3_11",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "temperature"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_11.webp",
+    "audioKey": "mazo-3/audios/m3_11.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_11_cloze",
+    "variantType": "cloze",
+    "text": "Tiene la temperatura elevada.",
+    "englishText": "You have an elevated temperature.",
+    "clozeOptions": [
+      "Su presión está normal.",
+      "Tiene la temperatura elevada.",
+      "Ya terminamos.",
+      "Su frecuencia cardíaca es normal."
+    ],
+    "clozeCorrect": "Tiene la temperatura elevada."
+  },
+  {
+    "conceptId": "m3_11",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "temperature"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_11.webp",
+    "audioKey": "mazo-3/audios/m3_11.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_11_mcq",
+    "variantType": "mcq",
+    "text": "You have an elevated temperature.",
+    "englishText": "You have an elevated temperature.",
+    "mcqQuestionEs": "You have an elevated temperature.",
+    "mcqOptionsEn": [
+      "Su presión está alta.",
+      "Tiene la temperatura elevada.",
+      "Su temperatura es normal."
+    ],
+    "mcqCorrectEn": "Tiene la temperatura elevada."
+  },
+  {
+    "conceptId": "m3_12",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "heart_rate"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_12.webp",
+    "audioKey": "mazo-3/audios/m3_12.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_12_intro",
+    "variantType": "intro",
+    "text": "Su frecuencia cardíaca es normal.",
+    "englishText": "Your heart rate is normal."
+  },
+  {
+    "conceptId": "m3_12",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "heart_rate"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_12.webp",
+    "audioKey": "mazo-3/audios/m3_12.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_12_cloze",
+    "variantType": "cloze",
+    "text": "Su frecuencia cardíaca es normal.",
+    "englishText": "Your heart rate is normal.",
+    "clozeOptions": [
+      "Tiene fiebre.",
+      "Su presión está alta.",
+      "Ya terminamos.",
+      "Su frecuencia cardíaca es normal."
+    ],
+    "clozeCorrect": "Su frecuencia cardíaca es normal."
+  },
+  {
+    "conceptId": "m3_12",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "vital_signs",
+      "heart_rate"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_12.webp",
+    "audioKey": "mazo-3/audios/m3_12.mp3",
+    "category": "vital_signs",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_12_mcq",
+    "variantType": "mcq",
+    "text": "Su frecuencia cardíaca es normal.",
+    "englishText": "Your heart rate is normal.",
+    "mcqQuestionEs": "Su frecuencia cardíaca es normal.",
+    "mcqOptionsEn": [
+      "Your blood pressure is high.",
+      "Your heart rate is normal.",
+      "You have a fever."
+    ],
+    "mcqCorrectEn": "Your heart rate is normal."
+  },
+  {
+    "conceptId": "m3_13",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "documentation",
+      "records"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_13.webp",
+    "audioKey": "mazo-3/audios/m3_13.mp3",
+    "category": "documentation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_13_intro",
+    "variantType": "intro",
+    "text": "Estos valores los voy a registrar en su expediente.",
+    "englishText": "I am going to record these values in your chart."
+  },
+  {
+    "conceptId": "m3_13",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "documentation",
+      "records"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_13.webp",
+    "audioKey": "mazo-3/audios/m3_13.mp3",
+    "category": "documentation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_13_cloze",
+    "variantType": "cloze",
+    "text": "Estos valores los voy a registrar en su expediente.",
+    "englishText": "I am going to record these values in your chart.",
+    "clozeOptions": [
+      "Ya terminamos.",
+      "Voy a registrar los valores.",
+      "En un momento regreso.",
+      "Estos valores los voy a registrar en su expediente."
+    ],
+    "clozeCorrect": "Estos valores los voy a registrar en su expediente."
+  },
+  {
+    "conceptId": "m3_13",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "documentation",
+      "records"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_13.webp",
+    "audioKey": "mazo-3/audios/m3_13.mp3",
+    "category": "documentation",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_13_mcq",
+    "variantType": "mcq",
+    "text": "Estos valores los voy a registrar en su expediente.",
+    "englishText": "I am going to record these values in your chart.",
+    "mcqQuestionEs": "Estos valores los voy a registrar en su expediente.",
+    "mcqOptionsEn": [
+      "I am going to report your symptoms.",
+      "I am going to record these values in your chart.",
+      "Please have a seat."
+    ],
+    "mcqCorrectEn": "I am going to record these values in your chart."
+  },
+  {
+    "conceptId": "m3_14",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "patient_communication",
+      "monitoring"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_14.webp",
+    "audioKey": "mazo-3/audios/m3_14.mp3",
+    "category": "patient_communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_14_intro",
+    "variantType": "intro",
+    "text": "Avíseme si se siente mareado.",
+    "englishText": "Let me know if you feel dizzy."
+  },
+  {
+    "conceptId": "m3_14",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "patient_communication",
+      "monitoring"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_14.webp",
+    "audioKey": "mazo-3/audios/m3_14.mp3",
+    "category": "patient_communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_14_cloze",
+    "variantType": "cloze",
+    "text": "Avíseme si se siente mareado.",
+    "englishText": "Let me know if you feel dizzy.",
+    "clozeOptions": [
+      "No hable.",
+      "Avíseme si se siente mareado.",
+      "Ya terminamos.",
+      "Respire normal."
+    ],
+    "clozeCorrect": "Avíseme si se siente mareado."
+  },
+  {
+    "conceptId": "m3_14",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "patient_communication",
+      "monitoring"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_14.webp",
+    "audioKey": "mazo-3/audios/m3_14.mp3",
+    "category": "patient_communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_14_mcq",
+    "variantType": "mcq",
+    "text": "Let me know if you feel dizzy.",
+    "englishText": "Let me know if you feel dizzy.",
+    "mcqQuestionEs": "Let me know if you feel dizzy.",
+    "mcqOptionsEn": [
+      "Avíseme si tiene dolor.",
+      "Avíseme si se siente mareado.",
+      "Avíseme si tiene fiebre."
+    ],
+    "mcqCorrectEn": "Avíseme si se siente mareado."
+  },
+  {
+    "conceptId": "m3_15",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "closure",
+      "patient_care"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_15.webp",
+    "audioKey": "mazo-3/audios/m3_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_15_intro",
+    "variantType": "intro",
+    "text": "Ya terminamos, gracias por su paciencia.",
+    "englishText": "We are done, thank you for your patience."
+  },
+  {
+    "conceptId": "m3_15",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "closure",
+      "patient_care"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_15.webp",
+    "audioKey": "mazo-3/audios/m3_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_15_cloze",
+    "variantType": "cloze",
+    "text": "Ya terminamos, gracias por su paciencia.",
+    "englishText": "We are done, thank you for your patience.",
+    "clozeOptions": [
+      "Tome asiento.",
+      "Respire normal.",
+      "En un momento regreso.",
+      "Ya terminamos, gracias por su paciencia."
+    ],
+    "clozeCorrect": "Ya terminamos, gracias por su paciencia."
+  },
+  {
+    "conceptId": "m3_15",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "closure",
+      "patient_care"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_15.webp",
+    "audioKey": "mazo-3/audios/m3_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_15_mcq",
+    "variantType": "mcq",
+    "text": "Ya terminamos, gracias por su paciencia.",
+    "englishText": "We are done, thank you for your patience.",
+    "mcqQuestionEs": "Ya terminamos, gracias por su paciencia.",
+    "mcqOptionsEn": [
+      "We are done, thank you for your patience.",
+      "Please wait here.",
+      "I will be back shortly."
+    ],
+    "mcqCorrectEn": "We are done, thank you for your patience."
+  },
+  {
+    "conceptId": "m3_16",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "closure",
+      "patient_flow"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_16.webp",
+    "audioKey": "mazo-3/audios/m3_16.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_16_intro",
+    "variantType": "intro",
+    "text": "En un momento regreso con usted.",
+    "englishText": "I will be back with you shortly."
+  },
+  {
+    "conceptId": "m3_16",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "closure",
+      "patient_flow"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_16.webp",
+    "audioKey": "mazo-3/audios/m3_16.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_16_cloze",
+    "variantType": "cloze",
+    "text": "En un momento regreso con usted.",
+    "englishText": "I will be back with you shortly.",
+    "clozeOptions": [
+      "En un momento regreso con usted.",
+      "Respire normal.",
+      "Tome asiento.",
+      "Ya terminamos."
+    ],
+    "clozeCorrect": "En un momento regreso con usted."
+  },
+  {
+    "conceptId": "m3_16",
+    "deckId": "mazo_03_signos",
+    "tags": [
+      "closure",
+      "patient_flow"
+    ],
+    "imageKey": "mazo-3/imagenes/m3_16.webp",
+    "audioKey": "mazo-3/audios/m3_16.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m3_16_mcq",
+    "variantType": "mcq",
+    "text": "I will be back with you shortly.",
+    "englishText": "I will be back with you shortly.",
+    "mcqQuestionEs": "I will be back with you shortly.",
+    "mcqOptionsEn": [
+      "Ya terminamos.",
+      "Por favor, relaje el brazo.",
+      "En un momento regreso con usted."
+    ],
+    "mcqCorrectEn": "En un momento regreso con usted."
   }
 ] as const;
 
