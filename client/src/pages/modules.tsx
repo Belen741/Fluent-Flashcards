@@ -7,7 +7,7 @@ import { resetAllProgress } from "@/utils/userProgress";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw, Crown, LogIn, Settings, CreditCard, LogOut } from "lucide-react";
+import { Loader2, Lock, Check, ChevronRight, Trophy, RotateCcw, Crown, LogIn, Settings, CreditCard, LogOut, Star, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
 import { useAuth, useClerk } from "@clerk/clerk-react";
@@ -175,6 +175,32 @@ export default function Modules() {
             </div>
           </div>
         </Card>
+
+        {overall.percentage === 100 && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 200, damping: 20 }}
+          >
+            <Card className="p-6 text-center space-y-3 border-2 border-primary bg-primary/5" data-testid="card-all-complete">
+              <div className="flex items-center justify-center gap-2">
+                <Star className="h-6 w-6 text-amber-500 fill-amber-500" />
+                <Trophy className="h-8 w-8 text-primary" />
+                <Star className="h-6 w-6 text-amber-500 fill-amber-500" />
+              </div>
+              <h2 className="text-xl font-bold text-foreground" data-testid="text-all-complete-title">
+                Congratulations!
+              </h2>
+              <p className="text-sm text-muted-foreground max-w-[300px] mx-auto" data-testid="text-all-complete-desc">
+                You've completed all 15 modules! Keep practicing to stay sharp. Review sessions will appear automatically.
+              </p>
+              <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground">
+                <PartyPopper className="h-4 w-4" />
+                <span>You can revisit any module anytime for review</span>
+              </div>
+            </Card>
+          </motion.div>
+        )}
 
         <div className="relative">
           <div className="absolute left-8 top-0 bottom-0 w-1 bg-border rounded-full" />
