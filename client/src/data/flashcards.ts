@@ -5059,6 +5059,916 @@ export const flashcardsData = [
       "Puede resetear ahora."
     ],
     "mcqCorrectEn": "Puede descansar ahora."
+  },
+  {
+    "conceptId": "m6_01",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "explanation"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_01.webp",
+    "audioKey": "mazo-6/audios/m6_01.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_01_intro",
+    "variantType": "intro",
+    "text": "Le voy a explicar el procedimiento.",
+    "englishText": "I am going to explain the procedure."
+  },
+  {
+    "conceptId": "m6_01",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "explanation"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_01.webp",
+    "audioKey": "mazo-6/audios/m6_01.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_01_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a explicar el procedimiento.",
+    "englishText": "I am going to explain the procedure.",
+    "clozeOptions": [
+      "Le voy a explicar el procedimiento.",
+      "Voy a limpiar el área.",
+      "Todo salió bien.",
+      "Esto puede causar molestia."
+    ],
+    "clozeCorrect": "Le voy a explicar el procedimiento."
+  },
+  {
+    "conceptId": "m6_01",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "explanation"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_01.webp",
+    "audioKey": "mazo-6/audios/m6_01.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_01_mcq",
+    "variantType": "mcq",
+    "text": "Le voy a explicar el ____.",
+    "englishText": "I am going to explain the procedure.",
+    "mcqQuestionEs": "Le voy a explicar el ____.",
+    "mcqOptionsEn": [
+      "procedimiento",
+      "área",
+      "pasos"
+    ],
+    "mcqCorrectEn": "procedimiento"
+  },
+  {
+    "conceptId": "m6_02",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "reassurance",
+      "warning"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_02.webp",
+    "audioKey": "mazo-6/audios/m6_02.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_02_intro",
+    "variantType": "intro",
+    "text": "Esto puede causar una pequeña molestia.",
+    "englishText": "This may cause slight discomfort."
+  },
+  {
+    "conceptId": "m6_02",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "reassurance",
+      "warning"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_02.webp",
+    "audioKey": "mazo-6/audios/m6_02.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_02_cloze",
+    "variantType": "cloze",
+    "text": "Esto puede causar una pequeña molestia.",
+    "englishText": "This may cause slight discomfort.",
+    "clozeOptions": [
+      "Todo salió bien.",
+      "Ya terminamos.",
+      "Esto puede causar una pequeña molestia.",
+      "Va a sentir dolor."
+    ],
+    "clozeCorrect": "Esto puede causar una pequeña molestia."
+  },
+  {
+    "conceptId": "m6_02",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "reassurance",
+      "warning"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_02.webp",
+    "audioKey": "mazo-6/audios/m6_02.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_02_mcq",
+    "variantType": "mcq",
+    "text": "This may cause slight discomfort.",
+    "englishText": "This may cause slight discomfort.",
+    "mcqQuestionEs": "This may cause slight discomfort.",
+    "mcqOptionsEn": [
+      "Esto puede causar un pequeño aburrimiento.",
+      "Esto puede causar una grande molestia.",
+      "Esto puede causar una pequeña molestia."
+    ],
+    "mcqCorrectEn": "Esto puede causar una pequeña molestia."
+  },
+  {
+    "conceptId": "m6_03",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "preparation"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_03.webp",
+    "audioKey": "mazo-6/audios/m6_03.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_03_intro",
+    "variantType": "intro",
+    "text": "Voy a limpiar el área primero.",
+    "englishText": "I am going to clean the area first."
+  },
+  {
+    "conceptId": "m6_03",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "preparation"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_03.webp",
+    "audioKey": "mazo-6/audios/m6_03.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_03_cloze",
+    "variantType": "cloze",
+    "text": "Voy a limpiar el área primero.",
+    "englishText": "I am going to clean the area first.",
+    "clozeOptions": [
+      "Voy a retirar el material.",
+      "Presione aquí.",
+      "Voy a limpiar el área primero.",
+      "Voy a poner una inyección."
+    ],
+    "clozeCorrect": "Voy a limpiar el área primero."
+  },
+  {
+    "conceptId": "m6_03",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "preparation"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_03.webp",
+    "audioKey": "mazo-6/audios/m6_03.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_03_mcq",
+    "variantType": "mcq",
+    "text": "Voy a limpiar el ____.",
+    "englishText": "I am going to clean the area first.",
+    "mcqQuestionEs": "Voy a limpiar el ____.",
+    "mcqOptionsEn": [
+      "area",
+      "hospital",
+      "inyección"
+    ],
+    "mcqCorrectEn": "area"
+  },
+  {
+    "conceptId": "m6_04",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_04.webp",
+    "audioKey": "mazo-6/audios/m6_04.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_04_intro",
+    "variantType": "intro",
+    "text": "Va a sentir un pequeño dolor.",
+    "englishText": "You will feel a little pain."
+  },
+  {
+    "conceptId": "m6_04",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_04.webp",
+    "audioKey": "mazo-6/audios/m6_04.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_04_cloze",
+    "variantType": "cloze",
+    "text": "Va a sentir un pequeño dolor.",
+    "englishText": "You will feel a little pain.",
+    "clozeOptions": [
+      "Va a sentir un pequeño dolor.",
+      "Esto puede causar molestia.",
+      "Ya terminamos.",
+      "Todo salió bien."
+    ],
+    "clozeCorrect": "Va a sentir un pequeño dolor."
+  },
+  {
+    "conceptId": "m6_04",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_04.webp",
+    "audioKey": "mazo-6/audios/m6_04.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_04_mcq",
+    "variantType": "mcq",
+    "text": "Va a sentir un pequeño ____.",
+    "englishText": "You will feel a little pain.",
+    "mcqQuestionEs": "Va a sentir un pequeño ____.",
+    "mcqOptionsEn": [
+      "dolor",
+      "cosquillas",
+      "presión"
+    ],
+    "mcqCorrectEn": "dolor"
+  },
+  {
+    "conceptId": "m6_05",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_05.webp",
+    "audioKey": "mazo-6/audios/m6_05.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_05_intro",
+    "variantType": "intro",
+    "text": "Le voy a poner una inyección.",
+    "englishText": "I am going to give you an injection."
+  },
+  {
+    "conceptId": "m6_05",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_05.webp",
+    "audioKey": "mazo-6/audios/m6_05.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_05_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a poner una inyección.",
+    "englishText": "I am going to give you an injection.",
+    "clozeOptions": [
+      "Voy a limpiar el área.",
+      "Presione aquí.",
+      "Voy a canalizar una vena.",
+      "Le voy a poner una inyección."
+    ],
+    "clozeCorrect": "Le voy a poner una inyección."
+  },
+  {
+    "conceptId": "m6_05",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_05.webp",
+    "audioKey": "mazo-6/audios/m6_05.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_05_mcq",
+    "variantType": "mcq",
+    "text": "I am going to give you an injection.",
+    "englishText": "I am going to give you an injection.",
+    "mcqQuestionEs": "I am going to give you an injection.",
+    "mcqOptionsEn": [
+      "Le voy a poner una pomada.",
+      "Le voy a poner un medicamento.",
+      "Le voy a poner una inyección."
+    ],
+    "mcqCorrectEn": "Le voy a poner una inyección."
+  },
+  {
+    "conceptId": "m6_06",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "iv"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_06.webp",
+    "audioKey": "mazo-6/audios/m6_06.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_06_intro",
+    "variantType": "intro",
+    "text": "Voy a canalizar una vena.",
+    "englishText": "I am going to start an IV."
+  },
+  {
+    "conceptId": "m6_06",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "iv"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_06.webp",
+    "audioKey": "mazo-6/audios/m6_06.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_06_cloze",
+    "variantType": "cloze",
+    "text": "Voy a canalizar una vena.",
+    "englishText": "I am going to start an IV.",
+    "clozeOptions": [
+      "Todo salió bien.",
+      "Voy a limpiar el área.",
+      "Le voy a poner una inyección.",
+      "Voy a canalizar una vena."
+    ],
+    "clozeCorrect": "Voy a canalizar una vena."
+  },
+  {
+    "conceptId": "m6_06",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "iv"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_06.webp",
+    "audioKey": "mazo-6/audios/m6_06.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_06_mcq",
+    "variantType": "mcq",
+    "text": "Voy a canalizar una ____.",
+    "englishText": "I am going to start an IV.",
+    "mcqQuestionEs": "Voy a canalizar una ____.",
+    "mcqOptionsEn": [
+      "brazo",
+      "vena",
+      "corazón"
+    ],
+    "mcqCorrectEn": "vena"
+  },
+  {
+    "conceptId": "m6_07",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "instructions",
+      "safety"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_07.webp",
+    "audioKey": "mazo-6/audios/m6_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_07_intro",
+    "variantType": "intro",
+    "text": "Por favor, no mueva el brazo.",
+    "englishText": "Please do not move your arm."
+  },
+  {
+    "conceptId": "m6_07",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "instructions",
+      "safety"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_07.webp",
+    "audioKey": "mazo-6/audios/m6_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_07_cloze",
+    "variantType": "cloze",
+    "text": "Por favor, no mueva el brazo.",
+    "englishText": "Please do not move your arm.",
+    "clozeOptions": [
+      "Mantenga el brazo relajado.",
+      "Respire normal.",
+      "Por favor, no mueva el brazo.",
+      "Levante el brazo."
+    ],
+    "clozeCorrect": "Por favor, no mueva el brazo."
+  },
+  {
+    "conceptId": "m6_07",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "instructions",
+      "safety"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_07.webp",
+    "audioKey": "mazo-6/audios/m6_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_07_mcq",
+    "variantType": "mcq",
+    "text": "Please do not move your arm.",
+    "englishText": "Please do not move your arm.",
+    "mcqQuestionEs": "Please do not move your arm.",
+    "mcqOptionsEn": [
+      "Por favor, no mueva el codo.",
+      "Por favor, no mueva la cabeza.",
+      "Por favor, no mueva el brazo."
+    ],
+    "mcqCorrectEn": "Por favor, no mueva el brazo."
+  },
+  {
+    "conceptId": "m6_08",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "monitoring",
+      "patient_communication"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_08.webp",
+    "audioKey": "mazo-6/audios/m6_08.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_08_intro",
+    "variantType": "intro",
+    "text": "Avíseme si siente dolor o mareo.",
+    "englishText": "Let me know if you feel pain or dizziness."
+  },
+  {
+    "conceptId": "m6_08",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "monitoring",
+      "patient_communication"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_08.webp",
+    "audioKey": "mazo-6/audios/m6_08.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_08_cloze",
+    "variantType": "cloze",
+    "text": "Avíseme si siente dolor o mareo.",
+    "englishText": "Let me know if you feel pain or dizziness.",
+    "clozeOptions": [
+      "Ya terminamos.",
+      "Todo salió bien.",
+      "Avíseme si siente dolor o mareo.",
+      "Respire normal."
+    ],
+    "clozeCorrect": "Avíseme si siente dolor o mareo."
+  },
+  {
+    "conceptId": "m6_08",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "monitoring",
+      "patient_communication"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_08.webp",
+    "audioKey": "mazo-6/audios/m6_08.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_08_mcq",
+    "variantType": "mcq",
+    "text": "Let me know if you feel pain or dizziness.",
+    "englishText": "Let me know if you feel pain or dizziness.",
+    "mcqQuestionEs": "Let me know if you feel pain or dizziness.",
+    "mcqOptionsEn": [
+      "Avíseme si siente dolor o mareo.",
+      "Avíseme si siente dolor o sueño.",
+      "Avíseme si siente pánicor o mareo."
+    ],
+    "mcqCorrectEn": "Avíseme si siente dolor o mareo."
+  },
+  {
+    "conceptId": "m6_09",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "closure",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_09.webp",
+    "audioKey": "mazo-6/audios/m6_09.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_09_intro",
+    "variantType": "intro",
+    "text": "Ya terminamos con la inyección.",
+    "englishText": "We are done with the injection."
+  },
+  {
+    "conceptId": "m6_09",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "closure",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_09.webp",
+    "audioKey": "mazo-6/audios/m6_09.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_09_cloze",
+    "variantType": "cloze",
+    "text": "Ya terminamos con la inyección.",
+    "englishText": "We are done with the injection.",
+    "clozeOptions": [
+      "Todo salió bien.",
+      "Voy a colocar una venda.",
+      "Presione aquí.",
+      "Ya terminamos con la inyección."
+    ],
+    "clozeCorrect": "Ya terminamos con la inyección."
+  },
+  {
+    "conceptId": "m6_09",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "closure",
+      "injection"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_09.webp",
+    "audioKey": "mazo-6/audios/m6_09.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_09_mcq",
+    "variantType": "mcq",
+    "text": "We are done with the injection.",
+    "englishText": "We are done with the injection.",
+    "mcqQuestionEs": "We are done with the injection.",
+    "mcqOptionsEn": [
+      "Ya terminamos con la inyección.",
+      "Ya terminamos con el procedimiento.",
+      "Ya terminamos con el tratamiento."
+    ],
+    "mcqCorrectEn": "Ya terminamos con la inyección."
+  },
+  {
+    "conceptId": "m6_10",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_10.webp",
+    "audioKey": "mazo-6/audios/m6_10.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_10_intro",
+    "variantType": "intro",
+    "text": "Voy a colocarle una venda.",
+    "englishText": "I am going to place a bandage."
+  },
+  {
+    "conceptId": "m6_10",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_10.webp",
+    "audioKey": "mazo-6/audios/m6_10.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_10_cloze",
+    "variantType": "cloze",
+    "text": "Voy a colocarle una venda.",
+    "englishText": "I am going to place a bandage.",
+    "clozeOptions": [
+      "Voy a colocarle una venda.",
+      "Presione aquí.",
+      "Voy a retirar el material.",
+      "Todo salió bien."
+    ],
+    "clozeCorrect": "Voy a colocarle una venda."
+  },
+  {
+    "conceptId": "m6_10",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_10.webp",
+    "audioKey": "mazo-6/audios/m6_10.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_10_mcq",
+    "variantType": "mcq",
+    "text": "Voy a colocarle una ____.",
+    "englishText": "I am going to place a bandage.",
+    "mcqQuestionEs": "Voy a colocarle una ____.",
+    "mcqOptionsEn": [
+      "mareo",
+      "venda",
+      "cirugía"
+    ],
+    "mcqCorrectEn": "venda"
+  },
+  {
+    "conceptId": "m6_11",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "instructions",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_11.webp",
+    "audioKey": "mazo-6/audios/m6_11.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_11_intro",
+    "variantType": "intro",
+    "text": "Presione aquí unos minutos.",
+    "englishText": "Press here for a few minutes."
+  },
+  {
+    "conceptId": "m6_11",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "instructions",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_11.webp",
+    "audioKey": "mazo-6/audios/m6_11.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_11_cloze",
+    "variantType": "cloze",
+    "text": "Presione aquí unos minutos.",
+    "englishText": "Press here for a few minutes.",
+    "clozeOptions": [
+      "Ya terminamos.",
+      "Presione aquí unos minutos.",
+      "No mueva el brazo.",
+      "Todo salió bien."
+    ],
+    "clozeCorrect": "Presione aquí unos minutos."
+  },
+  {
+    "conceptId": "m6_11",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "instructions",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_11.webp",
+    "audioKey": "mazo-6/audios/m6_11.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_11_mcq",
+    "variantType": "mcq",
+    "text": "Press here for a few minutes.",
+    "englishText": "Press here for a few minutes.",
+    "mcqQuestionEs": "Press here for a few minutes.",
+    "mcqOptionsEn": [
+      "Pres  aquí unos minutos.",
+      "Presione allí unos minutos.",
+      "Presione aquí unos minutos."
+    ],
+    "mcqCorrectEn": "Presione aquí unos minutos."
+  },
+  {
+    "conceptId": "m6_12",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "aftercare",
+      "instructions"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_12.webp",
+    "audioKey": "mazo-6/audios/m6_12.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_12_intro",
+    "variantType": "intro",
+    "text": "Evite mojar esta zona.",
+    "englishText": "Avoid getting this area wet."
+  },
+  {
+    "conceptId": "m6_12",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "aftercare",
+      "instructions"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_12.webp",
+    "audioKey": "mazo-6/audios/m6_12.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_12_cloze",
+    "variantType": "cloze",
+    "text": "Evite mojar esta zona.",
+    "englishText": "Avoid getting this area wet.",
+    "clozeOptions": [
+      "Voy a retirar el material.",
+      "Presione aquí.",
+      "Todo salió bien.",
+      "Evite mojar esta zona."
+    ],
+    "clozeCorrect": "Evite mojar esta zona."
+  },
+  {
+    "conceptId": "m6_12",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "aftercare",
+      "instructions"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_12.webp",
+    "audioKey": "mazo-6/audios/m6_12.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_12_mcq",
+    "variantType": "mcq",
+    "text": "Evite mojar esta ____.",
+    "englishText": "Avoid getting this area wet.",
+    "mcqQuestionEs": "Evite mojar esta ____.",
+    "mcqOptionsEn": [
+      "zona",
+      "inyección",
+      "medicamento"
+    ],
+    "mcqCorrectEn": "zona"
+  },
+  {
+    "conceptId": "m6_13",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "reassurance",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_13.webp",
+    "audioKey": "mazo-6/audios/m6_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_13_intro",
+    "variantType": "intro",
+    "text": "Si sangra un poco, es normal.",
+    "englishText": "If it bleeds a little, it is normal."
+  },
+  {
+    "conceptId": "m6_13",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "reassurance",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_13.webp",
+    "audioKey": "mazo-6/audios/m6_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_13_cloze",
+    "variantType": "cloze",
+    "text": "Si sangra un poco, es normal.",
+    "englishText": "If it bleeds a little, it is normal.",
+    "clozeOptions": [
+      "Avíseme si duele.",
+      "Todo salió bien.",
+      "Ya terminamos.",
+      "Si sangra un poco, es normal."
+    ],
+    "clozeCorrect": "Si sangra un poco, es normal."
+  },
+  {
+    "conceptId": "m6_13",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "reassurance",
+      "aftercare"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_13.webp",
+    "audioKey": "mazo-6/audios/m6_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_13_mcq",
+    "variantType": "mcq",
+    "text": "If it bleeds a little, it is normal.",
+    "englishText": "If it bleeds a little, it is normal.",
+    "mcqQuestionEs": "If it bleeds a little, it is normal.",
+    "mcqOptionsEn": [
+      "Si sangra un poco, es normal.",
+      "Si sangra  mucho, es normal.",
+      "Si sangra moderadamente , es normal."
+    ],
+    "mcqCorrectEn": "Si sangra un poco, es normal."
+  },
+  {
+    "conceptId": "m6_14",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "cleanup"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_14.webp",
+    "audioKey": "mazo-6/audios/m6_14.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_14_intro",
+    "variantType": "intro",
+    "text": "Voy a retirar el material.",
+    "englishText": "I am going to remove the equipment."
+  },
+  {
+    "conceptId": "m6_14",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "cleanup"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_14.webp",
+    "audioKey": "mazo-6/audios/m6_14.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_14_cloze",
+    "variantType": "cloze",
+    "text": "Voy a retirar el material.",
+    "englishText": "I am going to remove the equipment.",
+    "clozeOptions": [
+      "Todo salió bien.",
+      "Voy a retirar el material.",
+      "Voy a limpiar el área.",
+      "Voy a colocar una venda."
+    ],
+    "clozeCorrect": "Voy a retirar el material."
+  },
+  {
+    "conceptId": "m6_14",
+    "deckId": "mazo_06_procedimientos",
+    "tags": [
+      "procedures",
+      "cleanup"
+    ],
+    "imageKey": "mazo-6/imagenes/m6_14.webp",
+    "audioKey": "mazo-6/audios/m6_14.mp3",
+    "category": "procedures",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m6_14_mcq",
+    "variantType": "mcq",
+    "text": "Voy a retirar el ____.",
+    "englishText": "I am going to remove the equipment.",
+    "mcqQuestionEs": "Voy a retirar el ____.",
+    "mcqOptionsEn": [
+      "material",
+      "procedimiento",
+      "síntoma"
+    ],
+    "mcqCorrectEn": "material"
   }
 ] as const;
 

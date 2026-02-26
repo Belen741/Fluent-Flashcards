@@ -87,7 +87,7 @@ export const modules: Module[] = [
     description: "Explaining basic medical procedures",
     icon: Stethoscope,
     color: "#1ABC9C",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m07",
