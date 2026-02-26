@@ -1425,7 +1425,7 @@ export const flashcardsData = [
     "mcqOptionsEn": [
       "comer",
       "correr",
-      "repirar"
+      "respirar"
     ],
     "mcqCorrectEn": "respirar"
   },
