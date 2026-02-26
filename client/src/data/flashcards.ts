@@ -7789,6 +7789,981 @@ export const flashcardsData = [
       "Su seguro es lo más importante."
     ],
     "mcqCorrectEn": "Su seguridad es lo más importante."
+  },
+  {
+    "conceptId": "m9_01",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "restrictions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_01.webp",
+    "audioKey": "mazo-9/audios/m9_01.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_01_intro",
+    "variantType": "intro",
+    "text": "Por ahora, no puede comer ni beber.",
+    "englishText": "For now, you cannot eat or drink."
+  },
+  {
+    "conceptId": "m9_01",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "restrictions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_01.webp",
+    "audioKey": "mazo-9/audios/m9_01.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_01_cloze",
+    "variantType": "cloze",
+    "text": "Por ahora, no puede comer ni beber.",
+    "englishText": "For now, you cannot eat or drink.",
+    "clozeOptions": [
+      "Debe permanecer en ayuno.",
+      "No coma nada.",
+      "Por ahora, no puede comer ni beber.",
+      "Puede beber agua."
+    ],
+    "clozeCorrect": "Por ahora, no puede comer ni beber."
+  },
+  {
+    "conceptId": "m9_01",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "restrictions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_01.webp",
+    "audioKey": "mazo-9/audios/m9_01.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_01_mcq",
+    "variantType": "mcq",
+    "text": "Por ahora, no puede comer ni ____.",
+    "englishText": "For now, you cannot eat or drink.",
+    "mcqQuestionEs": "Por ahora, no puede comer ni ____.",
+    "mcqOptionsEn": [
+      "beba",
+      "beberse",
+      "beber"
+    ],
+    "mcqCorrectEn": "beber"
+  },
+  {
+    "conceptId": "m9_02",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "preparation"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_02.webp",
+    "audioKey": "mazo-9/audios/m9_02.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_02_intro",
+    "variantType": "intro",
+    "text": "Debe permanecer en ayuno.",
+    "englishText": "You must remain fasting."
+  },
+  {
+    "conceptId": "m9_02",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "preparation"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_02.webp",
+    "audioKey": "mazo-9/audios/m9_02.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_02_cloze",
+    "variantType": "cloze",
+    "text": "Debe permanecer en ayuno.",
+    "englishText": "You must remain fasting.",
+    "clozeOptions": [
+      "Esto es importante.",
+      "Debe permanecer en ayuno.",
+      "Puede beber agua.",
+      "No coma nada."
+    ],
+    "clozeCorrect": "Debe permanecer en ayuno."
+  },
+  {
+    "conceptId": "m9_02",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "preparation"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_02.webp",
+    "audioKey": "mazo-9/audios/m9_02.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_02_mcq",
+    "variantType": "mcq",
+    "text": "Debe permanecer en ____.",
+    "englishText": "You must remain fasting.",
+    "mcqQuestionEs": "Debe permanecer en ____.",
+    "mcqOptionsEn": [
+      "ayuno",
+      "no comida",
+      "no comer"
+    ],
+    "mcqCorrectEn": "ayuno"
+  },
+  {
+    "conceptId": "m9_03",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "procedures"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_03.webp",
+    "audioKey": "mazo-9/audios/m9_03.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_03_intro",
+    "variantType": "intro",
+    "text": "Esto es importante para el procedimiento.",
+    "englishText": "This is important for the procedure."
+  },
+  {
+    "conceptId": "m9_03",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "procedures"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_03.webp",
+    "audioKey": "mazo-9/audios/m9_03.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_03_cloze",
+    "variantType": "cloze",
+    "text": "Esto es importante para el procedimiento.",
+    "englishText": "This is important for the procedure.",
+    "clozeOptions": [
+      "Avíseme si vomita.",
+      "Debe permanecer en ayuno.",
+      "No coma nada.",
+      "Esto es importante para el procedimiento."
+    ],
+    "clozeCorrect": "Esto es importante para el procedimiento."
+  },
+  {
+    "conceptId": "m9_03",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "procedures"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_03.webp",
+    "audioKey": "mazo-9/audios/m9_03.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_03_mcq",
+    "variantType": "mcq",
+    "text": "This is important for the procedure.",
+    "englishText": "This is important for the procedure.",
+    "mcqQuestionEs": "This is important for the procedure.",
+    "mcqOptionsEn": [
+      "Esto es importante para el procedimiento.",
+      "Esto es importante para los procesos.",
+      "Esto es importante para  el ayuno."
+    ],
+    "mcqCorrectEn": "Esto es importante para el procedimiento."
+  },
+  {
+    "conceptId": "m9_04",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "nutrition"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_04.webp",
+    "audioKey": "mazo-9/audios/m9_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_04_intro",
+    "variantType": "intro",
+    "text": "¿Cuándo fue la última vez que comió?",
+    "englishText": "When was the last time you ate?"
+  },
+  {
+    "conceptId": "m9_04",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "nutrition"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_04.webp",
+    "audioKey": "mazo-9/audios/m9_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_04_cloze",
+    "variantType": "cloze",
+    "text": "¿Cuándo fue la última vez que comió?",
+    "englishText": "When was the last time you ate?",
+    "clozeOptions": [
+      "¿Puede comer?",
+      "¿Cuándo fue la última vez que comió?",
+      "¿Tiene náuseas?",
+      "¿Cuándo bebió líquidos?"
+    ],
+    "clozeCorrect": "¿Cuándo fue la última vez que comió?"
+  },
+  {
+    "conceptId": "m9_04",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "nutrition"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_04.webp",
+    "audioKey": "mazo-9/audios/m9_04.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_04_mcq",
+    "variantType": "mcq",
+    "text": "When was the last time you ate?",
+    "englishText": "When was the last time you ate?",
+    "mcqQuestionEs": "When was the last time you ate?",
+    "mcqOptionsEn": [
+      "¿Cuándo fue la última vez que comió?",
+      "¿Cuándo fue la última vez que desayunó?",
+      "¿Cuándo fue la última vez que cenó?"
+    ],
+    "mcqCorrectEn": "¿Cuándo fue la última vez que comió?"
+  },
+  {
+    "conceptId": "m9_05",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "hydration"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_05.webp",
+    "audioKey": "mazo-9/audios/m9_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_05_intro",
+    "variantType": "intro",
+    "text": "¿Cuándo fue la última vez que bebió líquidos?",
+    "englishText": "When was the last time you drank liquids?"
+  },
+  {
+    "conceptId": "m9_05",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "hydration"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_05.webp",
+    "audioKey": "mazo-9/audios/m9_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_05_cloze",
+    "variantType": "cloze",
+    "text": "¿Cuándo fue la última vez que bebió líquidos?",
+    "englishText": "When was the last time you drank liquids?",
+    "clozeOptions": [
+      "¿Puede beber agua?",
+      "¿Tiene náuseas?",
+      "¿Cuándo comió?",
+      "¿Cuándo fue la última vez que bebió líquidos?"
+    ],
+    "clozeCorrect": "¿Cuándo fue la última vez que bebió líquidos?"
+  },
+  {
+    "conceptId": "m9_05",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "hydration"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_05.webp",
+    "audioKey": "mazo-9/audios/m9_05.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_05_mcq",
+    "variantType": "mcq",
+    "text": "When was the last time you drank liquids?",
+    "englishText": "When was the last time you drank liquids?",
+    "mcqQuestionEs": "When was the last time you drank liquids?",
+    "mcqOptionsEn": [
+      "¿Cuándo fue la última vez que bebió líquidos?",
+      "¿Cuándo fue la última vez que bebió agua?",
+      "¿Cuándo fue la última vez que bebió algo?"
+    ],
+    "mcqCorrectEn": "¿Cuándo fue la última vez que bebió líquidos?"
+  },
+  {
+    "conceptId": "m9_06",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "oral_care"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_06.webp",
+    "audioKey": "mazo-9/audios/m9_06.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_06_intro",
+    "variantType": "intro",
+    "text": "Puede enjuagarse la boca, pero no tragar.",
+    "englishText": "You may rinse your mouth, but do not swallow."
+  },
+  {
+    "conceptId": "m9_06",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "oral_care"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_06.webp",
+    "audioKey": "mazo-9/audios/m9_06.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_06_cloze",
+    "variantType": "cloze",
+    "text": "Puede enjuagarse la boca, pero no tragar.",
+    "englishText": "You may rinse your mouth, but do not swallow.",
+    "clozeOptions": [
+      "Avíseme si vomita.",
+      "No coma nada.",
+      "Puede enjuagarse la boca, pero no tragar.",
+      "Puede beber agua."
+    ],
+    "clozeCorrect": "Puede enjuagarse la boca, pero no tragar."
+  },
+  {
+    "conceptId": "m9_06",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "fasting",
+      "oral_care"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_06.webp",
+    "audioKey": "mazo-9/audios/m9_06.mp3",
+    "category": "fasting",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_06_mcq",
+    "variantType": "mcq",
+    "text": "You may rinse your mouth, but do not swallow.",
+    "englishText": "You may rinse your mouth, but do not swallow.",
+    "mcqQuestionEs": "You may rinse your mouth, but do not swallow.",
+    "mcqOptionsEn": [
+      "Puede enjuagarse la boca, pero no beber.",
+      "Puede lavarse la boca, pero no tragar.",
+      "Puede enjuagarse la boca, pero no tragar."
+    ],
+    "mcqCorrectEn": "Puede enjuagarse la boca, pero no tragar."
+  },
+  {
+    "conceptId": "m9_07",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "symptoms"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_07.webp",
+    "audioKey": "mazo-9/audios/m9_07.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_07_intro",
+    "variantType": "intro",
+    "text": "¿Tiene náuseas o ganas de vomitar?",
+    "englishText": "Do you have nausea or feel like vomiting?"
+  },
+  {
+    "conceptId": "m9_07",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "symptoms"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_07.webp",
+    "audioKey": "mazo-9/audios/m9_07.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_07_cloze",
+    "variantType": "cloze",
+    "text": "¿Tiene náuseas o ganas de vomitar?",
+    "englishText": "Do you have nausea or feel like vomiting?",
+    "clozeOptions": [
+      "¿Tiene náuseas o ganas de vomitar?",
+      "¿Tiene dolor?",
+      "¿Se siente bien?",
+      "¿Puede comer?"
+    ],
+    "clozeCorrect": "¿Tiene náuseas o ganas de vomitar?"
+  },
+  {
+    "conceptId": "m9_07",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "assessment",
+      "symptoms"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_07.webp",
+    "audioKey": "mazo-9/audios/m9_07.mp3",
+    "category": "assessment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_07_mcq",
+    "variantType": "mcq",
+    "text": "Do you have nausea or feel like vomiting?",
+    "englishText": "Do you have nausea or feel like vomiting?",
+    "mcqQuestionEs": "Do you have nausea or feel like vomiting?",
+    "mcqOptionsEn": [
+      "¿Tiene mareos o ganas de vomitar?",
+      "¿Tiene náuseas o ganas de vomitar?",
+      "¿Tiene mareos o ganas de escupir?"
+    ],
+    "mcqCorrectEn": "¿Tiene náuseas o ganas de vomitar?"
+  },
+  {
+    "conceptId": "m9_08",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "monitoring",
+      "symptoms"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_08.webp",
+    "audioKey": "mazo-9/audios/m9_08.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_08_intro",
+    "variantType": "intro",
+    "text": "Avíseme si vomita.",
+    "englishText": "Let me know if you vomit."
+  },
+  {
+    "conceptId": "m9_08",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "monitoring",
+      "symptoms"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_08.webp",
+    "audioKey": "mazo-9/audios/m9_08.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_08_cloze",
+    "variantType": "cloze",
+    "text": "Avíseme si vomita.",
+    "englishText": "Let me know if you vomit.",
+    "clozeOptions": [
+      "Avíseme si tiene dolor.",
+      "Todo va bien.",
+      "Avíseme si vomita.",
+      "No hay prisa."
+    ],
+    "clozeCorrect": "Avíseme si vomita."
+  },
+  {
+    "conceptId": "m9_08",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "monitoring",
+      "symptoms"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_08.webp",
+    "audioKey": "mazo-9/audios/m9_08.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_08_mcq",
+    "variantType": "mcq",
+    "text": "Avíseme si vomita.",
+    "englishText": "Let me know if you vomit.",
+    "mcqQuestionEs": "Avíseme si vomita.",
+    "mcqOptionsEn": [
+      "This is a soft diet.",
+      "You must remain fasting.",
+      "Let me know if you vomit."
+    ],
+    "mcqCorrectEn": "Let me know if you vomit."
+  },
+  {
+    "conceptId": "m9_09",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "hydration",
+      "instructions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_09.webp",
+    "audioKey": "mazo-9/audios/m9_09.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_09_intro",
+    "variantType": "intro",
+    "text": "Puede tomar pequeños sorbos de agua.",
+    "englishText": "You may take small sips of water."
+  },
+  {
+    "conceptId": "m9_09",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "hydration",
+      "instructions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_09.webp",
+    "audioKey": "mazo-9/audios/m9_09.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_09_cloze",
+    "variantType": "cloze",
+    "text": "Puede tomar pequeños sorbos de agua.",
+    "englishText": "You may take small sips of water.",
+    "clozeOptions": [
+      "No coma nada.",
+      "Puede tomar pequeños sorbos de agua.",
+      "Debe permanecer en ayuno.",
+      "Avíseme si vomita."
+    ],
+    "clozeCorrect": "Puede tomar pequeños sorbos de agua."
+  },
+  {
+    "conceptId": "m9_09",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "hydration",
+      "instructions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_09.webp",
+    "audioKey": "mazo-9/audios/m9_09.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_09_mcq",
+    "variantType": "mcq",
+    "text": "You may take small sips of water.",
+    "englishText": "You may take small sips of water.",
+    "mcqQuestionEs": "You may take small sips of water.",
+    "mcqOptionsEn": [
+      "Puede tomar pequeños sorbos de agua.",
+      "Puede tomar grandes sorbos de agua.",
+      "Puede tomar muchos sorbos de agua."
+    ],
+    "mcqCorrectEn": "Puede tomar pequeños sorbos de agua."
+  },
+  {
+    "conceptId": "m9_10",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "diet"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_10.webp",
+    "audioKey": "mazo-9/audios/m9_10.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_10_intro",
+    "variantType": "intro",
+    "text": "Esta es una dieta blanda.",
+    "englishText": "This is a soft diet."
+  },
+  {
+    "conceptId": "m9_10",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "diet"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_10.webp",
+    "audioKey": "mazo-9/audios/m9_10.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_10_cloze",
+    "variantType": "cloze",
+    "text": "Esta es una dieta blanda.",
+    "englishText": "This is a soft diet.",
+    "clozeOptions": [
+      "Puede beber agua.",
+      "Esta es una dieta blanda.",
+      "Esta es una dieta líquida.",
+      "No coma nada."
+    ],
+    "clozeCorrect": "Esta es una dieta blanda."
+  },
+  {
+    "conceptId": "m9_10",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "diet"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_10.webp",
+    "audioKey": "mazo-9/audios/m9_10.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_10_mcq",
+    "variantType": "mcq",
+    "text": "Esta es una ____ blanda.",
+    "englishText": "This is a soft diet.",
+    "mcqQuestionEs": "Esta es una ____ blanda.",
+    "mcqOptionsEn": [
+      "dieta",
+      "bebida",
+      "comida"
+    ],
+    "mcqCorrectEn": "dieta"
+  },
+  {
+    "conceptId": "m9_11",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "instructions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_11.webp",
+    "audioKey": "mazo-9/audios/m9_11.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_11_intro",
+    "variantType": "intro",
+    "text": "Coma despacio, por favor.",
+    "englishText": "Please eat slowly."
+  },
+  {
+    "conceptId": "m9_11",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "instructions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_11.webp",
+    "audioKey": "mazo-9/audios/m9_11.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_11_cloze",
+    "variantType": "cloze",
+    "text": "Coma despacio, por favor.",
+    "englishText": "Please eat slowly.",
+    "clozeOptions": [
+      "Coma despacio, por favor.",
+      "Beba agua.",
+      "No coma nada.",
+      "No hay prisa."
+    ],
+    "clozeCorrect": "Coma despacio, por favor."
+  },
+  {
+    "conceptId": "m9_11",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "instructions"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_11.webp",
+    "audioKey": "mazo-9/audios/m9_11.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_11_mcq",
+    "variantType": "mcq",
+    "text": "Coma ____, por favor.",
+    "englishText": "Please eat slowly.",
+    "mcqQuestionEs": "Coma ____, por favor.",
+    "mcqOptionsEn": [
+      "despacio",
+      "corriendo",
+      "caminando"
+    ],
+    "mcqCorrectEn": "despacio"
+  },
+  {
+    "conceptId": "m9_12",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "hydration",
+      "education"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_12.webp",
+    "audioKey": "mazo-9/audios/m9_12.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_12_intro",
+    "variantType": "intro",
+    "text": "Es importante mantenerse hidratado.",
+    "englishText": "It is important to stay hydrated."
+  },
+  {
+    "conceptId": "m9_12",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "hydration",
+      "education"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_12.webp",
+    "audioKey": "mazo-9/audios/m9_12.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_12_cloze",
+    "variantType": "cloze",
+    "text": "Es importante mantenerse hidratado.",
+    "englishText": "It is important to stay hydrated.",
+    "clozeOptions": [
+      "Debe permanecer en ayuno.",
+      "Todo va bien.",
+      "Es importante mantenerse hidratado.",
+      "Coma despacio."
+    ],
+    "clozeCorrect": "Es importante mantenerse hidratado."
+  },
+  {
+    "conceptId": "m9_12",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "hydration",
+      "education"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_12.webp",
+    "audioKey": "mazo-9/audios/m9_12.mp3",
+    "category": "hydration",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_12_mcq",
+    "variantType": "mcq",
+    "text": "It is important to stay hydrated.",
+    "englishText": "It is important to stay hydrated.",
+    "mcqQuestionEs": "It is important to stay hydrated.",
+    "mcqOptionsEn": [
+      "Es importante mantenerse hidratado.",
+      "Es importante mantenerse hidra.",
+      "Es importante comportarse hidratado."
+    ],
+    "mcqCorrectEn": "Es importante mantenerse hidratado."
+  },
+  {
+    "conceptId": "m9_13",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "monitoring",
+      "nutrition"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_13.webp",
+    "audioKey": "mazo-9/audios/m9_13.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_13_intro",
+    "variantType": "intro",
+    "text": "Avíseme si no tolera los alimentos.",
+    "englishText": "Let me know if you cannot tolerate the food."
+  },
+  {
+    "conceptId": "m9_13",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "monitoring",
+      "nutrition"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_13.webp",
+    "audioKey": "mazo-9/audios/m9_13.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_13_cloze",
+    "variantType": "cloze",
+    "text": "Avíseme si no tolera los alimentos.",
+    "englishText": "Let me know if you cannot tolerate the food.",
+    "clozeOptions": [
+      "Avíseme si vomita.",
+      "No hay prisa.",
+      "Avíseme si no tolera los alimentos.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Avíseme si no tolera los alimentos."
+  },
+  {
+    "conceptId": "m9_13",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "monitoring",
+      "nutrition"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_13.webp",
+    "audioKey": "mazo-9/audios/m9_13.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_13_mcq",
+    "variantType": "mcq",
+    "text": "Let me know if you cannot tolerate the food.",
+    "englishText": "Let me know if you cannot tolerate the food.",
+    "mcqQuestionEs": "Let me know if you cannot tolerate the food.",
+    "mcqOptionsEn": [
+      "Avíseme si no tolera los alimentos.",
+      "Avíseme si no tolera los líquidos.",
+      "Avíseme si no tolera los medicamentos."
+    ],
+    "mcqCorrectEn": "Avíseme si no tolera los alimentos."
+  },
+  {
+    "conceptId": "m9_14",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "safety",
+      "fasting"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_14.webp",
+    "audioKey": "mazo-9/audios/m9_14.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_14_intro",
+    "variantType": "intro",
+    "text": "No coma nada sin avisarnos.",
+    "englishText": "Do not eat anything without telling us."
+  },
+  {
+    "conceptId": "m9_14",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "safety",
+      "fasting"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_14.webp",
+    "audioKey": "mazo-9/audios/m9_14.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_14_cloze",
+    "variantType": "cloze",
+    "text": "No coma nada sin avisarnos.",
+    "englishText": "Do not eat anything without telling us.",
+    "clozeOptions": [
+      "No coma nada sin avisarnos.",
+      "Puede beber agua.",
+      "Avíseme si vomita.",
+      "Debe permanecer en ayuno."
+    ],
+    "clozeCorrect": "No coma nada sin avisarnos."
+  },
+  {
+    "conceptId": "m9_14",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "safety",
+      "fasting"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_14.webp",
+    "audioKey": "mazo-9/audios/m9_14.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_14_mcq",
+    "variantType": "mcq",
+    "text": "Do not eat anything without telling us.",
+    "englishText": "Do not eat anything without telling us.",
+    "mcqQuestionEs": "Do not eat anything without telling us.",
+    "mcqOptionsEn": [
+      "Coma nada sin avisarnos.",
+      "No coma nada sin avisarnos.",
+      "Coma nada con avisarnos."
+    ],
+    "mcqCorrectEn": "No coma nada sin avisarnos."
+  },
+  {
+    "conceptId": "m9_15",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "workflow"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_15.webp",
+    "audioKey": "mazo-9/audios/m9_15.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_15_intro",
+    "variantType": "intro",
+    "text": "Le voy a retirar la charola.",
+    "englishText": "I am going to remove the tray."
+  },
+  {
+    "conceptId": "m9_15",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "workflow"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_15.webp",
+    "audioKey": "mazo-9/audios/m9_15.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_15_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a retirar la charola.",
+    "englishText": "I am going to remove the tray.",
+    "clozeOptions": [
+      "Voy a limpiar el área.",
+      "Ya regreso.",
+      "Puede descansar.",
+      "Le voy a retirar la charola."
+    ],
+    "clozeCorrect": "Le voy a retirar la charola."
+  },
+  {
+    "conceptId": "m9_15",
+    "deckId": "mazo_09_alimentacion",
+    "tags": [
+      "nutrition",
+      "workflow"
+    ],
+    "imageKey": "mazo-9/imagenes/m9_15.webp",
+    "audioKey": "mazo-9/audios/m9_15.mp3",
+    "category": "nutrition",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m9_15_mcq",
+    "variantType": "mcq",
+    "text": "Le voy a retirar la charola.",
+    "englishText": "I am going to remove the tray.",
+    "mcqQuestionEs": "Le voy a retirar la charola.",
+    "mcqOptionsEn": [
+      "You may take small sips of water.",
+      "I am going to remove the tray.",
+      "For now, you cannot eat or drink."
+    ],
+    "mcqCorrectEn": "I am going to remove the tray."
   }
 ] as const;
 

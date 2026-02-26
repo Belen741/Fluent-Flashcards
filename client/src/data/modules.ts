@@ -117,7 +117,7 @@ export const modules: Module[] = [
     description: "Instructions about meals and restrictions",
     icon: UtensilsCrossed,
     color: "#8BC34A",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m10",
