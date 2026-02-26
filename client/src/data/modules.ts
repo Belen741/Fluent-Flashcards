@@ -107,7 +107,7 @@ export const modules: Module[] = [
     description: "Safe movement instructions",
     icon: PersonStanding,
     color: "#FF9800",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m09",

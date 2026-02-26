@@ -6944,6 +6944,851 @@ export const flashcardsData = [
       "Tómese su tiempo, no hay prisa."
     ],
     "mcqCorrectEn": "Tómese su tiempo, no hay prisa."
+  },
+  {
+    "conceptId": "m8_01",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "fall_prevention"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_01.webp",
+    "audioKey": "mazo-8/audios/m8_01.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_01_intro",
+    "variantType": "intro",
+    "text": "Por favor, no se levante solo.",
+    "englishText": "Please do not get up by yourself."
+  },
+  {
+    "conceptId": "m8_01",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "fall_prevention"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_01.webp",
+    "audioKey": "mazo-8/audios/m8_01.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_01_cloze",
+    "variantType": "cloze",
+    "text": "Por favor, no se levante solo.",
+    "englishText": "Please do not get up by yourself.",
+    "clozeOptions": [
+      "Levántese despacio.",
+      "Camine con cuidado.",
+      "Use el timbre.",
+      "Por favor, no se levante solo."
+    ],
+    "clozeCorrect": "Por favor, no se levante solo."
+  },
+  {
+    "conceptId": "m8_01",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "fall_prevention"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_01.webp",
+    "audioKey": "mazo-8/audios/m8_01.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_01_mcq",
+    "variantType": "mcq",
+    "text": "Please do not get up by yourself.",
+    "englishText": "Please do not get up by yourself.",
+    "mcqQuestionEs": "Please do not get up by yourself.",
+    "mcqOptionsEn": [
+      "Por favor, no se levante solo.",
+      "Por favor, no se levante por usted mismo.",
+      "Por favor, no se acueste solo."
+    ],
+    "mcqCorrectEn": "Por favor, no se levante solo."
+  },
+  {
+    "conceptId": "m8_02",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "assistance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_02.webp",
+    "audioKey": "mazo-8/audios/m8_02.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_02_intro",
+    "variantType": "intro",
+    "text": "Use el timbre si necesita ayuda.",
+    "englishText": "Use the call button if you need help."
+  },
+  {
+    "conceptId": "m8_02",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "assistance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_02.webp",
+    "audioKey": "mazo-8/audios/m8_02.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_02_cloze",
+    "variantType": "cloze",
+    "text": "Use el timbre si necesita ayuda.",
+    "englishText": "Use the call button if you need help.",
+    "clozeOptions": [
+      "Espere un momento.",
+      "No camine solo.",
+      "Use el timbre si necesita ayuda.",
+      "Apoye los pies."
+    ],
+    "clozeCorrect": "Use el timbre si necesita ayuda."
+  },
+  {
+    "conceptId": "m8_02",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "assistance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_02.webp",
+    "audioKey": "mazo-8/audios/m8_02.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_02_mcq",
+    "variantType": "mcq",
+    "text": "Use el timbre si necesita ____.",
+    "englishText": "Use the call button if you need help.",
+    "mcqQuestionEs": "Use el timbre si necesita ____.",
+    "mcqOptionsEn": [
+      "descansar",
+      "ayuda",
+      "relajarse"
+    ],
+    "mcqCorrectEn": "ayuda"
+  },
+  {
+    "conceptId": "m8_03",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "assistance",
+      "mobility"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_03.webp",
+    "audioKey": "mazo-8/audios/m8_03.mp3",
+    "category": "assistance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_03_intro",
+    "variantType": "intro",
+    "text": "Le voy a ayudar a levantarse.",
+    "englishText": "I am going to help you stand up."
+  },
+  {
+    "conceptId": "m8_03",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "assistance",
+      "mobility"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_03.webp",
+    "audioKey": "mazo-8/audios/m8_03.mp3",
+    "category": "assistance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_03_cloze",
+    "variantType": "cloze",
+    "text": "Le voy a ayudar a levantarse.",
+    "englishText": "I am going to help you stand up.",
+    "clozeOptions": [
+      "Le voy a ayudar a caminar.",
+      "Le voy a ayudar a levantarse.",
+      "Espere un momento.",
+      "Camine con cuidado."
+    ],
+    "clozeCorrect": "Le voy a ayudar a levantarse."
+  },
+  {
+    "conceptId": "m8_03",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "assistance",
+      "mobility"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_03.webp",
+    "audioKey": "mazo-8/audios/m8_03.mp3",
+    "category": "assistance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_03_mcq",
+    "variantType": "mcq",
+    "text": "I am going to help you stand up.",
+    "englishText": "I am going to help you stand up.",
+    "mcqQuestionEs": "I am going to help you stand up.",
+    "mcqOptionsEn": [
+      "Le voy a ayudar a caminar.",
+      "Le voy a ayudar a vestirse.",
+      "Le voy a ayudar a levantarse."
+    ],
+    "mcqCorrectEn": "Le voy a ayudar a levantarse."
+  },
+  {
+    "conceptId": "m8_04",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_04.webp",
+    "audioKey": "mazo-8/audios/m8_04.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_04_intro",
+    "variantType": "intro",
+    "text": "Siéntese primero en la orilla de la cama.",
+    "englishText": "Sit on the edge of the bed first."
+  },
+  {
+    "conceptId": "m8_04",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_04.webp",
+    "audioKey": "mazo-8/audios/m8_04.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_04_cloze",
+    "variantType": "cloze",
+    "text": "Siéntese primero en la orilla de la cama.",
+    "englishText": "Sit on the edge of the bed first.",
+    "clozeOptions": [
+      "Espere un momento.",
+      "Siéntese primero en la orilla de la cama.",
+      "Acuéstese lentamente.",
+      "Apoye los pies."
+    ],
+    "clozeCorrect": "Siéntese primero en la orilla de la cama."
+  },
+  {
+    "conceptId": "m8_04",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_04.webp",
+    "audioKey": "mazo-8/audios/m8_04.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_04_mcq",
+    "variantType": "mcq",
+    "text": "Sit on the edge of the bed first.",
+    "englishText": "Sit on the edge of the bed first.",
+    "mcqQuestionEs": "Sit on the edge of the bed first.",
+    "mcqOptionsEn": [
+      "Siéntese primero en la orilla de la silla.",
+      "Siéntese primero en la orilla de la cama.",
+      "Acuéstese primero en la orilla de la silla."
+    ],
+    "mcqCorrectEn": "Siéntese primero en la orilla de la cama."
+  },
+  {
+    "conceptId": "m8_05",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "dizziness"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_05.webp",
+    "audioKey": "mazo-8/audios/m8_05.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_05_intro",
+    "variantType": "intro",
+    "text": "Espere un momento antes de ponerse de pie.",
+    "englishText": "Wait a moment before standing up."
+  },
+  {
+    "conceptId": "m8_05",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "dizziness"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_05.webp",
+    "audioKey": "mazo-8/audios/m8_05.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_05_cloze",
+    "variantType": "cloze",
+    "text": "Espere un momento antes de ponerse de pie.",
+    "englishText": "Wait a moment before standing up.",
+    "clozeOptions": [
+      "Espere un momento antes de ponerse de pie.",
+      "Regrese a la cama.",
+      "Camine con cuidado.",
+      "Levántese despacio."
+    ],
+    "clozeCorrect": "Espere un momento antes de ponerse de pie."
+  },
+  {
+    "conceptId": "m8_05",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "dizziness"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_05.webp",
+    "audioKey": "mazo-8/audios/m8_05.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_05_mcq",
+    "variantType": "mcq",
+    "text": "Espere un momento antes de ponerse de ____.",
+    "englishText": "Wait a moment before standing up.",
+    "mcqQuestionEs": "Espere un momento antes de ponerse de ____.",
+    "mcqOptionsEn": [
+      "pusiste de pie",
+      "ponte de pie",
+      "ponerse de pie"
+    ],
+    "mcqCorrectEn": "ponerse de pie"
+  },
+  {
+    "conceptId": "m8_06",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "balance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_06.webp",
+    "audioKey": "mazo-8/audios/m8_06.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_06_intro",
+    "variantType": "intro",
+    "text": "Apoye bien los pies en el piso.",
+    "englishText": "Place your feet firmly on the floor."
+  },
+  {
+    "conceptId": "m8_06",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "balance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_06.webp",
+    "audioKey": "mazo-8/audios/m8_06.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_06_cloze",
+    "variantType": "cloze",
+    "text": "Apoye bien los pies en el piso.",
+    "englishText": "Place your feet firmly on the floor.",
+    "clozeOptions": [
+      "Apoye bien los pies en el piso.",
+      "Camine con cuidado.",
+      "Espere un momento.",
+      "Levántese despacio."
+    ],
+    "clozeCorrect": "Apoye bien los pies en el piso."
+  },
+  {
+    "conceptId": "m8_06",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "balance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_06.webp",
+    "audioKey": "mazo-8/audios/m8_06.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_06_mcq",
+    "variantType": "mcq",
+    "text": "Place your feet firmly on the floor.",
+    "englishText": "Place your feet firmly on the floor.",
+    "mcqQuestionEs": "Place your feet firmly on the floor.",
+    "mcqOptionsEn": [
+      "Apoye bien los pies en el piso.",
+      "Apoye bien los dedos en el piso.",
+      "Apoye bien las manos en el piso."
+    ],
+    "mcqCorrectEn": "Apoye bien los pies en el piso."
+  },
+  {
+    "conceptId": "m8_07",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "movement"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_07.webp",
+    "audioKey": "mazo-8/audios/m8_07.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_07_intro",
+    "variantType": "intro",
+    "text": "Levántese despacio.",
+    "englishText": "Stand up slowly."
+  },
+  {
+    "conceptId": "m8_07",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "movement"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_07.webp",
+    "audioKey": "mazo-8/audios/m8_07.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_07_cloze",
+    "variantType": "cloze",
+    "text": "Levántese despacio.",
+    "englishText": "Stand up slowly.",
+    "clozeOptions": [
+      "Camine con cuidado.",
+      "Espere un momento.",
+      "Levántese despacio.",
+      "Regrese a la cama."
+    ],
+    "clozeCorrect": "Levántese despacio."
+  },
+  {
+    "conceptId": "m8_07",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "movement"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_07.webp",
+    "audioKey": "mazo-8/audios/m8_07.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_07_mcq",
+    "variantType": "mcq",
+    "text": "Levántese _____.",
+    "englishText": "Stand up slowly.",
+    "mcqQuestionEs": "Levántese _____.",
+    "mcqOptionsEn": [
+      "despacio",
+      "rápido",
+      "ya"
+    ],
+    "mcqCorrectEn": "despacio"
+  },
+  {
+    "conceptId": "m8_08",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "walking"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_08.webp",
+    "audioKey": "mazo-8/audios/m8_08.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_08_intro",
+    "variantType": "intro",
+    "text": "Camine con cuidado.",
+    "englishText": "Walk carefully."
+  },
+  {
+    "conceptId": "m8_08",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "walking"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_08.webp",
+    "audioKey": "mazo-8/audios/m8_08.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_08_cloze",
+    "variantType": "cloze",
+    "text": "Camine con cuidado.",
+    "englishText": "Walk carefully.",
+    "clozeOptions": [
+      "Levántese despacio.",
+      "Use el timbre.",
+      "No camine solo.",
+      "Camine con cuidado."
+    ],
+    "clozeCorrect": "Camine con cuidado."
+  },
+  {
+    "conceptId": "m8_08",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "walking"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_08.webp",
+    "audioKey": "mazo-8/audios/m8_08.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_08_mcq",
+    "variantType": "mcq",
+    "text": "Walk carefully.",
+    "englishText": "Walk carefully.",
+    "mcqQuestionEs": "Walk carefully.",
+    "mcqOptionsEn": [
+      "Camine con cuidado.",
+      "Corra con cuidado.",
+      "Camine con despacio."
+    ],
+    "mcqCorrectEn": "Camine con cuidado."
+  },
+  {
+    "conceptId": "m8_09",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "assistance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_09.webp",
+    "audioKey": "mazo-8/audios/m8_09.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_09_intro",
+    "variantType": "intro",
+    "text": "No camine sin ayuda por ahora.",
+    "englishText": "Do not walk without help for now."
+  },
+  {
+    "conceptId": "m8_09",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "assistance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_09.webp",
+    "audioKey": "mazo-8/audios/m8_09.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_09_cloze",
+    "variantType": "cloze",
+    "text": "No camine sin ayuda por ahora.",
+    "englishText": "Do not walk without help for now.",
+    "clozeOptions": [
+      "Use el timbre.",
+      "Camine con cuidado.",
+      "No camine sin ayuda por ahora.",
+      "Regrese a la cama."
+    ],
+    "clozeCorrect": "No camine sin ayuda por ahora."
+  },
+  {
+    "conceptId": "m8_09",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "safety",
+      "assistance"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_09.webp",
+    "audioKey": "mazo-8/audios/m8_09.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_09_mcq",
+    "variantType": "mcq",
+    "text": "Do not walk without help for now.",
+    "englishText": "Do not walk without help for now.",
+    "mcqQuestionEs": "Do not walk without help for now.",
+    "mcqOptionsEn": [
+      "No pasee sin ayuda por ahora.",
+      "No camine sin ayuda por ahora.",
+      "No camine con ayuda por ahora."
+    ],
+    "mcqCorrectEn": "No camine sin ayuda por ahora."
+  },
+  {
+    "conceptId": "m8_10",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "fall_prevention",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_10.webp",
+    "audioKey": "mazo-8/audios/m8_10.mp3",
+    "category": "fall_prevention",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_10_intro",
+    "variantType": "intro",
+    "text": "Vamos a prevenir una caída.",
+    "englishText": "We are going to prevent a fall."
+  },
+  {
+    "conceptId": "m8_10",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "fall_prevention",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_10.webp",
+    "audioKey": "mazo-8/audios/m8_10.mp3",
+    "category": "fall_prevention",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_10_cloze",
+    "variantType": "cloze",
+    "text": "Vamos a prevenir una caída.",
+    "englishText": "We are going to prevent a fall.",
+    "clozeOptions": [
+      "Vamos a prevenir una caída.",
+      "Camine con cuidado.",
+      "Su seguridad es importante.",
+      "Espere un momento."
+    ],
+    "clozeCorrect": "Vamos a prevenir una caída."
+  },
+  {
+    "conceptId": "m8_10",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "fall_prevention",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_10.webp",
+    "audioKey": "mazo-8/audios/m8_10.mp3",
+    "category": "fall_prevention",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_10_mcq",
+    "variantType": "mcq",
+    "text": "Vamos a prevenir una ____.",
+    "englishText": "We are going to prevent a fall.",
+    "mcqQuestionEs": "Vamos a prevenir una ____.",
+    "mcqOptionsEn": [
+      "caída",
+      "caminata",
+      "receta "
+    ],
+    "mcqCorrectEn": "caída"
+  },
+  {
+    "conceptId": "m8_11",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_11.webp",
+    "audioKey": "mazo-8/audios/m8_11.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_11_intro",
+    "variantType": "intro",
+    "text": "Regrese a la cama con cuidado.",
+    "englishText": "Return to the bed carefully."
+  },
+  {
+    "conceptId": "m8_11",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_11.webp",
+    "audioKey": "mazo-8/audios/m8_11.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_11_cloze",
+    "variantType": "cloze",
+    "text": "Regrese a la cama con cuidado.",
+    "englishText": "Return to the bed carefully.",
+    "clozeOptions": [
+      "Acuéstese lentamente.",
+      "Espere un momento.",
+      "Regrese a la cama con cuidado.",
+      "Camine con cuidado."
+    ],
+    "clozeCorrect": "Regrese a la cama con cuidado."
+  },
+  {
+    "conceptId": "m8_11",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_11.webp",
+    "audioKey": "mazo-8/audios/m8_11.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_11_mcq",
+    "variantType": "mcq",
+    "text": "Return to the bed carefully.",
+    "englishText": "Return to the bed carefully.",
+    "mcqQuestionEs": "Return to the bed carefully.",
+    "mcqOptionsEn": [
+      "Regrese a la sillón despacio.",
+      "Regrese a la cama con cuidado.",
+      "Regreseal sillón con cuidado."
+    ],
+    "mcqCorrectEn": "Regrese a la cama con cuidado."
+  },
+  {
+    "conceptId": "m8_12",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_12.webp",
+    "audioKey": "mazo-8/audios/m8_12.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_12_intro",
+    "variantType": "intro",
+    "text": "Acuéstese lentamente.",
+    "englishText": "Lie down slowly."
+  },
+  {
+    "conceptId": "m8_12",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_12.webp",
+    "audioKey": "mazo-8/audios/m8_12.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_12_cloze",
+    "variantType": "cloze",
+    "text": "Acuéstese lentamente.",
+    "englishText": "Lie down slowly.",
+    "clozeOptions": [
+      "Regrese a la cama.",
+      "Siéntese primero.",
+      "Acuéstese lentamente.",
+      "Espere un momento."
+    ],
+    "clozeCorrect": "Acuéstese lentamente."
+  },
+  {
+    "conceptId": "m8_12",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "positioning",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_12.webp",
+    "audioKey": "mazo-8/audios/m8_12.mp3",
+    "category": "positioning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_12_mcq",
+    "variantType": "mcq",
+    "text": "Acuéstese lentamente.",
+    "englishText": "Lie down slowly.",
+    "mcqQuestionEs": "Acuéstese lentamente.",
+    "mcqOptionsEn": [
+      "Return to the bed carefully.",
+      "Lie down slowly.",
+      "Stand up slowly."
+    ],
+    "mcqCorrectEn": "Lie down slowly."
+  },
+  {
+    "conceptId": "m8_13",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "reassurance",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_13.webp",
+    "audioKey": "mazo-8/audios/m8_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_13_intro",
+    "variantType": "intro",
+    "text": "Su seguridad es lo más importante.",
+    "englishText": "Your safety is the most important thing."
+  },
+  {
+    "conceptId": "m8_13",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "reassurance",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_13.webp",
+    "audioKey": "mazo-8/audios/m8_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_13_cloze",
+    "variantType": "cloze",
+    "text": "Su seguridad es lo más importante.",
+    "englishText": "Your safety is the most important thing.",
+    "clozeOptions": [
+      "Su seguridad es lo más importante.",
+      "Camine con cuidado.",
+      "Vamos a prevenir una caída.",
+      "No hay prisa."
+    ],
+    "clozeCorrect": "Su seguridad es lo más importante."
+  },
+  {
+    "conceptId": "m8_13",
+    "deckId": "mazo_08_movilidad",
+    "tags": [
+      "reassurance",
+      "safety"
+    ],
+    "imageKey": "mazo-8/imagenes/m8_13.webp",
+    "audioKey": "mazo-8/audios/m8_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m8_13_mcq",
+    "variantType": "mcq",
+    "text": "Your safety is the most important thing.",
+    "englishText": "Your safety is the most important thing.",
+    "mcqQuestionEs": "Your safety is the most important thing.",
+    "mcqOptionsEn": [
+      "Su seguridad más importante.",
+      "Su seguridad es lo más importante.",
+      "Su seguro es lo más importante."
+    ],
+    "mcqCorrectEn": "Su seguridad es lo más importante."
   }
 ] as const;
 
