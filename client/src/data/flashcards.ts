@@ -4084,6 +4084,981 @@ export const flashcardsData = [
       "Este antibiótico es para tratar la infección."
     ],
     "mcqCorrectEn": "El paracetamol es para el dolor o la fiebre."
+  },
+  {
+    "conceptId": "m5_01",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_01.webp",
+    "audioKey": "mazo-5/audios/m5_01.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_01_intro",
+    "variantType": "intro",
+    "text": "Necesito que respire profundo.",
+    "englishText": "I need you to take a deep breath."
+  },
+  {
+    "conceptId": "m5_01",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_01.webp",
+    "audioKey": "mazo-5/audios/m5_01.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_01_cloze",
+    "variantType": "cloze",
+    "text": "Necesito que respire profundo.",
+    "englishText": "I need you to take a deep breath.",
+    "clozeOptions": [
+      "Suelte el aire.",
+      "Necesito que respire profundo.",
+      "No se mueva.",
+      "Respire normal."
+    ],
+    "clozeCorrect": "Necesito que respire profundo."
+  },
+  {
+    "conceptId": "m5_01",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_01.webp",
+    "audioKey": "mazo-5/audios/m5_01.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_01_mcq",
+    "variantType": "mcq",
+    "text": "Necesito que respire ____.",
+    "englishText": "I need you to take a deep breath.",
+    "mcqQuestionEs": "Necesito que respire ____.",
+    "mcqOptionsEn": [
+      "profundo",
+      "profunda",
+      "presión"
+    ],
+    "mcqCorrectEn": "profundo"
+  },
+  {
+    "conceptId": "m5_02",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_02.webp",
+    "audioKey": "mazo-5/audios/m5_02.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_02_intro",
+    "variantType": "intro",
+    "text": "Por favor, no se mueva.",
+    "englishText": "Please, do not move."
+  },
+  {
+    "conceptId": "m5_02",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_02.webp",
+    "audioKey": "mazo-5/audios/m5_02.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_02_cloze",
+    "variantType": "cloze",
+    "text": "Por favor, no se mueva.",
+    "englishText": "Please, do not move.",
+    "clozeOptions": [
+      "Cierre los ojos.",
+      "Por favor, no se mueva.",
+      "Respire normal.",
+      "Quédese quieto."
+    ],
+    "clozeCorrect": "Por favor, no se mueva."
+  },
+  {
+    "conceptId": "m5_02",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_02.webp",
+    "audioKey": "mazo-5/audios/m5_02.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_02_mcq",
+    "variantType": "mcq",
+    "text": "Por favor, no se mueva.",
+    "englishText": "Please, do not move.",
+    "mcqQuestionEs": "Por favor, no se mueva.",
+    "mcqOptionsEn": [
+      "Please, do not move.",
+      "Please sit down.",
+      "Please relax."
+    ],
+    "mcqCorrectEn": "Please, do not move."
+  },
+  {
+    "conceptId": "m5_03",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "reassurance"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_03.webp",
+    "audioKey": "mazo-5/audios/m5_03.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_03_intro",
+    "variantType": "intro",
+    "text": "Relájese, por favor.",
+    "englishText": "Please relax."
+  },
+  {
+    "conceptId": "m5_03",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "reassurance"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_03.webp",
+    "audioKey": "mazo-5/audios/m5_03.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_03_cloze",
+    "variantType": "cloze",
+    "text": "Relájese, por favor.",
+    "englishText": "Please relax.",
+    "clozeOptions": [
+      "Respire profundo.",
+      "Relájese, por favor.",
+      "Cierre los ojos.",
+      "Siéntese despacio."
+    ],
+    "clozeCorrect": "Relájese, por favor."
+  },
+  {
+    "conceptId": "m5_03",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "reassurance"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_03.webp",
+    "audioKey": "mazo-5/audios/m5_03.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_03_mcq",
+    "variantType": "mcq",
+    "text": "Relájese, por favor.",
+    "englishText": "Please relax.",
+    "mcqQuestionEs": "Relájese, por favor.",
+    "mcqOptionsEn": [
+      "Please sit down slowly.",
+      "Please breathe deeply.",
+      "Please relax."
+    ],
+    "mcqCorrectEn": "Please relax."
+  },
+  {
+    "conceptId": "m5_04",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "exam"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_04.webp",
+    "audioKey": "mazo-5/audios/m5_04.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_04_intro",
+    "variantType": "intro",
+    "text": "Abra la boca, por favor.",
+    "englishText": "Please open your mouth."
+  },
+  {
+    "conceptId": "m5_04",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "exam"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_04.webp",
+    "audioKey": "mazo-5/audios/m5_04.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_04_cloze",
+    "variantType": "cloze",
+    "text": "Abra la boca, por favor.",
+    "englishText": "Please open your mouth.",
+    "clozeOptions": [
+      "Abra la boca, por favor.",
+      "Respire profundo.",
+      "Cierre los ojos.",
+      "Levante el brazo."
+    ],
+    "clozeCorrect": "Abra la boca, por favor."
+  },
+  {
+    "conceptId": "m5_04",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "exam"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_04.webp",
+    "audioKey": "mazo-5/audios/m5_04.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_04_mcq",
+    "variantType": "mcq",
+    "text": "Please open your mouth.",
+    "englishText": "Please open your mouth.",
+    "mcqQuestionEs": "Please open your mouth.",
+    "mcqOptionsEn": [
+      "Abra los ojos, por favor.",
+      "Cierre la boca, por favor.",
+      "Abra la boca, por favor."
+    ],
+    "mcqCorrectEn": "Abra la boca, por favor."
+  },
+  {
+    "conceptId": "m5_05",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "exam"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_05.webp",
+    "audioKey": "mazo-5/audios/m5_05.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_05_intro",
+    "variantType": "intro",
+    "text": "Cierre los ojos.",
+    "englishText": "Close your eyes."
+  },
+  {
+    "conceptId": "m5_05",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "exam"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_05.webp",
+    "audioKey": "mazo-5/audios/m5_05.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_05_cloze",
+    "variantType": "cloze",
+    "text": "Cierre los ojos.",
+    "englishText": "Close your eyes.",
+    "clozeOptions": [
+      "Cierre los ojos.",
+      "Relájese.",
+      "Abra la boca.",
+      "Respire normal."
+    ],
+    "clozeCorrect": "Cierre los ojos."
+  },
+  {
+    "conceptId": "m5_05",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "exam"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_05.webp",
+    "audioKey": "mazo-5/audios/m5_05.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_05_mcq",
+    "variantType": "mcq",
+    "text": "Cierre los ____.",
+    "englishText": "Close your eyes.",
+    "mcqQuestionEs": "Cierre los ____.",
+    "mcqOptionsEn": [
+      "brazo",
+      "ojos",
+      "boca"
+    ],
+    "mcqCorrectEn": "ojos"
+  },
+  {
+    "conceptId": "m5_06",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_06.webp",
+    "audioKey": "mazo-5/audios/m5_06.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_06_intro",
+    "variantType": "intro",
+    "text": "Levante el brazo, por favor.",
+    "englishText": "Please raise your arm."
+  },
+  {
+    "conceptId": "m5_06",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_06.webp",
+    "audioKey": "mazo-5/audios/m5_06.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_06_cloze",
+    "variantType": "cloze",
+    "text": "Levante el brazo, por favor.",
+    "englishText": "Please raise your arm.",
+    "clozeOptions": [
+      "Relájese.",
+      "Baje el brazo lentamente.",
+      "Levante el brazo, por favor.",
+      "Respire normal."
+    ],
+    "clozeCorrect": "Levante el brazo, por favor."
+  },
+  {
+    "conceptId": "m5_06",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_06.webp",
+    "audioKey": "mazo-5/audios/m5_06.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_06_mcq",
+    "variantType": "mcq",
+    "text": "Please raise your arm.",
+    "englishText": "Please raise your arm.",
+    "mcqQuestionEs": "Please raise your arm.",
+    "mcqOptionsEn": [
+      "Levante el brazo, por favor.",
+      "Lavente su pierna por favor.",
+      "Please relax."
+    ],
+    "mcqCorrectEn": "Levante el brazo, por favor."
+  },
+  {
+    "conceptId": "m5_07",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_07.webp",
+    "audioKey": "mazo-5/audios/m5_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_07_intro",
+    "variantType": "intro",
+    "text": "Baje el brazo lentamente.",
+    "englishText": "Lower your arm slowly."
+  },
+  {
+    "conceptId": "m5_07",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_07.webp",
+    "audioKey": "mazo-5/audios/m5_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_07_cloze",
+    "variantType": "cloze",
+    "text": "Baje el brazo lentamente.",
+    "englishText": "Lower your arm slowly.",
+    "clozeOptions": [
+      "Levante el brazo.",
+      "Relájese.",
+      "Respire normal.",
+      "Baje el brazo lentamente."
+    ],
+    "clozeCorrect": "Baje el brazo lentamente."
+  },
+  {
+    "conceptId": "m5_07",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "movement"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_07.webp",
+    "audioKey": "mazo-5/audios/m5_07.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_07_mcq",
+    "variantType": "mcq",
+    "text": "Lower your arm slowly.",
+    "englishText": "Lower your arm slowly.",
+    "mcqQuestionEs": "Lower your arm slowly.",
+    "mcqOptionsEn": [
+      "Levante el brazo, por favor.",
+      "Baje el brazo lentamente.",
+      "Baje la pierna por favor"
+    ],
+    "mcqCorrectEn": "Baje el brazo lentamente."
+  },
+  {
+    "conceptId": "m5_08",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_08.webp",
+    "audioKey": "mazo-5/audios/m5_08.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_08_intro",
+    "variantType": "intro",
+    "text": "Gírese hacia su lado izquierdo.",
+    "englishText": "Turn onto your left side."
+  },
+  {
+    "conceptId": "m5_08",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_08.webp",
+    "audioKey": "mazo-5/audios/m5_08.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_08_cloze",
+    "variantType": "cloze",
+    "text": "Gírese hacia su lado izquierdo.",
+    "englishText": "Turn onto your left side.",
+    "clozeOptions": [
+      "Doble las rodillas.",
+      "Siéntese despacio.",
+      "Gírese hacia su lado izquierdo.",
+      "Acuéstese boca arriba."
+    ],
+    "clozeCorrect": "Gírese hacia su lado izquierdo."
+  },
+  {
+    "conceptId": "m5_08",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_08.webp",
+    "audioKey": "mazo-5/audios/m5_08.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_08_mcq",
+    "variantType": "mcq",
+    "text": "Turn onto your left side.",
+    "englishText": "Turn onto your left side.",
+    "mcqQuestionEs": "Turn onto your left side.",
+    "mcqOptionsEn": [
+      "Gírese hacia su lado izquierdo.",
+      "Lie on your back.",
+      "Bend your knees."
+    ],
+    "mcqCorrectEn": "Gírese hacia su lado izquierdo."
+  },
+  {
+    "conceptId": "m5_09",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_09.webp",
+    "audioKey": "mazo-5/audios/m5_09.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_09_intro",
+    "variantType": "intro",
+    "text": "Acuéstese boca arriba.",
+    "englishText": "Lie on your back."
+  },
+  {
+    "conceptId": "m5_09",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_09.webp",
+    "audioKey": "mazo-5/audios/m5_09.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_09_cloze",
+    "variantType": "cloze",
+    "text": "Acuéstese boca arriba.",
+    "englishText": "Lie on your back.",
+    "clozeOptions": [
+      "Doble las rodillas.",
+      "Gírese hacia su lado.",
+      "Acuéstese boca arriba.",
+      "Siéntese despacio."
+    ],
+    "clozeCorrect": "Acuéstese boca arriba."
+  },
+  {
+    "conceptId": "m5_09",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_09.webp",
+    "audioKey": "mazo-5/audios/m5_09.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_09_mcq",
+    "variantType": "mcq",
+    "text": "Acuéstese boca arriba.",
+    "englishText": "Lie on your back.",
+    "mcqQuestionEs": "Acuéstese boca arriba.",
+    "mcqOptionsEn": [
+      "Sit down slowly.",
+      "Turn onto your side.",
+      "Lie on your back."
+    ],
+    "mcqCorrectEn": "Lie on your back."
+  },
+  {
+    "conceptId": "m5_10",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_10.webp",
+    "audioKey": "mazo-5/audios/m5_10.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_10_intro",
+    "variantType": "intro",
+    "text": "Doble las rodillas.",
+    "englishText": "Bend your knees."
+  },
+  {
+    "conceptId": "m5_10",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_10.webp",
+    "audioKey": "mazo-5/audios/m5_10.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_10_cloze",
+    "variantType": "cloze",
+    "text": "Doble las rodillas.",
+    "englishText": "Bend your knees.",
+    "clozeOptions": [
+      "Relájese.",
+      "Doble las rodillas.",
+      "Estire las piernas.",
+      "Respire normal."
+    ],
+    "clozeCorrect": "Doble las rodillas."
+  },
+  {
+    "conceptId": "m5_10",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "positioning"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_10.webp",
+    "audioKey": "mazo-5/audios/m5_10.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_10_mcq",
+    "variantType": "mcq",
+    "text": "Doble las ____.",
+    "englishText": "Bend your knees.",
+    "mcqQuestionEs": "Doble las ____.",
+    "mcqOptionsEn": [
+      "ojos",
+      "rodillas",
+      "brazo"
+    ],
+    "mcqCorrectEn": "rodillas"
+  },
+  {
+    "conceptId": "m5_11",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_11.webp",
+    "audioKey": "mazo-5/audios/m5_11.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_11_intro",
+    "variantType": "intro",
+    "text": "Suelte el aire lentamente.",
+    "englishText": "Slowly release the air."
+  },
+  {
+    "conceptId": "m5_11",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_11.webp",
+    "audioKey": "mazo-5/audios/m5_11.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_11_cloze",
+    "variantType": "cloze",
+    "text": "Suelte el aire lentamente.",
+    "englishText": "Slowly release the air.",
+    "clozeOptions": [
+      "No se mueva.",
+      "Respire normal.",
+      "Suelte el aire lentamente.",
+      "Respire profundo."
+    ],
+    "clozeCorrect": "Suelte el aire lentamente."
+  },
+  {
+    "conceptId": "m5_11",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "instructions",
+      "breathing"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_11.webp",
+    "audioKey": "mazo-5/audios/m5_11.mp3",
+    "category": "instructions",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_11_mcq",
+    "variantType": "mcq",
+    "text": "Slowly release the air.",
+    "englishText": "Slowly release the air.",
+    "mcqQuestionEs": "Slowly release the air.",
+    "mcqOptionsEn": [
+      "Suelte el aire lentamente.",
+      "Suelte el aire rápido.",
+      "Suelte el aire suavemente."
+    ],
+    "mcqCorrectEn": "Suelte el aire lentamente."
+  },
+  {
+    "conceptId": "m5_12",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_12.webp",
+    "audioKey": "mazo-5/audios/m5_12.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_12_intro",
+    "variantType": "intro",
+    "text": "Ya casi terminamos.",
+    "englishText": "We are almost done."
+  },
+  {
+    "conceptId": "m5_12",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_12.webp",
+    "audioKey": "mazo-5/audios/m5_12.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_12_cloze",
+    "variantType": "cloze",
+    "text": "Ya casi terminamos.",
+    "englishText": "We are almost done.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "Puede descansar.",
+      "Ya casi terminamos.",
+      "Falta un momento."
+    ],
+    "clozeCorrect": "Ya casi terminamos."
+  },
+  {
+    "conceptId": "m5_12",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_12.webp",
+    "audioKey": "mazo-5/audios/m5_12.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_12_mcq",
+    "variantType": "mcq",
+    "text": "Ya casi terminamos.",
+    "englishText": "We are almost done.",
+    "mcqQuestionEs": "Ya casi terminamos.",
+    "mcqOptionsEn": [
+      "You can rest now.",
+      "Everything is fine.",
+      "We are almost done."
+    ],
+    "mcqCorrectEn": "We are almost done."
+  },
+  {
+    "conceptId": "m5_13",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "courtesy",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_13.webp",
+    "audioKey": "mazo-5/audios/m5_13.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_13_intro",
+    "variantType": "intro",
+    "text": "Gracias por su cooperación.",
+    "englishText": "Thank you for your cooperation."
+  },
+  {
+    "conceptId": "m5_13",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "courtesy",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_13.webp",
+    "audioKey": "mazo-5/audios/m5_13.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_13_cloze",
+    "variantType": "cloze",
+    "text": "Gracias por su cooperación.",
+    "englishText": "Thank you for your cooperation.",
+    "clozeOptions": [
+      "Puede descansar.",
+      "Gracias por su cooperación.",
+      "Ya terminamos.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Gracias por su cooperación."
+  },
+  {
+    "conceptId": "m5_13",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "courtesy",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_13.webp",
+    "audioKey": "mazo-5/audios/m5_13.mp3",
+    "category": "courtesy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_13_mcq",
+    "variantType": "mcq",
+    "text": "Thank you for your cooperation.",
+    "englishText": "Thank you for your cooperation.",
+    "mcqQuestionEs": "Thank you for your cooperation.",
+    "mcqOptionsEn": [
+      "Gracias por su intento.",
+      "Gracias por su cooperación.",
+      "Gracias por su dedicación."
+    ],
+    "mcqCorrectEn": "Gracias por su cooperación."
+  },
+  {
+    "conceptId": "m5_14",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_14.webp",
+    "audioKey": "mazo-5/audios/m5_14.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_14_intro",
+    "variantType": "intro",
+    "text": "Todo va bien.",
+    "englishText": "Everything is fine."
+  },
+  {
+    "conceptId": "m5_14",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_14.webp",
+    "audioKey": "mazo-5/audios/m5_14.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_14_cloze",
+    "variantType": "cloze",
+    "text": "Todo va bien.",
+    "englishText": "Everything is fine.",
+    "clozeOptions": [
+      "Ya casi terminamos.",
+      "Todo va bien.",
+      "Relájese.",
+      "Puede descansar."
+    ],
+    "clozeCorrect": "Todo va bien."
+  },
+  {
+    "conceptId": "m5_14",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "reassurance",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_14.webp",
+    "audioKey": "mazo-5/audios/m5_14.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_14_mcq",
+    "variantType": "mcq",
+    "text": "Everything is fine.",
+    "englishText": "Everything is fine.",
+    "mcqQuestionEs": "Everything is fine.",
+    "mcqOptionsEn": [
+      "Todo va bien.",
+      "Todo viene bien.",
+      "Todo va a estar bien."
+    ],
+    "mcqCorrectEn": "Todo va bien."
+  },
+  {
+    "conceptId": "m5_15",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "closure",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_15.webp",
+    "audioKey": "mazo-5/audios/m5_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_15_intro",
+    "variantType": "intro",
+    "text": "Puede descansar ahora.",
+    "englishText": "You can rest now."
+  },
+  {
+    "conceptId": "m5_15",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "closure",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_15.webp",
+    "audioKey": "mazo-5/audios/m5_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_15_cloze",
+    "variantType": "cloze",
+    "text": "Puede descansar ahora.",
+    "englishText": "You can rest now.",
+    "clozeOptions": [
+      "Ya terminamos.",
+      "Relájese.",
+      "Todo va bien.",
+      "Puede descansar ahora."
+    ],
+    "clozeCorrect": "Puede descansar ahora."
+  },
+  {
+    "conceptId": "m5_15",
+    "deckId": "mazo_05_indicaciones",
+    "tags": [
+      "closure",
+      "patient_care"
+    ],
+    "imageKey": "mazo-5/imagenes/m5_15.webp",
+    "audioKey": "mazo-5/audios/m5_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m5_15_mcq",
+    "variantType": "mcq",
+    "text": "You can rest now.",
+    "englishText": "You can rest now.",
+    "mcqQuestionEs": "You can rest now.",
+    "mcqOptionsEn": [
+      "Puede descansar ahora.",
+      "Puede restar ahora.",
+      "Puede resetear ahora."
+    ],
+    "mcqCorrectEn": "Puede descansar ahora."
   }
 ] as const;
 

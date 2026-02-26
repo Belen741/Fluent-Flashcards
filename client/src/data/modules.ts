@@ -77,7 +77,7 @@ export const modules: Module[] = [
     description: "Simple instructions for the patient",
     icon: MessageSquare,
     color: "#F39C12",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m06",
