@@ -167,7 +167,7 @@ export const modules: Module[] = [
     description: "Hospital discharge instructions",
     icon: LogOut,
     color: "#4CAF50",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m15",

@@ -12014,6 +12014,981 @@ export const flashcardsData = [
       "Avíseme si presenta mareo."
     ],
     "mcqCorrectEn": "Avíseme si presenta sangrado."
+  },
+  {
+    "conceptId": "m14_01",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "transition"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_01.webp",
+    "audioKey": "mazo-14/audios/m14_01.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_01_intro",
+    "variantType": "intro",
+    "text": "Hoy se va a ir a casa.",
+    "englishText": "You are going home today."
+  },
+  {
+    "conceptId": "m14_01",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "transition"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_01.webp",
+    "audioKey": "mazo-14/audios/m14_01.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_01_cloze",
+    "variantType": "cloze",
+    "text": "Hoy se va a ir a casa.",
+    "englishText": "You are going home today.",
+    "clozeOptions": [
+      "Todo salió bien.",
+      "El médico viene.",
+      "Hoy se va a ir a casa.",
+      "Ya puede descansar."
+    ],
+    "clozeCorrect": "Hoy se va a ir a casa."
+  },
+  {
+    "conceptId": "m14_01",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "transition"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_01.webp",
+    "audioKey": "mazo-14/audios/m14_01.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_01_mcq",
+    "variantType": "mcq",
+    "text": "You are going home today.",
+    "englishText": "You are going home today.",
+    "mcqQuestionEs": "You are going home today.",
+    "mcqOptionsEn": [
+      "Mañana se va a ir a casa.",
+      "Hoy se va a ir a casa.",
+      "el lunes se va a ir a casa."
+    ],
+    "mcqCorrectEn": "Hoy se va a ir a casa."
+  },
+  {
+    "conceptId": "m14_02",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "instructions"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_02.webp",
+    "audioKey": "mazo-14/audios/m14_02.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_02_intro",
+    "variantType": "intro",
+    "text": "Antes de salir, voy a darle algunas indicaciones.",
+    "englishText": "Before you leave, I am going to give you some instructions."
+  },
+  {
+    "conceptId": "m14_02",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "instructions"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_02.webp",
+    "audioKey": "mazo-14/audios/m14_02.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_02_cloze",
+    "variantType": "cloze",
+    "text": "Antes de salir, voy a darle algunas indicaciones.",
+    "englishText": "Before you leave, I am going to give you some instructions.",
+    "clozeOptions": [
+      "Antes de salir, voy a darle algunas indicaciones.",
+      "Revise los documentos.",
+      "Puede descansar.",
+      "Todo está listo."
+    ],
+    "clozeCorrect": "Antes de salir, voy a darle algunas indicaciones."
+  },
+  {
+    "conceptId": "m14_02",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "instructions"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_02.webp",
+    "audioKey": "mazo-14/audios/m14_02.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_02_mcq",
+    "variantType": "mcq",
+    "text": "Antes de salir, voy a darle algunas indicaciones.",
+    "englishText": "Before you leave, I am going to give you some instructions.",
+    "mcqQuestionEs": "Antes de salir, voy a darle algunas indicaciones.",
+    "mcqOptionsEn": [
+      "Before you leave, please review these instructions carefully",
+      "Before you leave, make sure you understand the next steps.",
+      "Before you leave, I am going to give you some instructions."
+    ],
+    "mcqCorrectEn": "Before you leave, I am going to give you some instructions."
+  },
+  {
+    "conceptId": "m14_03",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "paperwork"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_03.webp",
+    "audioKey": "mazo-14/audios/m14_03.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_03_intro",
+    "variantType": "intro",
+    "text": "Aquí tiene sus documentos de alta.",
+    "englishText": "Here are your discharge papers."
+  },
+  {
+    "conceptId": "m14_03",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "paperwork"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_03.webp",
+    "audioKey": "mazo-14/audios/m14_03.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_03_cloze",
+    "variantType": "cloze",
+    "text": "Aquí tiene sus documentos de alta.",
+    "englishText": "Here are your discharge papers.",
+    "clozeOptions": [
+      "Revise las indicaciones.",
+      "Todo está listo.",
+      "Guárdelos bien.",
+      "Aquí tiene sus documentos de alta."
+    ],
+    "clozeCorrect": "Aquí tiene sus documentos de alta."
+  },
+  {
+    "conceptId": "m14_03",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "paperwork"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_03.webp",
+    "audioKey": "mazo-14/audios/m14_03.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_03_mcq",
+    "variantType": "mcq",
+    "text": "Here are your discharge papers.",
+    "englishText": "Here are your discharge papers.",
+    "mcqQuestionEs": "Here are your discharge papers.",
+    "mcqOptionsEn": [
+      "Aquí tiene sus documentos de alta.",
+      "Aquí tiene su hoja de alta.",
+      "Aquí tiene su información de alta."
+    ],
+    "mcqCorrectEn": "Aquí tiene sus documentos de alta."
+  },
+  {
+    "conceptId": "m14_04",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "education"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_04.webp",
+    "audioKey": "mazo-14/audios/m14_04.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_04_intro",
+    "variantType": "intro",
+    "text": "Revise bien las indicaciones antes de irse.",
+    "englishText": "Please review the instructions carefully before leaving."
+  },
+  {
+    "conceptId": "m14_04",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "education"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_04.webp",
+    "audioKey": "mazo-14/audios/m14_04.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_04_cloze",
+    "variantType": "cloze",
+    "text": "Revise bien las indicaciones antes de irse.",
+    "englishText": "Please review the instructions carefully before leaving.",
+    "clozeOptions": [
+      "Tome sus medicamentos.",
+      "Todo va bien.",
+      "Programe su cita.",
+      "Revise bien las indicaciones antes de irse."
+    ],
+    "clozeCorrect": "Revise bien las indicaciones antes de irse."
+  },
+  {
+    "conceptId": "m14_04",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "discharge",
+      "education"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_04.webp",
+    "audioKey": "mazo-14/audios/m14_04.mp3",
+    "category": "discharge",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_04_mcq",
+    "variantType": "mcq",
+    "text": "Please review the instructions carefully before leaving.",
+    "englishText": "Please review the instructions carefully before leaving.",
+    "mcqQuestionEs": "Please review the instructions carefully before leaving.",
+    "mcqOptionsEn": [
+      "No se vaya sin revisar las indicaciones.",
+      "Revise bien las indicaciones antes de irse.",
+      "Revise bien los papeles antes de irse."
+    ],
+    "mcqCorrectEn": "Revise bien las indicaciones antes de irse."
+  },
+  {
+    "conceptId": "m14_05",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "medication",
+      "adherence"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_05.webp",
+    "audioKey": "mazo-14/audios/m14_05.mp3",
+    "category": "medication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_05_intro",
+    "variantType": "intro",
+    "text": "Tome sus medicamentos como se le indicó.",
+    "englishText": "Take your medications as prescribed."
+  },
+  {
+    "conceptId": "m14_05",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "medication",
+      "adherence"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_05.webp",
+    "audioKey": "mazo-14/audios/m14_05.mp3",
+    "category": "medication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_05_cloze",
+    "variantType": "cloze",
+    "text": "Tome sus medicamentos como se le indicó.",
+    "englishText": "Take your medications as prescribed.",
+    "clozeOptions": [
+      "Tome sus medicamentos como se le indicó.",
+      "No cambie la dosis.",
+      "Todo va bien.",
+      "Siga las indicaciones."
+    ],
+    "clozeCorrect": "Tome sus medicamentos como se le indicó."
+  },
+  {
+    "conceptId": "m14_05",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "medication",
+      "adherence"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_05.webp",
+    "audioKey": "mazo-14/audios/m14_05.mp3",
+    "category": "medication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_05_mcq",
+    "variantType": "mcq",
+    "text": "Take your medications as prescribed.",
+    "englishText": "Take your medications as prescribed.",
+    "mcqQuestionEs": "Take your medications as prescribed.",
+    "mcqOptionsEn": [
+      "Tome sus sueros como se le indicó.",
+      "Tome sus medicamentos como se le indicó.",
+      "Tome sus pomadas como se le indicó."
+    ],
+    "mcqCorrectEn": "Tome sus medicamentos como se le indicó."
+  },
+  {
+    "conceptId": "m14_06",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "medication",
+      "safety"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_06.webp",
+    "audioKey": "mazo-14/audios/m14_06.mp3",
+    "category": "medication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_06_intro",
+    "variantType": "intro",
+    "text": "No cambie las dosis por su cuenta.",
+    "englishText": "Do not change the doses on your own."
+  },
+  {
+    "conceptId": "m14_06",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "medication",
+      "safety"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_06.webp",
+    "audioKey": "mazo-14/audios/m14_06.mp3",
+    "category": "medication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_06_cloze",
+    "variantType": "cloze",
+    "text": "No cambie las dosis por su cuenta.",
+    "englishText": "Do not change the doses on your own.",
+    "clozeOptions": [
+      "Tome el medicamento.",
+      "No cambie las dosis por su cuenta.",
+      "Siga las indicaciones.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "No cambie las dosis por su cuenta."
+  },
+  {
+    "conceptId": "m14_06",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "medication",
+      "safety"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_06.webp",
+    "audioKey": "mazo-14/audios/m14_06.mp3",
+    "category": "medication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_06_mcq",
+    "variantType": "mcq",
+    "text": "No cambie las dosis por su cuenta.",
+    "englishText": "Do not change the doses on your own.",
+    "mcqQuestionEs": "No cambie las dosis por su cuenta.",
+    "mcqOptionsEn": [
+      "Do not change the doses on your own.",
+      "Do not change your dose without asking.",
+      "Follow the dosage instructions carefully."
+    ],
+    "mcqCorrectEn": "Do not change the doses on your own."
+  },
+  {
+    "conceptId": "m14_07",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "warning",
+      "symptoms"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_07.webp",
+    "audioKey": "mazo-14/audios/m14_07.mp3",
+    "category": "warning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_07_intro",
+    "variantType": "intro",
+    "text": "Si presenta fiebre, regrese al hospital.",
+    "englishText": "If you develop a fever, return to the hospital."
+  },
+  {
+    "conceptId": "m14_07",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "warning",
+      "symptoms"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_07.webp",
+    "audioKey": "mazo-14/audios/m14_07.mp3",
+    "category": "warning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_07_cloze",
+    "variantType": "cloze",
+    "text": "Si presenta fiebre, regrese al hospital.",
+    "englishText": "If you develop a fever, return to the hospital.",
+    "clozeOptions": [
+      "No hay prisa.",
+      "Todo va bien.",
+      "Si presenta fiebre, regrese al hospital.",
+      "Avíseme si duele."
+    ],
+    "clozeCorrect": "Si presenta fiebre, regrese al hospital."
+  },
+  {
+    "conceptId": "m14_07",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "warning",
+      "symptoms"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_07.webp",
+    "audioKey": "mazo-14/audios/m14_07.mp3",
+    "category": "warning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_07_mcq",
+    "variantType": "mcq",
+    "text": "If you develop a fever, return to the hospital.",
+    "englishText": "If you develop a fever, return to the hospital.",
+    "mcqQuestionEs": "If you develop a fever, return to the hospital.",
+    "mcqOptionsEn": [
+      "Si presenta fiebre, regrese al hospital.",
+      "Si presenta mareo, regrese al hospital.",
+      "Si presenta vómito, regrese al hospital."
+    ],
+    "mcqCorrectEn": "Si presenta fiebre, regrese al hospital."
+  },
+  {
+    "conceptId": "m14_08",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "warning",
+      "pain"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_08.webp",
+    "audioKey": "mazo-14/audios/m14_08.mp3",
+    "category": "warning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_08_intro",
+    "variantType": "intro",
+    "text": "Si el dolor empeora, busque atención médica.",
+    "englishText": "If the pain gets worse, seek medical attention."
+  },
+  {
+    "conceptId": "m14_08",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "warning",
+      "pain"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_08.webp",
+    "audioKey": "mazo-14/audios/m14_08.mp3",
+    "category": "warning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_08_cloze",
+    "variantType": "cloze",
+    "text": "Si el dolor empeora, busque atención médica.",
+    "englishText": "If the pain gets worse, seek medical attention.",
+    "clozeOptions": [
+      "No hay prisa.",
+      "Si el dolor empeora, busque atención médica.",
+      "Avíseme si sangra.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Si el dolor empeora, busque atención médica."
+  },
+  {
+    "conceptId": "m14_08",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "warning",
+      "pain"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_08.webp",
+    "audioKey": "mazo-14/audios/m14_08.mp3",
+    "category": "warning",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_08_mcq",
+    "variantType": "mcq",
+    "text": "If the pain gets worse, seek medical attention.",
+    "englishText": "If the pain gets worse, seek medical attention.",
+    "mcqQuestionEs": "If the pain gets worse, seek medical attention.",
+    "mcqOptionsEn": [
+      "Si el dolor empeora, busque atención médica.",
+      "Si el dolor empeora, vaya a atención médica.",
+      "Si el dolor empeora, marqué al médico."
+    ],
+    "mcqCorrectEn": "Si el dolor empeora, busque atención médica."
+  },
+  {
+    "conceptId": "m14_09",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "recovery",
+      "activity"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_09.webp",
+    "audioKey": "mazo-14/audios/m14_09.mp3",
+    "category": "recovery",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_09_intro",
+    "variantType": "intro",
+    "text": "Evite esfuerzos físicos por ahora.",
+    "englishText": "Avoid physical exertion for now."
+  },
+  {
+    "conceptId": "m14_09",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "recovery",
+      "activity"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_09.webp",
+    "audioKey": "mazo-14/audios/m14_09.mp3",
+    "category": "recovery",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_09_cloze",
+    "variantType": "cloze",
+    "text": "Evite esfuerzos físicos por ahora.",
+    "englishText": "Avoid physical exertion for now.",
+    "clozeOptions": [
+      "Puede descansar.",
+      "Todo va bien.",
+      "Evite esfuerzos físicos por ahora.",
+      "Mantenga reposo."
+    ],
+    "clozeCorrect": "Evite esfuerzos físicos por ahora."
+  },
+  {
+    "conceptId": "m14_09",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "recovery",
+      "activity"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_09.webp",
+    "audioKey": "mazo-14/audios/m14_09.mp3",
+    "category": "recovery",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_09_mcq",
+    "variantType": "mcq",
+    "text": "Evite esfuerzos físicos por ahora.",
+    "englishText": "Avoid physical exertion for now.",
+    "mcqQuestionEs": "Evite esfuerzos físicos por ahora.",
+    "mcqOptionsEn": [
+      "Avoid heavy activities for now.",
+      "Avoid physical exertion for now.",
+      "Try not to do too much physical activity."
+    ],
+    "mcqCorrectEn": "Avoid physical exertion for now."
+  },
+  {
+    "conceptId": "m14_10",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "recovery",
+      "rest"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_10.webp",
+    "audioKey": "mazo-14/audios/m14_10.mp3",
+    "category": "recovery",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_10_intro",
+    "variantType": "intro",
+    "text": "Mantenga reposo los próximos días.",
+    "englishText": "Get plenty of rest over the next few days."
+  },
+  {
+    "conceptId": "m14_10",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "recovery",
+      "rest"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_10.webp",
+    "audioKey": "mazo-14/audios/m14_10.mp3",
+    "category": "recovery",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_10_cloze",
+    "variantType": "cloze",
+    "text": "Mantenga reposo los próximos días.",
+    "englishText": "Get plenty of rest over the next few days.",
+    "clozeOptions": [
+      "Evite esfuerzos.",
+      "Puede caminar.",
+      "Todo va bien.",
+      "Mantenga reposo los próximos días."
+    ],
+    "clozeCorrect": "Mantenga reposo los próximos días."
+  },
+  {
+    "conceptId": "m14_10",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "recovery",
+      "rest"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_10.webp",
+    "audioKey": "mazo-14/audios/m14_10.mp3",
+    "category": "recovery",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_10_mcq",
+    "variantType": "mcq",
+    "text": "Get plenty of rest over the next few days.",
+    "englishText": "Get plenty of rest over the next few days.",
+    "mcqQuestionEs": "Get plenty of rest over the next few days.",
+    "mcqOptionsEn": [
+      "Mantenga reposo las próximas semanas.",
+      "Mantenga reposo los próximos días.",
+      "Mantenga reposo las próximas horas."
+    ],
+    "mcqCorrectEn": "Mantenga reposo los próximos días."
+  },
+  {
+    "conceptId": "m14_11",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "aftercare",
+      "hygiene"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_11.webp",
+    "audioKey": "mazo-14/audios/m14_11.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_11_intro",
+    "variantType": "intro",
+    "text": "Puede bañarse, pero evite mojar esta zona.",
+    "englishText": "You may shower, but avoid getting this area wet."
+  },
+  {
+    "conceptId": "m14_11",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "aftercare",
+      "hygiene"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_11.webp",
+    "audioKey": "mazo-14/audios/m14_11.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_11_cloze",
+    "variantType": "cloze",
+    "text": "Puede bañarse, pero evite mojar esta zona.",
+    "englishText": "You may shower, but avoid getting this area wet.",
+    "clozeOptions": [
+      "Puede descansar.",
+      "Todo va bien.",
+      "Mantenga la herida seca.",
+      "Puede bañarse, pero evite mojar esta zona."
+    ],
+    "clozeCorrect": "Puede bañarse, pero evite mojar esta zona."
+  },
+  {
+    "conceptId": "m14_11",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "aftercare",
+      "hygiene"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_11.webp",
+    "audioKey": "mazo-14/audios/m14_11.mp3",
+    "category": "aftercare",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_11_mcq",
+    "variantType": "mcq",
+    "text": "You may shower, but avoid getting this area wet.",
+    "englishText": "You may shower, but avoid getting this area wet.",
+    "mcqQuestionEs": "You may shower, but avoid getting this area wet.",
+    "mcqOptionsEn": [
+      "Puede bañarse, pero molestar mojar esta zona.",
+      "Puede bañarse, pero evite tocar esta zona.",
+      "Puede bañarse, pero evite mojar esta zona."
+    ],
+    "mcqCorrectEn": "Puede bañarse, pero evite mojar esta zona."
+  },
+  {
+    "conceptId": "m14_12",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "safety",
+      "restrictions"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_12.webp",
+    "audioKey": "mazo-14/audios/m14_12.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_12_intro",
+    "variantType": "intro",
+    "text": "No conduzca hasta que el médico lo autorice.",
+    "englishText": "Do not drive until the doctor approves it."
+  },
+  {
+    "conceptId": "m14_12",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "safety",
+      "restrictions"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_12.webp",
+    "audioKey": "mazo-14/audios/m14_12.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_12_cloze",
+    "variantType": "cloze",
+    "text": "No conduzca hasta que el médico lo autorice.",
+    "englishText": "Do not drive until the doctor approves it.",
+    "clozeOptions": [
+      "Evite esfuerzos.",
+      "Puede descansar.",
+      "Todo va bien.",
+      "No conduzca hasta que el médico lo autorice."
+    ],
+    "clozeCorrect": "No conduzca hasta que el médico lo autorice."
+  },
+  {
+    "conceptId": "m14_12",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "safety",
+      "restrictions"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_12.webp",
+    "audioKey": "mazo-14/audios/m14_12.mp3",
+    "category": "safety",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_12_mcq",
+    "variantType": "mcq",
+    "text": "No conduzca hasta que el médico lo _____.",
+    "englishText": "Do not drive until the doctor approves it.",
+    "mcqQuestionEs": "No conduzca hasta que el médico lo _____.",
+    "mcqOptionsEn": [
+      "publique",
+      "autorice",
+      "piense"
+    ],
+    "mcqCorrectEn": "autorice"
+  },
+  {
+    "conceptId": "m14_13",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "follow_up",
+      "planning"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_13.webp",
+    "audioKey": "mazo-14/audios/m14_13.mp3",
+    "category": "follow_up",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_13_intro",
+    "variantType": "intro",
+    "text": "Programe su cita de seguimiento.",
+    "englishText": "Schedule your follow-up appointment."
+  },
+  {
+    "conceptId": "m14_13",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "follow_up",
+      "planning"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_13.webp",
+    "audioKey": "mazo-14/audios/m14_13.mp3",
+    "category": "follow_up",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_13_cloze",
+    "variantType": "cloze",
+    "text": "Programe su cita de seguimiento.",
+    "englishText": "Schedule your follow-up appointment.",
+    "clozeOptions": [
+      "Revise las indicaciones.",
+      "Todo está listo.",
+      "Programe su cita de seguimiento.",
+      "Puede irse."
+    ],
+    "clozeCorrect": "Programe su cita de seguimiento."
+  },
+  {
+    "conceptId": "m14_13",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "follow_up",
+      "planning"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_13.webp",
+    "audioKey": "mazo-14/audios/m14_13.mp3",
+    "category": "follow_up",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_13_mcq",
+    "variantType": "mcq",
+    "text": "Programe su ______de seguimiento.",
+    "englishText": "Schedule your follow-up appointment.",
+    "mcqQuestionEs": "Programe su ______de seguimiento.",
+    "mcqOptionsEn": [
+      "medicamento",
+      "cita",
+      "apoyo"
+    ],
+    "mcqCorrectEn": "Programe su cita de seguimiento."
+  },
+  {
+    "conceptId": "m14_14",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "empathy",
+      "closure"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_14.webp",
+    "audioKey": "mazo-14/audios/m14_14.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_14_intro",
+    "variantType": "intro",
+    "text": "Le deseo una pronta recuperación.",
+    "englishText": "I wish you a speedy recovery."
+  },
+  {
+    "conceptId": "m14_14",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "empathy",
+      "closure"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_14.webp",
+    "audioKey": "mazo-14/audios/m14_14.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_14_cloze",
+    "variantType": "cloze",
+    "text": "Le deseo una pronta recuperación.",
+    "englishText": "I wish you a speedy recovery.",
+    "clozeOptions": [
+      "Buen día.",
+      "Todo va bien.",
+      "Le deseo una pronta recuperación.",
+      "Cuídese mucho."
+    ],
+    "clozeCorrect": "Le deseo una pronta recuperación."
+  },
+  {
+    "conceptId": "m14_14",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "empathy",
+      "closure"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_14.webp",
+    "audioKey": "mazo-14/audios/m14_14.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_14_mcq",
+    "variantType": "mcq",
+    "text": "Le deseo una pronta recuperación.",
+    "englishText": "I wish you a speedy recovery.",
+    "mcqQuestionEs": "Le deseo una pronta recuperación.",
+    "mcqOptionsEn": [
+      "I wish you a speedy recovery.",
+      "Best wishes for a smooth recovery.",
+      "I hope you feel better soon."
+    ],
+    "mcqCorrectEn": "I wish you a speedy recovery."
+  },
+  {
+    "conceptId": "m14_15",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "closure",
+      "discharge"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_15.webp",
+    "audioKey": "mazo-14/audios/m14_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_15_intro",
+    "variantType": "intro",
+    "text": "Que tenga buen regreso a casa.",
+    "englishText": "Have a safe trip home."
+  },
+  {
+    "conceptId": "m14_15",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "closure",
+      "discharge"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_15.webp",
+    "audioKey": "mazo-14/audios/m14_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_15_cloze",
+    "variantType": "cloze",
+    "text": "Que tenga buen regreso a casa.",
+    "englishText": "Have a safe trip home.",
+    "clozeOptions": [
+      "Que tenga buen regreso a casa.",
+      "Buen día.",
+      "Cuídese mucho.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Que tenga buen regreso a casa."
+  },
+  {
+    "conceptId": "m14_15",
+    "deckId": "mazo_14_alta",
+    "tags": [
+      "closure",
+      "discharge"
+    ],
+    "imageKey": "mazo-14/imagenes/m14_15.webp",
+    "audioKey": "mazo-14/audios/m14_15.mp3",
+    "category": "closure",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m14_15_mcq",
+    "variantType": "mcq",
+    "text": "Have a safe trip home.",
+    "englishText": "Have a safe trip home.",
+    "mcqQuestionEs": "Have a safe trip home.",
+    "mcqOptionsEn": [
+      "Deseo que tenga buen regreso a casa.",
+      "Que tenga buen regreso a casa.",
+      "Que tenga buen regreso al trabajo."
+    ],
+    "mcqCorrectEn": "Que tenga buen regreso a casa."
   }
 ] as const;
 
