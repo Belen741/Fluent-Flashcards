@@ -137,7 +137,7 @@ export const modules: Module[] = [
     description: "Vocabulary for urgent situations",
     icon: Siren,
     color: "#F44336",
-    hasContent: false,
+    hasContent: true,
   },
   {
     id: "m12",

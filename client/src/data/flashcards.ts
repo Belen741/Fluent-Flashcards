@@ -9739,6 +9739,851 @@ export const flashcardsData = [
       "permanezca calmado"
     ],
     "mcqCorrectEn": "La situación está bajo control."
+  },
+  {
+    "conceptId": "m11_01",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "validation"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_01.webp",
+    "audioKey": "mazo-11/audios/m11_01.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_01_intro",
+    "variantType": "intro",
+    "text": "Entiendo cómo se siente.",
+    "englishText": "I understand how you feel."
+  },
+  {
+    "conceptId": "m11_01",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "validation"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_01.webp",
+    "audioKey": "mazo-11/audios/m11_01.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_01_cloze",
+    "variantType": "cloze",
+    "text": "Entiendo cómo se siente.",
+    "englishText": "I understand how you feel.",
+    "clozeOptions": [
+      "Entiendo cómo se siente.",
+      "Estoy aquí para ayudarle.",
+      "Sé que es difícil.",
+      "No está solo."
+    ],
+    "clozeCorrect": "Entiendo cómo se siente."
+  },
+  {
+    "conceptId": "m11_01",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "validation"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_01.webp",
+    "audioKey": "mazo-11/audios/m11_01.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_01_mcq",
+    "variantType": "mcq",
+    "text": "I understand how you feel.",
+    "englishText": "I understand how you feel.",
+    "mcqQuestionEs": "I understand how you feel.",
+    "mcqOptionsEn": [
+      "Entiendo cómo  siente.",
+      "Entiendo cómo piensa.",
+      "Entiendo cómo se siente."
+    ],
+    "mcqCorrectEn": "Entiendo cómo se siente."
+  },
+  {
+    "conceptId": "m11_02",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_02.webp",
+    "audioKey": "mazo-11/audios/m11_02.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_02_intro",
+    "variantType": "intro",
+    "text": "Sé que esta situación puede ser difícil.",
+    "englishText": "I know this situation can be difficult."
+  },
+  {
+    "conceptId": "m11_02",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_02.webp",
+    "audioKey": "mazo-11/audios/m11_02.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_02_cloze",
+    "variantType": "cloze",
+    "text": "Sé que esta situación puede ser difícil.",
+    "englishText": "I know this situation can be difficult.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "Es normal sentirse así.",
+      "Sé que esta situación puede ser difícil.",
+      "No está solo."
+    ],
+    "clozeCorrect": "Sé que esta situación puede ser difícil."
+  },
+  {
+    "conceptId": "m11_02",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_02.webp",
+    "audioKey": "mazo-11/audios/m11_02.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_02_mcq",
+    "variantType": "mcq",
+    "text": "Sé que esta situación puede ser ____.",
+    "englishText": "I know this situation can be difficult.",
+    "mcqQuestionEs": "Sé que esta situación puede ser ____.",
+    "mcqOptionsEn": [
+      "rápida",
+      "difícil",
+      "fácil"
+    ],
+    "mcqCorrectEn": "difícil"
+  },
+  {
+    "conceptId": "m11_03",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "support",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_03.webp",
+    "audioKey": "mazo-11/audios/m11_03.mp3",
+    "category": "support",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_03_intro",
+    "variantType": "intro",
+    "text": "Estoy aquí para ayudarle.",
+    "englishText": "I am here to help you."
+  },
+  {
+    "conceptId": "m11_03",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "support",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_03.webp",
+    "audioKey": "mazo-11/audios/m11_03.mp3",
+    "category": "support",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_03_cloze",
+    "variantType": "cloze",
+    "text": "Estoy aquí para ayudarle.",
+    "englishText": "I am here to help you.",
+    "clozeOptions": [
+      "Estoy pendiente de usted.",
+      "Voy a explicarle.",
+      "Estoy aquí para ayudarle.",
+      "No está solo."
+    ],
+    "clozeCorrect": "Estoy aquí para ayudarle."
+  },
+  {
+    "conceptId": "m11_03",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "support",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_03.webp",
+    "audioKey": "mazo-11/audios/m11_03.mp3",
+    "category": "support",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_03_mcq",
+    "variantType": "mcq",
+    "text": "I am here to help you.",
+    "englishText": "I am here to help you.",
+    "mcqQuestionEs": "I am here to help you.",
+    "mcqOptionsEn": [
+      "Estoy aallá para ayudarle.",
+      "Estoy aquí para ayudarme.",
+      "Estoy aquí para ayudarle."
+    ],
+    "mcqCorrectEn": "Estoy aquí para ayudarle."
+  },
+  {
+    "conceptId": "m11_04",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "support"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_04.webp",
+    "audioKey": "mazo-11/audios/m11_04.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_04_intro",
+    "variantType": "intro",
+    "text": "No está solo.",
+    "englishText": "You are not alone."
+  },
+  {
+    "conceptId": "m11_04",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "support"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_04.webp",
+    "audioKey": "mazo-11/audios/m11_04.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_04_cloze",
+    "variantType": "cloze",
+    "text": "No está solo.",
+    "englishText": "You are not alone.",
+    "clozeOptions": [
+      "Estoy aquí con usted.",
+      "No está solo.",
+      "Ya pasó lo peor.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "No está solo."
+  },
+  {
+    "conceptId": "m11_04",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "support"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_04.webp",
+    "audioKey": "mazo-11/audios/m11_04.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_04_mcq",
+    "variantType": "mcq",
+    "text": "No está solo.",
+    "englishText": "You are not alone.",
+    "mcqQuestionEs": "No está solo.",
+    "mcqOptionsEn": [
+      "You are not alone.",
+      "I understand .",
+      "I am here to help you."
+    ],
+    "mcqCorrectEn": "You are not alone."
+  },
+  {
+    "conceptId": "m11_05",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "reassurance",
+      "patience"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_05.webp",
+    "audioKey": "mazo-11/audios/m11_05.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_05_intro",
+    "variantType": "intro",
+    "text": "Tómese su tiempo.",
+    "englishText": "Take your time."
+  },
+  {
+    "conceptId": "m11_05",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "reassurance",
+      "patience"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_05.webp",
+    "audioKey": "mazo-11/audios/m11_05.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_05_cloze",
+    "variantType": "cloze",
+    "text": "Tómese su tiempo.",
+    "englishText": "Take your time.",
+    "clozeOptions": [
+      "No hay prisa.",
+      "Tómese su tiempo.",
+      "Todo va bien.",
+      "Estoy aquí."
+    ],
+    "clozeCorrect": "Tómese su tiempo."
+  },
+  {
+    "conceptId": "m11_05",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "reassurance",
+      "patience"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_05.webp",
+    "audioKey": "mazo-11/audios/m11_05.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_05_mcq",
+    "variantType": "mcq",
+    "text": "Tómese su ____.",
+    "englishText": "Take your time.",
+    "mcqQuestionEs": "Tómese su ____.",
+    "mcqOptionsEn": [
+      "tiempo",
+      "consulta",
+      "respiración"
+    ],
+    "mcqCorrectEn": "tiempo"
+  },
+  {
+    "conceptId": "m11_06",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "communication",
+      "openness"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_06.webp",
+    "audioKey": "mazo-11/audios/m11_06.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_06_intro",
+    "variantType": "intro",
+    "text": "Si tiene alguna duda, dígamelo.",
+    "englishText": "If you have any questions, tell me."
+  },
+  {
+    "conceptId": "m11_06",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "communication",
+      "openness"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_06.webp",
+    "audioKey": "mazo-11/audios/m11_06.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_06_cloze",
+    "variantType": "cloze",
+    "text": "Si tiene alguna duda, dígamelo.",
+    "englishText": "If you have any questions, tell me.",
+    "clozeOptions": [
+      "Si tiene alguna duda, dígamelo.",
+      "No está solo.",
+      "Puede preguntarme.",
+      "Estoy aquí para ayudarle."
+    ],
+    "clozeCorrect": "Si tiene alguna duda, dígamelo."
+  },
+  {
+    "conceptId": "m11_06",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "communication",
+      "openness"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_06.webp",
+    "audioKey": "mazo-11/audios/m11_06.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_06_mcq",
+    "variantType": "mcq",
+    "text": "If you have any questions, tell me.",
+    "englishText": "If you have any questions, tell me.",
+    "mcqQuestionEs": "If you have any questions, tell me.",
+    "mcqOptionsEn": [
+      "Si tiene alguna duda, ecúcheme.",
+      "Si tiene alguna duda, dígamelo.",
+      "Si tiene alguna duda, démelo."
+    ],
+    "mcqCorrectEn": "Si tiene alguna duda, dígamelo."
+  },
+  {
+    "conceptId": "m11_07",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "normalization"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_07.webp",
+    "audioKey": "mazo-11/audios/m11_07.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_07_intro",
+    "variantType": "intro",
+    "text": "Es normal sentirse así.",
+    "englishText": "It is normal to feel this way."
+  },
+  {
+    "conceptId": "m11_07",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "normalization"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_07.webp",
+    "audioKey": "mazo-11/audios/m11_07.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_07_cloze",
+    "variantType": "cloze",
+    "text": "Es normal sentirse así.",
+    "englishText": "It is normal to feel this way.",
+    "clozeOptions": [
+      "Entiendo cómo se siente.",
+      "Es normal sentirse así.",
+      "Todo va bien.",
+      "No está solo."
+    ],
+    "clozeCorrect": "Es normal sentirse así."
+  },
+  {
+    "conceptId": "m11_07",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "normalization"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_07.webp",
+    "audioKey": "mazo-11/audios/m11_07.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_07_mcq",
+    "variantType": "mcq",
+    "text": "Es normal sentirse así.",
+    "englishText": "It is normal to feel this way.",
+    "mcqQuestionEs": "Es normal sentirse así.",
+    "mcqOptionsEn": [
+      "it is normal to feel sad",
+      "It is normal to feel this way.",
+      "it is normal to feel bad"
+    ],
+    "mcqCorrectEn": "It is normal to feel this way."
+  },
+  {
+    "conceptId": "m11_08",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "commitment",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_08.webp",
+    "audioKey": "mazo-11/audios/m11_08.mp3",
+    "category": "commitment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_08_intro",
+    "variantType": "intro",
+    "text": "Vamos a hacer todo lo posible por usted.",
+    "englishText": "We will do everything we can for you."
+  },
+  {
+    "conceptId": "m11_08",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "commitment",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_08.webp",
+    "audioKey": "mazo-11/audios/m11_08.mp3",
+    "category": "commitment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_08_cloze",
+    "variantType": "cloze",
+    "text": "Vamos a hacer todo lo posible por usted.",
+    "englishText": "We will do everything we can for you.",
+    "clozeOptions": [
+      "Estoy aquí para ayudarle.",
+      "Vamos a hacer todo lo posible por usted.",
+      "El médico viene.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Vamos a hacer todo lo posible por usted."
+  },
+  {
+    "conceptId": "m11_08",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "commitment",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_08.webp",
+    "audioKey": "mazo-11/audios/m11_08.mp3",
+    "category": "commitment",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_08_mcq",
+    "variantType": "mcq",
+    "text": "We will do everything we can for you.",
+    "englishText": "We will do everything we can for you.",
+    "mcqQuestionEs": "We will do everything we can for you.",
+    "mcqOptionsEn": [
+      "Vamos a hacer todo lo posible por usted.",
+      "Vamos a hacer todo lo posible por mi.",
+      "Vamos a atenderlo lo más posible."
+    ],
+    "mcqCorrectEn": "Vamos a hacer todo lo posible por usted."
+  },
+  {
+    "conceptId": "m11_09",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "monitoring",
+      "care"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_09.webp",
+    "audioKey": "mazo-11/audios/m11_09.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_09_intro",
+    "variantType": "intro",
+    "text": "Estoy pendiente de usted.",
+    "englishText": "I am keeping an eye on you."
+  },
+  {
+    "conceptId": "m11_09",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "monitoring",
+      "care"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_09.webp",
+    "audioKey": "mazo-11/audios/m11_09.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_09_cloze",
+    "variantType": "cloze",
+    "text": "Estoy pendiente de usted.",
+    "englishText": "I am keeping an eye on you.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "Estoy pendiente de usted.",
+      "Voy a quedarme.",
+      "No está solo."
+    ],
+    "clozeCorrect": "Estoy pendiente de usted."
+  },
+  {
+    "conceptId": "m11_09",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "monitoring",
+      "care"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_09.webp",
+    "audioKey": "mazo-11/audios/m11_09.mp3",
+    "category": "monitoring",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_09_mcq",
+    "variantType": "mcq",
+    "text": "Estoy pendiente de usted.",
+    "englishText": "I am keeping an eye on you.",
+    "mcqQuestionEs": "Estoy pendiente de usted.",
+    "mcqOptionsEn": [
+      "I'm looking at you",
+      "I am looking for you",
+      "I am keeping an eye on you."
+    ],
+    "mcqCorrectEn": "I am keeping an eye on you."
+  },
+  {
+    "conceptId": "m11_10",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "communication",
+      "validation"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_10.webp",
+    "audioKey": "mazo-11/audios/m11_10.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_10_intro",
+    "variantType": "intro",
+    "text": "Gracias por decírmelo.",
+    "englishText": "Thank you for telling me."
+  },
+  {
+    "conceptId": "m11_10",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "communication",
+      "validation"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_10.webp",
+    "audioKey": "mazo-11/audios/m11_10.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_10_cloze",
+    "variantType": "cloze",
+    "text": "Gracias por decírmelo.",
+    "englishText": "Thank you for telling me.",
+    "clozeOptions": [
+      "Todo va bien.",
+      "Estoy aquí para ayudarle.",
+      "Entiendo su preocupación.",
+      "Gracias por decírmelo."
+    ],
+    "clozeCorrect": "Gracias por decírmelo."
+  },
+  {
+    "conceptId": "m11_10",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "communication",
+      "validation"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_10.webp",
+    "audioKey": "mazo-11/audios/m11_10.mp3",
+    "category": "communication",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_10_mcq",
+    "variantType": "mcq",
+    "text": "Thank you for telling me.",
+    "englishText": "Thank you for telling me.",
+    "mcqQuestionEs": "Thank you for telling me.",
+    "mcqOptionsEn": [
+      "Gracias por verme.",
+      "Gracias por decírmelo.",
+      "Gracias por escucharme."
+    ],
+    "mcqCorrectEn": "Gracias por decírmelo."
+  },
+  {
+    "conceptId": "m11_11",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_11.webp",
+    "audioKey": "mazo-11/audios/m11_11.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_11_intro",
+    "variantType": "intro",
+    "text": "Entiendo su preocupación.",
+    "englishText": "I understand your concern."
+  },
+  {
+    "conceptId": "m11_11",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_11.webp",
+    "audioKey": "mazo-11/audios/m11_11.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_11_cloze",
+    "variantType": "cloze",
+    "text": "Entiendo su preocupación.",
+    "englishText": "I understand your concern.",
+    "clozeOptions": [
+      "No está solo.",
+      "Entiendo su preocupación.",
+      "Todo va bien.",
+      "Es normal sentirse así."
+    ],
+    "clozeCorrect": "Entiendo su preocupación."
+  },
+  {
+    "conceptId": "m11_11",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "empathy",
+      "reassurance"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_11.webp",
+    "audioKey": "mazo-11/audios/m11_11.mp3",
+    "category": "empathy",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_11_mcq",
+    "variantType": "mcq",
+    "text": "I understand your concern.",
+    "englishText": "I understand your concern.",
+    "mcqQuestionEs": "I understand your concern.",
+    "mcqOptionsEn": [
+      "Entiendo su preocupación.",
+      "Entiendo su posición.",
+      "Entiendo su situación."
+    ],
+    "mcqCorrectEn": "Entiendo su preocupación."
+  },
+  {
+    "conceptId": "m11_12",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "presence",
+      "support"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_12.webp",
+    "audioKey": "mazo-11/audios/m11_12.mp3",
+    "category": "presence",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_12_intro",
+    "variantType": "intro",
+    "text": "Voy a quedarme un momento con usted.",
+    "englishText": "I am going to stay with you for a moment."
+  },
+  {
+    "conceptId": "m11_12",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "presence",
+      "support"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_12.webp",
+    "audioKey": "mazo-11/audios/m11_12.mp3",
+    "category": "presence",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_12_cloze",
+    "variantType": "cloze",
+    "text": "Voy a quedarme un momento con usted.",
+    "englishText": "I am going to stay with you for a moment.",
+    "clozeOptions": [
+      "Estoy aquí.",
+      "Voy a quedarme un momento con usted.",
+      "Todo va bien.",
+      "No está solo."
+    ],
+    "clozeCorrect": "Voy a quedarme un momento con usted."
+  },
+  {
+    "conceptId": "m11_12",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "presence",
+      "support"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_12.webp",
+    "audioKey": "mazo-11/audios/m11_12.mp3",
+    "category": "presence",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_12_mcq",
+    "variantType": "mcq",
+    "text": "Voy a quedarme un momento con usted.",
+    "englishText": "I am going to stay with you for a moment.",
+    "mcqQuestionEs": "Voy a quedarme un momento con usted.",
+    "mcqOptionsEn": [
+      "I'm going to sit with you for a moment.",
+      "I'm going to listen to you for a moment.",
+      "I am going to stay with you for a moment."
+    ],
+    "mcqCorrectEn": "I am going to stay with you for a moment."
+  },
+  {
+    "conceptId": "m11_13",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_13.webp",
+    "audioKey": "mazo-11/audios/m11_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_13_intro",
+    "variantType": "intro",
+    "text": "Ya pasó la parte más difícil.",
+    "englishText": "The hardest part is over."
+  },
+  {
+    "conceptId": "m11_13",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_13.webp",
+    "audioKey": "mazo-11/audios/m11_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_13_cloze",
+    "variantType": "cloze",
+    "text": "Ya pasó la parte más difícil.",
+    "englishText": "The hardest part is over.",
+    "clozeOptions": [
+      "No hay prisa.",
+      "Ya pasó la parte más difícil.",
+      "El médico viene.",
+      "Todo va bien."
+    ],
+    "clozeCorrect": "Ya pasó la parte más difícil."
+  },
+  {
+    "conceptId": "m11_13",
+    "deckId": "mazo_11_emergencias",
+    "tags": [
+      "reassurance",
+      "closure"
+    ],
+    "imageKey": "mazo-11/imagenes/m11_13.webp",
+    "audioKey": "mazo-11/audios/m11_13.mp3",
+    "category": "reassurance",
+    "imageUrl": "",
+    "audioUrl": "",
+    "id": "m11_13_mcq",
+    "variantType": "mcq",
+    "text": "Ya pasó la parte más difícil.",
+    "englishText": "The hardest part is over.",
+    "mcqQuestionEs": "Ya pasó la parte más difícil.",
+    "mcqOptionsEn": [
+      "The hard part is here.",
+      "The hardest part is over.",
+      "The hard part won't come back."
+    ],
+    "mcqCorrectEn": "The hardest part is over."
   }
 ] as const;
 
