@@ -4080,7 +4080,7 @@ export const flashcardsData = [
     "mcqQuestionEs": "Acetaminophen is for pain or fever.",
     "mcqOptionsEn": [
       "Este medicamento es para la presión.",
-      "El paracetamol es para el calor.",
+      "El paracetamol es para el dolor o la fiebre.",
       "Este antibiótico es para tratar la infección."
     ],
     "mcqCorrectEn": "El paracetamol es para el dolor o la fiebre."
