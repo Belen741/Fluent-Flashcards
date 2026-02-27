@@ -121,9 +121,19 @@ export async function registerRoutes(
   });
 
   const cards = await storage.getFlashcards();
+  
+  const contentHash = flashcardsData.map(c => {
+    const cd = c as Record<string, unknown>;
+    return `${c.conceptId}:${c.variantType}:${(cd.mcqOptionsEn as string[] || []).join(',')}:${(cd.clozeOptions as string[] || []).join(',')}:${cd.mcqCorrectEn || ''}:${cd.clozeCorrect || ''}`;
+  }).join('|');
+  const dbHash = cards.map(c => {
+    return `${c.conceptId}:${c.variantType}:${(c.mcqOptionsEn || []).join(',')}:${(c.clozeOptions || []).join(',')}:${c.mcqCorrectEn || ''}:${c.clozeCorrect || ''}`;
+  }).join('|');
+
   const needsReseed = cards.length === 0 
     || cards.length !== flashcardsData.length
-    || cards.some(c => c.variantType === "cloze" && !c.clozeOptions);
+    || cards.some(c => c.variantType === "cloze" && !c.clozeOptions)
+    || contentHash !== dbHash;
 
   if (needsReseed) {
     if (cards.length > 0) {
