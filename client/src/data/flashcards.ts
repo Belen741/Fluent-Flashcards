@@ -4600,8 +4600,8 @@ export const flashcardsData = [
     "mcqQuestionEs": "Turn onto your left side.",
     "mcqOptionsEn": [
       "Gírese hacia su lado izquierdo.",
-      "Lie on your back.",
-      "Bend your knees."
+      "Acuéstese boca arriba.",
+      "Doble las rodillas."
     ],
     "mcqCorrectEn": "Gírese hacia su lado izquierdo."
   },
