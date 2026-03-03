@@ -77,12 +77,7 @@ export function ReviewCard({ card, onAnswer }: ReviewCardProps) {
       </div>
 
       <div className="flex-1 flex flex-col items-center justify-center p-4 text-center">
-        <motion.div
-          animate={{ rotateY: isFlipped ? 180 : 0 }}
-          transition={{ duration: 0.4 }}
-          style={{ transformStyle: "preserve-3d" }}
-          className="w-full"
-        >
+        <div className="w-full">
           {!isFlipped ? (
             <div>
               <p className="text-xl font-medium mb-4" data-testid="text-spanish-phrase">
@@ -96,7 +91,7 @@ export function ReviewCard({ card, onAnswer }: ReviewCardProps) {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              transition={{ duration: 0.3 }}
             >
               <p className="text-xl font-medium mb-2" data-testid="text-spanish-phrase-back">
                 {card.text}
@@ -106,7 +101,7 @@ export function ReviewCard({ card, onAnswer }: ReviewCardProps) {
               </p>
             </motion.div>
           )}
-        </motion.div>
+        </div>
       </div>
 
       {isFlipped && (
