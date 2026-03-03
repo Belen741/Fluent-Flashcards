@@ -13890,7 +13890,7 @@ export const flashcardsData = [
     "audioUrl": "",
     "id": "m15_15_mcq",
     "variantType": "mcq",
-    "text": "Cualquier novedad, les avisamos inmediatamente.",
+    "text": "Cualquier novedad, les avisamos ________ .",
     "englishText": "If there is any update, we will notify you immediately.",
     "mcqQuestionEs": "Cualquier novedad, les avisamos ________ .",
     "mcqOptionsEn": [
