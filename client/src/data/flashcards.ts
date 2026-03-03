@@ -11236,7 +11236,7 @@ export const flashcardsData = [
     "mcqCorrectEn": "The procedure will begin shortly."
   },
   {
-    "conceptId": "m12_12",
+    "conceptId": "m12_11",
     "deckId": "mazo_12_preoperatorio",
     "tags": [
       "monitoring",
@@ -11247,13 +11247,13 @@ export const flashcardsData = [
     "category": "monitoring",
     "imageUrl": "",
     "audioUrl": "",
-    "id": "m12_12_intro",
+    "id": "m12_11_intro",
     "variantType": "intro",
     "text": "Si siente dolor o malestar, avíseme.",
     "englishText": "Let me know if you feel pain or discomfort."
   },
   {
-    "conceptId": "m12_12",
+    "conceptId": "m12_11",
     "deckId": "mazo_12_preoperatorio",
     "tags": [
       "monitoring",
@@ -11264,7 +11264,7 @@ export const flashcardsData = [
     "category": "monitoring",
     "imageUrl": "",
     "audioUrl": "",
-    "id": "m12_12_cloze",
+    "id": "m12_11_cloze",
     "variantType": "cloze",
     "text": "Si siente dolor o malestar, avíseme.",
     "englishText": "Let me know if you feel pain or discomfort.",
@@ -11277,7 +11277,7 @@ export const flashcardsData = [
     "clozeCorrect": "Si siente dolor o malestar, avíseme."
   },
   {
-    "conceptId": "m12_12",
+    "conceptId": "m12_11",
     "deckId": "mazo_12_preoperatorio",
     "tags": [
       "monitoring",
@@ -11288,7 +11288,7 @@ export const flashcardsData = [
     "category": "monitoring",
     "imageUrl": "",
     "audioUrl": "",
-    "id": "m12_12_mcq",
+    "id": "m12_11_mcq",
     "variantType": "mcq",
     "text": "Let me know if you feel pain or discomfort.",
     "englishText": "Let me know if you feel pain or discomfort.",
@@ -11301,7 +11301,7 @@ export const flashcardsData = [
     "mcqCorrectEn": "Si siente dolor o malestar, avíseme."
   },
   {
-    "conceptId": "m12_13",
+    "conceptId": "m12_12",
     "deckId": "mazo_12_preoperatorio",
     "tags": [
       "preparation",
@@ -11312,13 +11312,13 @@ export const flashcardsData = [
     "category": "preparation",
     "imageUrl": "",
     "audioUrl": "",
-    "id": "m12_13_intro",
+    "id": "m12_12_intro",
     "variantType": "intro",
     "text": "Todo está listo.",
     "englishText": "Everything is ready."
   },
   {
-    "conceptId": "m12_13",
+    "conceptId": "m12_12",
     "deckId": "mazo_12_preoperatorio",
     "tags": [
       "preparation",
@@ -11329,7 +11329,7 @@ export const flashcardsData = [
     "category": "preparation",
     "imageUrl": "",
     "audioUrl": "",
-    "id": "m12_13_cloze",
+    "id": "m12_12_cloze",
     "variantType": "cloze",
     "text": "Todo está listo.",
     "englishText": "Everything is ready.",
@@ -11342,7 +11342,7 @@ export const flashcardsData = [
     "clozeCorrect": "Todo está listo."
   },
   {
-    "conceptId": "m12_13",
+    "conceptId": "m12_12",
     "deckId": "mazo_12_preoperatorio",
     "tags": [
       "preparation",
@@ -11353,7 +11353,7 @@ export const flashcardsData = [
     "category": "preparation",
     "imageUrl": "",
     "audioUrl": "",
-    "id": "m12_13_mcq",
+    "id": "m12_12_mcq",
     "variantType": "mcq",
     "text": "Everything is ready.",
     "englishText": "Everything is ready.",
