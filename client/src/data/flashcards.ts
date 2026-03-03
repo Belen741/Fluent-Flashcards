@@ -12793,7 +12793,7 @@ export const flashcardsData = [
       "cita",
       "apoyo"
     ],
-    "mcqCorrectEn": "Programe su cita de seguimiento."
+    "mcqCorrectEn": "cita"
   },
   {
     "conceptId": "m14_14",
