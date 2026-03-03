@@ -13892,7 +13892,7 @@ export const flashcardsData = [
     "variantType": "mcq",
     "text": "Cualquier novedad, les avisamos inmediatamente.",
     "englishText": "If there is any update, we will notify you immediately.",
-    "mcqQuestionEs": "Cualquier novedad, les avisamos inmediatamente.",
+    "mcqQuestionEs": "Cualquier novedad, les avisamos ________ .",
     "mcqOptionsEn": [
       "depués",
       "con calma",
