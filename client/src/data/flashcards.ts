@@ -6485,10 +6485,10 @@ export const flashcardsData = [
     "mcqQuestionEs": "I am going to help you turn.",
     "mcqOptionsEn": [
       "Voy a ayudarle a girarse.",
-      "Please hold the support rail.",
-      "I am going to change the sheets."
+      "Por favor, sujete el riel de soporte.",
+      "Voy a ayudarle a levantarse."
     ],
-    "mcqCorrectEn": "I am going to help you turn."
+    "mcqCorrectEn": "Voy a ayudarle a girarse."
   },
   {
     "conceptId": "m7_09",
