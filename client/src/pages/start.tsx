@@ -109,18 +109,15 @@ export default function Start() {
           <p className="text-sm text-gray-400 mt-3">
             Start with 1 FREE module · Then continue for only $19/month
           </p>
-          <p className="text-xs text-gray-400 mt-1">No commitment. Cancel anytime.</p>
+          <p className="text-xs text-gray-400 mt-1">No credit card required. No commitment. Cancel anytime.</p>
         </div>
       </section>
 
       {/* PROBLEM */}
       <section className="px-6 py-16 bg-white">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
-            Communication barriers put patients at risk
-          </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Many nurses struggle to communicate with Spanish-speaking patients. This can create stress, misunderstandings, and impact patient care.
+            Many nurses struggle to communicate with Spanish-speaking patients.
           </p>
           <p className="text-lg text-[#1E40FF] font-semibold mt-4">
             Spanish for Nurses helps you learn exactly what to say in real hospital situations.
@@ -131,9 +128,12 @@ export default function Start() {
       {/* TOPICS */}
       <section className="px-6 py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-display font-bold text-gray-900 text-center mb-10">
+          <h2 className="text-3xl font-display font-bold text-gray-900 text-center mb-3">
             What you will learn
           </h2>
+          <p className="text-center text-gray-500 text-lg mb-10">
+            Everything you need to communicate in real hospital situations
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {topics.map((t) => (
               <div
