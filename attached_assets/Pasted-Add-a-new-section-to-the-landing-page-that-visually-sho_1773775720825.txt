@@ -1,0 +1,95 @@
+Add a new section to the landing page that visually shows how the product works (product preview section).
+
+IMPORTANT:
+This section should make users immediately understand what they will get after clicking "Start Free".
+
+-------------------------
+SECTION TITLE:
+-------------------------
+See how it works
+
+Subtitle:
+Get a preview of the flashcards and exercises used in real hospital situations.
+
+-------------------------
+DESIGN REQUIREMENTS:
+-------------------------
+
+- Create a clean, modern layout (similar to Duolingo or language apps)
+- Use a white or very light background
+- Center the content
+- Add spacing so it feels premium
+
+-------------------------
+CONTENT STRUCTURE:
+-------------------------
+
+Create 3 visual cards (side by side on desktop, stacked on mobile):
+
+1. FLASHCARDS
+Title: Flashcards for real situations
+Description: Learn exactly what to say with Spanish-speaking patients using clear, practical phrases.
+
+Visual:
+- Create a mockup of a flashcard
+- Show Spanish phrase + English translation
+Example:
+Spanish: "¿Dónde le duele?"
+English: "Where does it hurt?"
+
+Make it look like a real app card (rounded corners, soft shadow)
+
+-------------------------
+
+2. PRACTICE EXERCISES
+Title: Practice with real scenarios
+Description: Reinforce your learning with simple exercises based on real hospital situations.
+
+Visual:
+- Create a mockup of a multiple-choice question
+Example:
+"What does 'Tiene dolor?' mean?"
+A) Are you tired?
+B) Do you have pain?
+C) Are you hungry?
+
+Highlight the correct answer visually
+
+-------------------------
+
+3. REAL COMMUNICATION
+Title: Use it with real patients
+Description: Apply what you learn immediately during your shifts.
+
+Visual:
+- Create a simple conversation bubble mockup
+
+Example:
+Nurse: "¿Tiene dolor?"
+Patient: "Sí, en el pecho."
+
+Use chat-style bubbles
+
+-------------------------
+
+-------------------------
+EXTRA:
+-------------------------
+
+- Use icons for each section (book, quiz, chat)
+- Add subtle animations or hover effects if possible
+- Keep everything clean and easy to understand
+- Make it feel like a real product, not just text
+
+-------------------------
+PLACEMENT:
+-------------------------
+
+Insert this section right AFTER the "How it works" section and BEFORE the "Try the first module for free" section.
+
+-------------------------
+GOAL:
+-------------------------
+
+The user should think:
+"Ah, this is exactly what I will use. This looks useful."

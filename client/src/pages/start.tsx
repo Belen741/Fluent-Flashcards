@@ -176,6 +176,83 @@ export default function Start() {
         </div>
       </section>
 
+      {/* PRODUCT PREVIEW */}
+      <section className="px-6 py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-display font-bold text-gray-900 text-center mb-3">
+            See how it works
+          </h2>
+          <p className="text-center text-gray-500 text-lg mb-12">
+            Get a preview of the flashcards and exercises used in real hospital situations.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+            {/* Card 1: Flashcard */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-md transition-shadow" data-testid="preview-flashcard">
+              <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-[#1E40FF]" />
+              </div>
+              <h3 className="font-display font-bold text-gray-900 mb-1">Flashcards for real situations</h3>
+              <p className="text-gray-500 text-sm mb-5 leading-relaxed">Learn exactly what to say with Spanish-speaking patients using clear, practical phrases.</p>
+              <div className="w-full bg-gradient-to-b from-[#F0F4FF] to-white rounded-xl border border-blue-100 p-4 shadow-inner">
+                <p className="text-xs text-gray-400 uppercase tracking-wide mb-3 font-semibold">Flashcard</p>
+                <p className="text-2xl font-bold text-[#1E40FF] mb-3">¿Dónde le duele?</p>
+                <div className="border-t border-blue-100 pt-3">
+                  <p className="text-gray-600 font-medium text-sm">Where does it hurt?</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: MCQ */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-md transition-shadow" data-testid="preview-mcq">
+              <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] flex items-center justify-center mb-4">
+                <Check className="w-6 h-6 text-[#1E40FF]" />
+              </div>
+              <h3 className="font-display font-bold text-gray-900 mb-1">Practice with real scenarios</h3>
+              <p className="text-gray-500 text-sm mb-5 leading-relaxed">Reinforce your learning with simple exercises based on real hospital situations.</p>
+              <div className="w-full bg-gradient-to-b from-[#F0F4FF] to-white rounded-xl border border-blue-100 p-4 shadow-inner text-left">
+                <p className="text-xs text-gray-400 uppercase tracking-wide mb-3 font-semibold text-center">Multiple Choice</p>
+                <p className="text-sm font-semibold text-gray-800 mb-3 text-center">"¿Tiene dolor?" means:</p>
+                <div className="space-y-2">
+                  <div className="rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-500">A) Are you tired?</div>
+                  <div className="rounded-lg border border-[#1E40FF] bg-[#EEF2FF] px-3 py-2 text-sm text-[#1E40FF] font-semibold flex items-center gap-2">
+                    <Check className="w-4 h-4 flex-shrink-0" />
+                    B) Do you have pain?
+                  </div>
+                  <div className="rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-500">C) Are you hungry?</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: Conversation */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-md transition-shadow" data-testid="preview-chat">
+              <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] flex items-center justify-center mb-4">
+                <MessageCircle className="w-6 h-6 text-[#1E40FF]" />
+              </div>
+              <h3 className="font-display font-bold text-gray-900 mb-1">Use it with real patients</h3>
+              <p className="text-gray-500 text-sm mb-5 leading-relaxed">Apply what you learn immediately during your shifts.</p>
+              <div className="w-full bg-gradient-to-b from-[#F0F4FF] to-white rounded-xl border border-blue-100 p-4 shadow-inner space-y-3">
+                <p className="text-xs text-gray-400 uppercase tracking-wide mb-1 font-semibold text-center">Real conversation</p>
+                <div className="flex items-end gap-2">
+                  <div className="bg-[#1E40FF] text-white rounded-2xl rounded-bl-sm px-4 py-2 text-sm font-medium text-left max-w-[80%] shadow-sm">
+                    ¿Tiene dolor?
+                    <p className="text-blue-200 text-xs mt-0.5">Nurse</p>
+                  </div>
+                </div>
+                <div className="flex items-end gap-2 justify-end">
+                  <div className="bg-white text-gray-800 rounded-2xl rounded-br-sm px-4 py-2 text-sm font-medium text-left max-w-[80%] shadow-sm border border-gray-200">
+                    Sí, en el pecho.
+                    <p className="text-gray-400 text-xs mt-0.5">Patient</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* FREE MODULE CTA */}
       <section className="px-6 py-16 bg-gradient-to-r from-[#1E40FF] to-[#3B82F6] text-white text-center">
         <div className="max-w-xl mx-auto">
