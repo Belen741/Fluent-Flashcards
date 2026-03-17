@@ -12,6 +12,7 @@ import Modules from "@/pages/modules";
 import CheckoutSuccess from "@/pages/checkout-success";
 import CheckoutCancel from "@/pages/checkout-cancel";
 import NotFound from "@/pages/not-found";
+import Start from "@/pages/start";
 
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -19,6 +20,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/start" component={Start} />
       <Route path="/study" component={Study} />
       <Route path="/complete" component={Complete} />
       <Route path="/modules" component={Modules} />
