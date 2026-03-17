@@ -1,0 +1,172 @@
+I already have a website deployed (spanish4nurses.com).
+
+I want you to ADD a new landing page inside my existing project, not create a new project.
+
+Create a new route:
+
+/start
+
+This page will be used as a high-converting landing page for Google Ads traffic.
+
+IMPORTANT:
+- Do NOT replace my current homepage
+- Do NOT change existing pages
+- Only add a new page at /start
+- Make sure it is accessible at: spanish4nurses.com/start
+
+If needed:
+- Create a new file (start.html or a new route depending on the framework)
+- Link all styles correctly
+- Keep it consistent with the current site
+
+Then build the landing page using this structure:
+Create a modern, clean, high-converting landing page for a SaaS product called "Spanish for Nurses".
+
+The goal of this page is to convert visitors from facebook into free users and then paid subscribers.
+
+Use a clean, professional design similar to Duolingo or medical training platforms.
+
+Use HTML, CSS, and simple JavaScript (no frameworks required). Make it responsive (mobile-friendly).
+
+-------------------------
+CONTENT STRUCTURE
+-------------------------
+
+1. HERO SECTION (above the fold)
+
+Title:
+Learn medical Spanish phrases for real-life situations in the hospital.
+
+Subtitle:
+Flashcards designed specifically for nurses working with Spanish-speaking patients.
+
+Call to action:
+
+Start with 1 FREE module
+
+Then continue for only $19/month
+
+Primary button:
+Start Free
+
+Add small text under button:
+No commitment. Cancel anytime.
+
+Optional: add a simple illustration or icon of a nurse and patient.
+
+-------------------------
+
+2. PROBLEM SECTION
+
+Explain the problem briefly:
+
+Many nurses struggle to communicate with Spanish-speaking patients.
+This can create stress, misunderstandings, and impact patient care.
+
+Spanish for Nurses helps you learn exactly what to say in real hospital situations.
+
+-------------------------
+
+3. TOPICS SECTION
+
+Title:
+What you will learn
+
+Display as a clean grid or cards:
+
+1. Patient Admission  
+2. Symptoms and Pain  
+3. Vital Signs  
+4. Medications  
+5. Basic Instructions  
+6. Common Procedures  
+7. Hygiene and Personal Care  
+8. Mobility and Fall Prevention  
+9. Nutrition and Fasting  
+10. Emergencies  
+11. Empathetic Communication  
+12. Preoperative Instructions  
+13. Postoperative Care  
+14. Discharge  
+15. Family Members and Caregivers  
+
+Make it visually appealing with icons or checkmarks.
+
+-------------------------
+
+4. HOW IT WORKS SECTION
+
+Title:
+How it works
+
+Create a 3-step visual explanation:
+
+Step 1: Study flashcards  
+Step 2: Practice real phrases  
+Step 3: Speak with patients confidently  
+
+Leave placeholders for images (I will replace them later).
+
+-------------------------
+
+5. FREE MODULE SECTION
+
+Highlight:
+
+Try the first module for free
+
+Reinforce CTA:
+
+Start with 1 FREE module  
+Then continue for only $19/month  
+
+Button:
+Start Free
+
+-------------------------
+
+6. TRUST / BENEFITS SECTION
+
+Add 3–4 key benefits:
+
+- Learn phrases used in real hospitals  
+- Designed specifically for nurses  
+- Improve communication with patients  
+- Build confidence quickly  
+
+-------------------------
+
+7. FINAL CTA SECTION
+
+Repeat:
+
+Start with 1 FREE module  
+Then continue for only $19/month  
+
+Button:
+Start Free
+
+-------------------------
+
+8. STYLE GUIDELINES
+
+- Clean white background  
+- Blue or medical-style color accents  
+- Rounded buttons  
+- Modern font (like Inter or Open Sans)  
+- Plenty of spacing  
+- Professional but friendly tone  
+
+-------------------------
+
+9. EXTRA
+
+Make sure:
+
+- Buttons stand out clearly  
+- Layout is simple and not cluttered  
+- Everything is easy to understand in under 5 seconds  
+
+Return a complete working HTML file with embedded CSS.
+
+Make sure everything works correctly and the page loads independently.
